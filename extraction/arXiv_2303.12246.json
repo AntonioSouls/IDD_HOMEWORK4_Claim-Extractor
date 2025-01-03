@@ -1,0 +1,16 @@
+{
+    "id_table_1": {
+        "caption": "Table 1: Success rates of baseline methods and our conformalized heatmap (using the average pose) based on the 2D projection metric (i.e., a pose estimation is considered successful if the average 2D reprojection error is below 555 pixels).",
+        "table": [],
+        "footnotes": [
+            "[73] [73]\r\n\r\nSida Peng, Yuan Liu, Qixing Huang, Xiaowei Zhou, and Hujun Bao.\r\n\r\n\r\nPvnet: Pixel-wise voting network for 6dof pose estimation.\r\n\r\n\r\nIEEE Trans. Pattern Anal. Machine Intell., 2022.",
+            "[90] [90]\r\n\r\nBugra Tekin, Sudipta N Sinha, and Pascal Fua.\r\n\r\n\r\nReal-time seamless single shot 6d object pose prediction.\r\n\r\n\r\nIn IEEE Conf. on Computer Vision and Pattern Recognition\r\n(CVPR), pages 292–301, 2018.",
+            "[96] [96]\r\n\r\nYu Xiang, Tanner Schmidt, Venkatraman Narayanan, and Dieter Fox.\r\n\r\n\r\nPosecnn: A convolutional neural network for 6d object pose estimation\r\nin cluttered scenes.\r\n\r\n\r\nIn Robotics: Science and Systems (RSS), 2018.",
+            "[68] [68]\r\n\r\nMarkus Oberweger, Mahdi Rad, and Vincent Lepetit.\r\n\r\n\r\nMaking deep heatmaps robust to partial occlusions for 3d object pose\r\nestimation.\r\n\r\n\r\nIn European Conf. on Computer Vision (ECCV), pages 119–134,\r\n2018.",
+            "[73] [73]\r\n\r\nSida Peng, Yuan Liu, Qixing Huang, Xiaowei Zhou, and Hujun Bao.\r\n\r\n\r\nPvnet: Pixel-wise voting network for 6dof pose estimation.\r\n\r\n\r\nIEEE Trans. Pattern Anal. Machine Intell., 2022."
+        ],
+        "references": [
+            "Accuracy of the average pose. We compare the accuracy of our average pose with other methods according to the 2D projection metric (an estimation is correct if the mean reprojection error is below 555 pixels). Table 1 shows: (i) our average pose achieves significantly better success rates when using groundtruth bounding boxes, and similar success rates when using Faster RCNN; (ii) the accuracy of the average pose increases when ϵitalic-ϵ\\epsilon increases."
+        ]
+    }
+}
