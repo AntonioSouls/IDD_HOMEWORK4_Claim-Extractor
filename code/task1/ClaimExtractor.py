@@ -8,7 +8,7 @@ prompt = "".join(open("data/messageForModel.txt","r").readlines())
 
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="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",
+  api_key="API-KEY",
 )
 
 
