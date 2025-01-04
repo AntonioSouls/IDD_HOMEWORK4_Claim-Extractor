@@ -1,0 +1,27 @@
+{
+    "table": [
+        [
+            "Scoring method",
+            "NDS\u2191",
+            "mAP\u2191",
+            "mATE\u2193",
+            "mAOE\u2193"
+        ],
+        [
+            "Standard",
+            "0.463",
+            "0.392",
+            "0.626",
+            "0.282"
+        ],
+        [
+            "Monte Carlo",
+            "0.463",
+            "0.393",
+            "0.623",
+            "0.286"
+        ]
+    ],
+    "caption": "TABLE VIII: Comparison between the scoring methods on the nuScenes validation set.",
+    "references": []
+}

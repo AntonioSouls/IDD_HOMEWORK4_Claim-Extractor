@@ -1,0 +1,31 @@
+{
+    "table": [
+        [
+            "Type",
+            "Method",
+            "MPJPE"
+        ],
+        [
+            "",
+            "",
+            "40.0"
+        ],
+        [
+            "EF",
+            "concat",
+            "40.9"
+        ],
+        [
+            "EF",
+            "add",
+            "41.2"
+        ],
+        [
+            "EF",
+            "CA",
+            "41.1"
+        ]
+    ],
+    "caption": "(d) \r\n2D conditioning. IF: input fusion. EF: embedding fusion. CA: cross attention.\r\n\r\n",
+    "references": []
+}

@@ -1,0 +1,50 @@
+{
+    "table": [
+        [
+            "Method",
+            "AP",
+            "AP50",
+            "AP75"
+        ],
+        [
+            "Center\u2020",
+            "80.0",
+            "98.6",
+            "89.1"
+        ],
+        [
+            "Center",
+            "80.2",
+            "98.6",
+            "89.5"
+        ],
+        [
+            "Ours\u2020",
+            "84.2",
+            "99.3",
+            "96.2"
+        ],
+        [
+            "Ours",
+            "85.0",
+            "99.4",
+            "97.4"
+        ],
+        [
+            "Oracle\u2020",
+            "84.8",
+            "99.6",
+            "97.2"
+        ],
+        [
+            "Oracle",
+            "85.7",
+            "99.6",
+            "97.9"
+        ]
+    ],
+    "caption": "Table 3: Ablation study of different strategies on YCB.\r\nWe compare the center-based and the proposed visibility-guided sampling strategies used with standard NMS (denoted by \u2020\u2020\\dagger) or with our fusion strategy. Our method is more accurate than the baseline strategies and performs on par with the oracle one that relies on guided sampling from the ground-truth mask. Here, \u201cCenter\u2020\u201d corresponds to the strategy of FCOSv2\u00a0[44].\r\n",
+    "references": [
+        "Ablation study on YCB.\r\nWe compare NMS and our fusion strategy on a model trained either with the centered-based strategy or the proposed visibility-guided one.\r\nAs shown in Table\u00a03, with the same NMS post-processing, our sampling strategy already outperforms the center-based baseline by 4.2 points. This confirms the importance of involving all the visible object parts during training, leveraging the rigidity of the targets. Furthermore, both sampling strategies benefit from our fusion method discussed in Section\u00a03.3. However, it only increases the performance of the center-based one by 0.2 points, which highlights the drawback of not using non-center areas during training, making the fusion during inference less effective. By contrast, our fusion method increases the performance of our sampling strategy by 0.8 points, making it perform on par with the oracle that uses the ground-truth mask to guide sampling."
+    ]
+}

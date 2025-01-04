@@ -1,0 +1,62 @@
+{
+    "table": [
+        [
+            "Method",
+            "ADD(-S)",
+            "AUC of ADD-S",
+            "AUC of ADD(-S)"
+        ],
+        [
+            "RePose\u00a0[25]",
+            "62.1",
+            "88.5",
+            "82.0"
+        ],
+        [
+            "RNNPose\u00a0[50]",
+            "66.4",
+            "-",
+            "83.1"
+        ],
+        [
+            "SO-Pose\u00a0[12]",
+            "56.8",
+            "*90.9",
+            "*83.9"
+        ],
+        [
+            "DProST\u00a0[36]",
+            "65.1",
+            "-",
+            "77.4"
+        ],
+        [
+            "GDR-Net\u00a0[46]",
+            "60.1",
+            "*91.6",
+            "*84.4"
+        ],
+        [
+            "ZebraPose\u00a0[43]",
+            "80.5",
+            "90.1",
+            "85.3"
+        ],
+        [
+            "GDR-Net-LC",
+            "70.6",
+            "89.8, *94.1",
+            "84.0, *88.8"
+        ],
+        [
+            "ZebraPose-LC",
+            "82.4",
+            "90.8, *95.0",
+            "86.1, *90.8"
+        ]
+    ],
+    "caption": "Table 2: Comparison with the state of the art on YCB-V. * indicates that the AUC is calculated with 11-points interpolation.",
+    "references": [
+        "Results on YCB-V.\u2003As summarized in Tab.\u00a02, applying the LC loss on GDR-Net produces results second only to ZebraPose. Furthermore, we achieve state-of-the-art performance when the LC loss is applied to ZebraPose. We implement a symmetry-aware training scheme which selects the ground-truth pose on the fly based on the average distance between the predicted 3D coordinates at randomly selected 2D locations and possible 3D coordinates at the same locations under the symmetric ground-truth pose. This scheme is only applied to the GDR-Net-based experiments on YCB-V, including the baseline and the model with our LC loss for fair comparison."
+    ]
+}

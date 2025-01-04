@@ -1,0 +1,32 @@
+{
+    "table": [
+        [
+            "Method",
+            "ADD(-S)",
+            "Correctness",
+            "Runtime"
+        ],
+        [
+            "BPnP\u00a0[6]",
+            "64.1",
+            "53.9",
+            "30 ms"
+        ],
+        [
+            "EPro-PnP\u00a0[7]",
+            "64.5",
+            "59.3",
+            "80 ms"
+        ],
+        [
+            "Ours",
+            "66.5",
+            "99.9",
+            "15 ms"
+        ]
+    ],
+    "caption": "Table 3: Comparison between PnP layers on LM-O.",
+    "references": [
+        "Comparison with Differentiable PnP layers.\u2003As summarized in Tab.\u00a03, we carry out experiments on LM-O with the GDR-Net baseline, and compare the methods based on several metrics\r\nincluding the ADD(-S) score, the gradient correctness and the runtime per training step,\r\nthe correctness and runtime are evaluated at the end of training. Note that BPnP\u00a0[6] does not fully constrain the weights, thus we remove the scale branch as stated in Sec.\u00a04.1. Our method yields the best ADD(-S) score on LM-O. More importantly, it generates a much larger percentage of correct gradients. A 3D point is considered to have correct gradients if moving in the negative gradient direction leads to a smaller 2D reprojection error. A pose loss yielding a higher gradient correctness provides more consistent supervision signals.\r\nThe consistency is reflected by the dilated weight and coordinate maps shown in Fig.\u00a05, in particular by looking at pixels outside of but close to the actual object region.\r\nSuch pixels receive supervision only from the pose loss and thus indicate the differences between the different pose losses.\r\nHigher correctness helps the network to predict correct correspondences for such pixels.\r\nThis virtually expands the target object size in 3D object space and in 2D image space, which facilitates better pose estimates. The LC loss yields 99.9% gradient correctness, generating the most dilated maps. By contrast, the other losses have weaker consistency and thus tend to predict less accurate correspondences in these regions. Finally, as shown in Tab.\u00a03, our LC loss yields the fastest runtime, evaluated on an NVIDIA A100 GPU with a batch size of 32. This is due to our linearization of the PnP solver, removing the need for an iterative solution."
+    ]
+}

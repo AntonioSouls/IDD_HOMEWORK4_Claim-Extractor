@@ -1,0 +1,28 @@
+{
+    "table": [
+        [
+            "Method",
+            "Parameters (M)",
+            "Speed (fps)"
+        ],
+        [
+            "HRNet [30]",
+            "64",
+            "125"
+        ],
+        [
+            "SCIO [15]",
+            "193",
+            "72"
+        ],
+        [
+            "SCAI (Ours)",
+            "357",
+            "81"
+        ]
+    ],
+    "caption": "Table 6: Complexity analysis on COCO val set.",
+    "references": [
+        "(2) Algorithm complexity.\r\nTable 6 demonstrates that our proposed SCAI method introduces additional computational complexity. Specifically, the FFN and correction network increase the complexity of the baseline pose estimation model. It is worth noting that these two networks operate on the previously predicted heatmaps and thus their network structures and complexity are relatively modest. The self-referential adaptation requires updating the correction network multiple times for the entire batch, thereby increasing the overall computational burden. However, compared to SCIO, our model offers improved inference speed. In our future work, we aim to explore more efficient methods of self-adaptable inference."
+    ]
+}

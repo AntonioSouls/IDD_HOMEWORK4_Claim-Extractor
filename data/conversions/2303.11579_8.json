@@ -1,0 +1,20 @@
+{
+    "table": [
+        [
+            "Target",
+            "MPJPE"
+        ],
+        [
+            "noise",
+            "40.2"
+        ],
+        [
+            " data",
+            "40.0"
+        ]
+    ],
+    "caption": "(a) \r\nRegression target.\r\n\r\n",
+    "references": [
+        "As shown in Table\u00a08, we investigate the effect of two factors on the performance of JPMA: 1) the camera model, including pinhole camera (w/o distortion) or distorted pinhole camera (w/ distortion); 2) the way of accessing the intrinsic camera parameters, including using the ground truth (GT) or using a 2-layer MLPs to estimate the parameters (estimated). When the ground truth intrinsic camera parameters are used, the ideal pinhole camera model without distortion shows a performance degradation of 0.06mm compared with the case with distortion. When a neural network is utilized to estimate the parameters (the ground truth is not available), the performance drops by only 0.04mm and 0.02mm in distorted and distortion-free cases, respectively. These results indicate that the proposed JPMA method is robust to the noise caused by incorrect camera models or inaccurate estimations of intrinsic camera parameters."
+    ]
+}

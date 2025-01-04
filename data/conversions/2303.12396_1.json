@@ -1,0 +1,53 @@
+{
+    "table": [
+        [
+            "Method",
+            "LM-O",
+            "T-LESS",
+            "TUD-L",
+            "IC-BIN",
+            "ITODD",
+            "HB",
+            "YCB",
+            "Avg."
+        ],
+        [
+            "Ours",
+            "67.5",
+            "79.8",
+            "86.6",
+            "63.8",
+            "48.6",
+            "73.5",
+            "85.0",
+            "72.1"
+        ],
+        [
+            "FCOSv2\u00a0[44]",
+            "57.0",
+            "75.0",
+            "86.0",
+            "27.2",
+            "30.4",
+            "60.4",
+            "80.0",
+            "66.7"
+        ],
+        [
+            "Mask R-CNN\u00a0[10]",
+            "56.6",
+            "69.3",
+            "82.6",
+            "40.1",
+            "36.5",
+            "63.5",
+            "74.5",
+            "60.5"
+        ]
+    ],
+    "caption": "Table 1: Detection comparison on different 6D object datasets.\r\nOur method achieves much better accuracy than the baseline methods on these BOP datasets, demonstrating the effectiveness of our approach at detecting rigid objects in cluttered 6D pose estimation scenarios.\r\n",
+    "references": [
+        "Comparison with the baselines.\r\nWe compare our method with the baseline single-stage method FCOSv2\u00a0[44] and a typical two-stage method, Mask R-CNN\u00a0[10].\r\nAs shown in Table\u00a01, our method outperforms them by a large margin on all datasets from the BOP benchmarks, demonstrating the effectiveness of our approach at detecting rigid objects in cluttered 6D pose estimation scenarios.",
+        "Additional quantitative results.\r\nWe show the detailed object pose results using different metrics on LM-O, T-LESS, TUD-L, IC-BIN, ITODD, HB, and YCB in Table\u00a08,\u00a09,\u00a010,\u00a011,\u00a012,\u00a013, and\u00a014, respectively.\r\nOur method combined with PFA-Pose\u00a0[15] outperforms the state of the art in most experimental settings."
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "table": [
+        [
+            "nan",
+            "3.0",
+            "52\u2218cm{}^{}2cm",
+            "55\u2218cm{}^{}5cm",
+            "102\u2218cm{}^{}2cm",
+            "105\u2218cm{}^{}5cm",
+            "Param.",
+            "FPS"
+        ],
+        [
+            "Implicit",
+            "73.9",
+            "44.2",
+            "52.5",
+            "68.5",
+            "79.2",
+            "21M",
+            "34"
+        ],
+        [
+            "Explicit",
+            "75.1",
+            "45.0",
+            "50.7",
+            "69.6",
+            "80.0",
+            "24M",
+            "22"
+        ],
+        [
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan"
+        ]
+    ],
+    "caption": "Table 5: Comparison with explicit space transformation. Param. refers to the number of parameters.",
+    "references": [
+        "Comparison with Explicit Space Transformation.\r\nTo further verify the effectiveness of the proposed implicit space transformation, we set up an experiment with its explicit counterpart. For reaching a fair comparison, only WE and IST are included in the implicit candidate. From the results shown in Tab.\u00a05, we can easily find the results of the two methods are very close. However, our method yields obvious superiority in speed (34Hz vs 22Hz) and parameter quantity (21M vs 24M) which attributes to the succinct feature space transformation instead of introducing repetitive modules for extracting features from coordinates. This further indicates the potential of the proposed modules."
+    ]
+}

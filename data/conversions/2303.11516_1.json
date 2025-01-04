@@ -1,0 +1,54 @@
+{
+    "table": [
+        [
+            "Method",
+            "Training Data",
+            "ADD(-S)"
+        ],
+        [
+            "RePOSE\u00a0[25]",
+            "real+syn",
+            "51.6"
+        ],
+        [
+            "RNNPose\u00a0[50]",
+            "real+syn",
+            "60.65"
+        ],
+        [
+            "SO-Pose\u00a0[12]",
+            "real+pbr",
+            "62.3"
+        ],
+        [
+            "DProST\u00a0[36]",
+            "real+pbr",
+            "62.6"
+        ],
+        [
+            "GDR-Net\u00a0[46]",
+            "real+pbr",
+            "62.2"
+        ],
+        [
+            "ZebraPose\u00a0[43]",
+            "real+pbr",
+            "76.9"
+        ],
+        [
+            "GDR-Net-LC",
+            "real+pbr",
+            "66.48"
+        ],
+        [
+            "ZebraPose-LC",
+            "real+pbr",
+            "78.06"
+        ]
+    ],
+    "caption": "Table 1: Comparison with the state of the art on LM-O. The \u201cLC\u201d postfix indicates the LC loss is applied.",
+    "references": [
+        "Results on LM-O.\u2003We report the ADD(-S) score on LM-O in Tab.\u00a01.\r\nApplying the LC loss on GDR-Net surpasses most methods, and we achieve state-of-the-art performance when applying it to ZebraPose.",
+        "For the YCB-V dataset, we provide the detailed comparison of ADD(-S) scores (Tab.\u00a08) and AUC scores (Tab.\u00a010) between the baseline methods and the versions where the LC loss is applied."
+    ]
+}

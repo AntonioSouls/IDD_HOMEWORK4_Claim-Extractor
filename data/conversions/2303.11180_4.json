@@ -1,0 +1,56 @@
+{
+    "table": [
+        [
+            "Method",
+            "nan",
+            "nan",
+            "nan"
+        ],
+        [
+            "Baseline",
+            "75.5",
+            "71.9",
+            "80.5"
+        ],
+        [
+            "Baseline + SCI",
+            "nan",
+            "nan",
+            "nan"
+        ],
+        [
+            "+ Correction Network",
+            "78.5",
+            "73.9",
+            "81.4"
+        ],
+        [
+            "+ Self-Referential Error",
+            "78.9",
+            "75.8",
+            "81.6"
+        ],
+        [
+            "+ Joint Training",
+            "79.8",
+            "77.8",
+            "82.6"
+        ],
+        [
+            "Baseline + SCI + SAI",
+            "nan",
+            "nan",
+            "nan"
+        ],
+        [
+            "+ Self-Adaptive Inference",
+            "80.6",
+            "78.1",
+            "83.1"
+        ]
+    ],
+    "caption": "Table 4: Ablation study on different algorithmic components on COCO test-dev dataset.",
+    "references": [
+        "To assess the efficacy of our proposed SCAI method and analyze the influence of individual algorithmic components, we performed various ablation experiments on the COCO test-dev dataset. Our method incorporates two key innovations, namely self-correctable inference (SCI) and self-adaptable inference (SAI). Self-correctable inference consists of three essential parts: the correction network, self-referential error, and the joint training of the correction network and FFN. In Table 4, we present the results of our ablation studies. The first row shows the performance of the baseline method. The second row indicates the performance when incorporating the correction network, while the third and fourth rows correspond to the addition of the self-referential error and joint training components, respectively. The last row reports the results when including the self-adaptable inference component. Our findings demonstrate that each algorithmic component makes a substantial contribution to the overall performance of our method."
+    ]
+}

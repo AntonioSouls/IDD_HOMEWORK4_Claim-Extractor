@@ -1,0 +1,78 @@
+{
+    "table": [
+        [
+            "Model",
+            "Class avg.",
+            "Class avg.",
+            "Class avg.",
+            "Cabinet",
+            "Cabinet",
+            "Cabinet",
+            "Chair",
+            "Chair",
+            "Chair"
+        ],
+        [
+            "Model",
+            "T",
+            "R",
+            "S",
+            "T",
+            "R",
+            "S",
+            "T",
+            "R",
+            "S"
+        ],
+        [
+            "w/o NOCS",
+            "1.58",
+            "1.18",
+            "3.52",
+            "1.87",
+            "1.69",
+            "4.09",
+            "1.30",
+            "0.66",
+            "2.95"
+        ],
+        [
+            "w/o Camera PE",
+            "1.29",
+            "0.98",
+            "3.12",
+            "1.40",
+            "1.38",
+            "3.62",
+            "1.19",
+            "0.58",
+            "2.61"
+        ],
+        [
+            "w/o",
+            "1.35",
+            "1.01",
+            "3.13",
+            "1.59",
+            "1.35",
+            "3.52",
+            "1.10",
+            "0.67",
+            "2.74"
+        ],
+        [
+            "TransPoser",
+            "1.23",
+            "1.00",
+            "3.03",
+            "1.35",
+            "1.39",
+            "3.47",
+            "1.10",
+            "0.61",
+            "2.58"
+        ]
+    ],
+    "caption": "Table B.6: Ablation study of the NOCS representation, the positional encoding of the camera poses, and the addition of \ud835\udc8eKttsubscriptsuperscript\ud835\udc8e\ud835\udc61superscript\ud835\udc3e\ud835\udc61\\mbox{\\boldmath$m$}^{t}_{K^{t}} to the input of the decoder. Metrics for translation (T), rotation (R), and shape (S) are the mean squared error (10\u22122)superscript102(10^{-2}), Riemannian distance (10\u22121)superscript101(10^{-1}), and Chamfer distance (10\u22123)superscript103(10^{-3}), respectively. The results show that each component are independently essential to TransPoser.",
+    "references": []
+}

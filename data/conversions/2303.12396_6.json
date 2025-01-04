@@ -1,0 +1,57 @@
+{
+    "table": [
+        [
+            "Method",
+            "Avg.",
+            "MSPD",
+            "MSSD",
+            "VSD"
+        ],
+        [
+            "WDR + Ours",
+            "0.605",
+            "0.694",
+            "0.598",
+            "0.522"
+        ],
+        [
+            "WDR + RCNN",
+            "0.587",
+            "0.673",
+            "0.580",
+            "0.508"
+        ],
+        [
+            "WDR + FCOSv2",
+            "0.585",
+            "0.671",
+            "0.578",
+            "0.506"
+        ],
+        [
+            "CDPNv2 + Ours",
+            "0.412",
+            "0.534",
+            "0.428",
+            "0.275"
+        ],
+        [
+            "CDPNv2 + FCOSv2",
+            "0.402",
+            "0.523",
+            "0.416",
+            "0.268"
+        ],
+        [
+            "CDPNv2 + RCNN",
+            "0.388",
+            "0.506",
+            "0.401",
+            "0.258"
+        ]
+    ],
+    "caption": "Table 6: \r\nEffect on different pose regression networks.\r\nOur detection method consistently improves the results of different pose regression frameworks, including WDR\u00a0[19] and CDPNv2\u00a0[26]. Here we denote Mask R-CNN\u00a0[10] as \u201cRCNN\u2019.\r\n",
+    "references": [
+        "Evaluation with different pose regression networks.\r\nIn principle, our detection method can be used with most pose regression frameworks as a first component to extract the object\u2019s bounding box before pose regression.\r\nTo demonstrate its generalization ability, we test our detection method on YCB with two other typical pose regression networks, WDR-Pose\u00a0[19] and CDPNv2\u00a0[26].\r\nTable\u00a06 provides the results, evidencing that our detection method consistently improves the pose results."
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "table": [
+        [
+            "Method",
+            "Method",
+            "PCK",
+            "AUC",
+            "MPJPE"
+        ],
+        [
+            "U-CDGCN\u00a0[23] (=96)",
+            "MM\u201921",
+            "97.9",
+            "69.5",
+            "42.5"
+        ],
+        [
+            "P-STMO\u00a0[51] (=81)",
+            "ECCV\u201922",
+            "97.9",
+            "75.8",
+            "32.2"
+        ],
+        [
+            "TCN\u00a0[46] (=81)",
+            "CVPR\u201919",
+            "86.0",
+            "51.9",
+            "84.0"
+        ],
+        [
+            "U-GCN\u00a0[62] (=96)",
+            "ECCV\u201920",
+            "86.9",
+            "62.1",
+            "68.1"
+        ],
+        [
+            "Anatomy\u00a0[9] (=81)",
+            "TCSVT\u201921",
+            "87.9",
+            "54.0",
+            "78.8"
+        ],
+        [
+            "PoseFormer\u00a0[70] (=9)",
+            "ICCV\u201921",
+            "88.6",
+            "56.4",
+            "77.1"
+        ],
+        [
+            "MHFormer\u00a0[36] (=9, =3, P-Agg)",
+            "CVPR\u201922",
+            "93.8",
+            "63.3",
+            "58.0"
+        ],
+        [
+            "MixSTE\u00a0[68] (=27)",
+            "CVPR\u201922",
+            "94.4",
+            "66.5",
+            "54.9"
+        ],
+        [
+            "MixSTE\u00a0[68] (=243)",
+            "CVPR\u201922",
+            "96.9",
+            "75.8",
+            "35.4"
+        ],
+        [
+            "3DP (=243, =1, =1)",
+            "",
+            "97.7",
+            "77.8",
+            "30.2"
+        ],
+        [
+            "3DP (=243, =20, =20, P-Agg)",
+            "",
+            "97.7",
+            "78.0",
+            "30.0"
+        ],
+        [
+            "3DP (=243, =20, =20, J-Agg)",
+            "",
+            "97.7",
+            "78.2",
+            "29.7"
+        ],
+        [
+            "3DP (=243, =20, =20, P-Best)",
+            "",
+            "97.8",
+            "78.2",
+            "29.8"
+        ],
+        [
+            "3DP (=243, =20, =20, J-Best)",
+            "",
+            "98.0",
+            "79.1",
+            "28.1"
+        ]
+    ],
+    "caption": "Table 2: Results on MPI-INF-3DHP under three evaluation metrics using ground truth 2D keypoints as inputs. (\u25bd\u25bd\\triangledown) - They train and evaluate on 3D poses scaled to the height of the universal skeleton used by H36M, while we use the ground truth 3D poses.",
+    "references": [
+        "Table\u00a02 shows comparisons between our method and others on 3DHP dataset. D3DP reduces the MPJPE by 5.2mm on top of MixSTE\u00a0[68] in the single-hypothesis case (H\ud835\udc3bH=1). When H\ud835\udc3bH is increased to 20, the performance under J-Agg using JPMA is similar to P-Best and superior to P-Agg. Our method performs best when evaluated under J-Best. These results exhibit the same pattern as those on Human3.6M, which demonstrates the strong generalization capability of our method."
+    ]
+}

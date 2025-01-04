@@ -1,0 +1,68 @@
+{
+    "table": [
+        [
+            "nan",
+            "AP",
+            "AP50",
+            "AP75",
+            "nan",
+            "AP",
+            "AP50",
+            "AP75"
+        ],
+        [
+            "0.1",
+            "84.1",
+            "98.5",
+            "96.0",
+            "0.0",
+            "83.9",
+            "98.8",
+            "94.3"
+        ],
+        [
+            "0.2",
+            "84.7",
+            "99.3",
+            "96.8",
+            "0.1",
+            "85.0",
+            "99.4",
+            "97.4"
+        ],
+        [
+            "0.25",
+            "85.0",
+            "99.4",
+            "97.4",
+            "0.2",
+            "84.2",
+            "99.2",
+            "95.9"
+        ],
+        [
+            "0.3",
+            "84.9",
+            "99.4",
+            "97.0",
+            "0.3",
+            "83.1",
+            "98.8",
+            "93.2"
+        ],
+        [
+            "0.4",
+            "84.0",
+            "98.6",
+            "96.6",
+            "0.4",
+            "81.2",
+            "98.0",
+            "90.8"
+        ]
+    ],
+    "caption": "Table 4: Ablation study of different hyper-parameters on YCB.",
+    "references": [
+        "Furthermore, we evaluate the performance of our method with different \ud835\udcaf\ud835\udcaf\\mathcal{T} and \u03b1\ud835\udefc\\alpha, where \ud835\udcaf\ud835\udcaf\\mathcal{T} is the threshold to filter out easy negative cells before sampling positive ones, and \u03b1\ud835\udefc\\alpha is the weight balancing the Euclidean distance and the minimum barrier distance in Eq.\u00a03.\r\nWe use the default settings of \ud835\udcaf=0.25\ud835\udcaf0.25\\mathcal{T}=0.25 and \u03b1=0.1\ud835\udefc0.1\\alpha=0.1, and vary only one parameter at a time. As shown in Table\u00a04, the results are stable when \ud835\udcaf\ud835\udcaf\\mathcal{T} is set between 0.2 and 0.3, and we use the best value 0.25 found on YCB for all our experiments. Following\u00a0[18], we use the default value 0.1 for \u03b1\ud835\udefc\\alpha, which is further supported by our results with different \u03b1\ud835\udefc\\alpha values."
+    ]
+}

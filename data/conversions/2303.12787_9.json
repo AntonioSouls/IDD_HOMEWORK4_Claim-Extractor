@@ -1,0 +1,221 @@
+{
+    "table": [
+        [
+            "Notation",
+            "Notation",
+            "Description"
+        ],
+        [
+            "nan",
+            "nan",
+            "Coordinate vector of the -th 3D object point"
+        ],
+        [
+            "nan",
+            "nan",
+            "Coordinate vector of the -th 2D image point"
+        ],
+        [
+            "nan",
+            "nan",
+            "Weight vector of the -th 2D-3D point pair"
+        ],
+        [
+            "nan",
+            "nan",
+            "The set of weighted 2D-3D correspondences"
+        ],
+        [
+            "nan",
+            "nan",
+            "Object pose"
+        ],
+        [
+            "nan",
+            "nan",
+            "Ground truth of object pose"
+        ],
+        [
+            "nan",
+            "nan",
+            "Object pose estimated by the PnP solver"
+        ],
+        [
+            "nan",
+            "nan",
+            "3\u00d73 rotation matrix representation of object orientation"
+        ],
+        [
+            "nan",
+            "nan",
+            "1D yaw angle representation of object orientation"
+        ],
+        [
+            "nan",
+            "nan",
+            "Unit quaternion representation of object orientation"
+        ],
+        [
+            "nan",
+            "nan",
+            "Translation vector representation of object position"
+        ],
+        [
+            "nan",
+            "nan",
+            "Pose covariance estimated by the PnP solver"
+        ],
+        [
+            "nan",
+            "nan",
+            "Jacobian matrix"
+        ],
+        [
+            "nan",
+            "nan",
+            "Rescaled Jacobian matrix"
+        ],
+        [
+            "nan",
+            "nan",
+            "Concatenated vector of weighted reprojection errors of all points"
+        ],
+        [
+            "nan",
+            "nan",
+            "Concatenated vector of rescaled weighted reprojection errors of all points"
+        ],
+        [
+            "nan",
+            "nan",
+            "Camera projection function"
+        ],
+        [
+            "nan",
+            "nan",
+            "Weighted reprojection error of the -th correspondence at pose"
+        ],
+        [
+            "nan",
+            "nan",
+            "Unweighted reprojection error of the -th correspondence at pose"
+        ],
+        [
+            "nan",
+            "nan",
+            "Huber kernel function"
+        ],
+        [
+            "nan",
+            "nan",
+            "The derivative of the Huber kernel function of the -th correspondence"
+        ],
+        [
+            "nan",
+            "nan",
+            "The Huber threshold"
+        ],
+        [
+            "nan",
+            "nan",
+            "Likelihood function of object pose"
+        ],
+        [
+            "nan",
+            "nan",
+            "PDF of the prior pose distribution"
+        ],
+        [
+            "nan",
+            "nan",
+            "PDF of the posterior pose distribution"
+        ],
+        [
+            "nan",
+            "nan",
+            "PDF of the target pose distribution"
+        ],
+        [
+            "nan",
+            "nan",
+            "PDF of the proposal pose distribution (of the -th AMIS iteration)"
+        ],
+        [
+            "nan",
+            "nan",
+            "The -th random pose sample (of the -th AMIS iteration)"
+        ],
+        [
+            "nan",
+            "nan",
+            "Importance weight of the -th pose sample (of the -th AMIS iteration)"
+        ],
+        [
+            "nan",
+            "nan",
+            "Index of 2D-3D point pair"
+        ],
+        [
+            "nan",
+            "nan",
+            "Index of random pose sample"
+        ],
+        [
+            "nan",
+            "nan",
+            "Index of AMIS iteration"
+        ],
+        [
+            "nan",
+            "nan",
+            "Number of 2D-3D point pairs in total"
+        ],
+        [
+            "nan",
+            "nan",
+            "Number of pose samples in total"
+        ],
+        [
+            "nan",
+            "nan",
+            "Number of AMIS iterations"
+        ],
+        [
+            "nan",
+            "nan",
+            "Number of pose samples per AMIS iteration"
+        ],
+        [
+            "nan",
+            "nan",
+            "Number of heads in the deformable correspondence network"
+        ],
+        [
+            "nan",
+            "nan",
+            "Number of points per head in the deformable correspondence network"
+        ],
+        [
+            "nan",
+            "nan",
+            "KL divergence loss for object pose"
+        ],
+        [
+            "nan",
+            "nan",
+            "The component of concerning the reprojection errors at target pose"
+        ],
+        [
+            "nan",
+            "nan",
+            "The component of concerning the reprojection errors over predicted pose"
+        ],
+        [
+            "nan",
+            "nan",
+            "Derivative regularization loss"
+        ]
+    ],
+    "caption": "TABLE IX: A summary of frequently used notations.",
+    "references": []
+}

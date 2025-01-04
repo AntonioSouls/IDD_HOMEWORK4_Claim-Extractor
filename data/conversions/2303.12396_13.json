@@ -1,0 +1,92 @@
+{
+    "table": [
+        [
+            "Method",
+            "Avg.",
+            "MSPD",
+            "MSSD",
+            "VSD"
+        ],
+        [
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.840",
+            "0.879",
+            "0.840",
+            "0.804"
+        ],
+        [
+            "SurfEmb",
+            "0.791",
+            "0.888",
+            "0.760",
+            "0.725"
+        ],
+        [
+            "Cosypose",
+            "0.656",
+            "0.721",
+            "0.634",
+            "0.613"
+        ],
+        [
+            "CDPNv2",
+            "0.722",
+            "0.845",
+            "0.708",
+            "0.614"
+        ],
+        [
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.869",
+            "0.888",
+            "0.879",
+            "0.839"
+        ],
+        [
+            "SurfEmb",
+            "0.866",
+            "0.893",
+            "0.875",
+            "0.829"
+        ],
+        [
+            "CIR",
+            "0.757",
+            "0.757",
+            "0.753",
+            "0.760"
+        ],
+        [
+            "Cosypose+ICP",
+            "0.712",
+            "0.737",
+            "0.717",
+            "0.679"
+        ],
+        [
+            "CDPNv2+ICP",
+            "0.712",
+            "0.749",
+            "0.757",
+            "0.629"
+        ]
+    ],
+    "caption": "Table 13: Additional object pose results on HB.\r\n",
+    "references": [
+        "Additional quantitative results.\r\nWe show the detailed object pose results using different metrics on LM-O, T-LESS, TUD-L, IC-BIN, ITODD, HB, and YCB in Table\u00a08,\u00a09,\u00a010,\u00a011,\u00a012,\u00a013, and\u00a014, respectively.\r\nOur method combined with PFA-Pose\u00a0[15] outperforms the state of the art in most experimental settings."
+    ]
+}

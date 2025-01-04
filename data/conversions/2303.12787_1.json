@@ -1,0 +1,46 @@
+{
+    "table": [
+        [
+            "ID",
+            "Method",
+            "ADD(-S)",
+            "ADD(-S)",
+            "ADD(-S)",
+            "Mean"
+        ],
+        [
+            "ID",
+            "Method",
+            "0.02d",
+            "0.05d",
+            "0.1d",
+            "Mean"
+        ],
+        [
+            "A0",
+            "CDPN-Full\u00a0[18]",
+            "29.10",
+            "69.50",
+            "91.03",
+            "63.21"
+        ],
+        [
+            "A1",
+            "CDPN w/o trans. head",
+            "15.93",
+            "46.79",
+            "74.54",
+            "45.75"
+        ],
+        [
+            "A2",
+            "A1 \u2192\u00a0Batch=32, LM solver",
+            "21.17",
+            "55.00",
+            "79.96",
+            "52.04"
+        ]
+    ],
+    "caption": "TABLE I: Results of the CDPN baseline. A0 and A1 are reproduced with the official code (https://git.io/JXZv6).",
+    "references": []
+}

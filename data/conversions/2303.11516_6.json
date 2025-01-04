@@ -1,0 +1,29 @@
+{
+    "table": [
+        [
+            "dist.\\ rep.",
+            "ours-3D",
+            "quater.",
+            "axis-ang.",
+            "two-col.\u00a0[52]"
+        ],
+        [
+            "Laplace",
+            "66.48",
+            "66.72",
+            "65.85",
+            "66.39"
+        ],
+        [
+            "Gaussian",
+            "61.90",
+            "60.72",
+            "59.79",
+            "60.37"
+        ]
+    ],
+    "caption": "Table 6: Results on different pose representations and NLL distributions in ADD(-S) score.",
+    "references": [
+        "Experiments on other pose representations and other NLL formulations.\u2003We also carried out experiments on losses based on quaternions, axis-angles and two-column\u00a0[52] pose representations on LM-O.\r\nFor the Laplace NLL formulation, we used the sum of the square roots of the covariance diagonal for {Ec\u200bo\u200bv,Ep\u200br\u200bi\u200bo\u200br}subscript\ud835\udc38\ud835\udc50\ud835\udc5c\ud835\udc63subscript\ud835\udc38\ud835\udc5d\ud835\udc5f\ud835\udc56\ud835\udc5c\ud835\udc5f\\{E_{cov},E_{prior}\\} and the sum of the absolute values of the approximate error for El\u200bi\u200bn\u200be\u200ba\u200brsubscript\ud835\udc38\ud835\udc59\ud835\udc56\ud835\udc5b\ud835\udc52\ud835\udc4e\ud835\udc5fE_{linear}.\r\nTo further validate the distribution from which the NLL loss originates, we switched from Laplace to Gaussian, using the trace of the covariance and the sum of the squared errors to build the losses.\r\nAs shown in Tab.\u00a06, the performance is robust to the pose representation. However, the Laplace NLL losses yield much better results than their Gaussian counterparts."
+    ]
+}

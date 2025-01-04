@@ -1,0 +1,50 @@
+{
+    "table": [
+        [
+            "Method",
+            "3DPW-Test",
+            "3DPW-Test",
+            "3DPW-Test",
+            "3DPW-Test"
+        ],
+        [
+            "Method",
+            "MJE",
+            "MJEx",
+            "MJEy",
+            "MJEz"
+        ],
+        [
+            "PARE(HR-W32)",
+            "74.5",
+            "30.3",
+            "28.9",
+            "78.9"
+        ],
+        [
+            "CLIFF(HR-W48)",
+            "72.7",
+            "27.1",
+            "27.0",
+            "51.8"
+        ],
+        [
+            "BoPR(HR-W32)",
+            "68.8",
+            "25.9",
+            "27.5",
+            "46.6"
+        ],
+        [
+            "BoPR(HR-W48)",
+            "65.1",
+            "22.0",
+            "23.4",
+            "48.1"
+        ]
+    ],
+    "caption": "Table 3: Axis-wise performance comparison on the 3DPW-Test. All methods have been trained on dataset with 3DPW.",
+    "references": [
+        "Improved occlusion handling.\r\nTable \u00a03 showcases the results of our proposed BoPR method, the baseline PARE method, and the CLIFF method on the occlusion datasets 3DPW-OCC and 3DOH. All methods were evaluated on 3DPW-OCC without using the 3DPW training dataset. When evaluating 3DOH, they fine-tuned the network on the 3DPW training dataset. Both evaluations excluded their own training set to ensure a better comparison of the generalization ability on occlusion datasets. BoPR outperformed PARE in both MJE and PAMJE and showed superior performance compared to CLIFF and PARE on 3DOH. Specifically, on the 3DPW-OCC dataset, BoPR reduced MJE and PAMJE by 5.8% and 10.9%, respectively, compared to PARE. On 3DOH, BoPR achieved a 2.6% improvement over CLIFF. These results suggest that part-aware regression with body-reference conditioning enhances occlusion handling and improves accuracy and generalization in challenging scenarios."
+    ]
+}

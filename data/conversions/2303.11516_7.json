@@ -1,0 +1,28 @@
+{
+    "table": [
+        [
+            "Row",
+            "Method",
+            "ADD(-S)"
+        ],
+        [
+            "A0",
+            "ZebraPose\u00a0[43]",
+            "76.91"
+        ],
+        [
+            "A1",
+            "ZebraPose baseline",
+            "75.19"
+        ],
+        [
+            "A2",
+            "A1 + LC loss",
+            "78.06"
+        ]
+    ],
+    "caption": "Table 7: Results of the ZebraPose\u00a0[43] based experiments on the LM-O dataset.",
+    "references": [
+        "Results.\r\nAs shown in Tab.\u00a07, after switching from the global vertex encoding to our coordinate-wise encoding (A0\u00a0vs.\u00a0A1), the performance drops by about 1.7 points. When the LC loss is applied, the performance drop is compensated, surpassing the original ZebraPose\u00a0[43]."
+    ]
+}

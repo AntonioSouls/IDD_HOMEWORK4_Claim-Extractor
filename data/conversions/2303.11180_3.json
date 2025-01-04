@@ -1,0 +1,78 @@
+{
+    "table": [
+        [
+            "Method",
+            "Backbone",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4"
+        ],
+        [
+            "SimpleBaseline",
+            "R152",
+            "73.7",
+            "70.3",
+            "79.0"
+        ],
+        [
+            "+ SCAI",
+            "R152",
+            "78.8",
+            "75.5",
+            "82.5"
+        ],
+        [
+            "Performance Gain",
+            "nan",
+            "5.1",
+            "5.2",
+            "3.5"
+        ],
+        [
+            "HRNet",
+            "HR32",
+            "74.9",
+            "71.3",
+            "80.1"
+        ],
+        [
+            "+ SCAI",
+            "HR32",
+            "79.9",
+            "76.8",
+            "82.5"
+        ],
+        [
+            "Performance Gain",
+            "nan",
+            "5.0",
+            "5.5",
+            "2.4"
+        ],
+        [
+            "HRNet",
+            "HR48",
+            "75.5",
+            "71.9",
+            "80.5"
+        ],
+        [
+            "+ SCAI",
+            "HR48",
+            "80.6",
+            "78.1",
+            "83.1"
+        ],
+        [
+            "Performance Gain",
+            "nan",
+            "5.1",
+            "6.2",
+            "2.6"
+        ]
+    ],
+    "caption": "Table 3: Comparison with state-of-the-art of three baselines on COCO test-dev.",
+    "references": [
+        "Table 3 provides a comparison of our SCAI method with other state-of-the-art methods that use different baseline networks such as R152, HR32, and HR48 networks. Our SCAI method consistently outperforms other methods, even when different baseline networks are employed."
+    ]
+}

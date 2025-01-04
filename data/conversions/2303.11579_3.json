@@ -1,0 +1,44 @@
+{
+    "table": [
+        [
+            "Diffusion",
+            "JPMA",
+            "nan",
+            "Setting",
+            "MPJPE"
+        ],
+        [
+            "nan",
+            "nan",
+            "1.0",
+            "nan",
+            "41.0"
+        ],
+        [
+            "\u2713",
+            "nan",
+            "1.0",
+            "nan",
+            "40.0"
+        ],
+        [
+            "\u2713",
+            "nan",
+            "20.0",
+            "P-Agg",
+            "39.9"
+        ],
+        [
+            "\u2713",
+            "\u2713",
+            "20.0",
+            "J-Agg",
+            "39.5"
+        ]
+    ],
+    "caption": "Table 3: Ablation experiments on Human3.6M. H\ud835\udc3bH=20, K\ud835\udc3eK=10.",
+    "references": [
+        "As shown in Table\u00a03a, we begin with MixSTE\u00a0[68] as the backbone (first row), and then combine it with the diffusion models, resulting in our D3DP (second row), which achieves 1mm improvement in the single-hypothesis case. This result reveals that a simple combination of diffusion models and existing deterministic pose estimators brings a large performance gain. Besides, the network is equipped with the ability to generate multiple pose hypotheses, which fits the property of depth uncertainty in 3D pose estimation. Under P-Agg setting, MPJPE slightly decreases (40.0\u2192\u2192\\rightarrow39.9mm) when H\ud835\udc3bH is raised to 20. The error is further reduced to 39.5mm by using our JPMA (under J-Agg) method. This result shows that multi-hypothesis aggregation at the joint level, which allows fine-grained hypothesis selection, is superior to that at the pose level.",
+        "We compare pose-level and joint-level multi-hypothesis aggregation methods in Table\u00a03b, including 1) averaging over all hypotheses; 2) using a 4-layer MLPs to generate scores for each pose/joint, which are used for a weighted average of hypotheses; 3) using our reprojection-based method at the pose level (PPMA, 4thsuperscript4th\\text{4}^{\\text{th}} row) and joint level (JPMA, 5thsuperscript5th\\text{5}^{\\text{th}} row). For fairness, we implement the same approach (MLPs/reprojection-based) at both levels. The results show that joint-level approaches are superior to pose-level approaches. Besides, PPMA outperforms both MLPs and average at the pose level and JPMA outperforms MLPs at the joint level, which shows that the 2D prior is effective in multi-hypothesis aggregation. Thus, our JPMA, which conducts aggregation at the joint level using 2D priors, achieves the best performance."
+    ]
+}

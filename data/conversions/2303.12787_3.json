@@ -1,0 +1,62 @@
+{
+    "table": [
+        [
+            "Main Loss",
+            "nan",
+            "2\u00b0",
+            "2 cm",
+            "2\u00b0, 2 cm",
+            "ADD(-S) 0.1d"
+        ],
+        [
+            "Implicit diff.\u00a0[12]",
+            "nan",
+            "divergence",
+            "divergence",
+            "divergence",
+            "divergence"
+        ],
+        [
+            "Reprojection\u00a0[28]",
+            "nan",
+            "00.32",
+            "42.30",
+            "00.16",
+            "14.56"
+        ],
+        [
+            "KL div. (ours)",
+            "nan",
+            "58.28",
+            "91.17",
+            "55.71",
+            "89.93"
+        ],
+        [
+            "Implicit diff.\u00a0[12]",
+            "\u2713",
+            "56.13",
+            "91.13",
+            "53.33",
+            "88.74"
+        ],
+        [
+            "Reprojection\u00a0[28]",
+            "\u2713",
+            "62.79",
+            "92.91",
+            "60.65",
+            "92.04"
+        ],
+        [
+            "KL div. (ours)",
+            "\u2713",
+            "69.95",
+            "94.97",
+            "68.38",
+            "93.83"
+        ]
+    ],
+    "caption": "TABLE III: Comparison among loss functions by experiments conducted on the same dense correspondence network. For implicit differentiation, we minimize the distance metric of pose in Eq.\u00a0(10) instead of the reprojection-metric pose loss in BPnP\u00a0[12].",
+    "references": []
+}

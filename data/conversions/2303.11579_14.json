@@ -1,0 +1,27 @@
+{
+    "table": [
+        [
+            "Backbone",
+            "P-STMO\u00a0[51]",
+            "PoseFormer\u00a0[70]",
+            "STE\u00a0[35]",
+            "TCN\u00a0[46]"
+        ],
+        [
+            "w/o diffusion",
+            "43.7",
+            "47.6",
+            "44.6",
+            "46.4"
+        ],
+        [
+            "w/ diffusion",
+            "42.2",
+            "45.7",
+            "43.8",
+            "44.5"
+        ]
+    ],
+    "caption": "Table 7: Performance using other 3D estimators as backbone. MPJPE\u2193\u2193\\downarrow is reported. H=K=1.",
+    "references": []
+}

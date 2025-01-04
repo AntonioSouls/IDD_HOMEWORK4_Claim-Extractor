@@ -1,0 +1,162 @@
+{
+    "table": [
+        [
+            "Method",
+            "Avg.",
+            "MSPD",
+            "MSSD",
+            "VSD"
+        ],
+        [
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.719",
+            "0.832",
+            "0.682",
+            "0.643"
+        ],
+        [
+            "SurfEmb",
+            "0.735",
+            "0.857",
+            "0.686",
+            "0.661"
+        ],
+        [
+            "Cosypose",
+            "0.640",
+            "0.761",
+            "0.589",
+            "0.571"
+        ],
+        [
+            "CDPNv2",
+            "0.407",
+            "0.579",
+            "0.338",
+            "0.303"
+        ],
+        [
+            "RGB (Real+PBR)",
+            "RGB (Real+PBR)",
+            "RGB (Real+PBR)",
+            "RGB (Real+PBR)",
+            "RGB (Real+PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.778",
+            "0.877",
+            "0.749",
+            "0.709"
+        ],
+        [
+            "SurfEmb",
+            "0.770",
+            "-",
+            "-",
+            "-"
+        ],
+        [
+            "CIR",
+            "0.715",
+            "0.798",
+            "0.684",
+            "0.663"
+        ],
+        [
+            "Cosypose",
+            "0.728",
+            "0.821",
+            "0.695",
+            "0.669"
+        ],
+        [
+            "CDPNv2",
+            "0.478",
+            "0.620",
+            "0.426",
+            "0.386"
+        ],
+        [
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.801",
+            "0.833",
+            "0.807",
+            "0.764"
+        ],
+        [
+            "SurfEmb",
+            "0.828",
+            "0.859",
+            "0.829",
+            "0.797"
+        ],
+        [
+            "CDPNv2+ICP",
+            "0.435",
+            "0.488",
+            "0.449",
+            "0.368"
+        ],
+        [
+            "RGB-D (Real+PBR)",
+            "RGB-D (Real+PBR)",
+            "RGB-D (Real+PBR)",
+            "RGB-D (Real+PBR)",
+            "RGB-D (Real+PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.850",
+            "0.878",
+            "0.856",
+            "0.816"
+        ],
+        [
+            "SurfEmb",
+            "0.833",
+            "-",
+            "-",
+            "-"
+        ],
+        [
+            "CIR",
+            "0.776",
+            "0.795",
+            "0.773",
+            "0.760"
+        ],
+        [
+            "Cosypose+ICP",
+            "0.701",
+            "0.767",
+            "0.749",
+            "0.587"
+        ],
+        [
+            "CDPNv2+ICP",
+            "0.464",
+            "0.516",
+            "0.489",
+            "0.385"
+        ]
+    ],
+    "caption": "Table 9: Additional object pose results on T-LESS.\r\n",
+    "references": [
+        "Additional quantitative results.\r\nWe show the detailed object pose results using different metrics on LM-O, T-LESS, TUD-L, IC-BIN, ITODD, HB, and YCB in Table\u00a08,\u00a09,\u00a010,\u00a011,\u00a012,\u00a013, and\u00a014, respectively.\r\nOur method combined with PFA-Pose\u00a0[15] outperforms the state of the art in most experimental settings."
+    ]
+}

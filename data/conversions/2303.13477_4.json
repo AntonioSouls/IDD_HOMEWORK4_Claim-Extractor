@@ -1,0 +1,32 @@
+{
+    "table": [
+        [
+            "Method",
+            "\u200bCls Avg.\u200b",
+            "Cabinet",
+            "Chair",
+            "Display",
+            "Table"
+        ],
+        [
+            "ELLIPSDF [30]",
+            "89.0",
+            "91.0",
+            "90.6",
+            "96.9",
+            "77.3"
+        ],
+        [
+            "TransPoser",
+            "94.3",
+            "92.4",
+            "98.5",
+            "93.8",
+            "92.4"
+        ]
+    ],
+    "caption": "Table 4: Accuracy of shape estimation for ScanNet\u00a0[11]. TransPoser achieves highest accuracy for all categories.",
+    "references": [
+        "Tables\u00a05, 4 and\u00a06 quantitatively compares the proposed TransPoser with state-of-the-art methods. TransPoser clearly outperforms other methods including ELLIPSDF\u00a0[30] that also estimates the pose and shape code. TransPoser required 0.06 sec for each optimization step, and 0.61 sec for a total of 10 iterations with GeForce RTX 2080 Ti. This is approximately 10 times faster than those of ELLIPSDF which required 0.75 sec for its first SGD step.\r\nNote that the exact instances used in the ELLIPSDF are not available\u00a0[3] and we used the test split of Scan2CAD instead. Examples in Fig.\u00a06 demonstrate that TransPoser can reconstruct plausible 3D shapes even from partial observations. These results show that our neural optimization model successfully learns to leverage the structured bias in category-level shape pose estimation."
+    ]
+}

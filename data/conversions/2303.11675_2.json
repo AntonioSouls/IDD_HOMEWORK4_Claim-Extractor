@@ -1,0 +1,53 @@
+{
+    "table": [
+        [
+            "Method",
+            "Agora",
+            "Agora"
+        ],
+        [
+            "Method",
+            "MJE",
+            "V2V"
+        ],
+        [
+            "SPIN\u00a0[18]",
+            "153.4",
+            "148.9"
+        ],
+        [
+            "PARE\u00a0[16]",
+            "146.2",
+            "140.9"
+        ],
+        [
+            "ROMP\u00a0[34]",
+            "108.1",
+            "103.4"
+        ],
+        [
+            "BEV\u00a0[35]",
+            "105.3",
+            "100.7"
+        ],
+        [
+            "Hand4Whole\u00a0[35]",
+            "89.8",
+            "84.8"
+        ],
+        [
+            "CLIFF\u00a0[20]",
+            "81.0",
+            "76.0"
+        ],
+        [
+            "BoPR",
+            "79.9",
+            "74.5"
+        ]
+    ],
+    "caption": "Table 2: Performance comparison on the AGORA dataset. Here, all the comparing methods adopt weak perspective projection and also fine-tune the model on the AGORA training set (except PARE).",
+    "references": [
+        "We also evaluate our method on a multi-person dataset AGORA and compare it with state-of-the-art methods. Furthermore, since camera parameter estimation plays a crucial role in the performance of the AGORA dataset, we compare our method with those using weak-perspective projection in training for a fair comparison. Table\u00a02 shows the result where our method performs better than multi-person-based approaches and previous state-of-the-art method CLIFF."
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "table": [
+        [
+            "Method",
+            "3.0",
+            "3.0",
+            "52\u2218cm{}^{}2cm",
+            "55\u2218cm{}^{}5cm",
+            "102\u2218cm{}^{}2cm",
+            "105\u2218cm{}^{}5cm"
+        ],
+        [
+            "SGPA\u00a0[3]",
+            "80.1",
+            "61.9",
+            "35.9",
+            "39.6",
+            "61.3",
+            "70.7"
+        ],
+        [
+            "IST-NetM",
+            "82.5",
+            "72.7",
+            "35.8",
+            "38.4",
+            "64.2",
+            "72.4"
+        ],
+        [
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan"
+        ]
+    ],
+    "caption": "Table 6: Ablation on the predicted world coordinate. M\ud835\udc40M is our matching-based variant, using the Umeyama algorithm for testing.",
+    "references": [
+        "Ablations on Predicted World Coordinate.\r\nConsidering that we predict the coordinate of observed points in world-space for supervising implicit space transformation from a low-level perspective. Therefore, the quality of the generated coordinate can also reflect the effectiveness of the proposed method. To verify this, we use the predicted coordinate and observed points in camera space for solving the pose parameters by Umeyama algorithm\u00a0[31]. As shown in Tab.\u00a06, our method achieves comparable results with SGPA, even with significant improvement on 3D75subscript\ud835\udc3775D_{75} (72.7 vs 61.9), indicating that the network can reconstruct the perspective in world-space without introducing shape prior."
+    ]
+}

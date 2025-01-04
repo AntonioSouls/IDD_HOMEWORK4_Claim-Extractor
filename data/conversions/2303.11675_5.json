@@ -1,0 +1,56 @@
+{
+    "table": [
+        [
+            "Method",
+            "3DPW",
+            "3DPW",
+            "3DPW"
+        ],
+        [
+            "Method",
+            "MJE",
+            "PAMJE",
+            "PVE"
+        ],
+        [
+            "PARE",
+            "91.0",
+            "56.7",
+            "108.2"
+        ],
+        [
+            "PARE w TF",
+            "91.5",
+            "55.7",
+            "108.6"
+        ],
+        [
+            "BoPR w/o",
+            "89.4",
+            "55.8",
+            "106.7"
+        ],
+        [
+            "BoPR w/o",
+            "90.6",
+            "54.8",
+            "107.2"
+        ],
+        [
+            "BoPR w/o",
+            "89.0",
+            "54.2",
+            "105.7"
+        ],
+        [
+            "BoPR",
+            "88.6",
+            "53.7",
+            "105.3"
+        ]
+    ],
+    "caption": "Table 5: Ablation study of BoPR on 3DPW.",
+    "references": [
+        "Ablation Experiments.\r\nIn this experiment, we use HR-W32 as the backbone and train all the comparing methods on a small COCO-2014-EFT (22K), part of the COCO-EFT dataset. We first incorporate PARE with a transformer regressor and evaluate the performance on the 3DPW dataset. Table\u00a05 shows that combining two techniques slightly reduces the PAMJE yet increases the MJE and PVE. In contrast, our proposed method improves PARE by a large margin, indicating that learning body-aware part features contributes significantly to the performance gain. We also ablate the auxiliary losses, namely the 2D keypoint L2\u200bDsubscript\ud835\udc3f2\ud835\udc37L_{2D}, 3D keypoint L3\u200bDsubscript\ud835\udc3f3\ud835\udc37L_{3D}, and the reference distance LR\u200bDsubscript\ud835\udc3f\ud835\udc45\ud835\udc37L_{RD}. The result in Table\u00a05 shows all the loss helps to improve the effect."
+    ]
+}

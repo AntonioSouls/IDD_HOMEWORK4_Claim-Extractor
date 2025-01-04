@@ -1,0 +1,30 @@
+{
+    "table": [
+        [
+            "Iteration",
+            "1.0",
+            "2.0",
+            "3.0",
+            "4.0",
+            "5.0"
+        ],
+        [
+            "noise",
+            "48.6",
+            "43.5",
+            "41.0",
+            "40.5",
+            "40.0"
+        ],
+        [
+            "original data",
+            "39.9",
+            "39.9",
+            "39.8",
+            "39.8",
+            "39.7"
+        ]
+    ],
+    "caption": "Table 6: Performance of two regression targets after each iteration. MPJPE\u2193\u2193\\downarrow is reported. H=K=5. J-Agg is used.",
+    "references": []
+}

@@ -1,0 +1,88 @@
+{
+    "table": [
+        [
+            "Method",
+            "nan",
+            "nan",
+            "MPJPE",
+            "Params(M)",
+            "Train. MACs(G)",
+            "Infer. MACs(G)",
+            "Infer. FPS"
+        ],
+        [
+            "PoseFormer\u00a0[70]",
+            "1.0",
+            "nan",
+            "44.3",
+            "9.5",
+            "0.81",
+            "1.62",
+            "1952"
+        ],
+        [
+            "MHFormer\u00a0[36]",
+            "3.0",
+            "nan",
+            "43.1",
+            "24.7",
+            "4.81",
+            "9.62",
+            "598"
+        ],
+        [
+            "P-STMO\u00a0[51]",
+            "1.0",
+            "nan",
+            "42.8",
+            "6.7",
+            "0.87",
+            "1.74",
+            "3040"
+        ],
+        [
+            "MixSTE\u00a0[68]",
+            "1.0",
+            "nan",
+            "41.0",
+            "33.6",
+            "0.57",
+            "1.14",
+            "4547"
+        ],
+        [
+            "D3DP",
+            "1.0",
+            "1.0",
+            "40.0",
+            "34.6",
+            "0.57",
+            "1.14",
+            "4364"
+        ],
+        [
+            "D3DP",
+            "5.0",
+            "5.0",
+            "39.7",
+            "34.6",
+            "0.57",
+            "28.5",
+            "204"
+        ],
+        [
+            "D3DP",
+            "20.0",
+            "10.0",
+            "39.5",
+            "34.6",
+            "0.57",
+            "228.2",
+            "29"
+        ]
+    ],
+    "caption": "Table 4: Accuracy&speed. MACs are averaged over each frame. The proposed method uses the J-Agg setting.",
+    "references": [
+        "Note that the difference between our work and other concurrent diffusion-based methods\u00a0[22, 18, 14] mainly lies in the regression target. The regression target of our model is the original 3D data \ud835\udc9a0subscript\ud835\udc9a0\\bm{y}_{0}, while theirs is the noise \u03f5tsubscriptitalic-\u03f5\ud835\udc61\\epsilon_{t} at each timestep. Table\u00a05a shows our method outperforms theirs. Further experiments (Table\u00a06) reveal that predicting \ud835\udc9a0subscript\ud835\udc9a0\\bm{y}_{0} yields good performance even in early iterations, while predicting \u03f5tsubscriptitalic-\u03f5\ud835\udc61\\epsilon_{t} does not. This is because in early iterations, when the input \ud835\udc9atsubscript\ud835\udc9a\ud835\udc61\\bm{y}_{t} is extremely noisy, it is more effective to predict the original signal \ud835\udc9a0subscript\ud835\udc9a0\\bm{y}_{0} directly than to obtain \ud835\udc9a0subscript\ud835\udc9a0\\bm{y}_{0} by predicting the noise \u03f5tsubscriptitalic-\u03f5\ud835\udc61\\epsilon_{t} and then subtracting it from \ud835\udc9atsubscript\ud835\udc9a\ud835\udc61\\bm{y}_{t}. This property is valuable for real-time processing. For example, when K\ud835\udc3eK is fixed and computational resources are inadequate, the algorithm is required to produce predictions after the first iteration. Our method of predicting \ud835\udc9a0subscript\ud835\udc9a0\\bm{y}_{0} still achieves satisfactory results, while theirs of predicting \u03f5tsubscriptitalic-\u03f5\ud835\udc61\\epsilon_{t} does not."
+    ]
+}

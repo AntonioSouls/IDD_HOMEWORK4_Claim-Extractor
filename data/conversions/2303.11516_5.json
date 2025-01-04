@@ -1,0 +1,39 @@
+{
+    "table": [
+        [
+            "Row",
+            "Training Loss",
+            "Solver",
+            "ADD(-S)"
+        ],
+        [
+            "0",
+            "MLE",
+            "PnP RANSAC",
+            "57.89"
+        ],
+        [
+            "1",
+            "MLE",
+            "PnP weighted",
+            "59.90"
+        ],
+        [
+            "2",
+            "MLE + LC loss",
+            "PnP RANSAC",
+            "57.74"
+        ],
+        [
+            "3",
+            "MLE + LC loss",
+            "PnP weighted",
+            "61.08"
+        ]
+    ],
+    "caption": "Table 5: Ablation for the sparse correspondence-based method on the LM-O dataset. ",
+    "references": [
+        "We evaluate the influence of each component of our LC loss by applying it to the dense correspondence-based GDR-Net and to the sparse correspondence-based one on the LM-O dataset.\r\nThe results are summarized in Tab.\u00a04 and Tab.\u00a05.",
+        "Effectiveness with a Sparse Correspondence-based Method.\u2003In the dense case, the weights serve as both attention mechanism, emphasizing some important or stable points during training, and indicators for well learned correspondences during testing. The sparsity in sparse correspondence methods limits the attention feature. The loss function in sparse cases mostly encourages the network to predict better weights. Our sparse baseline is trained with a Laplace MLE loss, similar to the Gaussian MLE loss in\u00a0[33]. The predicted standard deviations are encouraged to capture point location errors, and their inverse are subsequently used as weights in the PnP solver. As shown in Tab.\u00a05, applying our loss in this scenario also brings a performance gain. As the networks yield very close performance when not using weights (Row\u00a00\u00a0vs.\u00a0Row\u00a02), this gain comes mostly from better weights learning.\r\nNote that the PnP RANSAC solver does not use weights but uses RANSAC\u00a0[16] to evict outliers, thus reflecting only the quality of 2D point locations. The PnP weighted solver iteratively solves Eq.\u00a04 using the PnP RANSAC\u2019s solution as starting point, which effectively relies on predicted weights to evict outliers, reflecting the quality of the predicted weights."
+    ]
+}

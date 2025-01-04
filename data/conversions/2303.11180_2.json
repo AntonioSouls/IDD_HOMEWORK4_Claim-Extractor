@@ -1,0 +1,68 @@
+{
+    "table": [
+        [
+            "Method",
+            "Backbone",
+            "nan",
+            "nan"
+        ],
+        [
+            "Mask-RCNN [12]",
+            "ResNet101",
+            "60.3",
+            "-"
+        ],
+        [
+            "AlphaPose [8]",
+            "-",
+            "61.0",
+            "61.4"
+        ],
+        [
+            "OccNet [10]",
+            "ResNet50",
+            "65.5",
+            "66.6"
+        ],
+        [
+            "JC-SPPE [20]",
+            "ResNet101",
+            "66.0",
+            "66.3"
+        ],
+        [
+            "HigherHRNet [5]",
+            "HR48",
+            "67.6",
+            "-"
+        ],
+        [
+            "MIPNet [16]",
+            "HR48",
+            "70.0",
+            "71.1"
+        ],
+        [
+            "SCIO [15]",
+            "HR48",
+            "71.5",
+            "72.2"
+        ],
+        [
+            "SCAI (Ours)",
+            "HR48",
+            "72.4",
+            "73.2"
+        ],
+        [
+            "Performance Gain",
+            "nan",
+            "0.9",
+            "+1.0"
+        ]
+    ],
+    "caption": "Table 2: \r\nComparison with the state-of-the-art methods on CrowdPose test-dev.\r\nThe best results are in bold and the second best results are underlined.\r\n",
+    "references": [
+        "Table 2 presents the results of our SCAI method compared to other state-of-the-art methods on the challenging CrowdPose dataset. The methods compared include Mask-RCNN [12], SimpleBaseline [39], AlphaPose [8], OccNet [10], JC-SPPE [20], HigherHRNet [5], MIPNet [16], and SCIO [15]. Our SCAI method achieves an improvement in average precision by up to 0.9% compared to the current best method SCIO [15]. This indicates that our method can provide more accurate pose estimation for multi-person scenes with challenging occlusion scenarios."
+    ]
+}

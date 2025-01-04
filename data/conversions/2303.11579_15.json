@@ -1,0 +1,31 @@
+{
+    "table": [
+        [
+            "Camera Model",
+            "Access",
+            "MPJPE"
+        ],
+        [
+            "w/ distortion",
+            "GT",
+            "39.74"
+        ],
+        [
+            "w/o distortion",
+            "GT",
+            "39.80"
+        ],
+        [
+            "w/ distortion",
+            "estimated",
+            "39.78"
+        ],
+        [
+            "w/o distortion",
+            "estimated",
+            "39.82"
+        ]
+    ],
+    "caption": "Table 8: Impact of different camera models and different ways of accessing intrinsic camera parameters. H\ud835\udc3bH=5, K\ud835\udc3eK=5. GT: ground truth. J-Agg setting is used.",
+    "references": []
+}

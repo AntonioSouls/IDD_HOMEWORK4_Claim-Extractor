@@ -1,0 +1,43 @@
+{
+    "table": [
+        [
+            "Diffusion",
+            "JPMA",
+            "nan",
+            "Setting",
+            "MPJPE"
+        ],
+        [
+            "nan",
+            "nan",
+            "1.0",
+            "nan",
+            "41.0"
+        ],
+        [
+            "\u2713",
+            "nan",
+            "1.0",
+            "nan",
+            "40.0"
+        ],
+        [
+            "\u2713",
+            "nan",
+            "20.0",
+            "P-Agg",
+            "39.9"
+        ],
+        [
+            "\u2713",
+            "\u2713",
+            "20.0",
+            "J-Agg",
+            "39.5"
+        ]
+    ],
+    "caption": "(a) \r\nEffectiveness of components.\r\n\r\n",
+    "references": [
+        "Table\u00a04 shows the accuracy and inference speed. Experiments are conducted on a single NVIDIA RTX 3080 Ti GPU. For previous methods (first four rows), MACs of inference are twice as high as those of training, due to the data augmentation applied. D3DP (5thsuperscript5th\\text{5}^{\\text{th}} row) makes a few modifications (add additional inputs and timestep embedding) to MixSTE (our backbone, 4thsuperscript4th\\text{4}^{\\text{th}} row), and adds a parameter-free diffusion process. This results in a small increase in the number of parameters, essentially unchanged MACs, a slight decrease in FPS, and a 1mm performance improvement. Moreover, we can adjust H,K\ud835\udc3b\ud835\udc3eH,K to trade computational budgets for performance during inference. When H,K\ud835\udc3b\ud835\udc3eH,K increases, MACs and FPS roughly show a linear increase and decrease, respectively."
+    ]
+}

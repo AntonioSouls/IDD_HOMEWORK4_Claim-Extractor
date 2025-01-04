@@ -1,0 +1,48 @@
+{
+    "table": [
+        [
+            "Type",
+            "3.0",
+            "3.0",
+            "52\u2218cm{}^{}2cm",
+            "55\u2218cm{}^{}5cm",
+            "102\u2218cm{}^{}2cm",
+            "105\u2218cm{}^{}5cm",
+            "1010\u2218cm{}^{}10cm"
+        ],
+        [
+            "MSE",
+            "82.5",
+            "76.6",
+            "47.5",
+            "53.4",
+            "72.1",
+            "80.5",
+            "82.6"
+        ],
+        [
+            "L1",
+            "82.8",
+            "74.6",
+            "44.6",
+            "50.4",
+            "69.8",
+            "78.8",
+            "81.1"
+        ],
+        [
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan"
+        ]
+    ],
+    "caption": "Table 9: Ablate on the loss type of Lf\u200be\u200ba\u200btsubscript\ud835\udc3f\ud835\udc53\ud835\udc52\ud835\udc4e\ud835\udc61L_{feat}",
+    "references": [
+        "In this experiment, we ablate the effect of different loss types of Lfeatsubscript\ud835\udc3ffeatL_{\\text{feat}}. We present the results of MSE loss and L1 loss in\r\nTab.\u00a09. In contrast, MSE Loss has more advantages. It does not require two features to be completely similar but imposes strong constraints on places with large differences, which makes the imitation between features easier to learn."
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "table": [
+        [
+            "Method",
+            "Online",
+            "Cls avg.",
+            "Cabinet",
+            "Chair",
+            "Display",
+            "Table"
+        ],
+        [
+            "Scan2CAD [4]",
+            "nan",
+            "31.7",
+            "34.0",
+            "44.3",
+            "17.9",
+            "30.7"
+        ],
+        [
+            "RayTran [34]",
+            "nan",
+            "42.1",
+            "36.2",
+            "59.3",
+            "30.4",
+            "42.5"
+        ],
+        [
+            "Vid2CAD [24]",
+            "\u2713",
+            "38.8",
+            "23.8",
+            "64.6",
+            "37.7",
+            "28.9"
+        ],
+        [
+            "ELLIPSDF [30]",
+            "\u2713",
+            "39.6",
+            "-",
+            "-",
+            "-",
+            "-"
+        ],
+        [
+            "TransPoser",
+            "\u2713",
+            "59.3",
+            "45.4",
+            "91.2",
+            "45.0",
+            "55.7"
+        ]
+    ],
+    "caption": "Table 5: Accuracy of pose estimation for ScanNet\u00a0[11]. TransPoser achieves higher accuracy for all categories.",
+    "references": []
+}

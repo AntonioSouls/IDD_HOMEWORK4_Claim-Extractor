@@ -1,0 +1,24 @@
+{
+    "table": [
+        [
+            "Location",
+            "MPJPE"
+        ],
+        [
+            "none",
+            "40.8"
+        ],
+        [
+            " layer",
+            "40.0"
+        ],
+        [
+            "all layers",
+            "40.0"
+        ]
+    ],
+    "caption": "(b) \r\nLocation of the added timestep embedding.\r\n\r\n",
+    "references": [
+        "Table\u00a09 provides quantitative comparisons between our D3DP with JPMA and the state-of-the-art approaches on Human3.6M when P-MPJPE is reported using 2D keypoints obtained from 2D detectors as inputs. Table\u00a010 shows the results when MPJPE is reported using ground truth 2D keypoints as inputs. Without bells and whistles, D3DP transforms an existing deterministic 3D pose estimator into a probabilistic version with simple modifications and achieves considerable performance gains. Our method produces favorable results under conventional pose-level settings (P-Agg and P-Best), and the performance is further enhanced under the proposed joint-level settings (J-Agg and J-Best), which demonstrates the effectiveness of disentangling the hypothesis at the joint level. Experimental results show that the proposed method surpasses the others by a wide margin."
+    ]
+}

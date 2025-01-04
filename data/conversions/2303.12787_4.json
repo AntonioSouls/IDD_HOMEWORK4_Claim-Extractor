@@ -1,0 +1,69 @@
+{
+    "table": [
+        [
+            "Method",
+            "Type",
+            "ADD(-S)",
+            "ADD(-S)",
+            "ADD(-S)"
+        ],
+        [
+            "Method",
+            "Type",
+            "0.02d",
+            "0.05d",
+            "0.1d"
+        ],
+        [
+            "CDPN\u00a0[18]",
+            "PnP + Explicit depth",
+            "-",
+            "-",
+            "89.86"
+        ],
+        [
+            "HybridPose\u00a0[14]",
+            "Hybrid constraints",
+            "-",
+            "-",
+            "91.30"
+        ],
+        [
+            "GDRNet*\u00a0[43]",
+            "PnP + Explicit depth",
+            "35.60",
+            "76.00",
+            "93.60"
+        ],
+        [
+            "DPOD\u00a0[8]",
+            "PnP + Explicit refiner",
+            "-",
+            "-",
+            "95.15"
+        ],
+        [
+            "PVNet-RePOSE\u00a0[7]",
+            "PnP + Implicit refiner",
+            "-",
+            "-",
+            "96.10"
+        ],
+        [
+            "PVNet-RNNPose\u00a0[42]",
+            "PnP + Implicit refiner",
+            "50.39",
+            "85.56",
+            "97.37"
+        ],
+        [
+            "Ours",
+            "PnP",
+            "43.77",
+            "81.73",
+            "96.36"
+        ]
+    ],
+    "caption": "TABLE IV: Comparison to the state-of-the-art geometric methods. BPnP\u00a0[12] is not included as it adopts a different train/test split. *Although GDRNet\u00a0[43] only reports the performance in its ablation section, it is still a fair comparison to our method, since both use the same baseline (CDPN).",
+    "references": []
+}

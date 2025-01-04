@@ -1,0 +1,86 @@
+{
+    "table": [
+        [
+            "Method",
+            "\u200b Feedback Loop \u200b",
+            "\u200b Fewer Updates \u200b",
+            "Joint Shape and Pose Estimation",
+            "Multi-view Observation",
+            "Online",
+            "Shape Representation",
+            "Momentum"
+        ],
+        [
+            "DPDN [21]",
+            "nan",
+            "-",
+            "\u2713",
+            "nan",
+            "-",
+            "Point Cloud",
+            "-"
+        ],
+        [
+            "Scan2CAD [4]",
+            "nan",
+            "-",
+            "\u2713",
+            "\u2713",
+            "nan",
+            "CAD models",
+            "-"
+        ],
+        [
+            "RayTran [34]",
+            "nan",
+            "-",
+            "\u2713",
+            "\u2713",
+            "nan",
+            "Voxel Occupancy",
+            "-"
+        ],
+        [
+            "Vid2CAD [24]",
+            "\u2713",
+            "nan",
+            "\u2713",
+            "\u2713",
+            "\u2713",
+            "CAD models",
+            "Moving Avg."
+        ],
+        [
+            "ELLIPSDF [30]",
+            "\u2713",
+            "nan",
+            "\u2713",
+            "\u2713",
+            "\u2713",
+            "DeepSDF",
+            "Moving Avg."
+        ],
+        [
+            "Ma et al. [23]",
+            "\u2713",
+            "\u2713",
+            "nan",
+            "nan",
+            "nan",
+            "-",
+            "nan"
+        ],
+        [
+            "TransPoser",
+            "\u2713",
+            "\u2713",
+            "\u2713",
+            "\u2713",
+            "\u2713",
+            "DeepDDF",
+            "Cross-Attn."
+        ]
+    ],
+    "caption": "Table 1: Category-level object shape and pose estimation methods. TransPoser realizes neural optimization that effectively weighs multiple viewpoints and leverages learned momentum, which enables efficient and accurate joint object shape and pose estimation from sequential observations. We also introduce an efficient neural shape representation, DeepDDF, for this.",
+    "references": []
+}

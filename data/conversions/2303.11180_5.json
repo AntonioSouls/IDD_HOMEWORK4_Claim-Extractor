@@ -1,0 +1,56 @@
+{
+    "table": [
+        [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5"
+        ],
+        [
+            "0.85",
+            "0.65",
+            "0.3",
+            "80.2",
+            "77.6",
+            "82.7"
+        ],
+        [
+            "0.85",
+            "0.65",
+            "0.6",
+            "80.4",
+            "77.9",
+            "82.9"
+        ],
+        [
+            "0.85",
+            "0.65",
+            "0.45",
+            "80.6",
+            "78.1",
+            "83.1"
+        ],
+        [
+            "1.0",
+            "0.65",
+            "0.45",
+            "80.5",
+            "78.1",
+            "83.1"
+        ],
+        [
+            "0.85",
+            "0.4",
+            "0.45",
+            "80.4",
+            "77.9",
+            "83.1"
+        ]
+    ],
+    "caption": "Table 5: Ablation study on different loss parts and their weights in Equation (5).",
+    "references": [
+        "Table 5 presents an analysis of the impact of varying loss weights in Equation (5) on our experimental results. The results suggest that the optimal weights for the parameters a\ud835\udc4ea, b\ud835\udc4fb, and \u03bb\ud835\udf06\\lambda are 0.85, 0.65, and 0.45, respectively."
+    ]
+}

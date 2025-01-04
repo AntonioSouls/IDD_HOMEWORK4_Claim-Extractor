@@ -1,0 +1,38 @@
+{
+    "table": [
+        [
+            "PyTorch",
+            "Backbone & FPN",
+            "Heads",
+            "Heads",
+            "PnP",
+            "Total"
+        ],
+        [
+            "PyTorch",
+            "nan",
+            "FCOS",
+            "Deform",
+            "PnP",
+            "Total"
+        ],
+        [
+            "v1.8.1+cu111",
+            "0.194",
+            "0.074",
+            "0.029",
+            "0.026",
+            "0.328"
+        ],
+        [
+            "v1.10.1+cu113",
+            "0.173",
+            "0.056",
+            "0.025",
+            "0.046",
+            "0.304"
+        ]
+    ],
+    "caption": "TABLE VII: Inference time (sec) of the deformable correspondence network on nuScenes\u00a0[4]. The PnP solver (including initialization) works faster (26 ms) with PyTorch v1.8.1, for which the code was originally developed, while the full model works faster (304 ms) with PyTorch v1.10.1.",
+    "references": []
+}

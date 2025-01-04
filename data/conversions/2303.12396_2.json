@@ -1,0 +1,50 @@
+{
+    "table": [
+        [
+            "Method",
+            "AP",
+            "AP50",
+            "AP75"
+        ],
+        [
+            "Ours",
+            "85.0",
+            "99.4",
+            "97.4"
+        ],
+        [
+            "PAA\u00a0[22]",
+            "83.5",
+            "98.3",
+            "93.2"
+        ],
+        [
+            "AutoAssign\u00a0[51]",
+            "83.3",
+            "98.1",
+            "91.7"
+        ],
+        [
+            "ATSS\u00a0[50]",
+            "82.8",
+            "98.0",
+            "91.4"
+        ],
+        [
+            "FCOSv2\u00a0[44]",
+            "80.0",
+            "98.6",
+            "89.1"
+        ],
+        [
+            "Faster R-CNN\u00a0[37]",
+            "73.7",
+            "92.5",
+            "83.3"
+        ]
+    ],
+    "caption": "Table 2: Detection comparison on YCB.\r\nOur method consistently outperforms other methods, especially in terms of AP75.\r\n",
+    "references": [
+        "Comparison with the state of the art on YCB.\r\nWe compare our method with the state-of-the-art detection methods, including AutoAssign\u00a0[51] and PAA \u00a0[22], on the YCB dataset. Table\u00a02 summarizes the results, showing that our method consistently outperforms the state-of-the-art ones, especially in terms of AP75."
+    ]
+}

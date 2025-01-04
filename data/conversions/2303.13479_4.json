@@ -1,0 +1,44 @@
+{
+    "table": [
+        [
+            "PE",
+            "3.0",
+            "3.0",
+            "52\u2218cm{}^{}2cm",
+            "55\u2218cm{}^{}5cm",
+            "102\u2218cm{}^{}2cm",
+            "105\u2218cm{}^{}5cm"
+        ],
+        [
+            "w",
+            "82.5",
+            "76.6",
+            "47.5",
+            "53.4",
+            "72.1",
+            "80.5"
+        ],
+        [
+            "w/o",
+            "81.3",
+            "73.0",
+            "41.5",
+            "47.4",
+            "68.8",
+            "78.8"
+        ],
+        [
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan"
+        ]
+    ],
+    "caption": "Table 4: Ablation on position encoding term. PE refers to the position encoding term.",
+    "references": [
+        "Effects of Position Encoding Term.\r\nIn this part, we verify the effect of the positional encoding (PE) term, the results are shown in Tab.\u00a04. Obviously, without the PE module, the performance drops significantly on 52\u2218cm{}^{\\circ}2cm and 55\u2218cm{}^{\\circ}5cm. This in turn proves that the PE module makes up for the position lost by the feature extractor, which benefits pose regression."
+    ]
+}

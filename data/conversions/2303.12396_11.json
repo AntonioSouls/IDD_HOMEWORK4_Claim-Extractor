@@ -1,0 +1,92 @@
+{
+    "table": [
+        [
+            "Method",
+            "Avg.",
+            "MSPD",
+            "MSSD",
+            "VSD"
+        ],
+        [
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.600",
+            "0.689",
+            "0.589",
+            "0.521"
+        ],
+        [
+            "SurfEmb",
+            "0.588",
+            "0.678",
+            "0.573",
+            "0.514"
+        ],
+        [
+            "Cosypose",
+            "0.473",
+            "0.675",
+            "0.559",
+            "0.515"
+        ],
+        [
+            "CDPNv2",
+            "0.226",
+            "0.582",
+            "0.438",
+            "0.399"
+        ],
+        [
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.676",
+            "0.702",
+            "0.692",
+            "0.636"
+        ],
+        [
+            "SurfEmb",
+            "0.659",
+            "0.680",
+            "0.677",
+            "0621"
+        ],
+        [
+            "CIR",
+            "0.676",
+            "0.683",
+            "0.688",
+            "0.656"
+        ],
+        [
+            "Cosypose+ICP",
+            "0.647",
+            "0.666",
+            "0.652",
+            "0.624"
+        ],
+        [
+            "CDPNv2+ICP",
+            "0.450",
+            "0.459",
+            "0.458",
+            "0.433"
+        ]
+    ],
+    "caption": "Table 11: Additional object pose results on IC-BIN.\r\n",
+    "references": [
+        "Additional quantitative results.\r\nWe show the detailed object pose results using different metrics on LM-O, T-LESS, TUD-L, IC-BIN, ITODD, HB, and YCB in Table\u00a08,\u00a09,\u00a010,\u00a011,\u00a012,\u00a013, and\u00a014, respectively.\r\nOur method combined with PFA-Pose\u00a0[15] outperforms the state of the art in most experimental settings."
+    ]
+}
