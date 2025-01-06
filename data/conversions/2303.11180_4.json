@@ -2,9 +2,9 @@
     "table": [
         [
             "Method",
-            "nan",
-            "nan",
-            "nan"
+            "AP",
+            "AP^{M}",
+            "AR"
         ],
         [
             "Baseline",

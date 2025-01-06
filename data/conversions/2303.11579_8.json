@@ -2,15 +2,15 @@
     "table": [
         [
             "Target",
-            "MPJPE"
+            "MPJPE\\downarrow"
         ],
         [
             "noise",
             "40.2"
         ],
         [
-            " data",
-            "40.0"
+            "\\cellcolorbestcolororiginal data",
+            "\\cellcolorbestcolor40.0"
         ]
     ],
     "caption": "(a) \r\nRegression target.\r\n\r\n",

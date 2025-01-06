@@ -2,7 +2,7 @@
     "table": [
         [
             "Main Loss",
-            "nan",
+            "\\mathcal{L}_{\\text{crd}}",
             "2\u00b0",
             "2 cm",
             "2\u00b0, 2 cm",

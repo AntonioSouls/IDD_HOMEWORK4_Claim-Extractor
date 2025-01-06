@@ -12,13 +12,13 @@
         ],
         [
             "nan",
-            "nan",
-            "nan",
-            "nan",
-            "nan",
-            "nan",
-            "nan",
-            "nan"
+            "e_{\\bm{t}}",
+            "e_{\\bm{R}}",
+            "e_{\\text{pose}}",
+            "e_{\\bm{t}}",
+            "e_{\\bm{R}}",
+            "e_{\\text{pose}}",
+            "\\mu"
         ],
         [
             "lava1302\u00a0[6]",
@@ -58,7 +58,7 @@
             "0.0150",
             "0.0750",
             "0.0900",
-            "0.079"
+            "0.0790"
         ],
         [
             "haoranhuang_njust",
@@ -78,7 +78,7 @@
             "0.0126",
             "0.0465",
             "0.0590",
-            "0.049"
+            "0.0490"
         ]
     ],
     "caption": "TABLE I: Comparison with state-of-the-art on SPEED+. Values depict the best-found results in a publication, the live, or post-mortem challenge.",

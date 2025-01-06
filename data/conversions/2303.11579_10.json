@@ -2,7 +2,7 @@
     "table": [
         [
             "Type",
-            "MPJPE"
+            "MPJPE\\downarrow"
         ],
         [
             "none",
@@ -13,8 +13,8 @@
             "40.3"
         ],
         [
-            "-flipping",
-            "40.0"
+            "\\cellcolorbestcolordiffusion-flipping",
+            "\\cellcolorbestcolor40.0"
         ]
     ],
     "caption": "(c) \r\nData augmentation.\r\n\r\n",

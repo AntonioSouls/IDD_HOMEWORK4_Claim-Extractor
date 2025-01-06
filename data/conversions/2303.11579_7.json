@@ -2,15 +2,15 @@
     "table": [
         [
             "Target",
-            "MPJPE"
+            "MPJPE\\downarrow"
         ],
         [
             "noise",
             "40.2"
         ],
         [
-            " data",
-            "40.0"
+            "\\cellcolorbestcolororiginal data",
+            "\\cellcolorbestcolor40.0"
         ]
     ],
     "caption": "Table 5: Ablation experiments of D3DP on Human3.6M to justify the selection of each component. H\ud835\udc3bH=1, K\ud835\udc3eK=1. Default settings are shown in gray. ",

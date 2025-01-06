@@ -2,15 +2,15 @@
     "table": [
         [
             "Location",
-            "MPJPE"
+            "MPJPE\\downarrow"
         ],
         [
             "none",
             "40.8"
         ],
         [
-            " layer",
-            "40.0"
+            "\\cellcolorbestcolorfirst layer",
+            "\\cellcolorbestcolor40.0"
         ],
         [
             "all layers",

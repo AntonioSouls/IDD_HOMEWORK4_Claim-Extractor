@@ -21,8 +21,6 @@ def sanitize_filename(filename):
 
 # Funzione che rimuove comandi LaTeX come \textbf{}, \frac{}, ecc.
 def clean_latex(text):
-    text = re.sub(r'\\[a-zA-Z]+\{.*?\}', '', text)
-    text = re.sub(r'\\[a-zA-Z]+', '', text)
     text = re.sub(r'\$', '', text)
     return text
 
@@ -31,21 +29,30 @@ def clean_latex(text):
 def conversion_calculator(html_table):
     soup = BeautifulSoup(html_table, 'html.parser')
 
-    for footnote in soup.find_all("span", class_="ltx_note ltx_role_footnote"):
-        footnote.decompose()  
+    # Trova tutti gli elementi <math> con classe "ltx_Math" e sostituisci il loro contenuto con il valore di "alttext"
     for math_element in soup.find_all("math", class_="ltx_Math"):
-        math_element.decompose()  
+        alttext = math_element.get('alttext', '')  # Ottieni il valore dell'attributo alttext
+        if alttext == "\\times" and math_element.string is None:
+            math_element.replace_with("x")
+        math_element.string = alttext  # Sostituisci il contenuto del tag con il valore di alttext
+    
+
+    # Trova la tabella
     table = soup.find("table")
     
-    df:pd.DataFrame = pd.read_html(StringIO(str(table)))[0]
-    df = df.map(lambda x: clean_latex(str(x)))
+    # Converte la tabella HTML in un DataFrame
+    df: pd.DataFrame = pd.read_html(StringIO(str(table)))[0]
     
+    # Pulisce il contenuto del DataFrame
+    df = df.map(lambda x: clean_latex(str(x)))
+
+    # Verifica se la prima riga può essere usata come intestazione
     first_row = df.iloc[0].apply(pd.to_numeric, errors='coerce')
 
     is_numeric_index = first_row.index.map(lambda x: isinstance(x, (int, float)))
     is_consecutive = False
     if is_numeric_index.all():
-        is_consecutive = all(first_row.index[i] == first_row.index[i-1] + 1 for i in range(1, len(first_row.index)))
+        is_consecutive = all(first_row.index[i] == first_row.index[i - 1] + 1 for i in range(1, len(first_row.index)))
     if is_consecutive:
         df.columns = df.iloc[0]
         df = df.drop(index=0).reset_index(drop=True)
@@ -111,22 +118,7 @@ def table_extractor(cartella_sorgente, cartella_destinazione_df, cartella_destin
                 print(f"Table {table_id_sanitized} converted")
             else:
                 print(f"Table {table_id_sanitized} NOT converted because it's None")
-        
+            
         print(f"Conversion of {JSON_File} completed!")
-        print(f"VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\n")    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
+        print(f"VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\n")
+           

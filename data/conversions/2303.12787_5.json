@@ -2,8 +2,8 @@
     "table": [
         [
             "ID",
-            "nan",
-            "nan",
+            "\\mathcal{L}_{\\text{KL}}",
+            "\\mathcal{L}_{\\text{reg}}",
             "Aux. loss",
             "Aux. loss",
             "NDS\u2191",
@@ -13,10 +13,10 @@
         ],
         [
             "ID",
-            "nan",
-            "nan",
-            "nan",
-            "nan",
+            "\\mathcal{L}_{\\text{KL}}",
+            "\\mathcal{L}_{\\text{reg}}",
+            "\\mathcal{L}_{\\text{crd}}",
+            "\\mathcal{L}_{\\text{proj}}",
             "NDS\u2191",
             "mAP\u2191",
             "mATE\u2193",

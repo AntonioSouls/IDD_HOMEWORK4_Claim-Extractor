@@ -1,22 +1,34 @@
 {
     "table": [
         [
-            "Unnamed: 0",
-            "lightbox",
-            "lightbox.1",
-            "lightbox.2",
-            "sunlamp",
-            "sunlamp.1",
-            "sunlamp.2"
-        ],
-        [
-            "nan",
-            "nan",
-            "nan",
-            "nan",
-            "nan",
-            "nan",
-            "nan"
+            [
+                "Unnamed: 0_level_0",
+                "Unnamed: 0_level_1"
+            ],
+            [
+                "lightbox",
+                "e_{\\bm{t}}"
+            ],
+            [
+                "lightbox",
+                "e_{\\bm{R}}"
+            ],
+            [
+                "lightbox",
+                "e_{\\text{pose}}"
+            ],
+            [
+                "sunlamp",
+                "e_{\\bm{t}}"
+            ],
+            [
+                "sunlamp",
+                "e_{\\bm{R}}"
+            ],
+            [
+                "sunlamp",
+                "e_{\\text{pose}}"
+            ]
         ],
         [
             "(i) no refinement",
@@ -28,7 +40,7 @@
             "0.23"
         ],
         [
-            "(ii) single",
+            "(ii) single h_{i}",
             "0.035",
             "0.133",
             "0.168",
@@ -37,7 +49,7 @@
             "0.2"
         ],
         [
-            "(iii) multi ;",
+            "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
             "0.03",
             "0.126",
             "0.156",
@@ -46,7 +58,7 @@
             "0.191"
         ],
         [
-            "(iv) multi ;",
+            "(iv) multi h_{i}; \\bm{I}_{o}",
             "0.024",
             "0.104",
             "0.127",
@@ -55,7 +67,7 @@
             "0.162"
         ],
         [
-            "(v) without",
+            "(v) without \\bm{I}_{o}",
             "0.037",
             "0.166",
             "0.203",

@@ -8,9 +8,9 @@
         ],
         [
             "Method",
-            "MJE",
-            "PAMJE",
-            "PVE"
+            "MJE\\downarrow",
+            "PAMJE\\downarrow",
+            "PVE\\downarrow"
         ],
         [
             "PARE",
@@ -25,19 +25,19 @@
             "108.6"
         ],
         [
-            "BoPR w/o",
+            "BoPR w/o L_{3D}",
             "89.4",
             "55.8",
             "106.7"
         ],
         [
-            "BoPR w/o",
+            "BoPR w/o L_{2D}",
             "90.6",
             "54.8",
             "107.2"
         ],
         [
-            "BoPR w/o",
+            "BoPR w/o L_{RD}",
             "89.0",
             "54.2",
             "105.7"

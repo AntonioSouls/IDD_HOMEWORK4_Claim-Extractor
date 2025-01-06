@@ -2,9 +2,9 @@
     "table": [
         [
             "ID",
-            "nan",
-            "nan",
-            "nan",
+            "\\mathcal{L}_{\\text{KL}}",
+            "\\mathcal{L}_{\\text{reg}}",
+            "\\mathcal{L}_{\\text{crd}}",
             "Init.",
             "ADD(-S)",
             "ADD(-S)",
@@ -13,9 +13,9 @@
         ],
         [
             "ID",
-            "nan",
-            "nan",
-            "nan",
+            "\\mathcal{L}_{\\text{KL}}",
+            "\\mathcal{L}_{\\text{reg}}",
+            "\\mathcal{L}_{\\text{crd}}",
             "Init.",
             "0.02d",
             "0.05d",
