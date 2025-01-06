@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 from io import StringIO
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -97,9 +98,7 @@ def save_converted_table(df, caption, references, path):
 # ognuna, effettua una conversione in formato data-frame e salva il risultato di tale conversione in un apposito file json specifico per 
 # quella tabella
 def table_extractor(cartella_sorgente, cartella_destinazione_df, cartella_destinazione_png):
-    for JSON_File in os.listdir(cartella_sorgente):
-        print(f"Converting tables of: {JSON_File}")
-        print(f"...")
+    for JSON_File in tqdm(os.listdir(cartella_sorgente), desc="Processing Papers in JSON format"):
 
         JSON_File_sanitized = sanitize_filename(JSON_File)
         JSON_file_path = os.path.join(cartella_sorgente, JSON_File)
@@ -115,10 +114,7 @@ def table_extractor(cartella_sorgente, cartella_destinazione_df, cartella_destin
                 table_png_path = os.path.join(cartella_destinazione_png, f"{JSON_File_sanitized}_{table_id_sanitized}.png")
                 save_converted_table(converted_table, table_content.get("caption"), table_content.get("references"), converted_table_path)
                 save_table_png(converted_table, table_png_path)
-                print(f"Table {table_id_sanitized} converted")
-            else:
-                print(f"Table {table_id_sanitized} NOT converted because it's None")
             
-        print(f"Conversion of {JSON_File} completed!")
-        print(f"VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\n")
+            
+        
            
