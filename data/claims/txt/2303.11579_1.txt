@@ -1,0 +1,949 @@
+The user wants to extract claims from a JSON object containing a table, caption, and references.
+Each claim should have a "specifications", "Measure", and "Outcome".
+The "Measure" can be found in the table, caption, or references.
+The "Outcome" is the value associated with the "Measure".
+
+Plan:
+1. Iterate through the rows of the table, starting from the second row (index 1).
+2. For each row, iterate through the columns, starting from the second column (index 1).
+3. Identify the "specifications" for the current claim. These will be the values from the current row and the first column.
+4. Identify the "Measure". The "Measure" will be the value from the first row (header row).
+5. Identify the "Outcome". The "Outcome" will be the value from the current cell.
+
+Let's consider the structure of the table provided. The first row contains the measures (MPJPE and variations). The first column contains model names or categories. It seems like a cross-table or nested cross-table.
+
+Revised Plan:
+1. Iterate through the rows of the table, starting from the second row (index 1).
+2. The first column of each row describes the 'Model' or 'Method'.
+3. The second column of each row often contains additional specification details (e.g., year, or aggregation method).
+4. The remaining columns represent different measures. The header of these columns are the measures.
+5. Iterate through the columns, starting from the third column (index 2).
+6. The specification will be composed of the values in the first and second column.
+7. The measure will be the header of the current column (first row).
+8. The outcome will be the value in the current cell.
+
+Edge cases to consider:
+- The table has grouped columns as in the provided example.
+- Cells might contain extra information like citations or asterisks. I need to extract only the numeric outcome.
+
+Revised Plan Again:
+1. Iterate through the rows of the table, starting from the second row.
+2. The first column represents 'Deterministic Methods' or 'Probabilistic Methods'. This will be part of the specifications.
+3. The second column represents the 'Model'. This will be part of the specifications.
+4. The rest of the first row seems to be multi-level headers. The second row contains the actual 'Measure' names.
+5. Iterate through the rows starting from the third row.
+6. The first column is the 'Model'.
+7. The second column is additional information.
+8. Iterate through the columns starting from the third column.
+9. The specifications will contain information from the current row's first and second columns, potentially combined with the overall category from the higher-level header (first row).
+10. The measure will be the value in the second row of the current column's index.
+11. The outcome will be the value in the current cell.
+
+Example Walkthrough:
+Row 2: ['TCN\xa0[46] (N=243)*', 'CVPR’19', '45.2', '46.7', '43.3', '45.6', '48.1', '55.1', '44.6', '44.3', '57.3', '65.8', '47.1', '44.0', '49.0', '32.8', '33.9', '46.8']
+Specifications: {'0': {'name': 'Model', 'value': 'TCN\xa0[46] (N=243)*'}, '1': {'name': 'Year', 'value': 'CVPR’19'}}
+Measure: 'Dir.'
+Outcome: '43.3'
+
+Final Plan:
+1. Initialize an empty dictionary to store the claims.
+2. Iterate through the rows of the table, starting from the third row (index 2).
+3. For each row, extract the model and additional info from the first and second columns.
+4. Iterate through the columns, starting from the third column (index 2).
+5. Get the measure from the second row at the current column index.
+6. Get the outcome from the current cell.
+7. Create a claim dictionary and append it to the main dictionary.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Dir.",
+        "Outcome": "43.3"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Disc.",
+        "Outcome": "46.7"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Eat",
+        "Outcome": "43.3"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Greet",
+        "Outcome": "45.6"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Phone",
+        "Outcome": "48.1"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Photo",
+        "Outcome": "55.1"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Pose",
+        "Outcome": "44.6"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Pur.",
+        "Outcome": "44.3"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Sit",
+        "Outcome": "57.3"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "SitD.",
+        "Outcome": "65.8"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Smoke",
+        "Outcome": "47.1"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Wait",
+        "Outcome": "44.0"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "WalkD.",
+        "Outcome": "49.0"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Walk",
+        "Outcome": "32.8"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "WalkT.",
+        "Outcome": "33.9"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "Avg",
+        "Outcome": "46.8"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Dir.",
+        "Outcome": "43.9"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Disc.",
+        "Outcome": "47.1"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Eat",
+        "Outcome": "43.9"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Greet",
+        "Outcome": "41.6"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Phone",
+        "Outcome": "45.8"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Photo",
+        "Outcome": "49.6"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Pose",
+        "Outcome": "46.5"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Pur.",
+        "Outcome": "40.0"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Sit",
+        "Outcome": "53.4"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "SitD.",
+        "Outcome": "61.1"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Smoke",
+        "Outcome": "46.1"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Wait",
+        "Outcome": "42.6"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "WalkD.",
+        "Outcome": "43.1"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Walk",
+        "Outcome": "31.5"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "WalkT.",
+        "Outcome": "32.6"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "Avg",
+        "Outcome": "44.8"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Dir.",
+        "Outcome": "39.8"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Disc.",
+        "Outcome": "44.8"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Eat",
+        "Outcome": "39.8"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Greet",
+        "Outcome": "42.5"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Phone",
+        "Outcome": "46.5"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Photo",
+        "Outcome": "51.6"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Pose",
+        "Outcome": "42.1"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Pur.",
+        "Outcome": "42.0"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Sit",
+        "Outcome": "53.3"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "SitD.",
+        "Outcome": "60.7"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Smoke",
+        "Outcome": "45.5"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Wait",
+        "Outcome": "43.3"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "WalkD.",
+        "Outcome": "46.1"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Walk",
+        "Outcome": "31.8"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "WalkT.",
+        "Outcome": "32.2"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "Avg",
+        "Outcome": "44.3"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Dir.",
+        "Outcome": "41.4"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Disc.",
+        "Outcome": "44.5"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Eat",
+        "Outcome": "41.4"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Greet",
+        "Outcome": "42.7"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Phone",
+        "Outcome": "46.3"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Photo",
+        "Outcome": "55.6"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Pose",
+        "Outcome": "41.8"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Pur.",
+        "Outcome": "41.9"
+    },
+    "56": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Sit",
+        "Outcome": "53.7"
+    },
+    "57": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "SitD.",
+        "Outcome": "60.8"
+    },
+    "58": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Smoke",
+        "Outcome": "45.0"
+    },
+    "59": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Wait",
+        "Outcome": "41.5"
+    },
+    "60": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "WalkD.",
+        "Outcome": "44.8"
+    },
+    "61": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "Walk",
+        "Outcome": "30.8"
+    },
+    "62": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "WalkT.",
+        "Outcome": "31.9"
+    },
+    "63": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Year",
+                "value": "MM’21"
+            }
+        },

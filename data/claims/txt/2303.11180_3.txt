@@ -1,0 +1,490 @@
+The user wants to extract claims from a table represented in a JSON format.
+Each claim should have a "specifications", "Measure", and "Outcome".
+The "specifications" are key-value pairs from the table's header and row.
+The "Measure" can be found in the table, caption, or references.
+The "Outcome" is the value associated with the "Measure".
+
+Let's analyze the example table provided:
+```
+{
+    "table": [
+        [
+            "Method",
+            "Backbone",
+            "AP",
+            "AP^{M}",
+            "AR"
+        ],
+        [
+            "SimpleBaseline",
+            "R152",
+            "73.7",
+            "70.3",
+            "79.0"
+        ],
+        [
+            "+ SCAI",
+            "R152",
+            "78.8",
+            "75.5",
+            "82.5"
+        ],
+        [
+            "Performance Gain",
+            "nan",
+            "5.1",
+            "5.2",
+            "3.5"
+        ],
+        [
+            "HRNet",
+            "HR32",
+            "74.9",
+            "71.3",
+            "80.1"
+        ],
+        [
+            "+ SCAI",
+            "HR32",
+            "79.9",
+            "76.8",
+            "82.5"
+        ],
+        [
+            "Performance Gain",
+            "nan",
+            "5.0",
+            "5.5",
+            "2.4"
+        ],
+        [
+            "HRNet",
+            "HR48",
+            "75.5",
+            "71.9",
+            "80.5"
+        ],
+        [
+            "+ SCAI",
+            "HR48",
+            "80.6",
+            "78.1",
+            "83.1"
+        ],
+        [
+            "Performance Gain",
+            "nan",
+            "5.1",
+            "6.2",
+            "2.6"
+        ]
+    ],
+    "caption": "Table 3: Comparison with state-of-the-art of three baselines on COCO test-dev.",
+    "references": [
+        "Table 3 provides a comparison of our SCAI method with other state-of-the-art methods that use different baseline networks such as R152, HR32, and HR48 networks. Our SCAI method consistently outperforms other methods, even when different baseline networks are employed."
+    ]
+}
+```
+
+The header of the table is: "Method", "Backbone", "AP", "AP^{M}", "AR".
+Each row represents a comparison.
+
+Let's try to extract claims for the first row (excluding the header).
+Method: SimpleBaseline, Backbone: R152
+Possible Measures: AP, AP^{M}, AR
+Outcome for AP: 73.7
+Outcome for AP^{M}: 70.3
+Outcome for AR: 79.0
+
+Let's try to extract claims for the 'Performance Gain' rows.
+Method: Performance Gain, Backbone: nan
+Possible Measures: AP, AP^{M}, AR
+Outcome for AP: 5.1
+Outcome for AP^{M}: 5.2
+Outcome for AR: 3.5
+
+Plan:
+1. Iterate through the rows of the table (excluding the header).
+2. For each row, extract the specifications based on the header.
+3. Iterate through the columns after the specification columns to find the Measure and Outcome.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SimpleBaseline"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R152"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "73.7"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SimpleBaseline"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R152"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "70.3"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SimpleBaseline"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R152"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "79.0"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ SCAI"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R152"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "78.8"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ SCAI"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R152"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "75.5"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ SCAI"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R152"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "82.5"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Performance Gain"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "nan"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "5.1"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Performance Gain"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "nan"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "5.2"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Performance Gain"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "nan"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "3.5"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR32"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "74.9"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR32"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "71.3"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR32"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "80.1"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ SCAI"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR32"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "79.9"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ SCAI"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR32"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "76.8"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ SCAI"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR32"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "82.5"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Performance Gain"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "nan"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "5.0"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Performance Gain"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "nan"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "5.5"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Performance Gain"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "nan"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "2.4"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR48"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "75.5"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR48"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "71.9"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR48"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "80.5"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ SCAI"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR48"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "80.6"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ SCAI"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR48"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "78.1"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ SCAI"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR48"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "83.1"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Performance Gain"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "nan"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "5.1"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Performance Gain"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "nan"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "6.2"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Performance Gain"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "nan"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "2.6"
+    }
+}
+```

@@ -1,0 +1,193 @@
+The user wants to extract claims from a JSON object containing a table, a caption, and references.
+Each claim should have a 'specifications', 'Measure', and 'Outcome'.
+The 'specifications' come from the table's row headers and values.
+The 'Measure' can be found in the table, caption, or references.
+The 'Outcome' is the value associated with the measure for a given specification.
+
+Let's analyze the example provided:
+```json
+{
+    "table": [
+        [
+            "Model",
+            "Parameters",
+            "Precision",
+            "Recall"
+        ],
+        [
+            "Llama3.2",
+            "7B",
+            "x",
+            "y"
+        ],
+        [
+            "Gemma",
+            "70B",
+            "x2",
+            "y2"
+        ]
+    ],
+    "caption": "string",
+    "references": [
+        "string", "string"
+    ]
+}
+```
+Based on this example, claims could be:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"}
+        },
+        "Measure": "Parameters",
+        "Outcome": "7B"
+    },
+    "1": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"}
+        },
+        "Measure": "Precision",
+        "Outcome": "x"
+    },
+    "2": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"}
+        },
+        "Measure": "Recall",
+        "Outcome": "y"
+    },
+    "3": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"}
+        },
+        "Measure": "Parameters",
+        "Outcome": "70B"
+    },
+    "4": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"}
+        },
+        "Measure": "Precision",
+        "Outcome": "x2"
+    },
+    "5": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"}
+        },
+        "Measure": "Recall",
+        "Outcome": "y2"
+    }
+}
+```
+
+Now let's apply this logic to the provided table:
+```json
+{'table': [['Method', 'ADD(-S)', 'Correctness', 'Runtime'], ['BPnP\xa0[6]', '64.1', '53.9', '\\sim 30 ms'], ['EPro-PnP\xa0[7]', '64.5', '59.3', '\\sim 80 ms'], ['Ours', '66.5', '99.9', '\\sim 15 ms']], 'caption': 'Table 3: Comparison between PnP layers on LM-O.', 'references': ['Comparison with Differentiable PnP layers.\u0003As summarized in Tab.\xa03, we carry out experiments on LM-O with the GDR-Net baseline, and compare the methods based on several metrics\r\nincluding the ADD(-S) score, the gradient correctness and the runtime per training step,\r\nthe correctness and runtime are evaluated at the end of training. Note that BPnP\xa0[6] does not fully constrain the weights, thus we remove the scale branch as stated in Sec.\xa04.1. Our method yields the best ADD(-S) score on LM-O. More importantly, it generates a much larger percentage of correct gradients. A 3D point is considered to have correct gradients if moving in the negative gradient direction leads to a smaller 2D reprojection error. A pose loss yielding a higher gradient correctness provides more consistent supervision signals.\r\nThe consistency is reflected by the dilated weight and coordinate maps shown in Fig.\xa05, in particular by looking at pixels outside of but close to the actual object region.\r\nSuch pixels receive supervision only from the pose loss and thus indicate the differences between the different pose losses.\r\nHigher correctness helps the network to predict correct correspondences for such pixels.\r\nThis virtually expands the target object size in 3D object space and in 2D image space, which facilitates better pose estimates. The LC loss yields 99.9% gradient correctness, generating the most dilated maps. By contrast, the other losses have weaker consistency and thus tend to predict less accurate correspondences in these regions. Finally, as shown in Tab.\xa03, our LC loss yields the fastest runtime, evaluated on an NVIDIA A100 GPU with a batch size of 32. This is due to our linearization of the PnP solver, removing the need for an iterative solution.']}
+```
+The table headers are: 'Method', 'ADD(-S)', 'Correctness', 'Runtime'.
+The data rows are for 'BPnP [6]', 'EPro-PnP [7]', and 'Ours'.
+
+Possible claims:
+- Method BPnP [6] has ADD(-S) of 64.1
+- Method BPnP [6] has Correctness of 53.9
+- Method BPnP [6] has Runtime of ~ 30 ms
+- Method EPro-PnP [7] has ADD(-S) of 64.5
+- Method EPro-PnP [7] has Correctness of 59.3
+- Method EPro-PnP [7] has Runtime of ~ 80 ms
+- Method Ours has ADD(-S) of 66.5
+- Method Ours has Correctness of 99.9
+- Method Ours has Runtime of ~ 15 ms```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BPnP\u00a0[6]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "64.1"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BPnP\u00a0[6]"
+            }
+        },
+        "Measure": "Correctness",
+        "Outcome": "53.9"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BPnP\u00a0[6]"
+            }
+        },
+        "Measure": "Runtime",
+        "Outcome": "\\sim 30 ms"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "EPro-PnP\u00a0[7]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "64.5"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "EPro-PnP\u00a0[7]"
+            }
+        },
+        "Measure": "Correctness",
+        "Outcome": "59.3"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "EPro-PnP\u00a0[7]"
+            }
+        },
+        "Measure": "Runtime",
+        "Outcome": "\\sim 80 ms"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "66.5"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "Correctness",
+        "Outcome": "99.9"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "Runtime",
+        "Outcome": "\\sim 15 ms"
+    }
+}
+```

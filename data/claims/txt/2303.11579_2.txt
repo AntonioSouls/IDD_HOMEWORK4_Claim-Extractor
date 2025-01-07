@@ -1,0 +1,649 @@
+The user wants to extract claims from a table represented in a JSON format.
+Each claim should have a "specifications", a "Measure" and an "Outcome".
+The "specifications" are key-value pairs that identify the row from which the claim is extracted.
+The "Measure" is a column header, potentially found in the caption or references.
+The "Outcome" is the value associated with the "Measure" in that row.
+
+Plan:
+1. Identify the different measures available in the table headers.
+2. Iterate through each row of the table (excluding the header).
+3. For each row, extract the "specifications" based on the first column(s).
+4. For each measure, extract the corresponding "Outcome" from the row.
+5. Structure the extracted information into the desired JSON format.
+
+Let's analyze the provided example:
+
+Table headers: 'Method', 'Method', 'PCK\\uparrow', 'AUC\\uparrow', 'MPJPE\\downarrow'
+Measures: 'PCK\\uparrow', 'AUC\\uparrow', 'MPJPE\\downarrow'
+
+Consider the first data row: ['U-CDGCN\xa0[23] (N=96)\\triangledown', 'MM’21', '97.9', '69.5', '42.5']
+
+Claim 0 (based on 'PCK\\uparrow'):
+{
+    "specifications": {
+        "0": {"name": "Method", "value": "U-CDGCN\xa0[23] (N=96)\\triangledown"},
+        "1": {"name": "Method", "value": "MM’21"}
+    },
+    "Measure": "PCK\\uparrow",
+    "Outcome": "97.9"
+}
+
+Claim 1 (based on 'AUC\\uparrow'):
+{
+    "specifications": {
+        "0": {"name": "Method", "value": "U-CDGCN\xa0[23] (N=96)\\triangledown"},
+        "1": {"name": "Method", "value": "MM’21"}
+    },
+    "Measure": "AUC\\uparrow",
+    "Outcome": "69.5"
+}
+
+Claim 2 (based on 'MPJPE\\downarrow'):
+{
+    "specifications": {
+        "0": {"name": "Method", "value": "U-CDGCN\xa0[23] (N=96)\\triangledown"},
+        "1": {"name": "Method", "value": "MM’21"}
+    },
+    "Measure": "MPJPE\\downarrow",
+    "Outcome": "42.5"
+}
+
+Need to handle the merged header columns. The specifications should include all identifying columns.
+
+Revised Plan:
+1. Identify the measure columns from the table header.
+2. Iterate through each data row of the table.
+3. For each row, identify the specification columns and their values.
+4. For each measure column, extract the corresponding outcome value.
+5. Construct the claim object.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "U-CDGCN\u00a0[23] (N=96)▽"
+            },
+            "1": {
+                "name": "Method",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "PCK↑",
+        "Outcome": "97.9"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "U-CDGCN\u00a0[23] (N=96)▽"
+            },
+            "1": {
+                "name": "Method",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "AUC↑",
+        "Outcome": "69.5"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "U-CDGCN\u00a0[23] (N=96)▽"
+            },
+            "1": {
+                "name": "Method",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE↓",
+        "Outcome": "42.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "P-STMO\u00a0[51] (N=81)▽"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ECCV’22"
+            }
+        },
+        "Measure": "PCK↑",
+        "Outcome": "97.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "P-STMO\u00a0[51] (N=81)▽"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ECCV’22"
+            }
+        },
+        "Measure": "AUC↑",
+        "Outcome": "75.8"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "P-STMO\u00a0[51] (N=81)▽"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ECCV’22"
+            }
+        },
+        "Measure": "MPJPE↓",
+        "Outcome": "32.2"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TCN\u00a0[46] (N=81)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "PCK↑",
+        "Outcome": "86.0"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TCN\u00a0[46] (N=81)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "AUC↑",
+        "Outcome": "51.9"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TCN\u00a0[46] (N=81)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE↓",
+        "Outcome": "84.0"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "U-GCN\u00a0[62] (N=96)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "PCK↑",
+        "Outcome": "86.9"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "U-GCN\u00a0[62] (N=96)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "AUC↑",
+        "Outcome": "62.1"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "U-GCN\u00a0[62] (N=96)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE↓",
+        "Outcome": "68.1"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Anatomy\u00a0[9] (N=81)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "TCSVT’21"
+            }
+        },
+        "Measure": "PCK↑",
+        "Outcome": "87.9"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Anatomy\u00a0[9] (N=81)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "TCSVT’21"
+            }
+        },
+        "Measure": "AUC↑",
+        "Outcome": "54.0"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Anatomy\u00a0[9] (N=81)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "TCSVT’21"
+            }
+        },
+        "Measure": "MPJPE↓",
+        "Outcome": "78.8"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PoseFormer\u00a0[70] (N=9)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "PCK↑",
+        "Outcome": "88.6"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PoseFormer\u00a0[70] (N=9)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "AUC↑",
+        "Outcome": "56.4"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PoseFormer\u00a0[70] (N=9)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE↓",
+        "Outcome": "77.1"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MHFormer\u00a0[36] (N=9, H=3, P-Agg)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’22"
+            }
+        },
+        "Measure": "PCK↑",
+        "Outcome": "93.8"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MHFormer\u00a0[36] (N=9, H=3, P-Agg)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’22"
+            }
+        },
+        "Measure": "AUC↑",
+        "Outcome": "63.3"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MHFormer\u00a0[36] (N=9, H=3, P-Agg)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’22"
+            }
+        },
+        "Measure": "MPJPE↓",
+        "Outcome": "58.0"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68] (N=27)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’22"
+            }
+        },
+        "Measure": "PCK↑",
+        "Outcome": "94.4"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68] (N=27)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’22"
+            }
+        },
+        "Measure": "AUC↑",
+        "Outcome": "66.5"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68] (N=27)"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’22"
+            }
+        },
+        "Measure": "MPJPE↓",
+        "Outcome": "54.9"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68] (N=243)‡"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’22"
+            }
+        },
+        "Measure": "PCK↑",
+        "Outcome": "96.9"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68] (N=243)‡"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’22"
+            }
+        },
+        "Measure": "AUC↑",
+        "Outcome": "75.8"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68] (N=243)‡"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CVPR’22"
+            }
+        },
+        "Measure": "MPJPE↓",
+        "Outcome": "35.4"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorPCK↑",
+        "Outcome": "\\cellcolorbestcolor97.7"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorAUC↑",
+        "Outcome": "\\cellcolorbestcolor77.8"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorMPJPE↓",
+        "Outcome": "\\cellcolorbestcolor30.2"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorPCK↑",
+        "Outcome": "\\cellcolorbestcolor97.7"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorAUC↑",
+        "Outcome": "\\cellcolorbestcolor78.0"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorMPJPE↓",
+        "Outcome": "\\cellcolorbestcolor30.0"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorPCK↑",
+        "Outcome": "\\cellcolorbestcolor97.7"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorAUC↑",
+        "Outcome": "\\cellcolorbestcolor78.2"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorMPJPE↓",
+        "Outcome": "\\cellcolorbestcolor29.7"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorPCK↑",
+        "Outcome": "\\cellcolorbestcolor97.8"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorAUC↑",
+        "Outcome": "\\cellcolorbestcolor78.2"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorMPJPE↓",
+        "Outcome": "\\cellcolorbestcolor29.8"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorPCK↑",
+        "Outcome": "\\cellcolorbestcolor98.0"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorAUC↑",
+        "Outcome": "\\cellcolorbestcolor79.1"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
+            },
+            "1": {
+                "name": "\\cellcolorbestcolor",
+                "value": null
+            }
+        },
+        "Measure": "\\cellcolorbestcolorMPJPE↓",
+        "Outcome": "\\cellcolorbestcolor28.1"
+    }
+}
+```

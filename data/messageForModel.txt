@@ -45,4 +45,5 @@ Given this table classification your task is to extract claims from the table. E
 }
 
 The Measure can be found on the table, references or caption. You must decide it. And the outcome is the value associated to the mesaure.
-It's MANDATORY that you return me only the json file where all the claims are extracted. I don't want any other description added by you.
+It's MANDATORY that you return me only the json file where all the claims are extracted. 
+If you generated multiple claims, make sure the response is valid, closed JSON. If you can't extract all the claims, stop and return a closed JSON. 

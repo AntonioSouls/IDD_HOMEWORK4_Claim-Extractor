@@ -1,0 +1,120 @@
+The user wants to extract claims from a table represented in a JSON object.
+Each claim should have a "specifications", "Measure", and "Outcome".
+The "specifications" are key-value pairs from the table's header and rows.
+The "Measure" is the metric being compared, which can be found in the table, caption, or references.
+The "Outcome" is the value corresponding to the "Measure".
+
+Let's analyze the example provided:
+```json
+{
+    "table": [
+        [
+            "Model",
+            "Parameters",
+            "Precision",
+            "Recall"
+        ],
+        [
+            "Llama3.2",
+            "7B",
+            "x",
+            "y"
+        ],
+        [
+            "Gemma",
+            "70B",
+            "x2",
+            "y2"
+        ]
+    ],
+    "caption": "string",
+    "references": [
+        "string", "string"
+    ]
+}
+```
+
+And the target claim structure:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"},
+            "1": {"name": "Parameters", "value": "7B"}
+        },
+        "Measure": "Precision",
+        "Outcome": "x"
+    },
+    "1": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"},
+            "1": {"name": "Parameters", "value": "7B"}
+        },
+        "Measure": "Recall",
+        "Outcome": "y"
+    },
+    "2": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"},
+            "1": {"name": "Parameters", "value": "70B"}
+        },
+        "Measure": "Precision",
+        "Outcome": "x2"
+    },
+    "3": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"},
+            "1": {"name": "Parameters", "value": "70B"}
+        },
+        "Measure": "Recall",
+        "Outcome": "y2"
+    }
+}
+```
+
+Now let's apply this to the given input:
+```json
+{'table': [['Type', 'MPJPE\\downarrow'], ['none', '40.6'], ['flipping-once', '40.3'], ['\\cellcolorbestcolordiffusion-flipping', '\\cellcolorbestcolor40.0']], 'caption': '(c) \r\nData augmentation.\r\n\r\n', 'references': ['Table\xa09 provides quantitative comparisons between our D3DP with JPMA and the state-of-the-art approaches on Human3.6M when P-MPJPE is reported using 2D keypoints obtained from 2D detectors as inputs. Table\xa010 shows the results when MPJPE is reported using ground truth 2D keypoints as inputs. Without bells and whistles, D3DP transforms an existing deterministic 3D pose estimator into a probabilistic version with simple modifications and achieves considerable performance gains. Our method produces favorable results under conventional pose-level settings (P-Agg and P-Best), and the performance is further enhanced under the proposed joint-level settings (J-Agg and J-Best), which demonstrates the effectiveness of disentangling the hypothesis at the joint level. Experimental results show that the proposed method surpasses the others by a wide margin.']}
+```
+
+The header of the table is ['Type', 'MPJPE\\downarrow'].
+The possible measures mentioned in the caption and references are:
+- MPJPE
+- P-MPJPE
+
+Let's assume 'MPJPE' is the measure from the table header. The 'downarrow' indicates that lower values are better.
+
+Now, let's extract the claims.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "none"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.6"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "flipping-once"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.3"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "\\cellcolorbestcolordiffusion-flipping"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "\\cellcolorbestcolor40.0"
+    }
+}
+```

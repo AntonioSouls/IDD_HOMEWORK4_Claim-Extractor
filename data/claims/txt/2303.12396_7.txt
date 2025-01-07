@@ -1,0 +1,1130 @@
+The user wants to extract claims from a JSON object containing a table, caption and references.
+Each claim should have a "specifications", "Measure" and "Outcome".
+The "specifications" are key-value pairs from the table headers and row values.
+The "Measure" can be found in the table, caption or references.
+The "Outcome" is the value associated with the measure.
+
+The table provided is a cross table where columns represent different models and rows represent different categories.  The metrics are in the second row.
+
+Plan:
+1. Iterate through each row (excluding the header and metric rows).
+2. For each row, the "Category" will be a specification.
+3. Iterate through the columns for each row (excluding the "Category" column).
+4. Identify the Model (from the first row) and Metric (from the second row) as specifications.
+5. The value in the current cell will be the "Outcome".
+6. Look for a suitable "Measure".  It seems like different performance metrics are used. Let's use the metric name.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "20.9"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "38.4"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "30.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "16.1"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "34.0"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "25.7"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "31.8"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "47.2"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "42.3"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "38.3"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "59.4"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "43.1"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "37.0"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "58.5"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "41.9"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "40.5"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "60.7"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "45.7"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "50.1"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "69.7"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "59.4"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "50.2"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "69.3"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "60.2"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "52.6"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "71.5"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "63.8"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "34.7"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "52.5"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "38.8"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "35.1"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "52.0"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "39.0"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "36.5"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "53.6"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "40.7"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "41.3"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "62.3"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "50.6"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "41.5"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "62.7"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "50.6"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "42.8"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "63.2"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "52.2"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "65.7"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "86.8"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "68.4"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "67.2"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "88.9"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "69.8"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "63.0"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "84.5"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "66.2"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "60.7"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "81.9"
+    },
+    "56": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "62.4"
+    },
+    "57": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "62.1"
+    },
+    "58": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "83.2"
+    },
+    "59": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "63.9"
+    },
+    "60": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "59.3"
+    },
+    "61": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "80.8"
+    },
+    "62": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "60.7"
+    },
+    "63": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cow"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "56.4"
+    },
+    "64": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cow"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "72.3"
+    },
+    "65": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cow"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "60.5"
+    },
+    "66": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cow"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "58.0"
+    },
+    "67": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cow"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "74.0"
+    },
+    "68": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cow"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "62.8"
+    },
+    "69": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cow"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "56.0"
+    },
+    "70": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cow"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "71.0"
+    },
+    "71": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cow"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "60.2"
+    },
+    "72": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Sheep"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "51.4"
+    },
+    "73": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Sheep"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "71.2"
+    },
+    "74": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Sheep"
+            },
+            "1": {
+                "name": "FCOSv2\xa0[44]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "60.7"
+    },
+    "75": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Sheep"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "51.7"
+    },
+    "76": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Sheep"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "71.6"
+    },
+    "77": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Sheep"
+            },
+            "1": {
+                "name": "PAA\xa0[22]",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "61.2"
+    },
+    "78": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Sheep"
+            },
+            "1": {
+                "name": "Ours",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "50.0"
+    },
+    "79": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Sheep"
+            },
+            "1": {
+                "name": "O

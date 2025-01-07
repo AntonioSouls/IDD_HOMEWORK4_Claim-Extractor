@@ -1,0 +1,245 @@
+The user wants to extract claims from a table represented in a JSON object.
+Each claim should have a "specifications" part, a "Measure" and an "Outcome".
+The "specifications" are the conditions for the claim, usually column-row pairs.
+The "Measure" is what is being measured (a column header).
+The "Outcome" is the value of the measure for the given specifications.
+The Measure can be found in the table, caption or references.
+
+Let's analyze the example provided:
+```json
+{
+    "table": [
+        [
+            "Model",
+            "Parameters",
+            "Precision",
+            "Recall"
+        ],
+        [
+            "Llama3.2",
+            "7B",
+            "x",
+            "y"
+        ],
+        [
+            "Gemma",
+            "70B",
+            "x2",
+            "y2"
+        ]
+    ],
+    "caption": "string",
+    "references": [
+        "string", "string"
+    ]
+}
+```
+Claim 0 example:
+```json
+{
+    "specifications": {
+        "0": {"name": "Model", "value": "Full Fine-tuning"},
+        "1": {"name": "# Params.", "value": "1.8B"},
+    },
+    "Measure": "VS",
+    "Outcome": "5.3"
+}
+```
+In this example, the specifications select a specific row based on "Model" and "# Params.". The "Measure" is "VS" and the "Outcome" is its corresponding value.
+
+Now let's analyze the provided table:
+```json
+{'table': [['Method', '3DPW', '3DPW', '3DPW'], ['Method', 'MJE\\downarrow', 'PAMJE\\downarrow', 'PVE\\downarrow'], ['PARE', '91.0', '56.7', '108.2'], ['PARE w TF', '91.5', '55.7', '108.6'], ['BoPR w/o L_{3D}', '89.4', '55.8', '106.7'], ['BoPR w/o L_{2D}', '90.6', '54.8', '107.2'], ['BoPR w/o L_{RD}', '89.0', '54.2', '105.7'], ['BoPR', '88.6', '53.7', '105.3']], 'caption': 'Table 5: Ablation study of BoPR on 3DPW.', 'references': ['Ablation Experiments.\r\nIn this experiment, we use HR-W32 as the backbone and train all the comparing methods on a small COCO-2014-EFT (22K), part of the COCO-EFT dataset. We first incorporate PARE with a transformer regressor and evaluate the performance on the 3DPW dataset. Table\xa05 shows that combining two techniques slightly reduces the PAMJE yet increases the MJE and PVE. In contrast, our proposed method improves PARE by a large margin, indicating that learning body-aware part features contributes significantly to the performance gain. We also ablate the auxiliary losses, namely the 2D keypoint L2\u200bDsubscript𝐿2𝐷L_{2D}, 3D keypoint L3\u200bDsubscript𝐿3𝐷L_{3D}, and the reference distance LR\u200bDsubscript𝐿𝑅𝐷L_{RD}. The result in Table\xa05 shows all the loss helps to improve the effect.']}
+```
+The table has a multi-level header. The main headers are "Method" and "3DPW" (repeated 3 times). The sub-headers under "3DPW" are "MJE↓", "PAMJE↓", "PVE↓".
+
+Possible claims:
+For each method, we have values for MJE, PAMJE, and PVE.
+
+Plan:
+1. Iterate through the rows of the table (starting from the third row).
+2. For each row, the "Method" column will be part of the specifications.
+3. The other columns represent Measures ("MJE↓", "PAMJE↓", "PVE↓") and their corresponding Outcomes.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "91.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "56.7"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "108.2"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE w TF"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "91.5"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE w TF"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "55.7"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE w TF"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "108.6"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{3D}"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "89.4"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{3D}"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "55.8"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{3D}"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "106.7"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{2D}"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "90.6"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{2D}"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "54.8"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{2D}"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "107.2"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{RD}"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "89.0"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{RD}"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "54.2"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{RD}"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "105.7"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "88.6"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "53.7"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "105.3"
+    }
+}
+```

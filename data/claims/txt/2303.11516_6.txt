@@ -1,0 +1,126 @@
+The user wants to extract claims from a JSON object containing table data, a caption, and references. Each claim should have a "specifications", "Measure", and "Outcome".
+
+The "specifications" are key-value pairs from the table's row header and column header.
+The "Measure" can be found in the table, caption, or references.
+The "Outcome" is the value associated with the "Measure" based on the "specifications".
+
+Let's analyze the example to understand the structure of the table and how to identify the specifications, measure, and outcome.
+
+**Table Analysis:**
+
+- The first row seems to be the column headers.
+- The first column seems to be the row headers.
+
+**Example Claim Breakdown:**
+
+For the first claim in the example:
+
+- **Specifications:** We select a specific cell in the table and its corresponding row and column headers. For example, to get "Model": "Full Fine-tuning", and "# Params.": "1.8B", we are looking at a row with "Full Fine-tuning" under "Model" and the value "1.8B" under "# Params.".
+
+- **Measure:** This is the metric being evaluated (e.g., "VS"). It needs to be identified from the provided information.
+
+- **Outcome:** This is the value of the measure for the given specifications (e.g., "5.3").
+
+**Applying to the new input:**
+
+```json
+{'table': [['dist.\\ rep.', 'ours-3D', 'quater.', 'axis-ang.', 'two-col.\\xa0[52]'], ['Laplace', '66.48', '66.72', '65.85', '66.39'], ['Gaussian', '61.90', '60.72', '59.79', '60.37']], 'caption': 'Table 6: Results on different pose representations and NLL distributions in ADD(-S) score.', 'references': ['Experiments on other pose representations and other NLL formulations.\u2003We also carried out experiments on losses based on quaternions, axis-angles and two-column\xa0[52] pose representations on LM-O.\r\nFor the Laplace NLL formulation, we used the sum of the square roots of the covariance diagonal for {Ec\u200bo\u200bv,Ep\u200br\u200bi\u200bo\u200br}subscript𝐸𝑐𝑜𝑣subscript𝐸𝑝𝑟𝑖𝑜𝑟\\{E_{cov},E_{prior}\\} and the sum of the absolute values of the approximate error for El\u200bi\u200bn\u200be\u200ba\u200brsubscript𝐸𝑙𝑖𝑛𝑒𝑎𝑟E_{linear}.\r\nTo further validate the distribution from which the NLL loss originates, we switched from Laplace to Gaussian, using the trace of the covariance and the sum of the squared errors to build the losses.\r\nAs shown in Tab.\xa06, the performance is robust to the pose representation. However, the Laplace NLL losses yield much better results than their Gaussian counterparts.']}
+```
+
+**Measure Identification:**
+
+- From the caption: "ADD(-S) score".
+
+Now we can iterate through the table and extract claims.
+
+**Claim Extraction Logic:**
+
+1. Iterate through each row of the table (starting from the second row, as the first row is the header).
+2. For each row, the first element is the value for the row header.
+3. Iterate through each column (starting from the second column) in the current row.
+4. For each cell, extract the value as the "Outcome".
+5. The "Specifications" will be the row header and the corresponding column header.
+6. The "Measure" will be "ADD(-S) score".```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "dist. rep.",
+                "value": "Laplace"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "66.48"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "dist. rep.",
+                "value": "Laplace"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "66.72"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "dist. rep.",
+                "value": "Laplace"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "65.85"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "dist. rep.",
+                "value": "Laplace"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "66.39"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "dist. rep.",
+                "value": "Gaussian"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "61.90"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "dist. rep.",
+                "value": "Gaussian"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "60.72"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "dist. rep.",
+                "value": "Gaussian"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "59.79"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "dist. rep.",
+                "value": "Gaussian"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "60.37"
+    }
+}
+```

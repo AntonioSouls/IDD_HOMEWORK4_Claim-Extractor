@@ -1,0 +1,131 @@
+The user wants to extract claims from a table represented in a JSON object.
+Each claim should follow a specific structure: "specifications", "Measure", and "Outcome".
+The "Measure" can be found in the table, caption, or references.
+The "Outcome" is the value associated with the "Measure".
+The "specifications" are the key-value pairs that identify the context of the claim.
+
+Let's analyze the example provided:
+```json
+{
+    "table": [
+        [
+            "Model",
+            "Parameters",
+            "Precision",
+            "Recall"
+        ],
+        [
+            "Llama3.2",
+            "7B",
+            "x",
+            "y"
+        ],
+        [
+            "Gemma",
+            "70B",
+            "x2",
+            "y2"
+        ]
+    ],
+    "caption": "string",
+    "references": [
+        "string", "string"
+    ]
+}
+```
+In this example, possible claims could be:
+- Model Llama3.2 has Precision x.
+- Model Llama3.2 has Recall y.
+- Model Gemma has Precision x2.
+- Model Gemma has Recall y2.
+- Model Llama3.2 with Parameters 7B has Precision x.
+- Model Llama3.2 with Parameters 7B has Recall y.
+- Model Gemma with Parameters 70B has Precision x2.
+- Model Gemma with Parameters 70B has Recall y2.
+
+Let's analyze the new table provided:
+```json
+{'table': [['Row', 'Training Loss', 'Solver', 'ADD(-S)'], ['0', 'MLE', 'PnP RANSAC', '57.89'], ['1', 'MLE', 'PnP weighted', '59.90'], ['2', 'MLE + LC loss', 'PnP RANSAC', '57.74'], ['3', 'MLE + LC loss', 'PnP weighted', '61.08']], 'caption': 'Table 5: Ablation for the sparse correspondence-based method on the LM-O dataset. ', 'references': ['We evaluate the influence of each component of our LC loss by applying it to the dense correspondence-based GDR-Net and to the sparse correspondence-based one on the LM-O dataset.\r\nThe results are summarized in Tab.\xa04 and Tab.\xa05.', 'Effectiveness with a Sparse Correspondence-based Method.\u2003In the dense case, the weights serve as both attention mechanism, emphasizing some important or stable points during training, and indicators for well learned correspondences during testing. The sparsity in sparse correspondence methods limits the attention feature. The loss function in sparse cases mostly encourages the network to predict better weights. Our sparse baseline is trained with a Laplace MLE loss, similar to the Gaussian MLE loss in\xa0[33]. The predicted standard deviations are encouraged to capture point location errors, and their inverse are subsequently used as weights in the PnP solver. As shown in Tab.\xa05, applying our loss in this scenario also brings a performance gain. As the networks yield very close performance when not using weights (Row\xa00\xa0vs.\xa0Row\xa02), this gain comes mostly from better weights learning.\r\nNote that the PnP RANSAC solver does not use weights but uses RANSAC\xa0[16] to evict outliers, thus reflecting only the quality of 2D point locations. The PnP weighted solver iteratively solves Eq.\xa04 using the PnP RANSAC’s solution as starting point, which effectively relies on predicted weights to evict outliers, reflecting the quality of the predicted weights.']}
+```
+Here, "ADD(-S)" looks like a good candidate for the "Measure".
+
+Claims could be:
+- Row 0 with Training Loss MLE and Solver PnP RANSAC has ADD(-S) 57.89.
+- Row 1 with Training Loss MLE and Solver PnP weighted has ADD(-S) 59.90.
+- Row 2 with Training Loss MLE + LC loss and Solver PnP RANSAC has ADD(-S) 57.74.
+- Row 3 with Training Loss MLE + LC loss and Solver PnP weighted has ADD(-S) 61.08.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "0"
+            },
+            "1": {
+                "name": "Training Loss",
+                "value": "MLE"
+            },
+            "2": {
+                "name": "Solver",
+                "value": "PnP RANSAC"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "57.89"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "1"
+            },
+            "1": {
+                "name": "Training Loss",
+                "value": "MLE"
+            },
+            "2": {
+                "name": "Solver",
+                "value": "PnP weighted"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "59.90"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "2"
+            },
+            "1": {
+                "name": "Training Loss",
+                "value": "MLE + LC loss"
+            },
+            "2": {
+                "name": "Solver",
+                "value": "PnP RANSAC"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "57.74"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "3"
+            },
+            "1": {
+                "name": "Training Loss",
+                "value": "MLE + LC loss"
+            },
+            "2": {
+                "name": "Solver",
+                "value": "PnP weighted"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "61.08"
+    }
+}
+```

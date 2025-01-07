@@ -1,0 +1,180 @@
+The user wants to extract claims from tables represented in a JSON format.
+Each claim should have a "specifications", a "Measure", and an "Outcome".
+The "specifications" are key-value pairs from the header and a cell in the table.
+The "Measure" is a column header, and the "Outcome" is the corresponding cell value.
+Let's analyze the example provided:
+```json
+{
+    "table": [
+        [
+            "Model",
+            "Parameters",
+            "Precision",
+            "Recall"
+        ],
+        [
+            "Llama3.2",
+            "7B",
+            "x",
+            "y"
+        ],
+        [
+            "Gemma",
+            "70B",
+            "x2",
+            "y2"
+        ]
+    ],
+    "caption": "string",
+    "references": [
+        "string", "string"
+    ]
+}
+```
+For this table, potential claims could be:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"}
+        },
+        "Measure": "Parameters",
+        "Outcome": "7B"
+    },
+    "1": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"}
+        },
+        "Measure": "Precision",
+        "Outcome": "x"
+    },
+    "2": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"}
+        },
+        "Measure": "Recall",
+        "Outcome": "y"
+    },
+    "3": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"}
+        },
+        "Measure": "Parameters",
+        "Outcome": "70B"
+    },
+    "4": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"}
+        },
+        "Measure": "Precision",
+        "Outcome": "x2"
+    },
+    "5": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"}
+        },
+        "Measure": "Recall",
+        "Outcome": "y2"
+    }
+}
+```
+
+Now let's process the provided example:
+```json
+{'table': [['Type', 'Method', 'MPJPE\\downarrow'], ['\\cellcolorbestcolorIF', '\\cellcolorbestcolorconcat', '\\cellcolorbestcolor40.0'], ['EF', 'concat', '40.9'], ['EF', 'add', '41.2'], ['EF', 'CA', '41.1']], 'caption': '(d) \r\n2D conditioning. IF: input fusion. EF: embedding fusion. CA: cross attention.\r\n\r\n', 'references': []}
+```
+Header: ['Type', 'Method', 'MPJPE\\downarrow']
+Rows:
+- ['\\cellcolorbestcolorIF', '\\cellcolorbestcolorconcat', '\\cellcolorbestcolor40.0']
+- ['EF', 'concat', '40.9']
+- ['EF', 'add', '41.2']
+- ['EF', 'CA', '41.1']
+
+Claims could be:
+- For Type '\\cellcolorbestcolorIF', Method is '\\cellcolorbestcolorconcat', MPJPE is '\\cellcolorbestcolor40.0'
+- For Type 'EF', Method is 'concat', MPJPE is '40.9'
+- For Type 'EF', Method is 'add', MPJPE is '41.2'
+- For Type 'EF', Method is 'CA', MPJPE is '41.1'```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "\\cellcolorbestcolorIF"
+            }
+        },
+        "Measure": "Method",
+        "Outcome": "\\cellcolorbestcolorconcat"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "\\cellcolorbestcolorIF"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "\\cellcolorbestcolor40.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "Method",
+        "Outcome": "concat"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "Method",
+        "Outcome": "add"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "41.2"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "Method",
+        "Outcome": "CA"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "41.1"
+    }
+}
+```

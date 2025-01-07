@@ -1,0 +1,216 @@
+The user wants to extract claims from a JSON object representing a table.
+Each claim should follow a specific structure with "specifications", "Measure", and "Outcome".
+The "Measure" can be found in the table, caption, or references.
+The "Outcome" is the value associated with the "Measure".
+
+Let's analyze the example provided:
+```json
+{
+    "table": [
+        [
+            "Model",
+            "Parameters",
+            "Precision",
+            "Recall"
+        ],
+        [
+            "Llama3.2",
+            "7B",
+            "x",
+            "y"
+        ],
+        [
+            "Gemma",
+            "70B",
+            "x2",
+            "y2"
+        ]
+    ],
+    "caption": "string",
+    "references": [
+        "string", "string"
+    ]
+}
+```
+For this example, a possible claim would be:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"}
+        },
+        "Measure": "Parameters",
+        "Outcome": "7B"
+    },
+    "1": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"}
+        },
+        "Measure": "Precision",
+        "Outcome": "x"
+    },
+    "2": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Llama3.2"}
+        },
+        "Measure": "Recall",
+        "Outcome": "y"
+    },
+    "3": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"}
+        },
+        "Measure": "Parameters",
+        "Outcome": "70B"
+    },
+    "4": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"}
+        },
+        "Measure": "Precision",
+        "Outcome": "x2"
+    },
+    "5": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Gemma"}
+        },
+        "Measure": "Recall",
+        "Outcome": "y2"
+    }
+}
+```
+
+Now let's analyze the provided JSON object:
+```json
+{'table': [['Diffusion', 'JPMA', 'H', 'Setting', 'MPJPE\\downarrow'], ['nan', 'nan', '1', 'nan', '41.0'], ['✓', 'nan', '1', 'nan', '40.0'], ['✓', 'nan', '20', 'P-Agg', '39.9'], ['✓', '✓', '20', 'J-Agg', '39.5']], 'caption': 'Table 3: Ablation experiments on Human3.6M. H𝐻H=20, K𝐾K=10.', 'references': ['As shown in Table\xa03a, we begin with MixSTE\xa0[68] as the backbone (first row), and then combine it with the diffusion models, resulting in our D3DP (second row), which achieves 1mm improvement in the single-hypothesis case. This result reveals that a simple combination of diffusion models and existing deterministic pose estimators brings a large performance gain. Besides, the network is equipped with the ability to generate multiple pose hypotheses, which fits the property of depth uncertainty in 3D pose estimation. Under P-Agg setting, MPJPE slightly decreases (40.0→→\\rightarrow39.9mm) when H𝐻H is raised to 20. The error is further reduced to 39.5mm by using our JPMA (under J-Agg) method. This result shows that multi-hypothesis aggregation at the joint level, which allows fine-grained hypothesis selection, is superior to that at the pose level.', 'We compare pose-level and joint-level multi-hypothesis aggregation methods in Table\xa03b, including 1) averaging over all hypotheses; 2) using a 4-layer MLPs to generate scores for each pose/joint, which are used for a weighted average of hypotheses; 3) using our reprojection-based method at the pose level (PPMA, 4thsuperscript4th\\text{4}^{\\text{th}} row) and joint level (JPMA, 5thsuperscript5th\\text{5}^{\\text{th}} row). For fairness, we implement the same approach (MLPs/reprojection-based) at both levels. The results show that joint-level approaches are superior to pose-level approaches. Besides, PPMA outperforms both MLPs and average at the pose level and JPMA outperforms MLPs at the joint level, which shows that the 2D prior is effective in multi-hypothesis aggregation. Thus, our JPMA, which conducts aggregation at the joint level using 2D priors, achieves the best performance.']}
+```
+
+Let's extract the column names first: `['Diffusion', 'JPMA', 'H', 'Setting', 'MPJPE\\downarrow']`
+
+For the second row `['nan', 'nan', '1', 'nan', '41.0']`:
+- Diffusion: nan, JPMA: nan, H: 1, Setting: nan, MPJPE: 41.0
+
+For the third row `['✓', 'nan', '1', 'nan', '40.0']`:
+- Diffusion: ✓, JPMA: nan, H: 1, Setting: nan, MPJPE: 40.0
+
+For the fourth row `['✓', 'nan', '20', 'P-Agg', '39.9']`:
+- Diffusion: ✓, JPMA: nan, H: 20, Setting: P-Agg, MPJPE: 39.9
+
+For the fifth row `['✓', '✓', '20', 'J-Agg', '39.5']`:
+- Diffusion: ✓, JPMA: ✓, H: 20, Setting: J-Agg, MPJPE: 39.5
+
+The caption mentions "MPJPE".
+The references mention "MPJPE" and "improvement".
+
+Let's try to extract claims based on the table structure first.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "nan"
+            },
+            "1": {
+                "name": "JPMA",
+                "value": "nan"
+            },
+            "2": {
+                "name": "H",
+                "value": "1"
+            },
+            "3": {
+                "name": "Setting",
+                "value": "nan"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "41.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "✓"
+            },
+            "1": {
+                "name": "JPMA",
+                "value": "nan"
+            },
+            "2": {
+                "name": "H",
+                "value": "1"
+            },
+            "3": {
+                "name": "Setting",
+                "value": "nan"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "✓"
+            },
+            "1": {
+                "name": "JPMA",
+                "value": "nan"
+            },
+            "2": {
+                "name": "H",
+                "value": "20"
+            },
+            "3": {
+                "name": "Setting",
+                "value": "P-Agg"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "✓"
+            },
+            "1": {
+                "name": "JPMA",
+                "value": "✓"
+            },
+            "2": {
+                "name": "H",
+                "value": "20"
+            },
+            "3": {
+                "name": "Setting",
+                "value": "J-Agg"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.5"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Setting",
+                "value": "P-Agg"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.9"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Setting",
+                "value": "J-Agg"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.5"
+    }
+}
+```

@@ -1,0 +1,73 @@
+The user wants to extract claims from a table represented in a JSON object.
+Each claim should have a "specifications", "Measure", and "Outcome".
+The "specifications" are derived from the column headers and row values that define the context of the claim.
+The "Measure" is a column header that represents the measured value.
+The "Outcome" is the cell value corresponding to the "Measure".
+The "Measure" can potentially be found in the table headers, caption or references.
+
+Let's analyze the provided example:
+```json
+{
+    "table": [
+        [
+            "Location",
+            "MPJPE\\downarrow"
+        ],
+        [
+            "none",
+            "40.8"
+        ],
+        [
+            "\\cellcolorbestcolorfirst layer",
+            "\\cellcolorbestcolor40.0"
+        ],
+        [
+            "all layers",
+            "40.0"
+        ]
+    ],
+    "caption": "(b) \r\nLocation of the added timestep embedding.\r\n\r\n",
+    "references": [
+        "Table\xa09 provides quantitative comparisons between our D3DP with JPMA and the state-of-the-art approaches on Human3.6M when P-MPJPE is reported using 2D keypoints obtained from 2D detectors as inputs. Table\xa010 shows the results when MPJPE is reported using ground truth 2D keypoints as inputs. Without bells and whistles, D3DP transforms an existing deterministic 3D pose estimator into a probabilistic version with simple modifications and achieves considerable performance gains. Our method produces favorable results under conventional pose-level settings (P-Agg and P-Best), and the performance is further enhanced under the proposed joint-level settings (J-Agg and J-Best), which demonstrates the effectiveness of disentangling the hypothesis at the joint level. Experimental results show that the proposed method surpasses the others by a wide margin."
+    ]
+}
+```
+
+The table is relational.
+The column headers are "Location" and "MPJPE\\downarrow".
+The "Measure" is likely "MPJPE\\downarrow".
+
+Let's iterate through the rows (starting from the second row) to extract claims.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Location",
+                "value": "none"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.8"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Location",
+                "value": "\\cellcolorbestcolorfirst layer"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "\\cellcolorbestcolor40.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Location",
+                "value": "all layers"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.0"
+    }
+}
+```

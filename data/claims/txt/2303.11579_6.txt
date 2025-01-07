@@ -1,0 +1,656 @@
+The user wants to extract claims from a given JSON object representing a table.
+Each claim should have a "specifications", "Measure", and "Outcome".
+The "specifications" are key-value pairs from the table's row, excluding the measure and outcome columns.
+The "Measure" and "Outcome" come from the table data itself, but the specific "Measure" column needs to be identified. It can also be found in the caption or references.
+
+Let's analyze the provided example table.
+The first row seems to be the header.
+Possible measures could be 'MPJPE↓', 'Params(M)', 'Train. MACs(G)', 'Infer. MACs(G)', 'Infer. FPS'.
+
+Let's choose 'MPJPE↓' as the measure.
+
+For the first data row:
+Specifications: {'Method': 'PoseFormer [70]', 'H': '1', 'K': 'nan'}
+Measure: 'MPJPE↓'
+Outcome: '44.3'
+
+For the second data row:
+Specifications: {'Method': 'MHFormer [36]', 'H': '3', 'K': 'nan'}
+Measure: 'MPJPE↓'
+Outcome: '43.1'
+
+And so on for other rows.
+
+The user wants the output in JSON format.
+
+Plan:
+1. Iterate through the data rows of the table (skip the header row).
+2. For each row, identify the 'Measure' column and the corresponding 'Outcome'.
+3. Create the 'specifications' by taking the remaining columns and their values.
+4. Construct the JSON output.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PoseFormer\u00a0[70]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "44.3"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MHFormer\u00a0[36]"
+            },
+            "1": {
+                "name": "H",
+                "value": "3"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "43.1"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "P-STMO\u00a0[51]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "42.8"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "41.0"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "1"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.0"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "5"
+            },
+            "2": {
+                "name": "K",
+                "value": "5"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.7"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "20"
+            },
+            "2": {
+                "name": "K",
+                "value": "10"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.5"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PoseFormer\u00a0[70]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Params(M)",
+        "Outcome": "9.5"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MHFormer\u00a0[36]"
+            },
+            "1": {
+                "name": "H",
+                "value": "3"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Params(M)",
+        "Outcome": "24.7"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "P-STMO\u00a0[51]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Params(M)",
+        "Outcome": "6.7"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Params(M)",
+        "Outcome": "33.6"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "1"
+            }
+        },
+        "Measure": "Params(M)",
+        "Outcome": "34.6"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "5"
+            },
+            "2": {
+                "name": "K",
+                "value": "5"
+            }
+        },
+        "Measure": "Params(M)",
+        "Outcome": "34.6"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "20"
+            },
+            "2": {
+                "name": "K",
+                "value": "10"
+            }
+        },
+        "Measure": "Params(M)",
+        "Outcome": "34.6"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PoseFormer\u00a0[70]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Train. MACs(G)",
+        "Outcome": "0.81"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MHFormer\u00a0[36]"
+            },
+            "1": {
+                "name": "H",
+                "value": "3"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Train. MACs(G)",
+        "Outcome": "4.81"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "P-STMO\u00a0[51]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Train. MACs(G)",
+        "Outcome": "0.87"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Train. MACs(G)",
+        "Outcome": "0.57"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "1"
+            }
+        },
+        "Measure": "Train. MACs(G)",
+        "Outcome": "0.57"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "5"
+            },
+            "2": {
+                "name": "K",
+                "value": "5"
+            }
+        },
+        "Measure": "Train. MACs(G)",
+        "Outcome": "0.57"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "20"
+            },
+            "2": {
+                "name": "K",
+                "value": "10"
+            }
+        },
+        "Measure": "Train. MACs(G)",
+        "Outcome": "0.57"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PoseFormer\u00a0[70]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Infer. MACs(G)",
+        "Outcome": "1.62"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MHFormer\u00a0[36]"
+            },
+            "1": {
+                "name": "H",
+                "value": "3"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Infer. MACs(G)",
+        "Outcome": "9.62"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "P-STMO\u00a0[51]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Infer. MACs(G)",
+        "Outcome": "1.74"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Infer. MACs(G)",
+        "Outcome": "1.14"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "1"
+            }
+        },
+        "Measure": "Infer. MACs(G)",
+        "Outcome": "1.14"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "5"
+            },
+            "2": {
+                "name": "K",
+                "value": "5"
+            }
+        },
+        "Measure": "Infer. MACs(G)",
+        "Outcome": "28.5"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "20"
+            },
+            "2": {
+                "name": "K",
+                "value": "10"
+            }
+        },
+        "Measure": "Infer. MACs(G)",
+        "Outcome": "228.2"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PoseFormer\u00a0[70]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Infer. FPS",
+        "Outcome": "1952"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MHFormer\u00a0[36]"
+            },
+            "1": {
+                "name": "H",
+                "value": "3"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Infer. FPS",
+        "Outcome": "598"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "P-STMO\u00a0[51]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Infer. FPS",
+        "Outcome": "3040"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MixSTE\u00a0[68]"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "nan"
+            }
+        },
+        "Measure": "Infer. FPS",
+        "Outcome": "4547"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            },
+            "2": {
+                "name": "K",
+                "value": "1"
+            }
+        },
+        "Measure": "Infer. FPS",
+        "Outcome": "4364"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "5"
+            },
+            "2": {
+                "name": "K",
+                "value": "5"
+            }
+        },
+        "Measure": "Infer. FPS",
+        "Outcome": "204"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "D3DP"
+            },
+            "1": {
+                "name": "H",
+                "value": "20"
+            },
+            "2": {
+                "name": "K",
+                

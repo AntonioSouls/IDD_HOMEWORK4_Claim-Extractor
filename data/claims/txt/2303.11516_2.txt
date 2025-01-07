@@ -1,0 +1,253 @@
+The user wants to extract claims from a JSON object containing a table, caption, and references.
+Each claim should be a JSON object with a specific structure: "specifications", "Measure", and "Outcome".
+The "specifications" are key-value pairs from the table's row.
+The "Measure" can be found in the table, caption, or references.
+The "Outcome" is the value associated with the "Measure".
+
+Let's analyze the example JSON provided:
+{'table': [['Method', 'ADD(-S)', 'AUC of ADD-S', 'AUC of ADD(-S)'], ['RePose\xa0[25]', '62.1', '88.5', '82.0'], ['RNNPose\xa0[50]', '66.4', '-', '83.1'], ['SO-Pose\xa0[12]', '56.8', '*90.9', '*83.9'], ['DProST\xa0[36]', '65.1', '-', '77.4'], ['GDR-Net\xa0[46]', '60.1', '*91.6', '*84.4'], ['ZebraPose\xa0[43]', '80.5', '90.1', '85.3'], ['GDR-Net-LC', '70.6', '89.8, *94.1', '84.0, *88.8'], ['ZebraPose-LC', '82.4', '90.8, *95.0', '86.1, *90.8']], 'caption': 'Table 2: Comparison with the state of the art on YCB-V. * indicates that the AUC is calculated with 11-points interpolation.', 'references': ['Results on YCB-V.\u2003As summarized in Tab.\xa02, applying the LC loss on GDR-Net produces results second only to ZebraPose. Furthermore, we achieve state-of-the-art performance when the LC loss is applied to ZebraPose. We implement a symmetry-aware training scheme which selects the ground-truth pose on the fly based on the average distance between the predicted 3D coordinates at randomly selected 2D locations and possible 3D coordinates at the same locations under the symmetric ground-truth pose. This scheme is only applied to the GDR-Net-based experiments on YCB-V, including the baseline and the model with our LC loss for fair comparison.']}
+
+The table headers are: 'Method', 'ADD(-S)', 'AUC of ADD-S', 'AUC of ADD(-S)'.
+We can iterate through each row of the table (excluding the header row) and create claims.
+For each row, the 'Method' will be part of the specifications. The other columns can be the "Measure" and the corresponding value will be the "Outcome".
+
+Let's start with the first data row: ['RePose\xa0[25]', '62.1', '88.5', '82.0']
+Claim 0:
+Specifications: {'0': {'name': 'Method', 'value': 'RePose\xa0[25]'}}
+Measure: 'ADD(-S)'
+Outcome: '62.1'
+
+Claim 1:
+Specifications: {'0': {'name': 'Method', 'value': 'RePose\xa0[25]'}}
+Measure: 'AUC of ADD-S'
+Outcome: '88.5'
+
+Claim 2:
+Specifications: {'0': {'name': 'Method', 'value': 'RePose\xa0[25]'}}
+Measure: 'AUC of ADD(-S)'
+Outcome: '82.0'
+
+Let's apply this to all rows.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RePose\u00a0[25]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "62.1"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RePose\u00a0[25]"
+            }
+        },
+        "Measure": "AUC of ADD-S",
+        "Outcome": "88.5"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RePose\u00a0[25]"
+            }
+        },
+        "Measure": "AUC of ADD(-S)",
+        "Outcome": "82.0"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RNNPose\u00a0[50]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "66.4"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RNNPose\u00a0[50]"
+            }
+        },
+        "Measure": "AUC of ADD(-S)",
+        "Outcome": "83.1"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SO-Pose\u00a0[12]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "56.8"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SO-Pose\u00a0[12]"
+            }
+        },
+        "Measure": "AUC of ADD-S",
+        "Outcome": "*90.9"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SO-Pose\u00a0[12]"
+            }
+        },
+        "Measure": "AUC of ADD(-S)",
+        "Outcome": "*83.9"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DProST\u00a0[36]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "65.1"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DProST\u00a0[36]"
+            }
+        },
+        "Measure": "AUC of ADD(-S)",
+        "Outcome": "77.4"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDR-Net\u00a0[46]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "60.1"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDR-Net\u00a0[46]"
+            }
+        },
+        "Measure": "AUC of ADD-S",
+        "Outcome": "*91.6"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDR-Net\u00a0[46]"
+            }
+        },
+        "Measure": "AUC of ADD(-S)",
+        "Outcome": "*84.4"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ZebraPose\u00a0[43]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "80.5"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ZebraPose\u00a0[43]"
+            }
+        },
+        "Measure": "AUC of ADD-S",
+        "Outcome": "90.1"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ZebraPose\u00a0[43]"
+            }
+        },
+        "Measure": "AUC of ADD(-S)",
+        "Outcome": "85.3"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "70.6"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "AUC of ADD-S",
+        "Outcome": "89.8, *94.1"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "AUC of ADD(-S)",
+        "Outcome": "84.0, *88.8"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "82.4"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "AUC of ADD-S",
+        "Outcome": "90.8, *95.0"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "AUC of ADD(-S)",
+        "Outcome": "86.1, *90.8"
+    }
+}
+```

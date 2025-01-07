@@ -1,0 +1,1016 @@
+The user wants to extract claims from a JSON object representing a table.
+Each claim should have a specific structure: `{"0": {"specifications": {...}, "Measure": "...", "Outcome": "..."}}`.
+The `specifications` are key-value pairs from the table's row headers and column headers corresponding to the `Outcome`.
+The `Measure` can be found in the table, caption, or references.
+The `Outcome` is a value from the table.
+
+Let's analyze the provided example JSON:
+```json
+{
+    "table": [
+        [
+            "Method",
+            "Avg.",
+            "MSPD",
+            "MSSD",
+            "VSD"
+        ],
+        [
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.600",
+            "0.689",
+            "0.589",
+            "0.521"
+        ],
+        [
+            "SurfEmb",
+            "0.588",
+            "0.678",
+            "0.573",
+            "0.514"
+        ],
+        [
+            "Cosypose",
+            "0.473",
+            "0.675",
+            "0.559",
+            "0.515"
+        ],
+        [
+            "CDPNv2",
+            "0.226",
+            "0.582",
+            "0.438",
+            "0.399"
+        ],
+        [
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.676",
+            "0.702",
+            "0.692",
+            "0.636"
+        ],
+        [
+            "SurfEmb",
+            "0.659",
+            "0.680",
+            "0.677",
+            "0621"
+        ],
+        [
+            "CIR",
+            "0.676",
+            "0.683",
+            "0.688",
+            "0.656"
+        ],
+        [
+            "Cosypose+ICP",
+            "0.647",
+            "0.666",
+            "0.652",
+            "0.624"
+        ],
+        [
+            "CDPNv2+ICP",
+            "0.450",
+            "0.459",
+            "0.458",
+            "0.433"
+        ]
+    ],
+    "caption": "Table 11: Additional object pose results on IC-BIN.\r\n",
+    "references": [
+        "Additional quantitative results.\r\nWe show the detailed object pose results using different metrics on LM-O, T-LESS, TUD-L, IC-BIN, ITODD, HB, and YCB in Table\xa08,\xa09,\xa010,\xa011,\xa012,\xa013, and\xa014, respectively.\r\nOur method combined with PFA-Pose\xa0[15] outperforms the state of the art in most experimental settings."
+    ]
+}
+```
+
+The table structure seems to have multi-level row headers and single-level column headers.
+The measures seem to be the column headers: "Avg.", "MSPD", "MSSD", "VSD".
+We can iterate through the rows and columns to extract the claims.
+
+For the first data row ("PFA+Ours", "0.600", "0.689", "0.589", "0.521"), and the first measure "Avg.":
+- `Outcome`: "0.600"
+- `Measure`: "Avg."
+- `specifications`: {"0": {"name": "Method", "value": "PFA+Ours"}, "1": {"name": "RGB (PBR)", "value": "RGB (PBR)"}}
+
+For the same data row and the second measure "MSPD":
+- `Outcome`: "0.689"
+- `Measure`: "MSPD"
+- `specifications`: {"0": {"name": "Method", "value": "PFA+Ours"}, "1": {"name": "RGB (PBR)", "value": "RGB (PBR)"}}
+
+Let's define the logic to extract specifications based on the row and column structure.
+
+```python
+import json
+
+table_data = {
+    "table": [
+        [
+            "Method",
+            "Avg.",
+            "MSPD",
+            "MSSD",
+            "VSD"
+        ],
+        [
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.600",
+            "0.689",
+            "0.589",
+            "0.521"
+        ],
+        [
+            "SurfEmb",
+            "0.588",
+            "0.678",
+            "0.573",
+            "0.514"
+        ],
+        [
+            "Cosypose",
+            "0.473",
+            "0.675",
+            "0.559",
+            "0.515"
+        ],
+        [
+            "CDPNv2",
+            "0.226",
+            "0.582",
+            "0.438",
+            "0.399"
+        ],
+        [
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.676",
+            "0.702",
+            "0.692",
+            "0.636"
+        ],
+        [
+            "SurfEmb",
+            "0.659",
+            "0.680",
+            "0.677",
+            "0621"
+        ],
+        [
+            "CIR",
+            "0.676",
+            "0.683",
+            "0.688",
+            "0.656"
+        ],
+        [
+            "Cosypose+ICP",
+            "0.647",
+            "0.666",
+            "0.652",
+            "0.624"
+        ],
+        [
+            "CDPNv2+ICP",
+            "0.450",
+            "0.459",
+            "0.458",
+            "0.433"
+        ]
+    ],
+    "caption": "Table 11: Additional object pose results on IC-BIN.\r\n",
+    "references": [
+        "Additional quantitative results.\r\nWe show the detailed object pose results using different metrics on LM-O, T-LESS, TUD-L, IC-BIN, ITODD, HB, and YCB in Table\xa08,\xa09,\xa010,\xa011,\xa012,\xa013, and\xa014, respectively.\r\nOur method combined with PFA-Pose\xa0[15] outperforms the state of the art in most experimental settings."
+    ]
+}
+
+table = table_data['table']
+caption = table_data.get('caption')
+references = table_data.get('references', [])
+
+claims = {}
+claim_index = 0
+
+column_headers = table[0]
+row_headers_level_1 = table[1]
+
+for row_index in range(2, len(table)):
+    row_data = table[row_index]
+    row_header = row_data[0]
+    row_header_level_2 = table[row_index - 1][0] if table[row_index - 1][0] not in column_headers else None
+
+    for col_index in range(1, len(column_headers)):
+        measure = column_headers[col_index]
+        outcome = row_data[col_index]
+
+        specifications = {}
+        specifications['0'] = {"name": column_headers[0], "value": row_header}
+        if row_header_level_2 and row_header_level_2 != row_header:
+            specifications['1'] = {"name": column_headers[col_index], "value": row_headers_level_1[col_index]}
+
+        claims[str(claim_index)] = {
+            "specifications": specifications,
+            "Measure": measure,
+            "Outcome": outcome
+        }
+        claim_index += 1
+
+print(json.dumps(claims, indent=4))
+```
+
+Rethinking the specification extraction. The specifications should be derived from the row and column headers leading to the `Outcome`.
+
+Let's correct the specification extraction logic.
+
+```python
+import json
+
+table_data = {
+    "table": [
+        [
+            "Method",
+            "Avg.",
+            "MSPD",
+            "MSSD",
+            "VSD"
+        ],
+        [
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.600",
+            "0.689",
+            "0.589",
+            "0.521"
+        ],
+        [
+            "SurfEmb",
+            "0.588",
+            "0.678",
+            "0.573",
+            "0.514"
+        ],
+        [
+            "Cosypose",
+            "0.473",
+            "0.675",
+            "0.559",
+            "0.515"
+        ],
+        [
+            "CDPNv2",
+            "0.226",
+            "0.582",
+            "0.438",
+            "0.399"
+        ],
+        [
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.676",
+            "0.702",
+            "0.692",
+            "0.636"
+        ],
+        [
+            "SurfEmb",
+            "0.659",
+            "0.680",
+            "0.677",
+            "0621"
+        ],
+        [
+            "CIR",
+            "0.676",
+            "0.683",
+            "0.688",
+            "0.656"
+        ],
+        [
+            "Cosypose+ICP",
+            "0.647",
+            "0.666",
+            "0.652",
+            "0.624"
+        ],
+        [
+            "CDPNv2+ICP",
+            "0.450",
+            "0.459",
+            "0.458",
+            "0.433"
+        ]
+    ],
+    "caption": "Table 11: Additional object pose results on IC-BIN.\r\n",
+    "references": [
+        "Additional quantitative results.\r\nWe show the detailed object pose results using different metrics on LM-O, T-LESS, TUD-L, IC-BIN, ITODD, HB, and YCB in Table\xa08,\xa09,\xa010,\xa011,\xa012,\xa013, and\xa014, respectively.\r\nOur method combined with PFA-Pose\xa0[15] outperforms the state of the art in most experimental settings."
+    ]
+}
+
+table = table_data['table']
+caption = table_data.get('caption')
+references = table_data.get('references', [])
+
+claims = {}
+claim_index = 0
+
+column_headers_level_1 = table[0]
+column_headers_level_2 = table[1]
+
+for row_index in range(2, len(table)):
+    row_data = table[row_index]
+    row_header = row_data[0]
+
+    for col_index in range(1, len(column_headers_level_1)):
+        measure = column_headers_level_1[col_index]
+        outcome = row_data[col_index]
+
+        specifications = {}
+        specifications['0'] = {"name": column_headers_level_1[0], "value": row_header}
+        specifications['1'] = {"name": column_headers_level_1[col_index], "value": column_headers_level_2[col_index]}
+
+        claims[str(claim_index)] = {
+            "specifications": specifications,
+            "Measure": measure,
+            "Outcome": outcome
+        }
+        claim_index += 1
+
+print(json.dumps(claims, indent=4))
+```
+
+The specification logic is still not fully correct for all cases. Let's refine it based on the table structure. The first column contains the primary row identifier. Subsequent rows might contain categories for these identifiers.
+
+Let's consider the structure of the specifications more carefully. For a given `Outcome` cell, the `specifications` describe how to reach that cell using the row and column headers.
+
+For example, if `Outcome` is "0.600", `Measure` is "Avg.", the specifications are:
+- "Method": "PFA+Ours"
+- "Avg.": "RGB (PBR)"
+
+If the `Outcome` is "0.689", `Measure` is "MSPD", the specifications are:
+- "Method": "PFA+Ours"
+- "MSPD": "RGB (PBR)"
+
+Let's try a row-wise approach first.
+
+```python
+import json
+
+table_data = {
+    "table": [
+        [
+            "Method",
+            "Avg.",
+            "MSPD",
+            "MSSD",
+            "VSD"
+        ],
+        [
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)",
+            "RGB (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.600",
+            "0.689",
+            "0.589",
+            "0.521"
+        ],
+        [
+            "SurfEmb",
+            "0.588",
+            "0.678",
+            "0.573",
+            "0.514"
+        ],
+        [
+            "Cosypose",
+            "0.473",
+            "0.675",
+            "0.559",
+            "0.515"
+        ],
+        [
+            "CDPNv2",
+            "0.226",
+            "0.582",
+            "0.438",
+            "0.399"
+        ],
+        [
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)",
+            "RGB-D (PBR)"
+        ],
+        [
+            "PFA+Ours",
+            "0.676",
+            "0.702",
+            "0.692",
+            "0.636"
+        ],
+        [
+            "SurfEmb",
+            "0.659",
+            "0.680",
+            "0.677",
+            "0621"
+        ],
+        [
+            "CIR",
+            "0.676",
+            "0.683",
+            "0.688",
+            "0.656"
+        ],
+        [
+            "Cosypose+ICP",
+            "0.647",
+            "0.666",
+            "0.652",
+            "0.624"
+        ],
+        [
+            "CDPNv2+ICP",
+            "0.450",
+            "0.459",
+            "0.458",
+            "0.433"
+        ]
+    ],
+    "caption": "Table 11: Additional object pose results on IC-BIN.\r\n",
+    "references": [
+        "Additional quantitative results.\r\nWe show the detailed object pose results using different metrics on LM-O, T-LESS, TUD-L, IC-BIN, ITODD, HB, and YCB in Table\xa08,\xa09,\xa010,\xa011,\xa012,\xa013, and\xa014, respectively.\r\nOur method combined with PFA-Pose\xa0[15] outperforms the state of the art in most experimental settings."
+    ]
+}
+
+table = table_data['table']
+caption = table_data.get('caption')
+references = table_data.get('references', [])
+
+claims = {}
+claim_index = 0
+
+column_headers = table[0]
+
+for row_index in range(2, len(table)):
+    row_header = table[row_index][0]
+    for col_index in range(1, len(column_headers)):
+        measure = column_headers[col_index]
+        outcome = table[row_index][col_index]
+
+        specifications = {}
+        specifications['0'] = {"name": column_headers[0], "value": row_header}
+        # Add specification based on the second header row
+        specifications['1'] = {"name": measure, "value": table[1][col_index]}
+
+        claims[str(claim_index)] = {
+            "specifications": specifications,
+            "Measure": measure,
+            "Outcome": outcome
+        }
+        claim_index += 1
+
+print(json.dumps(claims, indent=4))
+```
+
+This version seems better aligned with the expected output structure. It correctly identifies the row identifier and the category from the second header row. The `Measure` is taken from the first header row.
+
+Final check of the requirements:
+- Returns only a JSON file.
+- Claims have the specified structure.
+- `Measure` is identified.
+- `Outcome` is the associated value.
+
+One edge case to consider is when the table doesn't have a second header row. The provided example has it. If it doesn't, the specification logic for the second element would need adjustment. However, based on the example, this logic should work.
+The `Measure` is consistently in the first row of the table.
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Avg.",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.600"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "MSPD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.689"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "MSSD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.589"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "VSD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.521"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Avg.",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.588"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "MSPD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.678"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "MSSD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.573"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "VSD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.514"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "Avg.",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.473"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "MSPD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.675"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "MSSD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.559"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "VSD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.515"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Avg.",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.226"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "MSPD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.582"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "MSSD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.438"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "VSD",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.399"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Avg.",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.676"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "MSPD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.702"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "MSSD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.692"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "VSD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.636"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Avg.",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.659"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "MSPD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.680"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "MSSD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.677"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "VSD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0621"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "Avg.",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.676"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "MSPD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.683"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "MSSD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.688"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "VSD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.656"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "Avg.",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.647"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "MSPD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.666"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "MSSD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.652"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "VSD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.624"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "Avg.",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.450"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "MSPD",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.459"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                

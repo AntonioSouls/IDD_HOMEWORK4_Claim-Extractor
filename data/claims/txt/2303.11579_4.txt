@@ -1,0 +1,172 @@
+The user wants to extract claims from a table contained within a JSON object.
+Each claim should follow a specific JSON structure: `{"0": {"specifications": {"0": {"name": "Column1", "value": "RowValue1"}, "1": {"name": "Column2", "value": "RowValue2"}}, "Measure": "MeasureName", "Outcome": "MeasureValue"}, "1": {...}}`.
+
+The `specifications` will be the column headers and the corresponding cell values for a given row.
+The `Measure` should be identified from the table, caption, or references.
+The `Outcome` is the value associated with that `Measure` in the table.
+
+Let's analyze the provided example:
+
+```json
+{
+    "table": [
+        [
+            "Diffusion",
+            "JPMA",
+            "H",
+            "Setting",
+            "MPJPE\\downarrow"
+        ],
+        [
+            "nan",
+            "nan",
+            "1",
+            "nan",
+            "41.0"
+        ],
+        [
+            "✓",
+            "nan",
+            "1",
+            "nan",
+            "40.0"
+        ],
+        [
+            "✓",
+            "nan",
+            "20",
+            "P-Agg",
+            "39.9"
+        ],
+        [
+            "✓",
+            "✓",
+            "20",
+            "J-Agg",
+            "39.5"
+        ]
+    ],
+    "caption": "(a) \r\nEffectiveness of components.\r\n\r\n",
+    "references": [
+        "Table\xa04 shows the accuracy and inference speed. Experiments are conducted on a single NVIDIA RTX 3080 Ti GPU. For previous methods (first four rows), MACs of inference are twice as high as those of training, due to the data augmentation applied. D3DP (5thsuperscript5th\\text{5}^{\\text{th}} row) makes a few modifications (add additional inputs and timestep embedding) to MixSTE (our backbone, 4thsuperscript4th\\text{4}^{\\text{th}} row), and adds a parameter-free diffusion process. This results in a small increase in the number of parameters, essentially unchanged MACs, a slight decrease in FPS, and a 1mm performance improvement. Moreover, we can adjust H,K𝐻𝐾H,K to trade computational budgets for performance during inference. When H,K𝐻𝐾H,K increases, MACs and FPS roughly show a linear increase and decrease, respectively."
+    ]
+}
+```
+
+The headers are: "Diffusion", "JPMA", "H", "Setting", "MPJPE\\downarrow".
+The potential measures are likely in the last column "MPJPE\\downarrow".
+
+Let's extract claims for each row based on the "MPJPE\\downarrow" measure.
+
+Row 2:
+Specifications: "Diffusion": "nan", "JPMA": "nan", "H": "1", "Setting": "nan"
+Measure: "MPJPE\\downarrow"
+Outcome: "41.0"
+
+Row 3:
+Specifications: "Diffusion": "✓", "JPMA": "nan", "H": "1", "Setting": "nan"
+Measure: "MPJPE\\downarrow"
+Outcome: "40.0"
+
+Row 4:
+Specifications: "Diffusion": "✓", "JPMA": "nan", "H": "20", "Setting": "P-Agg"
+Measure: "MPJPE\\downarrow"
+Outcome: "39.9"
+
+Row 5:
+Specifications: "Diffusion": "✓", "JPMA": "✓", "H": "20", "Setting": "J-Agg"
+Measure: "MPJPE\\downarrow"
+Outcome: "39.5"
+
+Now, let's structure the output JSON.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "nan"
+            },
+            "1": {
+                "name": "JPMA",
+                "value": "nan"
+            },
+            "2": {
+                "name": "H",
+                "value": "1"
+            },
+            "3": {
+                "name": "Setting",
+                "value": "nan"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "41.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "✓"
+            },
+            "1": {
+                "name": "JPMA",
+                "value": "nan"
+            },
+            "2": {
+                "name": "H",
+                "value": "1"
+            },
+            "3": {
+                "name": "Setting",
+                "value": "nan"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "✓"
+            },
+            "1": {
+                "name": "JPMA",
+                "value": "nan"
+            },
+            "2": {
+                "name": "H",
+                "value": "20"
+            },
+            "3": {
+                "name": "Setting",
+                "value": "P-Agg"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "✓"
+            },
+            "1": {
+                "name": "JPMA",
+                "value": "✓"
+            },
+            "2": {
+                "name": "H",
+                "value": "20"
+            },
+            "3": {
+                "name": "Setting",
+                "value": "J-Agg"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.5"
+    }
+}
+```

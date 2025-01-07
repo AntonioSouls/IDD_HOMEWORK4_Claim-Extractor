@@ -1,0 +1,1111 @@
+The user wants to extract claims from a given JSON object representing a table.
+Each claim should have a "specifications", a "Measure" and an "Outcome".
+The "specifications" are key-value pairs extracted from the row header.
+The "Measure" can be found in the table headers, caption or references.
+The "Outcome" is the value associated with the "Measure" for the specific "specifications".
+
+The table provided seems to be a relational table.
+The first row is the header row.
+The first column seems to be the categorical variable.
+Other columns are numerical measures for different datasets.
+
+Plan:
+1. Iterate through each row of the table, starting from the second row.
+2. For each row, the first element will be part of the "specifications".
+3. The remaining elements in the row will be the "Outcome".
+4. The corresponding column header will be the "Measure".
+5. Identify other "specifications" from the row, such as "Real" and "Data".
+
+Let's start with the first data row: ['PFA+Ours', 'nan', 'RGB', '0.715', '0.719', '0.733', '0.600', '0.353', '0.840', '0.648', '0.658']
+Specifications: Method = PFA+Ours, Real = nan, Data = RGB
+Measures: L-MO*, T-LESS, TUD-L, IC-BIN*, ITODD*, HB*, YCB, Avg.
+Outcomes: 0.715, 0.719, 0.733, 0.600, 0.353, 0.840, 0.648, 0.658
+
+Consider the caption and references to see if there are other potential measures.
+The caption mentions "average of MSPD, MSSD, and VSD". This seems to apply to the "Avg." column.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "LM-O∗",
+        "Outcome": "0.715"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "T-LESS",
+        "Outcome": "0.719"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "TUD-L",
+        "Outcome": "0.733"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "IC-BIN∗",
+        "Outcome": "0.600"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "ITODD∗",
+        "Outcome": "0.353"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "HB∗",
+        "Outcome": "0.840"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "YCB",
+        "Outcome": "0.648"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.658"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA\u00a0[15]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "LM-O∗",
+        "Outcome": "0.674"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA\u00a0[15]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "YCB",
+        "Outcome": "0.614"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "LM-O∗",
+        "Outcome": "0.663"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "T-LESS",
+        "Outcome": "0.735"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "TUD-L",
+        "Outcome": "0.715"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "IC-BIN∗",
+        "Outcome": "0.588"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "ITODD∗",
+        "Outcome": "0.413"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "HB∗",
+        "Outcome": "0.791"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "YCB",
+        "Outcome": "0.647"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.650"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "LM-O∗",
+        "Outcome": "0.633"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "T-LESS",
+        "Outcome": "0.640"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "TUD-L",
+        "Outcome": "0.685"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "IC-BIN∗",
+        "Outcome": "0.473"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "ITODD∗",
+        "Outcome": "0.216"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "HB∗",
+        "Outcome": "0.656"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "YCB",
+        "Outcome": "0.574"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.570"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2\u00a0[26]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "LM-O∗",
+        "Outcome": "0.624"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2\u00a0[26]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "T-LESS",
+        "Outcome": "0.407"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2\u00a0[26]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "TUD-L",
+        "Outcome": "0.588"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2\u00a0[26]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "IC-BIN∗",
+        "Outcome": "0.226"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2\u00a0[26]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "ITODD∗",
+        "Outcome": "0.067"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2\u00a0[26]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "HB∗",
+        "Outcome": "0.722"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2\u00a0[26]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "YCB",
+        "Outcome": "0.390"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2\u00a0[26]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "nan"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.472"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "LM-O∗",
+        "Outcome": "0.715"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "T-LESS",
+        "Outcome": "0.778"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "TUD-L",
+        "Outcome": "0.839"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "IC-BIN∗",
+        "Outcome": "0.600"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "ITODD∗",
+        "Outcome": "0.353"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "HB∗",
+        "Outcome": "0.840"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "YCB",
+        "Outcome": "0.806"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.704"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA\u00a0[15]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "LM-O∗",
+        "Outcome": "0.674"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA\u00a0[15]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "YCB",
+        "Outcome": "0.748"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "LM-O∗",
+        "Outcome": "0.663"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "T-LESS",
+        "Outcome": "0.770"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "TUD-L",
+        "Outcome": "0.805"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "IC-BIN∗",
+        "Outcome": "0.588"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "ITODD∗",
+        "Outcome": "0.413"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "HB∗",
+        "Outcome": "0.791"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "YCB",
+        "Outcome": "0.711"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb\u00a0[9]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.677"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "LM-O∗",
+        "Outcome": "0.633"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "T-LESS",
+        "Outcome": "0.728"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "TUD-L",
+        "Outcome": "0.823"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "IC-BIN∗",
+        "Outcome": "0.583"
+    },
+    "56": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "ITODD∗",
+        "Outcome": "0.216"
+    },
+    "57": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "HB∗",
+        "Outcome": "0.656"
+    },
+    "58": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "YCB",
+        "Outcome": "0.821"
+    },
+    "59": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CosyPose\u00a0[23]"
+            },
+            "1": {
+                "name": "Real",
+                "value": "✓"
+            },
+            "2": {
+                "name": "Data",
+                "value": "RGB"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.637"
+    },
+    "60": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "

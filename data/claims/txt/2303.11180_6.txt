@@ -1,0 +1,123 @@
+The user wants to extract claims from a table represented in a JSON object.
+Each claim should have a "specifications", "Measure", and "Outcome".
+The "specifications" are key-value pairs from the table columns.
+The "Measure" can be found in the table, caption, or references.
+The "Outcome" is the value associated with the "Measure".
+The output should be a JSON object containing all extracted claims.
+
+Let's analyze the example provided:
+```json
+{
+    "table": [
+        [
+            "Model",
+            "Parameters",
+            "Precision",
+            "Recall"
+        ],
+        [
+            "Llama3.2",
+            "7B",
+            "x",
+            "y"
+        ],
+        [
+            "Gemma",
+            "70B",
+            "x2",
+            "y2"
+        ]
+    ],
+    "caption": "string",
+    "references": [
+        "string", "string"
+    ]
+}
+```
+
+From this table, we can extract claims like:
+- Model Llama3.2 has Parameters 7B, Precision x, and Recall y.
+- Model Gemma has Parameters 70B, Precision x2, and Recall y2.
+
+Let's analyze the provided example from the prompt:
+```json
+{'table': [['Method', 'Parameters (M)', 'Speed (fps)'], ['HRNet [30]', '64', '125'], ['SCIO [15]', '193', '72'], ['SCAI (Ours)', '357', '81']], 'caption': 'Table 6: Complexity analysis on COCO val set.', 'references': ['(2) Algorithm complexity.\r\nTable 6 demonstrates that our proposed SCAI method introduces additional computational complexity. Specifically, the FFN and correction network increase the complexity of the baseline pose estimation model. It is worth noting that these two networks operate on the previously predicted heatmaps and thus their network structures and complexity are relatively modest. The self-referential adaptation requires updating the correction network multiple times for the entire batch, thereby increasing the overall computational burden. However, compared to SCIO, our model offers improved inference speed. In our future work, we aim to explore more efficient methods of self-adaptable inference.']}
+```
+
+From this table, we can extract claims like:
+- Method HRNet [30] has Parameters (M) 64 and Speed (fps) 125.
+- Method SCIO [15] has Parameters (M) 193 and Speed (fps) 72.
+- Method SCAI (Ours) has Parameters (M) 357 and Speed (fps) 81.
+
+The "Measure" can be "Parameters (M)" or "Speed (fps)".
+
+The process should be:
+1. Iterate through the rows of the table (skipping the header row).
+2. For each row, iterate through the columns (skipping the first column which acts as the identifier).
+3. Create a claim object.
+4. Populate the "specifications" with the values from the first column and the corresponding header.
+5. Set the "Measure" to the header of the current column.
+6. Set the "Outcome" to the value in the current cell.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet [30]"
+            }
+        },
+        "Measure": "Parameters (M)",
+        "Outcome": "64"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet [30]"
+            }
+        },
+        "Measure": "Speed (fps)",
+        "Outcome": "125"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCIO [15]"
+            }
+        },
+        "Measure": "Parameters (M)",
+        "Outcome": "193"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCIO [15]"
+            }
+        },
+        "Measure": "Speed (fps)",
+        "Outcome": "72"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCAI (Ours)"
+            }
+        },
+        "Measure": "Parameters (M)",
+        "Outcome": "357"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCAI (Ours)"
+            }
+        },
+        "Measure": "Speed (fps)",
+        "Outcome": "81"
+    }
+}
+```

@@ -1,0 +1,113 @@
+The user wants to extract claims from a table represented in a JSON format.
+Each claim should have a structured format:  `{"specifications": {...}, "Measure": "...", "Outcome": "..."}`.
+The `specifications` are the column-value pairs that define the context of the claim.
+The `Measure` is the metric being evaluated.
+The `Outcome` is the value of that metric.
+
+The input table can be of four types (relational, nested relational, cross table, nested cross table), but I don't need to classify the table myself, just extract claims based on the structure.
+
+Let's analyze the provided example:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Model", "value": "Full Fine-tuning"},
+            "1": {"name": "# Params.", "value": "1.8B"},
+        },
+        "Measure": "VS",
+        "Outcome": "5.3"
+    },
+    "1": { ... }
+}
+```
+Here, "Model" and "# Params." are used for specifications. "VS" is the Measure, and "5.3" is the Outcome.
+
+Now let's consider the input table:
+```json
+{'table': [['Camera Model', 'Access', 'MPJPE\\downarrow'], ['w/ distortion', 'GT', '39.74'], ['w/o distortion', 'GT', '39.80'], ['w/ distortion', 'estimated', '39.78'], ['w/o distortion', 'estimated', '39.82']], 'caption': 'Table 8: Impact of different camera models and different ways of accessing intrinsic camera parameters. H𝐻H=5, K𝐾K=5. GT: ground truth. J-Agg setting is used.', 'references': []}
+```
+The header row is `['Camera Model', 'Access', 'MPJPE\\downarrow']`.
+"MPJPE\\downarrow" seems like the Measure. The arrow suggests lower is better.
+
+Let's try to extract claims from each row based on this assumption.
+
+Row 1: `['w/ distortion', 'GT', '39.74']`
+Specifications: `{'0': {'name': 'Camera Model', 'value': 'w/ distortion'}, '1': {'name': 'Access', 'value': 'GT'}}`
+Measure: `MPJPE\\downarrow`
+Outcome: `39.74`
+
+Row 2: `['w/o distortion', 'GT', '39.80']`
+Specifications: `{'0': {'name': 'Camera Model', 'value': 'w/o distortion'}, '1': {'name': 'Access', 'value': 'GT'}}`
+Measure: `MPJPE\\downarrow`
+Outcome: `39.80`
+
+Row 3: `['w/ distortion', 'estimated', '39.78']`
+Specifications: `{'0': {'name': 'Camera Model', 'value': 'w/ distortion'}, '1': {'name': 'Access', 'value': 'estimated'}}`
+Measure: `MPJPE\\downarrow`
+Outcome: `39.78`
+
+Row 4: `['w/o distortion', 'estimated', '39.82']`
+Specifications: `{'0': {'name': 'Camera Model', 'value': 'w/o distortion'}, '1': {'name': 'Access', 'value': 'estimated'}}`
+Measure: `MPJPE\\downarrow`
+Outcome: `39.82`
+
+The Measure is found in the header of the table.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Camera Model",
+                "value": "w/ distortion"
+            },
+            "1": {
+                "name": "Access",
+                "value": "GT"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.74"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Camera Model",
+                "value": "w/o distortion"
+            },
+            "1": {
+                "name": "Access",
+                "value": "GT"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.80"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Camera Model",
+                "value": "w/ distortion"
+            },
+            "1": {
+                "name": "Access",
+                "value": "estimated"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.78"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Camera Model",
+                "value": "w/o distortion"
+            },
+            "1": {
+                "name": "Access",
+                "value": "estimated"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "39.82"
+    }
+}
+```
