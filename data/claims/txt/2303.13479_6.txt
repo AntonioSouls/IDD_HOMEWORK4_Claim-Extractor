@@ -1,0 +1,208 @@
+The user wants to extract claims from a table represented in a JSON object.
+Each claim has a "specifications", a "Measure", and an "Outcome".
+The "specifications" are key-value pairs taken from the row header and the corresponding cell.
+The "Measure" can be found in the table, caption, or references.
+The "Outcome" is the value associated with the "Measure".
+
+Let's analyze the example provided:
+```json
+{
+    "table": [
+        [
+            "Model",
+            "Parameters",
+            "Precision",
+            "Recall"
+        ],
+        [
+            "Llama3.2",
+            "7B",
+            "x",
+            "y"
+        ],
+        [
+            "Gemma",
+            "70B",
+            "x2",
+            "y2"
+        ]
+    ],
+    "caption": "string",
+    "references": [
+        "string", "string"
+    ]
+}
+```
+Possible claims:
+- Model Llama3.2 has Parameters 7B, Precision x, Recall y.
+- Model Gemma has Parameters 70B, Precision x2, Recall y2.
+- For Llama3.2, the Precision is x and the Recall is y.
+- For Gemma, the Precision is x2 and the Recall is y2.
+- The Parameter for Llama3.2 is 7B and for Gemma is 70B.
+
+Now let's analyze the provided table example:
+```json
+{'table': [['Method', '3D_{50}', '3D_{75}', '52∘cm{}^{\\circ}2cm', '55∘cm{}^{\\circ}5cm', '102∘cm{}^{\\circ}2cm', '105∘cm{}^{\\circ}5cm'], ['SGPA\xa0[3]', '80.1', '61.9', '35.9', '39.6', '61.3', '70.7'], ['IST-NetM', '82.5', '72.7', '35.8', '38.4', '64.2', '72.4'], ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']], 'caption': 'Table 6: Ablation on the predicted world coordinate. M𝑀M is our matching-based variant, using the Umeyama algorithm for testing.', 'references': ['Ablations on Predicted World Coordinate.\r\nConsidering that we predict the coordinate of observed points in world-space for supervising implicit space transformation from a low-level perspective. Therefore, the quality of the generated coordinate can also reflect the effectiveness of the proposed method. To verify this, we use the predicted coordinate and observed points in camera space for solving the pose parameters by Umeyama algorithm\xa0[31]. As shown in Tab.\xa06, our method achieves comparable results with SGPA, even with significant improvement on 3D75subscript𝐷75D_{75} (72.7 vs 61.9), indicating that the network can reconstruct the perspective in world-space without introducing shape prior.']}
+```
+Table headers: ['Method', '3D_{50}', '3D_{75}', '52∘cm{}^{\\circ}2cm', '55∘cm{}^{\\circ}5cm', '102∘cm{}^{\\circ}2cm', '105∘cm{}^{\\circ}5cm']
+Rows:
+- ['SGPA\xa0[3]', '80.1', '61.9', '35.9', '39.6', '61.3', '70.7']
+- ['IST-NetM', '82.5', '72.7', '35.8', '38.4', '64.2', '72.4']
+- ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+
+Potential Measures: '3D_{50}', '3D_{75}', '52∘cm{}^{\\circ}2cm', '55∘cm{}^{\\circ}5cm', '102∘cm{}^{\\circ}2cm', '105∘cm{}^{\\circ}5cm'
+
+Claims:
+- Method SGPA [3] has 3D_{50} of 80.1.
+- Method SGPA [3] has 3D_{75} of 61.9.
+- Method SGPA [3] has 52∘cm{}^{\\circ}2cm of 35.9.
+- ...
+- Method IST-NetM has 3D_{50} of 82.5.
+- Method IST-NetM has 3D_{75} of 72.7.
+- ...
+
+From the reference: "our method achieves comparable results with SGPA, even with significant improvement on 3D75subscript𝐷75D_{75} (72.7 vs 61.9)"
+Claim: IST-NetM has 3D_{75} of 72.7 and SGPA has 3D_{75} of 61.9.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\u00a0[3]"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "80.1"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\u00a0[3]"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "61.9"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\u00a0[3]"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "35.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\u00a0[3]"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "39.6"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\u00a0[3]"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "61.3"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\u00a0[3]"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "70.7"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "82.5"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "72.7"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "35.8"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "38.4"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "64.2"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "72.4"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "72.7"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "61.9"
+    }
+}
+```

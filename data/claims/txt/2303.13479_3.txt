@@ -1,0 +1,556 @@
+The user wants to extract claims from a given JSON object representing a table.
+Each claim should have a specific structure: `{"0": {"specifications": {"0": {"name": "col_name", "value": "row_value"}}, "Measure": "...", "Outcome": "..."}}`.
+The `Measure` can be found in the table, caption or references.
+The `Outcome` is the value associated with the `Measure`.
+
+Let's analyze the example provided by the user for the expected output structure.
+The `specifications` part seems to describe the context of the claim, based on the row and column headers.
+The `Measure` is the metric being evaluated.
+The `Outcome` is the value of that metric.
+
+For the given table:
+```
+[['nan', 'IST', 'CE', 'WE', '3D_{75}', '52∘cm{}^{\\circ}2cm', '55∘cm{}^{\\circ}5cm', '102∘cm{}^{\\circ}2cm', '105∘cm{}^{\\circ}5cm'],
+ ['E1', 'nan', 'nan', 'nan', '70.7', '35.2', '42.9', '58.8', '72.2'],
+ ['E2', '✓', 'nan', 'nan', '72.2', '42.9', '48.5', '68.7', '78.1'],
+ ['E3', '✓', '✓', 'nan', '73.9', '44.2', '52.5', '68.5', '79.2'],
+ ['E4', '✓', 'nan', '✓', '75.9', '43.5', '48.9', '70.4', '80.4'],
+ ['E5', '✓', '✓', '✓', '76.6', '47.5', '53.4', '72.1', '80.5'],
+ ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']]
+```
+And the caption: `Table 3: Ablation on different configurations of network architectures. IST refers to the implicit space transformation, CE and WE denote the camera and world-space enhancement. Note: In E1 we just remove the supervision of IST, not the module itself.`
+And the references: `['Effects of Proposed Modules.\r\nWe ablate the combination of different modules of the proposed method, the results are shown in Tab\xa03. Firstly we present the effectiveness of the implicit space transformation module (IST). By adding this module, we can easily observe that the baseline is greatly lifted, suggesting that transforming camera-space features to world-space counterparts and building the correspondence between them in an implicit manner indeed can benefit the pose estimation. Besides this, after adding the camera-space enhancer (CE), the precision on 55∘cm{}^{\\circ}5cm increases from 48.5 to 52.5, the reason is that with this auxiliary module, the feature extractors are enriched with more pose-sensitive information, which\r\nis beneficial to the quality of feature transformation and to improve the accuracy of final pose estimation. In addition, we show the advantage of world-space enhancer (WE), by combining it with IST. The results (E4) show that WE can further extend the performance, especially on 102∘cm{}^{\\circ}2cm and 105∘cm{}^{\\circ}5cm, which indicates that high-level supervision provides additional information different from low-level constraint. Finally, by combining all modules together, we reach relatively competitive performance.']`
+
+Let's try to extract some claims.
+
+From the reference: "the precision on 55∘cm{}^{\\circ}5cm increases from 48.5 to 52.5"
+This seems like a comparison between two configurations. Let's try to represent it.
+It seems that 'precision' is the measure, and the values are the outcomes. The specifications would be the different configurations.
+
+Example Claim:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Model", "value": "E2"},
+            "1": {"name": "IST", "value": "✓"},
+            "2": {"name": "CE", "value": "nan"},
+            "3": {"name": "WE", "value": "nan"}
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "48.5"
+    },
+    "1": {
+        "specifications": {
+            "0": {"name": "Model", "value": "E3"},
+            "1": {"name": "IST", "value": "✓"},
+            "2": {"name": "CE", "value": "✓"},
+            "3": {"name": "WE", "value": "nan"}
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "52.5"
+    }
+}
+```
+
+Another example from the reference: "The results (E4) show that WE can further extend the performance, especially on 102∘cm{}^{\\circ}2cm and 105∘cm{}^{\\circ}5cm"
+This is not a clear quantifiable claim.
+
+Let's focus on extracting row by row. For each row, the first column can be a specification, and the remaining columns are measures with their outcomes.
+
+Example Claim based on row E1:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Model", "value": "E1"}
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "70.7"
+    },
+    "1": {
+        "specifications": {
+            "0": {"name": "Model", "value": "E1"}
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "35.2"
+    },
+    "2": {
+        "specifications": {
+            "0": {"name": "Model", "value": "E1"}
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "42.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {"name": "Model", "value": "E1"}
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "58.8"
+    },
+    "4": {
+        "specifications": {
+            "0": {"name": "Model", "value": "E1"}
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "72.2"
+    }
+}
+```
+This seems like a reasonable approach. The first element of each row can be a specification, and the rest are measures and their corresponding values (outcomes).
+
+Let's refine the extraction logic. Iterate through each data row (starting from the second row).  For each cell in the row (excluding the first), create a claim. The specifications will be based on the first column of the current row and the column headers.  The measure is the column header, and the outcome is the cell value.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "70.7"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "35.2"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "42.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "58.8"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "72.2"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "72.2"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "42.9"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "48.5"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "68.7"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "78.1"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "73.9"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "44.2"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "52.5"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "68.5"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "79.2"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "75.9"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "43.5"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "48.9"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "70.4"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "80.4"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "76.6"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "47.5"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "53.4"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "72.1"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "✓"
+            },
+            "1": {
+                "name": "CE",
+                "value": "✓"
+            },
+            "2": {
+                "name": "WE",
+                "value": "✓"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "80.5"
+    }
+}
+```

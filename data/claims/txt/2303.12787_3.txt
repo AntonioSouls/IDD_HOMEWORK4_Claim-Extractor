@@ -1,0 +1,443 @@
+The user wants to extract claims from a table provided in a JSON format.
+Each claim should have a "specifications", a "Measure" and an "Outcome".
+The "specifications" are key-value pairs that define a context within the table.
+The "Measure" is a column header or a similar concept from the context.
+The "Outcome" is the value associated with the "Measure" within the specified context.
+
+Let's analyze the provided example:
+```json
+{
+  "table": [
+    [
+      "Main Loss",
+      "\\mathcal{L}_{\\text{crd}}",
+      "2°",
+      "2 cm",
+      "2°, 2 cm",
+      "ADD(-S) 0.1d"
+    ],
+    [
+      "Implicit diff.\xa0[12]",
+      "nan",
+      "divergence",
+      "divergence",
+      "divergence",
+      "divergence"
+    ],
+    [
+      "Reprojection\xa0[28]",
+      "nan",
+      "00.32",
+      "42.30",
+      "00.16",
+      "14.56"
+    ],
+    [
+      "KL div. (ours)",
+      "nan",
+      "58.28",
+      "91.17",
+      "55.71",
+      "89.93"
+    ],
+    [
+      "Implicit diff.\xa0[12]",
+      "✓",
+      "56.13",
+      "91.13",
+      "53.33",
+      "88.74"
+    ],
+    [
+      "Reprojection\xa0[28]",
+      "✓",
+      "62.79",
+      "92.91",
+      "60.65",
+      "92.04"
+    ],
+    [
+      "KL div. (ours)",
+      "✓",
+      "69.95",
+      "94.97",
+      "68.38",
+      "93.83"
+    ]
+  ],
+  "caption": "TABLE III: Comparison among loss functions by experiments conducted on the same dense correspondence network. For implicit differentiation, we minimize the distance metric of pose in Eq.\\xa0(10) instead of the reprojection-metric pose loss in BPnP\\xa0[12].",
+  "references": []
+}
+```
+
+The column headers seem to be: "Main Loss", "\\mathcal{L}_{\\text{crd}}", "2°", "2 cm", "2°, 2 cm", "ADD(-S) 0.1d".
+The rows represent different loss functions and configurations.
+
+Let's try to extract a claim. For example, for "Implicit diff.\xa0[12]" with "nan" in the second column:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Main Loss", "value": "Implicit diff.\xa0[12]"},
+            "1": {"name": "\\mathcal{L}_{\\text{crd}}", "value": "nan"}
+        },
+        "Measure": "2°",
+        "Outcome": "divergence"
+    }
+}
+```
+Another claim:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Main Loss", "value": "Implicit diff.\xa0[12]"},
+            "1": {"name": "\\mathcal{L}_{\\text{crd}}", "value": "nan"}
+        },
+        "Measure": "2 cm",
+        "Outcome": "divergence"
+    }
+}
+```
+It seems that the first column can be used as a specification, and the subsequent columns can act as "Measure" and "Outcome".
+
+Let's try to extract all the claims based on this idea.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Implicit diff.\u00a0[12]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "2°",
+        "Outcome": "divergence"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Implicit diff.\u00a0[12]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "2 cm",
+        "Outcome": "divergence"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Implicit diff.\u00a0[12]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "2°, 2 cm",
+        "Outcome": "divergence"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Implicit diff.\u00a0[12]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "ADD(-S) 0.1d",
+        "Outcome": "divergence"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Reprojection\u00a0[28]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "2°",
+        "Outcome": "00.32"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Reprojection\u00a0[28]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "2 cm",
+        "Outcome": "42.30"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Reprojection\u00a0[28]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "2°, 2 cm",
+        "Outcome": "00.16"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Reprojection\u00a0[28]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "ADD(-S) 0.1d",
+        "Outcome": "14.56"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "KL div. (ours)"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "2°",
+        "Outcome": "58.28"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "KL div. (ours)"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "2 cm",
+        "Outcome": "91.17"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "KL div. (ours)"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "2°, 2 cm",
+        "Outcome": "55.71"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "KL div. (ours)"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "nan"
+            }
+        },
+        "Measure": "ADD(-S) 0.1d",
+        "Outcome": "89.93"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Implicit diff.\u00a0[12]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "2°",
+        "Outcome": "56.13"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Implicit diff.\u00a0[12]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "2 cm",
+        "Outcome": "91.13"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Implicit diff.\u00a0[12]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "2°, 2 cm",
+        "Outcome": "53.33"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Implicit diff.\u00a0[12]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "ADD(-S) 0.1d",
+        "Outcome": "88.74"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Reprojection\u00a0[28]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "2°",
+        "Outcome": "62.79"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Reprojection\u00a0[28]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "2 cm",
+        "Outcome": "92.91"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Reprojection\u00a0[28]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "2°, 2 cm",
+        "Outcome": "60.65"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "Reprojection\u00a0[28]"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "ADD(-S) 0.1d",
+        "Outcome": "92.04"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "KL div. (ours)"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "2°",
+        "Outcome": "69.95"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "KL div. (ours)"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "2 cm",
+        "Outcome": "94.97"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "KL div. (ours)"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "2°, 2 cm",
+        "Outcome": "68.38"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Main Loss",
+                "value": "KL div. (ours)"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{crd}}",
+                "value": "✓"
+            }
+        },
+        "Measure": "ADD(-S) 0.1d",
+        "Outcome": "93.83"
+    }
+}
+```

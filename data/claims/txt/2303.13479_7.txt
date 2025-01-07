@@ -1,0 +1,793 @@
+The user wants to extract claims from a table represented in JSON format.
+Each claim should have a 'specifications', 'Measure', and 'Outcome'.
+The 'specifications' are key-value pairs from the table headers and row values.
+The 'Measure' is extracted from the table headers, caption, or references.
+The 'Outcome' is the value associated with the 'Measure' for a given 'specifications'.
+
+Let's analyze the example table provided:
+```
+{
+    "table": [
+        [
+            "Method",
+            "Prior",
+            "3D_{50}",
+            "3D_{75}",
+            "52∘cm{}^{\\circ}2cm",
+            "55∘cm{}^{\\circ}5cm",
+            "102∘cm{}^{\\circ}2cm",
+            "105∘cm{}^{\\circ}5cm"
+        ],
+        [
+            "NOCS\xa0[34]",
+            "✗",
+            "83.9",
+            "69.5",
+            "32.3",
+            "40.9",
+            "48.2",
+            "64.6"
+        ],
+        [
+            "DualPoseNet\xa0[22]",
+            "✗",
+            "92.4",
+            "86.4",
+            "64.7",
+            "70.7",
+            "77.2",
+            "84.7"
+        ],
+        [
+            "GPV-Pose\xa0[7]",
+            "✗",
+            "93.4",
+            "88.3",
+            "72.1",
+            "79.1",
+            "-",
+            "89.0"
+        ],
+        [
+            "SPD\xa0[30]",
+            "✓",
+            "93.2",
+            "83.1",
+            "54.3",
+            "59.0",
+            "73.3",
+            "81.5"
+        ],
+        [
+            "CR-Net\xa0[35]",
+            "✓",
+            "93.8",
+            "88.0",
+            "72.0",
+            "76.4",
+            "81.0",
+            "87.7"
+        ],
+        [
+            "SGPA\xa0[3]",
+            "✓",
+            "93.2",
+            "88.1",
+            "70.7",
+            "74.5",
+            "82.7",
+            "88.4"
+        ],
+        [
+            "RBP-Pose\xa0[40]",
+            "✓",
+            "93.1",
+            "89.0",
+            "73.5",
+            "79.6",
+            "82.1",
+            "89.5"
+        ],
+        [
+            "IST-Net (Ours)",
+            "✗",
+            "93.7",
+            "90.8",
+            "71.3",
+            "79.9",
+            "79.4",
+            "89.9"
+        ],
+        [
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan"
+        ]
+    ],
+    "caption": "Table 7: Comparison with state-of-art methods on CAMERA25 dataset. We summarize the pose estimation results reported in the original papers. Prior refers to whether the method builds upon shape priors. ‘-’ denotes no results reported under this metric.",
+    "references": [
+        "We further report the results of our method on the CAMERA25 dataset, as shown in Tab.\xa07. Our method is competitive with other methods, specifically, on metric 3D75subscript𝐷75D_{75}, IST-Net outperforms the previous state-of-the-art method by 2%. This indicates that our method has a strong ability to comprehensively estimate rotation, translation, and size."
+    ]
+}
+```
+
+The table headers are: 'Method', 'Prior', '3D_{50}', '3D_{75}', '52∘cm{}^{\\circ}2cm', '55∘cm{}^{\\circ}5cm', '102∘cm{}^{\\circ}2cm', '105∘cm{}^{\\circ}5cm'.
+Let's pick the first row of data (excluding the header): ['NOCS\xa0[34]', '✗', '83.9', '69.5', '32.3', '40.9', '48.2', '64.6'].
+
+Possible Measures are '3D_{50}', '3D_{75}', '52∘cm{}^{\\circ}2cm', '55∘cm{}^{\\circ}5cm', '102∘cm{}^{\\circ}2cm', '105∘cm{}^{\\circ}5cm'.
+
+For the first claim, let's choose '3D_{50}' as the Measure.
+The specifications for this claim would be Method = 'NOCS\xa0[34]' and Prior = '✗'.
+The Outcome would be '83.9'.
+
+For the second claim from the same row, let's choose '3D_{75}' as the Measure.
+The specifications would be Method = 'NOCS\xa0[34]' and Prior = '✗'.
+The Outcome would be '69.5'.
+
+We can iterate through each data row and each possible measure (column header).```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "NOCS\xa0[34]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "83.9"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "NOCS\xa0[34]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "69.5"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "NOCS\xa0[34]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "32.3"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "NOCS\xa0[34]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "40.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "NOCS\xa0[34]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "48.2"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "NOCS\xa0[34]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "64.6"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DualPoseNet\xa0[22]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "92.4"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DualPoseNet\xa0[22]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "86.4"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DualPoseNet\xa0[22]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "64.7"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DualPoseNet\xa0[22]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "70.7"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DualPoseNet\xa0[22]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "77.2"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DualPoseNet\xa0[22]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "84.7"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GPV-Pose\xa0[7]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "93.4"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GPV-Pose\xa0[7]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "88.3"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GPV-Pose\xa0[7]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "72.1"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GPV-Pose\xa0[7]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "79.1"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GPV-Pose\xa0[7]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "89.0"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPD\xa0[30]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "93.2"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPD\xa0[30]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "83.1"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPD\xa0[30]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "54.3"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPD\xa0[30]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "59.0"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPD\xa0[30]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "73.3"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPD\xa0[30]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "81.5"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CR-Net\xa0[35]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "93.8"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CR-Net\xa0[35]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "88.0"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CR-Net\xa0[35]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "72.0"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CR-Net\xa0[35]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "76.4"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CR-Net\xa0[35]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "81.0"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CR-Net\xa0[35]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "87.7"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\xa0[3]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "93.2"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\xa0[3]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "88.1"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\xa0[3]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "70.7"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\xa0[3]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "74.5"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\xa0[3]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "82.7"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA\xa0[3]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "88.4"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RBP-Pose\xa0[40]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "93.1"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RBP-Pose\xa0[40]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "89.0"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RBP-Pose\xa0[40]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "73.5"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RBP-Pose\xa0[40]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "79.6"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RBP-Pose\xa0[40]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "82.1"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RBP-Pose\xa0[40]"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✓"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "89.5"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-Net (Ours)"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "93.7"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-Net (Ours)"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "90.8"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-Net (Ours)"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "71.3"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-Net (Ours)"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "79.9"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-Net (Ours)"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "79.4"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-Net (Ours)"
+            },
+            "1": {
+                "name": "Prior",
+                "value": "✗"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "89.9"
+    }
+}
+```

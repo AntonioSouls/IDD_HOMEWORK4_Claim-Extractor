@@ -1,0 +1,234 @@
+The user wants to extract claims from a table represented in a JSON object.
+Each claim has a 'specifications', 'Measure', and 'Outcome'.
+'Specifications' are key-value pairs from the table headers and corresponding row values.
+'Measure' and 'Outcome' can be found in the table, caption, or references.
+The output should be a JSON object containing an array of claims.
+
+Let's analyze the provided example to understand the structure of the claims.
+
+The table is:
+[['nan', '3D_{75}', '52∘cm{}^{\\circ}2cm', '55∘cm{}^{\\circ}5cm', '102∘cm{}^{\\circ}2cm', '105∘cm{}^{\\circ}5cm', 'Param.', 'FPS'],
+ ['Implicit', '73.9', '44.2', '52.5', '68.5', '79.2', '21M', '34'],
+ ['Explicit', '75.1', '45.0', '50.7', '69.6', '80.0', '24M', '22'],
+ ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']]
+
+The caption is:
+'Table 5: Comparison with explicit space transformation. Param. refers to the number of parameters.'
+
+The references are:
+['Comparison with Explicit Space Transformation.\r\nTo further verify the effectiveness of the proposed implicit space transformation, we set up an experiment with its explicit counterpart. For reaching a fair comparison, only WE and IST are included in the implicit candidate. From the results shown in Tab.\xa05, we can easily find the results of the two methods are very close. However, our method yields obvious superiority in speed (34Hz vs 22Hz) and parameter quantity (21M vs 24M) which attributes to the succinct feature space transformation instead of introducing repetitive modules for extracting features from coordinates. This further indicates the potential of the proposed modules.']
+
+Let's try to extract some claims.
+
+From the row with 'Implicit':
+Specifications: {'0': {'name': 'Model', 'value': 'Implicit'}}
+Possible Measures and Outcomes:
+- '3D_{75}': '73.9'
+- '52∘cm{}^{\\circ}2cm': '44.2'
+- '55∘cm{}^{\\circ}5cm': '52.5'
+- '102∘cm{}^{\\circ}2cm': '68.5'
+- '105∘cm{}^{\\circ}5cm': '79.2'
+- 'Param.': '21M'
+- 'FPS': '34'
+
+From the row with 'Explicit':
+Specifications: {'0': {'name': 'Model', 'value': 'Explicit'}}
+Possible Measures and Outcomes:
+- '3D_{75}': '75.1'
+- '52∘cm{}^{\\circ}2cm': '45.0'
+- '55∘cm{}^{\\circ}5cm': '50.7'
+- '102∘cm{}^{\\circ}2cm': '69.6'
+- '105∘cm{}^{\\circ}5cm': '80.0'
+- 'Param.': '24M'
+- 'FPS': '22'
+
+From the references:
+Measure: 'speed', Outcome: '34Hz' for 'Implicit'
+Measure: 'speed', Outcome: '22Hz' for 'Explicit'
+Measure: 'parameter quantity', Outcome: '21M' for 'Implicit'
+Measure: 'parameter quantity', Outcome: '24M' for 'Explicit'
+
+Let's start by extracting claims from the table rows.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "73.9"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "44.2"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "52.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "68.5"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "79.2"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "Param.",
+        "Outcome": "21M"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "FPS",
+        "Outcome": "34"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "75.1"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "52∘cm{}^{\\circ}2cm",
+        "Outcome": "45.0"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "55∘cm{}^{\\circ}5cm",
+        "Outcome": "50.7"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "102∘cm{}^{\\circ}2cm",
+        "Outcome": "69.6"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "105∘cm{}^{\\circ}5cm",
+        "Outcome": "80.0"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "Param.",
+        "Outcome": "24M"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "FPS",
+        "Outcome": "22"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "speed",
+        "Outcome": "34Hz"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "speed",
+        "Outcome": "22Hz"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "parameter quantity",
+        "Outcome": "21M"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "parameter quantity",
+        "Outcome": "24M"
+    }
+}
+```

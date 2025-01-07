@@ -14,7 +14,7 @@ prompt = "".join(open("data/messageForModel.txt","r").readlines())
 # Definisce l'API da contattare, quindi il modello con cui si comunica
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="ciao",
+  api_key="hfbgng",
 )
 
 

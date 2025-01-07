@@ -1,0 +1,138 @@
+The user wants to extract structured claims from a table represented in a JSON object.
+Each claim needs a "specifications", a "Measure", and an "Outcome".
+
+Plan:
+1. Identify the table header to determine the different specifications.
+2. Iterate through the table rows to extract individual data points.
+3. For each data point, determine the specifications based on the column headers.
+4. Identify the "Measure" and "Outcome" for each claim. The "Measure" can come from the table, caption or references. The "Outcome" is the value associated with the "Measure".
+5. Structure the extracted claims in the desired JSON format.
+
+Let's analyze the provided example:
+Table:
+[['Method', '\u200bCls Avg.\u200b', 'Cabinet', 'Chair', 'Display', 'Table'],
+ ['ELLIPSDF [30]', '89.0', '91.0', '90.6', '96.9', '77.3'],
+ ['TransPoser', '94.3', '92.4', '98.5', '93.8', '92.4']]
+Caption: Table 4: Accuracy of shape estimation for ScanNet [11]. TransPoser achieves highest accuracy for all categories.
+References: ['Tables 5, 4 and 6 quantitatively compares the proposed TransPoser with state-of-the-art methods. TransPoser clearly outperforms other methods including ELLIPSDF [30] that also estimates the pose and shape code. TransPoser required 0.06 sec for each optimization step, and 0.61 sec for a total of 10 iterations with GeForce RTX 2080 Ti. This is approximately 10 times faster than those of ELLIPSDF which required 0.75 sec for its first SGD step.\r\nNote that the exact instances used in the ELLIPSDF are not available [3] and we used the test split of Scan2CAD instead. Examples in Fig. 6 demonstrate that TransPoser can reconstruct plausible 3D shapes even from partial observations. These results show that our neural optimization model successfully learns to leverage the structured bias in category-level shape pose estimation.']
+
+Possible Measures: Accuracy, \u200bCls Avg.\u200b, Cabinet, Chair, Display, Table
+
+For row 1:
+Method: ELLIPSDF [30]
+\u200bCls Avg.\u200b: 89.0
+Cabinet: 91.0
+Chair: 90.6
+Display: 96.9
+Table: 77.3
+
+For row 2:
+Method: TransPoser
+\u200bCls Avg.\u200b: 94.3
+Cabinet: 92.4
+Chair: 98.5
+Display: 93.8
+Table: 92.4```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "\u200bCls Avg.\u200b",
+        "Outcome": "89.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Cabinet",
+        "Outcome": "91.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Chair",
+        "Outcome": "90.6"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Display",
+        "Outcome": "96.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Table",
+        "Outcome": "77.3"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "\u200bCls Avg.\u200b",
+        "Outcome": "94.3"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Cabinet",
+        "Outcome": "92.4"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Chair",
+        "Outcome": "98.5"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Display",
+        "Outcome": "93.8"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Table",
+        "Outcome": "92.4"
+    }
+}
+```

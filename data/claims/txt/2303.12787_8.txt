@@ -1,0 +1,114 @@
+The user wants to extract claims from a table represented in a JSON format.
+Each claim should have a "specifications", "Measure", and "Outcome".
+
+The "specifications" are key-value pairs from the table's row and column headers.
+The "Measure" can be found in the table, caption, or references.
+The "Outcome" is the value associated with the "Measure".
+
+Let's analyze the provided example.
+The table is:
+```
+[['Scoring method', 'NDS↑', 'mAP↑', 'mATE↓', 'mAOE↓'],
+ ['Standard', '0.463', '0.392', '0.626', '0.282'],
+ ['Monte Carlo', '0.463', '0.393', '0.623', '0.286']]
+```
+The caption is: "TABLE VIII: Comparison between the scoring methods on the nuScenes validation set."
+
+Possible Measures: NDS, mAP, mATE, mAOE. The arrows indicate the direction of improvement.
+
+For the first row of data ("Standard"):
+- For NDS: Measure is "NDS↑", Outcome is "0.463", Specification is {"name": "Scoring method", "value": "Standard"}
+- For mAP: Measure is "mAP↑", Outcome is "0.392", Specification is {"name": "Scoring method", "value": "Standard"}
+- For mATE: Measure is "mATE↓", Outcome is "0.626", Specification is {"name": "Scoring method", "value": "Standard"}
+- For mAOE: Measure is "mAOE↓", Outcome is "0.282", Specification is {"name": "Scoring method", "value": "Standard"}
+
+For the second row of data ("Monte Carlo"):
+- For NDS: Measure is "NDS↑", Outcome is "0.463", Specification is {"name": "Scoring method", "value": "Monte Carlo"}
+- For mAP: Measure is "mAP↑", Outcome is "0.393", Specification is {"name": "Scoring method", "value": "Monte Carlo"}
+- For mATE: Measure is "mATE↓", Outcome is "0.623", Specification is {"name": "Scoring method", "value": "Monte Carlo"}
+- For mAOE: Measure is "mAOE↓", Outcome is "0.286", Specification is {"name": "Scoring method", "value": "Monte Carlo"}
+
+The output should be a JSON object containing all these claims.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Standard"
+            }
+        },
+        "Measure": "NDS↑",
+        "Outcome": "0.463"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Standard"
+            }
+        },
+        "Measure": "mAP↑",
+        "Outcome": "0.392"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Standard"
+            }
+        },
+        "Measure": "mATE↓",
+        "Outcome": "0.626"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Standard"
+            }
+        },
+        "Measure": "mAOE↓",
+        "Outcome": "0.282"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Monte Carlo"
+            }
+        },
+        "Measure": "NDS↑",
+        "Outcome": "0.463"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Monte Carlo"
+            }
+        },
+        "Measure": "mAP↑",
+        "Outcome": "0.393"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Monte Carlo"
+            }
+        },
+        "Measure": "mATE↓",
+        "Outcome": "0.623"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Monte Carlo"
+            }
+        },
+        "Measure": "mAOE↓",
+        "Outcome": "0.286"
+    }
+}
+```
