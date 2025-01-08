@@ -1,0 +1,32 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "none"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.6"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "flipping-once"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "40.3"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "\\cellcolorbestcolordiffusion-flipping"
+            }
+        },
+        "Measure": "MPJPE\\downarrow",
+        "Outcome": "\\cellcolorbestcolor40.0"
+    }
+}

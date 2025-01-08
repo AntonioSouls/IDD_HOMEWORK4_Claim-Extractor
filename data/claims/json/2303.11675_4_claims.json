@@ -1,0 +1,162 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE(HR-W32)"
+            }
+        },
+        "Measure": "MJE\\downarrow",
+        "Outcome": "84.9"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE(HR-W32)"
+            }
+        },
+        "Measure": "PAMJE\\downarrow",
+        "Outcome": "57.5"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE(HR-W32)"
+            }
+        },
+        "Measure": "MJE\\downarrow",
+        "Outcome": "94.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE(HR-W32)"
+            }
+        },
+        "Measure": "PAMJE\\downarrow",
+        "Outcome": "62.4"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF(HR-W48)"
+            }
+        },
+        "Measure": "MJE\\downarrow",
+        "Outcome": "-"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF(HR-W48)"
+            }
+        },
+        "Measure": "PAMJE\\downarrow",
+        "Outcome": "-"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF(HR-W48)"
+            }
+        },
+        "Measure": "MJE\\downarrow",
+        "Outcome": "80.4"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF(HR-W48)"
+            }
+        },
+        "Measure": "PAMJE\\downarrow",
+        "Outcome": "58.7"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            }
+        },
+        "Measure": "MJE\\downarrow",
+        "Outcome": "81.7"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            }
+        },
+        "Measure": "PAMJE\\downarrow",
+        "Outcome": "49.5"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            }
+        },
+        "Measure": "MJE\\downarrow",
+        "Outcome": "82.7"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            }
+        },
+        "Measure": "PAMJE\\downarrow",
+        "Outcome": "55.5"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            }
+        },
+        "Measure": "MJE\\downarrow",
+        "Outcome": "74.6"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            }
+        },
+        "Measure": "PAMJE\\downarrow",
+        "Outcome": "48.3"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            }
+        },
+        "Measure": "MJE\\downarrow",
+        "Outcome": "78.3"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            }
+        },
+        "Measure": "PAMJE\\downarrow",
+        "Outcome": "56.3"
+    }
+}

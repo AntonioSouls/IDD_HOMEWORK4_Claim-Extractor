@@ -1,0 +1,182 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            }
+        },
+        "Measure": "MJE\u2193",
+        "Outcome": "91.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            }
+        },
+        "Measure": "PAMJE\u2193",
+        "Outcome": "56.7"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            }
+        },
+        "Measure": "PVE\u2193",
+        "Outcome": "108.2"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE w TF"
+            }
+        },
+        "Measure": "MJE\u2193",
+        "Outcome": "91.5"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE w TF"
+            }
+        },
+        "Measure": "PAMJE\u2193",
+        "Outcome": "55.7"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE w TF"
+            }
+        },
+        "Measure": "PVE\u2193",
+        "Outcome": "108.6"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{3D}"
+            }
+        },
+        "Measure": "MJE\u2193",
+        "Outcome": "89.4"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{3D}"
+            }
+        },
+        "Measure": "PAMJE\u2193",
+        "Outcome": "55.8"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{3D}"
+            }
+        },
+        "Measure": "PVE\u2193",
+        "Outcome": "106.7"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{2D}"
+            }
+        },
+        "Measure": "MJE\u2193",
+        "Outcome": "90.6"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{2D}"
+            }
+        },
+        "Measure": "PAMJE\u2193",
+        "Outcome": "54.8"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{2D}"
+            }
+        },
+        "Measure": "PVE\u2193",
+        "Outcome": "107.2"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{RD}"
+            }
+        },
+        "Measure": "MJE\u2193",
+        "Outcome": "89.0"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{RD}"
+            }
+        },
+        "Measure": "PAMJE\u2193",
+        "Outcome": "54.2"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR w/o L_{RD}"
+            }
+        },
+        "Measure": "PVE\u2193",
+        "Outcome": "105.7"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            }
+        },
+        "Measure": "MJE\u2193",
+        "Outcome": "88.6"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            }
+        },
+        "Measure": "PAMJE\u2193",
+        "Outcome": "53.7"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            }
+        },
+        "Measure": "PVE\u2193",
+        "Outcome": "105.3"
+    }
+}
