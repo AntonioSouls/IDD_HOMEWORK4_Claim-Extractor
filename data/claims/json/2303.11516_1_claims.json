@@ -1,0 +1,114 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RePOSE\u00a0[25]"
+            },
+            "1": {
+                "name": "Training Data",
+                "value": "real+syn"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "51.6"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RNNPose\u00a0[50]"
+            },
+            "1": {
+                "name": "Training Data",
+                "value": "real+syn"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "60.65"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SO-Pose\u00a0[12]"
+            },
+            "1": {
+                "name": "Training Data",
+                "value": "real+pbr"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "62.3"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DProST\u00a0[36]"
+            },
+            "1": {
+                "name": "Training Data",
+                "value": "real+pbr"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "62.6"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDR-Net\u00a0[46]"
+            },
+            "1": {
+                "name": "Training Data",
+                "value": "real+pbr"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "62.2"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ZebraPose\u00a0[43]"
+            },
+            "1": {
+                "name": "Training Data",
+                "value": "real+pbr"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "76.9"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            },
+            "1": {
+                "name": "Training Data",
+                "value": "real+pbr"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "66.48"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            },
+            "1": {
+                "name": "Training Data",
+                "value": "real+pbr"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "78.06"
+    }
+}

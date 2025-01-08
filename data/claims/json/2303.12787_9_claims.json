@@ -1,0 +1,422 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "x^{\\text{3D}}_{i}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "\\in\\mathbb{R}^{3}"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "x^{\\text{2D}}_{i}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "\\in\\mathbb{R}^{2}"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "w^{\\text{2D}}_{i}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "\\in\\mathbb{R}^{2}_{+}"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "X"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "The set of weighted 2D-3D correspondences"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "y"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Object pose"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "y_{\\text{gt}}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Ground truth of object pose"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "y^{\\ast}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Object pose estimated by the PnP solver"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "R"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "3\u00d73 rotation matrix representation of object orientation"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\theta"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "1D yaw angle representation of object orientation"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "l"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Unit quaternion representation of object orientation"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "t"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "\\in\\mathbb{R}^{3}"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\Sigma_{y^{\\ast}}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Pose covariance estimated by the PnP solver"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "J"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Jacobian matrix"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\tilde{J}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Rescaled Jacobian matrix"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "F"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Concatenated vector of weighted reprojection errors of all points"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\tilde{F}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Concatenated vector of rescaled weighted reprojection errors of all points"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\pi(\\cdot)"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": ":\\mathbb{R}^{3}\\rightarrow\\mathbb{R}^{2}"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "f_{i}(y)"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "\\in\\mathbb{R}^{2}"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "r_{i}(y)"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "\\in\\mathbb{R}^{2}"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\rho(\\cdot)"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Huber kernel function"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\rho^{\\prime}_{i}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "The derivative of the Huber kernel function of the i-th correspondence"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\delta"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "The Huber threshold"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "p(X|y)"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Likelihood function of object pose"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "p(y)"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "PDF of the prior pose distribution"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "p(y|X)"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "PDF of the posterior pose distribution"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "t(y)"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "PDF of the target pose distribution"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "q(y),q_{t}(y)"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "PDF of the proposal pose distribution (of the t-th AMIS iteration)"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "y_{j},y_{j}^{t}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "The j-th random pose sample (of the t-th AMIS iteration)"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "v_{j},v_{j}^{t}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Importance weight of the j-th pose sample (of the t-th AMIS iteration)"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "i"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Index of 2D-3D point pair"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "j"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Index of random pose sample"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "t"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Index of AMIS iteration"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "N"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Number of 2D-3D point pairs in total"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "K"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Number of pose samples in total"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "T"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Number of AMIS iterations"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "K^{\\prime}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Number of pose samples per AMIS iteration"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "n_{\\text{head}}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Number of heads in the deformable correspondence network"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "n_{\\text{hpts}}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Number of points per head in the deformable correspondence network"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\mathcal{L}_{\\text{KL}}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "KL divergence loss for object pose"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\mathcal{L}_{\\text{tgt}}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "The component of \\mathcal{L}_{\\text{KL}} concerning the reprojection errors at target pose"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\mathcal{L}_{\\text{pred}}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "The component of \\mathcal{L}_{\\text{KL}} concerning the reprojection errors over predicted pose"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Notation",
+                "value": "\\mathcal{L}_{\\text{reg}}"
+            }
+        },
+        "Measure": "Description",
+        "Outcome": "Derivative regularization loss"
+    }
+}

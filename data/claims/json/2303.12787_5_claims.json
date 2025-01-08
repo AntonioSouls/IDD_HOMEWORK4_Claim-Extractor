@@ -1,0 +1,418 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C0"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "nan"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "nan"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "nan"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.447"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C0"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "nan"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "nan"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "nan"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.380"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C0"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "nan"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "nan"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "nan"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.656"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C0"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "nan"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "nan"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "nan"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.332"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C1"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "nan"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "nan"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "nan"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.408"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C1"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "nan"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "nan"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "nan"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.363"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C1"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "nan"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "nan"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "nan"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.683"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C1"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "nan"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "nan"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "nan"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.607"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C2"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "nan"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.429"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C2"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "nan"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.363"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C2"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "nan"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.691"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C2"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "nan"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.397"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C3"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.463"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C3"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.392"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C3"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.626"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "ID",
+                "value": "C3"
+            },
+            "1": {
+                "name": "\\mathcal{L}_{\\text{KL}}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\mathcal{L}_{\\text{reg}}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "Aux. loss_0",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "Aux. loss_1",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.282"
+    }
+}
