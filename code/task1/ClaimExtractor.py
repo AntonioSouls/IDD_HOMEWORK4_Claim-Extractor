@@ -108,7 +108,25 @@ def recover_incomplete_response(incomplete_response, table_content):
 
 # Funzione che riformatta e pulisce la risposta del modello
 def format_claims(raw_response):
-    return
+    try:
+        # Use a regex to find the JSON object in the response
+        json_match = re.search(r'\{.*\}', raw_response, re.DOTALL)
+        if not json_match:
+            raise ValueError("No JSON object found in the response.")
+        
+        # Extract the JSON string
+        json_str = json_match.group(0)
+        
+        # Parse the JSON string to ensure it's valid
+        claims = json.loads(json_str)
+        
+        return claims
+    except json.JSONDecodeError as e:
+        print(f"JSON decoding error: {e}")
+        return None
+    except ValueError as e:
+        print(f"Value error: {e}")
+        return None
 
 
 # Funzione principale che per ogni tabella chiede al modello di estrarne i claims
