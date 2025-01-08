@@ -1,0 +1,1069 @@
+The user wants to extract claims from a table represented in a JSON object.
+Each claim should follow a specific JSON structure: `{"0": {"specifications": {"0": {"name": "...", "value": "..."}, "1": {...}}, "Measure": "...", "Outcome": "..."}}`.
+The 'Measure' can be found in the table, caption, or references.
+The 'Outcome' is the value associated with the 'Measure'.
+The 'specifications' describe the context of the 'Outcome'.
+
+Let's analyze the provided example.
+The table has hierarchical headers in the first two rows.
+The 'Measure' candidates are the column headers 'Avg.', 'MSPD', 'MSSD', 'VSD'.
+The rows represent different 'Method's and 'RGB' types.
+
+Plan:
+1. Iterate through each row of the table starting from the third row (index 2).
+2. For each row, iterate through the columns starting from the second column (index 1), as the first column ('Method') will be part of the specifications.
+3. Identify the 'Measure' from the column headers (considering the hierarchical structure).
+4. Extract the 'Outcome' from the cell value.
+5. Extract the 'specifications' from the 'Method' column and the hierarchical header rows.
+6. Construct the claim JSON object.
+
+Detailed plan:
+1. Initialize an empty dictionary to store the claims.
+2. Iterate through rows starting from index 2.
+3. Get the 'Method' from the first cell of the current row.
+4. Iterate through columns starting from index 1.
+5. Get the 'Measure' from the column headers (row 0 and row 1).
+6. Get the 'Outcome' from the current cell.
+7. Construct the 'specifications' dictionary. This will include:
+   - 'Method' name.
+   - The value from the second row corresponding to the current column.
+8. Construct the claim dictionary.
+9. Add the claim to the main dictionary.
+10. Return the JSON representation of the dictionary.
+
+Consider edge cases and potential issues:
+- Hierarchical column headers need to be handled carefully when determining the 'Measure'.
+- The 'Measure' should be the most specific header.
+- The 'specifications' will be the 'Method' and the second-level column header.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.600"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.689"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.589"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.521"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.588"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.678"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.573"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.514"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.473"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.675"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.559"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.515"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.226"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.582"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.438"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.399"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.676"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.702"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.692"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.636"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.659"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.680"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.677"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0621"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.676"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.683"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.688"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.656"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.647"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.666"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.652"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.624"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.450"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.459"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.458"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.433"
+    }
+}
+```The user has provided a JSON object representing a table and wants to extract claims from it. The structure of each claim is defined, including "specifications", "Measure", and "Outcome".
+
+Plan:
+1. Iterate through the table rows to identify the subjects of the claims.
+2. For each subject, iterate through the columns representing different measures.
+3. Identify the "Measure" from the column header.
+4. Identify the "Outcome" from the cell value.
+5. Identify the "specifications" which involve the "Method" and potentially the row header if the table is nested.
+
+Detailed Plan:
+1. Initialize an empty dictionary to store the claims.
+2. Iterate through the rows starting from the second row (index 1), as the first row contains column headers.
+3.  Check if the first element of the current row is a repetition of the first element of the previous row. If it's a repetition, it indicates a nested structure.
+4. For each row, the "Method" will be the first element.
+5. Iterate through the columns starting from the second column (index 1).
+6. The "Measure" will be the header of the current column (first row).
+7. The "Outcome" will be the value in the current cell.
+8. Create the "specifications" dictionary.
+9. Add the claim to the main dictionary.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.600"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.689"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.589"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.521"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.588"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.678"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.573"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.514"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.473"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.675"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.559"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.515"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.226"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.582"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.438"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "RGB (PBR)",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.399"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.676"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.702"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.692"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.636"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.659"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.680"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.677"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.621"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.676"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.683"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.688"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.656"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.647"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.666"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.652"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.624"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.450"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.459"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.458"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "RGB-D (PBR)",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.433"
+    }
+}
+```

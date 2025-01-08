@@ -1,0 +1,2286 @@
+The user wants to extract claims from a JSON object representing a table.
+Each claim should have a "specifications", "Measure", and "Outcome".
+"Specifications" are key-value pairs from the table headers and row values.
+"Measure" can be found in the table, caption, or references.
+"Outcome" is the value associated with the "Measure".
+
+Let's analyze the provided table. It seems to be a cross-table or nested cross-table due to the multiple header rows.
+
+Plan:
+1. Identify the different measures available in the table headers. (AP, AP50, AP75)
+2. Iterate through the rows, starting from the third row (index 2).
+3. For each row, extract the category as a specification.
+4. For each measure, extract the corresponding outcome.
+5. Construct the claim JSON object.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "20.9"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "38.4"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "30.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "16.1"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "34.0"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "25.7"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "31.8"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "47.2"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "42.3"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "38.3"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "59.4"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "43.1"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "37.0"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "58.5"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "41.9"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "40.5"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "60.7"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "45.7"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "50.1"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "69.7"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "59.4"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "50.2"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "69.3"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "60.2"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "52.6"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "71.5"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "63.8"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "34.7"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "52.5"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "38.8"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "35.1"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "52.0"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "39.0"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "36.5"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "53.6"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "40.7"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "41.3"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "62.3"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "50.6"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "41.5"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "62.7"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "50.6"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "42.8"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "63.2"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "52.2"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "65.7"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "86.8"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "68.4"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "67.2"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "88.9"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "69.8"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "63.0"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "84.5"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "66.2"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "60.7"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "81.9"
+    },
+    "56": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "62.4"
+    },
+    "57": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "62.1"
+    },
+    "58": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "83.2"
+    },
+    "59": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "63.9"
+    },
+    "60": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "59.3"
+    },
+    "61": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "80.8"
+    },
+    "62": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "The user wants to extract claims from a table.
+Each claim should have "specifications", "Measure", and "Outcome".
+"Specifications" come from the row and column headers.
+"Measure" can be found in the table headers (AP, AP50, AP75).
+"Outcome" is the corresponding value for the measure.
+
+The table has a nested structure for the column headers.
+The first row of the table represents the Model.
+The second row of the table represents the Metric (Measure).
+
+Plan:
+1. Identify the "Category" from the first column of each data row (from the third row onwards).
+2. Iterate through the columns representing different models (every three columns).
+3. For each model, iterate through the three metrics (AP, AP50, AP75).
+4. Create a claim for each combination of Category, Model, and Metric.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "20.9"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "38.4"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "30.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "16.1"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+ 것을
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "34.0"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "25.7"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "31.8"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "47.2"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Toaster"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "42.3"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "38.3"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "59.4"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "43.1"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "37.0"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "58.5"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "41.9"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "40.5"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "60.7"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Bottle"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "45.7"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "50.1"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "69.7"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "59.4"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "50.2"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "69.3"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "60.2"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "52.6"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "71.5"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Skateboard"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "63.8"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "34.7"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "52.5"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "38.8"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "35.1"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "52.0"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "39.0"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "36.5"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "53.6"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Suitcase"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "40.7"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "41.3"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "62.3"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "50.6"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "41.5"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "62.7"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "50.6"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "42.8"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "63.2"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cup"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "52.2"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "65.7"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "86.8"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "68.4"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "67.2"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "88.9"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "69.8"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "63.0"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "84.5"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Cat"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "66.2"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "60.7"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "81.9"
+    },
+    "56": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "FCOSv2\u00a0[44]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "62.4"
+    },
+    "57": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "62.1"
+    },
+    "58": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "83.2"
+    },
+    "59": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PAA\u00a0[22]"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP75"
+            }
+        },
+        "Measure": "AP75",
+        "Outcome": "63.9"
+    },
+    "60": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "59.3"
+    },
+    "61": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {
+                "name": "Metric",
+                "value": "AP50"
+            }
+        },
+        "Measure": "AP50",
+        "Outcome": "80.8"
+    },
+    "62": {
+        "specifications": {
+            "0": {
+                "name": "Category",
+                "value": "Dog"
+            },
+            "1": {
+                "name": "Model",
+                "value": "Ours"
+            },
+            "2": {

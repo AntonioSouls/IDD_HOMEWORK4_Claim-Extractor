@@ -15,7 +15,7 @@ prompt = "".join(open("data/messageForModel.txt","r").readlines())
 # Definisce l'API da contattare, quindi il modello con cui si comunica
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="API_KEY",
+  api_key="API-KEY",
 )
 
 
@@ -49,8 +49,9 @@ def ask_chatbot(table_content, max_retries, wait_time):
     print("Errore: Non è stata ottenuta una risposta valida dopo diversi tentativi.")
     return None
 
-
-def ask_chatbot(table_content, max_retries, wait_time):
+# Funzione che re-interroga LLM nel caso in cui questo restituisca messaggi incompleti e gli chiede di completare la risposta
+# lasciata incompleta
+def ask_chatbot_recovery(continuation_prompt, max_retries, wait_time):
     for attempt in range(max_retries):
         completion = client.chat.completions.create(
             model="google/gemini-2.0-flash-thinking-exp:free",
@@ -60,7 +61,7 @@ def ask_chatbot(table_content, max_retries, wait_time):
                     "content": [
                         {
                             "type": "text",
-                            "text": f"{prompt}\n{table_content}"
+                            "text": f"{prompt}\n{continuation_prompt}"
                         }
                     ]
                 }
