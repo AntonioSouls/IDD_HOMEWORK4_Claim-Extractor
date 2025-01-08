@@ -1,0 +1,1828 @@
+The user wants to extract claims from a JSON object containing a table, caption, and references.
+Each claim should have the following structure:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "column_name_1", "value": "row_value_1"},
+            "1": {"name": "column_name_2", "value": "row_value_2"},
+            ...
+        },
+        "Measure": "measure_name",
+        "Outcome": "measure_value"
+    },
+    "1": { ... }
+}
+```
+The 'Measure' can be found in the table, references, or caption.
+The 'Outcome' is the value associated with the 'Measure'.
+
+Let's analyze the provided table and identify potential claims.
+The table has two main sections: "Deterministic Methods" and "Probabilistic Methods".
+Each section has multiple rows representing different models and their performance on various actions.
+
+For each model, we can extract claims related to their performance on different actions.
+The 'Measure' could be 'MPJPE', and the 'Outcome' would be the corresponding value for each action.
+The 'specifications' would be the model name and potentially the 'CVPR’19' etc. column.
+
+Let's start by extracting claims from the "Deterministic Methods" section.
+The first row after the header row is for 'TCN\xa0[46] (N=243)*'.
+The 'Measure' is 'MPJPE'. The outcomes are the values in the row for different actions.
+The specifications would be the model name and the conference year.
+
+Example claim:
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {"name": "Model", "value": "TCN\xa0[46] (N=243)*"},
+            "1": {"name": "Conference", "value": "CVPR’19"}
+        },
+        "Measure": "MPJPE Dir.",
+        "Outcome": "46.7"
+    },
+    "1": {
+        "specifications": {
+            "0": {"name": "Model", "value": "TCN\xa0[46] (N=243)*"},
+            "1": {"name": "Conference", "value": "CVPR’19"}
+        },
+        "Measure": "MPJPE Disc.",
+        "Outcome": "43.3"
+    },
+    ...
+}
+```
+
+Let's refine the approach. We can iterate through the rows of the table, excluding the header rows. For each row, the first column is the model name, and the second is the publication information. The remaining columns are performance metrics for different actions.
+
+The 'Measure' can be a combination of 'MPJPE' and the action name.
+
+Let's extract claims for the first few rows of "Deterministic Methods".```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Dir.",
+        "Outcome": "46.7"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Disc.",
+        "Outcome": "43.3"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Eat",
+        "Outcome": "45.6"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Greet",
+        "Outcome": "48.1"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Phone",
+        "Outcome": "55.1"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Photo",
+        "Outcome": "44.6"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Pose",
+        "Outcome": "44.3"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Pur.",
+        "Outcome": "57.3"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Sit",
+        "Outcome": "65.8"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE SitD.",
+        "Outcome": "47.1"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Smoke",
+        "Outcome": "44.0"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Wait",
+        "Outcome": "49.0"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE WalkD.",
+        "Outcome": "32.8"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Walk",
+        "Outcome": "33.9"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE WalkT.",
+        "Outcome": "46.8"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Avg",
+        "Outcome": "45.2"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Dir.",
+        "Outcome": "47.1"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Disc.",
+        "Outcome": "43.9"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Eat",
+        "Outcome": "41.6"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Greet",
+        "Outcome": "45.8"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Phone",
+        "Outcome": "49.6"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Photo",
+        "Outcome": "46.5"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Pose",
+        "Outcome": "40.0"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Pur.",
+        "Outcome": "53.4"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Sit",
+        "Outcome": "61.1"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE SitD.",
+        "Outcome": "46.1"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Smoke",
+        "Outcome": "42.6"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Wait",
+        "Outcome": "43.1"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE WalkD.",
+        "Outcome": "31.5"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Walk",
+        "Outcome": "32.6"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE WalkT.",
+        "Outcome": "46.6"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Avg",
+        "Outcome": "44.8"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Dir.",
+        "Outcome": "44.8"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Disc.",
+        "Outcome": "39.8"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Eat",
+        "Outcome": "42.5"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Greet",
+        "Outcome": "46.5"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Phone",
+        "Outcome": "51.6"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Photo",
+        "Outcome": "42.1"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Pose",
+        "Outcome": "42.0"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Pur.",
+        "Outcome": "53.3"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Sit",
+        "Outcome": "60.7"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE SitD.",
+        "Outcome": "45.5"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Smoke",
+        "Outcome": "43.3"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Wait",
+        "Outcome": "46.1"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE WalkD.",
+        "Outcome": "31.8"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Walk",
+        "Outcome": "32.2"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE WalkT.",
+        "Outcome": "44.3"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Avg",
+        "Outcome": "44.3"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Dir.",
+        "Outcome": "44.5"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Disc.",
+        "Outcome": "41.4"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Eat",
+        "Outcome": "42.7"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Greet",
+        "Outcome": "46.3"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Phone",
+        "Outcome": "55.6"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Photo",
+        "Outcome": "41.8"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Pose",
+        "Outcome": "41.9"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Pur.",
+        "Outcome": "53.7"
+    },
+    "56": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Sit",
+        "Outcome": "60.8"
+    },
+    "57": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE SitD.",
+        "Outcome": "45.0"
+    },
+    "58": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Smoke",
+        "Outcome": "41.5"
+    },
+    "59": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Wait",
+        "Outcome": "44.8"
+    },
+    "60": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE WalkD.",
+        "Outcome": "30.8"
+    },
+    "61": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Walk",
+        "Outcome": "31.9"
+    },
+    "62": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE WalkT.",
+        "Outcome": "44.3"
+    },
+    "63": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Avg",
+        "Outcome": "44.3"
+    },
+    "64": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Anatomy\u00a0[9] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "TCSVT’21"
+The user wants to extract claims from a JSON object representing a table.
+Each claim should have a "specifications", "Measure", and "Outcome".
+The "Measure" can be found in the table header, caption, or references.
+The "Outcome" is a value associated with the "Measure".
+
+Plan:
+1. Iterate through the rows of the 'table' array, starting from the second row (after the header).
+2. For each row, identify the specifications based on the first few columns.
+3. Identify the 'Measure' from the column headers.
+4. Extract the 'Outcome' for each 'Measure' in the current row.
+
+Let's consider the example table provided by the user.
+The first row is the header: ["Deterministic Methods", "Deterministic Methods", ...].
+The second row is also a header: ["MPJPE", "MPJPE", "Dir.", "Disc.", ...].
+The subsequent rows contain the data.
+
+For each data row:
+- The first column is the "Model".
+- The second column is the "Publication".
+- The remaining columns represent different measures related to "MPJPE".
+
+Example for the first data row:
+- Model: "TCN\xa0[46] (N=243)*"
+- Publication: "CVPR’19"
+- Measures: "MPJPE Dir.", "MPJPE Disc.", "MPJPE Eat", ...
+- Outcomes: 46.7, 43.3, 45.6, ...
+
+The 'specifications' will be a combination of "Model" and "Publication".
+The 'Measure' will be the column header.
+The 'Outcome' will be the corresponding cell value.```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Dir.",
+        "Outcome": "46.7"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Disc.",
+        "Outcome": "43.3"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Eat",
+        "Outcome": "45.6"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Greet",
+        "Outcome": "48.1"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Phone",
+        "Outcome": "55.1"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Photo",
+        "Outcome": "44.6"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Pose",
+        "Outcome": "44.3"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Pur.",
+        "Outcome": "57.3"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Sit",
+        "Outcome": "65.8"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE SitD.",
+        "Outcome": "47.1"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Smoke",
+        "Outcome": "44.0"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Wait",
+        "Outcome": "49.0"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE WalkD.",
+        "Outcome": "32.8"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Walk",
+        "Outcome": "33.9"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE WalkT.",
+        "Outcome": "46.8"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\u00a0[46] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "CVPR’19"
+            }
+        },
+        "Measure": "MPJPE Avg",
+        "Outcome": "45.2"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Dir.",
+        "Outcome": "47.1"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Disc.",
+        "Outcome": "43.9"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Eat",
+        "Outcome": "41.6"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Greet",
+        "Outcome": "45.8"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Phone",
+        "Outcome": "49.6"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Photo",
+        "Outcome": "46.5"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Pose",
+        "Outcome": "40.0"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Pur.",
+        "Outcome": "53.4"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Sit",
+        "Outcome": "61.1"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE SitD.",
+        "Outcome": "46.1"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Smoke",
+        "Outcome": "42.6"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Wait",
+        "Outcome": "43.1"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE WalkD.",
+        "Outcome": "31.5"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Walk",
+        "Outcome": "32.6"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE WalkT.",
+        "Outcome": "46.6"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "SRNet\u00a0[65] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ECCV’20"
+            }
+        },
+        "Measure": "MPJPE Avg",
+        "Outcome": "44.8"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Dir.",
+        "Outcome": "44.8"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Disc.",
+        "Outcome": "39.8"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Eat",
+        "Outcome": "42.5"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Greet",
+        "Outcome": "46.5"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Phone",
+        "Outcome": "51.6"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Photo",
+        "Outcome": "42.1"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Pose",
+        "Outcome": "42.0"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Pur.",
+        "Outcome": "53.3"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Sit",
+        "Outcome": "60.7"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE SitD.",
+        "Outcome": "45.5"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Smoke",
+        "Outcome": "43.3"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Wait",
+        "Outcome": "46.1"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE WalkD.",
+        "Outcome": "31.8"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Walk",
+        "Outcome": "32.2"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE WalkT.",
+        "Outcome": "44.3"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\u00a0[70] (N=81)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "ICCV’21"
+            }
+        },
+        "Measure": "MPJPE Avg",
+        "Outcome": "44.3"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Dir.",
+        "Outcome": "44.5"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Disc.",
+        "Outcome": "41.4"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Eat",
+        "Outcome": "42.7"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Greet",
+        "Outcome": "46.3"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Phone",
+        "Outcome": "55.6"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Photo",
+        "Outcome": "41.8"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Pose",
+        "Outcome": "41.9"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Pur.",
+        "Outcome": "53.7"
+    },
+    "56": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Sit",
+        "Outcome": "60.8"
+    },
+    "57": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE SitD.",
+        "Outcome": "45.0"
+    },
+    "58": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u00a0[52] (N=243)*"
+            },
+            "1": {
+                "name": "Publication",
+                "value": "MM’21"
+            }
+        },
+        "Measure": "MPJPE Smoke",
+        "Outcome": "41.5"
+    },
+    "59": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "RIE\u
