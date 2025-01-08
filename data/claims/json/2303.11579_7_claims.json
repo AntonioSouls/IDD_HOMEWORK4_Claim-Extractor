@@ -6,17 +6,17 @@
                 "value": "noise"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "40.2"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Target",
-                "value": "\\cellcolorbestcolororiginal data"
+                "value": "\\\\cellcolorbestcolororiginal data"
             }
         },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "\\cellcolorbestcolor40.0"
+        "Measure": "MPJPE\\\\downarrow",
+        "Outcome": "\\\\cellcolorbestcolor40.0"
     }
 }

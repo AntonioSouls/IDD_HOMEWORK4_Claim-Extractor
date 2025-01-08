@@ -6,11 +6,11 @@
                 "value": "C0"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "nan"
             },
             "3": {
@@ -32,11 +32,11 @@
                 "value": "C0"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "nan"
             },
             "3": {
@@ -58,11 +58,11 @@
                 "value": "C0"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "nan"
             },
             "3": {
@@ -84,11 +84,11 @@
                 "value": "C0"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "nan"
             },
             "3": {
@@ -110,11 +110,11 @@
                 "value": "C1"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "nan"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -136,11 +136,11 @@
                 "value": "C1"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "nan"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -162,11 +162,11 @@
                 "value": "C1"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "nan"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -188,11 +188,11 @@
                 "value": "C1"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "nan"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -214,11 +214,11 @@
                 "value": "C2"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "nan"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -240,11 +240,11 @@
                 "value": "C2"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "nan"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -266,11 +266,11 @@
                 "value": "C2"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "nan"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -292,11 +292,11 @@
                 "value": "C2"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "nan"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -318,11 +318,11 @@
                 "value": "C3"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -344,11 +344,11 @@
                 "value": "C3"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -370,11 +370,11 @@
                 "value": "C3"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {
@@ -396,11 +396,11 @@
                 "value": "C3"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{KL}}",
+                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\mathcal{L}_{\\text{reg}}",
+                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
                 "value": "\u2713"
             },
             "3": {

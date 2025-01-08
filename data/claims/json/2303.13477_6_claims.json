@@ -231,7 +231,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
             }
         },
         "Measure": "T",
@@ -241,7 +241,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
             }
         },
         "Measure": "R",
@@ -251,7 +251,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
             }
         },
         "Measure": "S",
@@ -261,7 +261,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
                 "name": "Cabinet",
@@ -275,7 +275,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
                 "name": "Cabinet",
@@ -289,7 +289,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
                 "name": "Cabinet",
@@ -303,7 +303,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
                 "name": "Chair",
@@ -317,7 +317,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
                 "name": "Chair",
@@ -331,7 +331,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
                 "name": "Chair",

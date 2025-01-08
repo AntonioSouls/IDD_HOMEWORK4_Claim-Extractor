@@ -6,7 +6,7 @@
                 "value": "PARE(HR-W32)"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "74.5"
     },
     "1": {
@@ -16,7 +16,7 @@
                 "value": "PARE(HR-W32)"
             }
         },
-        "Measure": "MJEx\\downarrow",
+        "Measure": "MJEx\\\\downarrow",
         "Outcome": "30.3"
     },
     "2": {
@@ -26,7 +26,7 @@
                 "value": "PARE(HR-W32)"
             }
         },
-        "Measure": "MJEy\\downarrow",
+        "Measure": "MJEy\\\\downarrow",
         "Outcome": "28.9"
     },
     "3": {
@@ -36,7 +36,7 @@
                 "value": "PARE(HR-W32)"
             }
         },
-        "Measure": "MJEz\\downarrow",
+        "Measure": "MJEz\\\\downarrow",
         "Outcome": "78.9"
     },
     "4": {
@@ -46,7 +46,7 @@
                 "value": "CLIFF(HR-W48)"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "72.7"
     },
     "5": {
@@ -56,7 +56,7 @@
                 "value": "CLIFF(HR-W48)"
             }
         },
-        "Measure": "MJEx\\downarrow",
+        "Measure": "MJEx\\\\downarrow",
         "Outcome": "27.1"
     },
     "6": {
@@ -66,7 +66,7 @@
                 "value": "CLIFF(HR-W48)"
             }
         },
-        "Measure": "MJEy\\downarrow",
+        "Measure": "MJEy\\\\downarrow",
         "Outcome": "27.0"
     },
     "7": {
@@ -76,7 +76,7 @@
                 "value": "CLIFF(HR-W48)"
             }
         },
-        "Measure": "MJEz\\downarrow",
+        "Measure": "MJEz\\\\downarrow",
         "Outcome": "51.8"
     },
     "8": {
@@ -86,7 +86,7 @@
                 "value": "BoPR(HR-W32)"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "68.8"
     },
     "9": {
@@ -96,7 +96,7 @@
                 "value": "BoPR(HR-W32)"
             }
         },
-        "Measure": "MJEx\\downarrow",
+        "Measure": "MJEx\\\\downarrow",
         "Outcome": "25.9"
     },
     "10": {
@@ -106,7 +106,7 @@
                 "value": "BoPR(HR-W32)"
             }
         },
-        "Measure": "MJEy\\downarrow",
+        "Measure": "MJEy\\\\downarrow",
         "Outcome": "27.5"
     },
     "11": {
@@ -116,7 +116,7 @@
                 "value": "BoPR(HR-W32)"
             }
         },
-        "Measure": "MJEz\\downarrow",
+        "Measure": "MJEz\\\\downarrow",
         "Outcome": "46.6"
     },
     "12": {
@@ -126,7 +126,7 @@
                 "value": "BoPR(HR-W48)"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "65.1"
     },
     "13": {
@@ -136,7 +136,7 @@
                 "value": "BoPR(HR-W48)"
             }
         },
-        "Measure": "MJEx\\downarrow",
+        "Measure": "MJEx\\\\downarrow",
         "Outcome": "22.0"
     },
     "14": {
@@ -146,7 +146,7 @@
                 "value": "BoPR(HR-W48)"
             }
         },
-        "Measure": "MJEy\\downarrow",
+        "Measure": "MJEy\\\\downarrow",
         "Outcome": "23.4"
     },
     "15": {
@@ -156,7 +156,7 @@
                 "value": "BoPR(HR-W48)"
             }
         },
-        "Measure": "MJEz\\downarrow",
+        "Measure": "MJEz\\\\downarrow",
         "Outcome": "48.1"
     }
 }

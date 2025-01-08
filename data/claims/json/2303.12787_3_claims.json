@@ -3,10 +3,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\u00a0[12]"
+                "value": "Implicit diff.\\u00a0[12]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -17,10 +17,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\u00a0[12]"
+                "value": "Implicit diff.\\u00a0[12]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -31,10 +31,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\u00a0[12]"
+                "value": "Implicit diff.\\u00a0[12]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -45,10 +45,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\u00a0[12]"
+                "value": "Implicit diff.\\u00a0[12]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -59,10 +59,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\u00a0[28]"
+                "value": "Reprojection\\u00a0[28]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -73,10 +73,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\u00a0[28]"
+                "value": "Reprojection\\u00a0[28]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -87,10 +87,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\u00a0[28]"
+                "value": "Reprojection\\u00a0[28]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -101,10 +101,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\u00a0[28]"
+                "value": "Reprojection\\u00a0[28]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -118,7 +118,7 @@
                 "value": "KL div. (ours)"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -132,7 +132,7 @@
                 "value": "KL div. (ours)"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -146,7 +146,7 @@
                 "value": "KL div. (ours)"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -160,7 +160,7 @@
                 "value": "KL div. (ours)"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "nan"
             }
         },
@@ -171,10 +171,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\u00a0[12]"
+                "value": "Implicit diff.\\u00a0[12]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -185,10 +185,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\u00a0[12]"
+                "value": "Implicit diff.\\u00a0[12]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -199,10 +199,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\u00a0[12]"
+                "value": "Implicit diff.\\u00a0[12]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -213,10 +213,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\u00a0[12]"
+                "value": "Implicit diff.\\u00a0[12]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -227,10 +227,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\u00a0[28]"
+                "value": "Reprojection\\u00a0[28]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -241,10 +241,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\u00a0[28]"
+                "value": "Reprojection\\u00a0[28]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -255,10 +255,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\u00a0[28]"
+                "value": "Reprojection\\u00a0[28]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -269,10 +269,10 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\u00a0[28]"
+                "value": "Reprojection\\u00a0[28]"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -286,7 +286,7 @@
                 "value": "KL div. (ours)"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -300,7 +300,7 @@
                 "value": "KL div. (ours)"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -314,7 +314,7 @@
                 "value": "KL div. (ours)"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },
@@ -328,7 +328,7 @@
                 "value": "KL div. (ours)"
             },
             "1": {
-                "name": "\\mathcal{L}_{\\text{crd}}",
+                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
                 "value": "\u2713"
             }
         },

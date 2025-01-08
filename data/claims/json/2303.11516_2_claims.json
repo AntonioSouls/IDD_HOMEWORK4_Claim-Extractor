@@ -3,7 +3,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePose\u00a0[25]"
+                "value": "RePose\\u00a0[25]"
             }
         },
         "Measure": "ADD(-S)",
@@ -13,7 +13,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePose\u00a0[25]"
+                "value": "RePose\\u00a0[25]"
             }
         },
         "Measure": "AUC of ADD-S",
@@ -23,7 +23,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePose\u00a0[25]"
+                "value": "RePose\\u00a0[25]"
             }
         },
         "Measure": "AUC of ADD(-S)",
@@ -33,7 +33,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose\u00a0[50]"
+                "value": "RNNPose\\u00a0[50]"
             }
         },
         "Measure": "ADD(-S)",
@@ -43,7 +43,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose\u00a0[50]"
+                "value": "RNNPose\\u00a0[50]"
             }
         },
         "Measure": "AUC of ADD(-S)",
@@ -53,7 +53,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose\u00a0[12]"
+                "value": "SO-Pose\\u00a0[12]"
             }
         },
         "Measure": "ADD(-S)",
@@ -63,7 +63,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose\u00a0[12]"
+                "value": "SO-Pose\\u00a0[12]"
             }
         },
         "Measure": "AUC of ADD-S",
@@ -73,7 +73,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose\u00a0[12]"
+                "value": "SO-Pose\\u00a0[12]"
             }
         },
         "Measure": "AUC of ADD(-S)",
@@ -83,7 +83,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST\u00a0[36]"
+                "value": "DProST\\u00a0[36]"
             }
         },
         "Measure": "ADD(-S)",
@@ -93,7 +93,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST\u00a0[36]"
+                "value": "DProST\\u00a0[36]"
             }
         },
         "Measure": "AUC of ADD(-S)",
@@ -103,7 +103,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net\u00a0[46]"
+                "value": "GDR-Net\\u00a0[46]"
             }
         },
         "Measure": "ADD(-S)",
@@ -113,7 +113,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net\u00a0[46]"
+                "value": "GDR-Net\\u00a0[46]"
             }
         },
         "Measure": "AUC of ADD-S",
@@ -123,7 +123,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net\u00a0[46]"
+                "value": "GDR-Net\\u00a0[46]"
             }
         },
         "Measure": "AUC of ADD(-S)",
@@ -133,7 +133,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose\u00a0[43]"
+                "value": "ZebraPose\\u00a0[43]"
             }
         },
         "Measure": "ADD(-S)",
@@ -143,7 +143,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose\u00a0[43]"
+                "value": "ZebraPose\\u00a0[43]"
             }
         },
         "Measure": "AUC of ADD-S",
@@ -153,7 +153,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose\u00a0[43]"
+                "value": "ZebraPose\\u00a0[43]"
             }
         },
         "Measure": "AUC of ADD(-S)",

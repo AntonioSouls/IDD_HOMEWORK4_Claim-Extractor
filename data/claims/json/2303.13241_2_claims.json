@@ -2,469 +2,469 @@
     "0": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2717"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.037"
     },
     "1": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2717"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.190"
     },
     "2": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2717"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.228"
     },
     "3": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2717"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.056"
     },
     "4": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2717"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.387"
     },
     "5": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2717"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.443"
     },
     "6": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.043"
     },
     "7": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.187"
     },
     "8": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.230"
     },
     "9": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
-                "value": "f_{\\alpha}"
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.036"
     },
     "10": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
-                "value": "f_{\\alpha}"
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.137"
     },
     "11": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2717"
             },
             "4": {
-                "name": "\\epsilon",
-                "value": "f_{\\alpha}"
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.174"
     },
     "12": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2713"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.039"
     },
     "13": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2713"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.161"
     },
     "14": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2713"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "\\\\epsilon",
                 "value": "1.0"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.200"
     },
     "15": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2713"
             },
             "4": {
-                "name": "\\epsilon",
-                "value": "f_{\\alpha}"
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.033"
     },
     "16": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2713"
             },
             "4": {
-                "name": "\\epsilon",
-                "value": "f_{\\alpha}"
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.117"
     },
     "17": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
                 "value": "\u2713"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
+                "name": "\\\\bm{I}_{o}",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
+                "name": "\\\\bm{I}_{e}",
                 "value": "\u2713"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
+                "name": "\\\\bm{I}_{r}",
                 "value": "\u2713"
             },
             "4": {
-                "name": "\\epsilon",
-                "value": "f_{\\alpha}"
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.150"
     }
 }

@@ -6,7 +6,7 @@
                 "value": "DPDN [21]"
             }
         },
-        "Measure": "\u200b Feedback Loop \u200b",
+        "Measure": "\\u200b Feedback Loop \\u200b",
         "Outcome": "nan"
     },
     "1": {
@@ -16,7 +16,7 @@
                 "value": "DPDN [21]"
             }
         },
-        "Measure": "\u200b Fewer Updates \u200b",
+        "Measure": "\\u200b Fewer Updates \\u200b",
         "Outcome": "-"
     },
     "2": {
@@ -76,7 +76,7 @@
                 "value": "Scan2CAD [4]"
             }
         },
-        "Measure": "\u200b Feedback Loop \u200b",
+        "Measure": "\\u200b Feedback Loop \\u200b",
         "Outcome": "nan"
     },
     "8": {
@@ -86,7 +86,7 @@
                 "value": "Scan2CAD [4]"
             }
         },
-        "Measure": "\u200b Fewer Updates \u200b",
+        "Measure": "\\u200b Fewer Updates \\u200b",
         "Outcome": "-"
     },
     "9": {
@@ -146,7 +146,7 @@
                 "value": "RayTran [34]"
             }
         },
-        "Measure": "\u200b Feedback Loop \u200b",
+        "Measure": "\\u200b Feedback Loop \\u200b",
         "Outcome": "nan"
     },
     "15": {
@@ -156,7 +156,7 @@
                 "value": "RayTran [34]"
             }
         },
-        "Measure": "\u200b Fewer Updates \u200b",
+        "Measure": "\\u200b Fewer Updates \\u200b",
         "Outcome": "-"
     },
     "16": {
@@ -216,7 +216,7 @@
                 "value": "Vid2CAD [24]"
             }
         },
-        "Measure": "\u200b Feedback Loop \u200b",
+        "Measure": "\\u200b Feedback Loop \\u200b",
         "Outcome": "\u2713"
     },
     "22": {
@@ -226,7 +226,7 @@
                 "value": "Vid2CAD [24]"
             }
         },
-        "Measure": "\u200b Fewer Updates \u200b",
+        "Measure": "\\u200b Fewer Updates \\u200b",
         "Outcome": "nan"
     },
     "23": {
@@ -286,7 +286,7 @@
                 "value": "ELLIPSDF [30]"
             }
         },
-        "Measure": "\u200b Feedback Loop \u200b",
+        "Measure": "\\u200b Feedback Loop \\u200b",
         "Outcome": "\u2713"
     },
     "29": {
@@ -296,7 +296,7 @@
                 "value": "ELLIPSDF [30]"
             }
         },
-        "Measure": "\u200b Fewer Updates \u200b",
+        "Measure": "\\u200b Fewer Updates \\u200b",
         "Outcome": "nan"
     },
     "30": {
@@ -356,7 +356,7 @@
                 "value": "Ma et al. [23]"
             }
         },
-        "Measure": "\u200b Feedback Loop \u200b",
+        "Measure": "\\u200b Feedback Loop \\u200b",
         "Outcome": "\u2713"
     },
     "36": {
@@ -366,7 +366,7 @@
                 "value": "Ma et al. [23]"
             }
         },
-        "Measure": "\u200b Fewer Updates \u200b",
+        "Measure": "\\u200b Fewer Updates \\u200b",
         "Outcome": "\u2713"
     },
     "37": {
@@ -426,7 +426,7 @@
                 "value": "TransPoser"
             }
         },
-        "Measure": "\u200b Feedback Loop \u200b",
+        "Measure": "\\u200b Feedback Loop \\u200b",
         "Outcome": "\u2713"
     },
     "43": {
@@ -436,7 +436,7 @@
                 "value": "TransPoser"
             }
         },
-        "Measure": "\u200b Fewer Updates \u200b",
+        "Measure": "\\u200b Fewer Updates \\u200b",
         "Outcome": "\u2713"
     },
     "44": {

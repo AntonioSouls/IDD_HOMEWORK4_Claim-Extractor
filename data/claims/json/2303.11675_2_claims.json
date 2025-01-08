@@ -3,120 +3,120 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SPIN\u00a0[18]"
+                "value": "SPIN\\u00a0[18]"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "153.4"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SPIN\u00a0[18]"
+                "value": "SPIN\\u00a0[18]"
             }
         },
-        "Measure": "V2V\\downarrow",
+        "Measure": "V2V\\\\downarrow",
         "Outcome": "148.9"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\u00a0[16]"
+                "value": "PARE\\u00a0[16]"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "146.2"
     },
     "3": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\u00a0[16]"
+                "value": "PARE\\u00a0[16]"
             }
         },
-        "Measure": "V2V\\downarrow",
+        "Measure": "V2V\\\\downarrow",
         "Outcome": "140.9"
     },
     "4": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ROMP\u00a0[34]"
+                "value": "ROMP\\u00a0[34]"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "108.1"
     },
     "5": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ROMP\u00a0[34]"
+                "value": "ROMP\\u00a0[34]"
             }
         },
-        "Measure": "V2V\\downarrow",
+        "Measure": "V2V\\\\downarrow",
         "Outcome": "103.4"
     },
     "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEV\u00a0[35]"
+                "value": "BEV\\u00a0[35]"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "105.3"
     },
     "7": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEV\u00a0[35]"
+                "value": "BEV\\u00a0[35]"
             }
         },
-        "Measure": "V2V\\downarrow",
+        "Measure": "V2V\\\\downarrow",
         "Outcome": "100.7"
     },
     "8": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Hand4Whole\u00a0[35]"
+                "value": "Hand4Whole\\u00a0[35]"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "89.8"
     },
     "9": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Hand4Whole\u00a0[35]"
+                "value": "Hand4Whole\\u00a0[35]"
             }
         },
-        "Measure": "V2V\\downarrow",
+        "Measure": "V2V\\\\downarrow",
         "Outcome": "84.8"
     },
     "10": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF\u00a0[20]"
+                "value": "CLIFF\\u00a0[20]"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "81.0"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF\u00a0[20]"
+                "value": "CLIFF\\u00a0[20]"
             }
         },
-        "Measure": "V2V\\downarrow",
+        "Measure": "V2V\\\\downarrow",
         "Outcome": "76.0"
     },
     "12": {
@@ -126,7 +126,7 @@
                 "value": "BoPR"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE\\\\downarrow",
         "Outcome": "79.9"
     },
     "13": {
@@ -136,7 +136,7 @@
                 "value": "BoPR"
             }
         },
-        "Measure": "V2V\\downarrow",
+        "Measure": "V2V\\\\downarrow",
         "Outcome": "74.5"
     }
 }

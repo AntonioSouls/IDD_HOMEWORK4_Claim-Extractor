@@ -6,18 +6,18 @@
                 "value": "none"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "40.8"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Location",
-                "value": "\\cellcolorbestcolorfirst layer"
+                "value": "\\\\cellcolorbestcolorfirst layer"
             }
         },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "\\cellcolorbestcolor40.0"
+        "Measure": "MPJPE\\\\downarrow",
+        "Outcome": "\\\\cellcolorbestcolor40.0"
     },
     "2": {
         "specifications": {
@@ -26,7 +26,7 @@
                 "value": "all layers"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "40.0"
     }
 }

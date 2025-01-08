@@ -3,7 +3,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE\u00a0[25]"
+                "value": "RePOSE\\u00a0[25]"
             },
             "1": {
                 "name": "Training Data",
@@ -17,7 +17,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose\u00a0[50]"
+                "value": "RNNPose\\u00a0[50]"
             },
             "1": {
                 "name": "Training Data",
@@ -31,7 +31,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose\u00a0[12]"
+                "value": "SO-Pose\\u00a0[12]"
             },
             "1": {
                 "name": "Training Data",
@@ -45,7 +45,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST\u00a0[36]"
+                "value": "DProST\\u00a0[36]"
             },
             "1": {
                 "name": "Training Data",
@@ -59,7 +59,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net\u00a0[46]"
+                "value": "GDR-Net\\u00a0[46]"
             },
             "1": {
                 "name": "Training Data",
@@ -73,7 +73,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose\u00a0[43]"
+                "value": "ZebraPose\\u00a0[43]"
             },
             "1": {
                 "name": "Training Data",

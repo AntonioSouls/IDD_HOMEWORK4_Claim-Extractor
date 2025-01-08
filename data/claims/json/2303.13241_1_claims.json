@@ -3,70 +3,70 @@
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "lava1302\u00a0[6]"
+                "value": "lava1302\\u00a0[6]"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0464"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "lava1302\u00a0[6]"
+                "value": "lava1302\\u00a0[6]"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.1163"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "lava1302\u00a0[6]"
+                "value": "lava1302\\u00a0[6]"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.1627"
     },
     "3": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "lava1302\u00a0[6]"
+                "value": "lava1302\\u00a0[6]"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0069"
     },
     "4": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "lava1302\u00a0[6]"
+                "value": "lava1302\\u00a0[6]"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0476"
     },
     "5": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "lava1302\u00a0[6]"
+                "value": "lava1302\\u00a0[6]"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.0545"
     },
     "6": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "lava1302\u00a0[6]"
+                "value": "lava1302\\u00a0[6]"
             }
         },
-        "Measure": "\\mu",
+        "Measure": "\\\\mu",
         "Outcome": "0.1086"
     },
     "7": {
@@ -76,7 +76,7 @@
                 "value": "prow"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0196"
     },
     "8": {
@@ -86,7 +86,7 @@
                 "value": "prow"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0944"
     },
     "9": {
@@ -96,7 +96,7 @@
                 "value": "prow"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.1140"
     },
     "10": {
@@ -106,7 +106,7 @@
                 "value": "prow"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0133"
     },
     "11": {
@@ -116,7 +116,7 @@
                 "value": "prow"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0840"
     },
     "12": {
@@ -126,7 +126,7 @@
                 "value": "prow"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.0972"
     },
     "13": {
@@ -136,77 +136,77 @@
                 "value": "prow"
             }
         },
-        "Measure": "\\mu",
+        "Measure": "\\\\mu",
         "Outcome": "0.1056"
     },
     "14": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "VPU\u00a0[5]"
+                "value": "VPU\\u00a0[5]"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0215"
     },
     "15": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "VPU\u00a0[5]"
+                "value": "VPU\\u00a0[5]"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0799"
     },
     "16": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "VPU\u00a0[5]"
+                "value": "VPU\\u00a0[5]"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.1014"
     },
     "17": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "VPU\u00a0[5]"
+                "value": "VPU\\u00a0[5]"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0118"
     },
     "18": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "VPU\u00a0[5]"
+                "value": "VPU\\u00a0[5]"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0493"
     },
     "19": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "VPU\u00a0[5]"
+                "value": "VPU\\u00a0[5]"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.0612"
     },
     "20": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "VPU\u00a0[5]"
+                "value": "VPU\\u00a0[5]"
             }
         },
-        "Measure": "\\mu",
+        "Measure": "\\\\mu",
         "Outcome": "0.0813"
     },
     "21": {
@@ -216,7 +216,7 @@
                 "value": "TangoUnchained"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0161"
     },
     "22": {
@@ -226,7 +226,7 @@
                 "value": "TangoUnchained"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0519"
     },
     "23": {
@@ -236,7 +236,7 @@
                 "value": "TangoUnchained"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.0679"
     },
     "24": {
@@ -246,7 +246,7 @@
                 "value": "TangoUnchained"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0150"
     },
     "25": {
@@ -256,7 +256,7 @@
                 "value": "TangoUnchained"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0750"
     },
     "26": {
@@ -266,7 +266,7 @@
                 "value": "TangoUnchained"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.0900"
     },
     "27": {
@@ -276,7 +276,7 @@
                 "value": "TangoUnchained"
             }
         },
-        "Measure": "\\mu",
+        "Measure": "\\\\mu",
         "Outcome": "0.0790"
     },
     "28": {
@@ -286,7 +286,7 @@
                 "value": "haoranhuang_njust"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0138"
     },
     "29": {
@@ -296,7 +296,7 @@
                 "value": "haoranhuang_njust"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0515"
     },
     "30": {
@@ -306,7 +306,7 @@
                 "value": "haoranhuang_njust"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.0652"
     },
     "31": {
@@ -316,7 +316,7 @@
                 "value": "haoranhuang_njust"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0110"
     },
     "32": {
@@ -326,7 +326,7 @@
                 "value": "haoranhuang_njust"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0479"
     },
     "33": {
@@ -336,7 +336,7 @@
                 "value": "haoranhuang_njust"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.0589"
     },
     "34": {
@@ -346,77 +346,77 @@
                 "value": "haoranhuang_njust"
             }
         },
-        "Measure": "\\mu",
+        "Measure": "\\\\mu",
         "Outcome": "0.0621"
     },
     "35": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "EagerNet\u00a0(ours)"
+                "value": "EagerNet\\u00a0(ours)"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0085"
     },
     "36": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "EagerNet\u00a0(ours)"
+                "value": "EagerNet\\u00a0(ours)"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0305"
     },
     "37": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "EagerNet\u00a0(ours)"
+                "value": "EagerNet\\u00a0(ours)"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.0390"
     },
     "38": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "EagerNet\u00a0(ours)"
+                "value": "EagerNet\\u00a0(ours)"
             }
         },
-        "Measure": "e_{\\bm{t}}",
+        "Measure": "e_{\\\\bm{t}}",
         "Outcome": "0.0126"
     },
     "39": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "EagerNet\u00a0(ours)"
+                "value": "EagerNet\\u00a0(ours)"
             }
         },
-        "Measure": "e_{\\bm{R}}",
+        "Measure": "e_{\\\\bm{R}}",
         "Outcome": "0.0465"
     },
     "40": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "EagerNet\u00a0(ours)"
+                "value": "EagerNet\\u00a0(ours)"
             }
         },
-        "Measure": "e_{\\text{pose}}",
+        "Measure": "e_{\\\\text{pose}}",
         "Outcome": "0.0590"
     },
     "41": {
         "specifications": {
             "0": {
                 "name": "nan",
-                "value": "EagerNet\u00a0(ours)"
+                "value": "EagerNet\\u00a0(ours)"
             }
         },
-        "Measure": "\\mu",
+        "Measure": "\\\\mu",
         "Outcome": "0.0490"
     }
 }

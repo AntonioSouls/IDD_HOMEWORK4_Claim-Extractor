@@ -6,7 +6,7 @@
                 "value": "ELLIPSDF [30]"
             }
         },
-        "Measure": "\u200bCls Avg.\u200b",
+        "Measure": "\\u200bCls Avg.\\u200b",
         "Outcome": "89.0"
     },
     "1": {
@@ -56,7 +56,7 @@
                 "value": "TransPoser"
             }
         },
-        "Measure": "\u200bCls Avg.\u200b",
+        "Measure": "\\u200bCls Avg.\\u200b",
         "Outcome": "94.3"
     },
     "6": {

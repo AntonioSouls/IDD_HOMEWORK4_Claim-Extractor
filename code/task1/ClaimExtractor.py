@@ -114,21 +114,21 @@ def format_claims(raw_response):
         json_parts = re.findall(r'```json(.*?)```', raw_response, re.DOTALL)
         if not json_parts:
             raise ValueError("No JSON object found in the response.")
-        
-        # Parse and print each JSON part
-        for i, json_part in enumerate(json_parts):
-            try:
-                parsed_json = json.loads(json_part)
-                print(f"JSON part {i+1}:")
-                print(json.dumps(parsed_json, indent=4))
-            except json.JSONDecodeError as e:
-                print(f"Error parsing JSON part {i+1}: {e}")
-        
-        
+    
         json_parts_lenght = len(json_parts)
+
         # Extract the JSON string
         json_str = json_parts[json_parts_lenght - 1].strip()
+
+        # Replace non-standard characters
+        json_str = json_str.replace('\xa0', ' ')
+
+        # Escape backslashes
+        json_str = json_str.replace('\\', '\\\\')
         
+        # Print the JSON string
+        # print(f"JSON string to be parsed: {json_str}")
+
         # Parse the JSON string to ensure it's valid
         claims = json.loads(json_str)
         
@@ -144,25 +144,25 @@ def format_claims(raw_response):
 
 # Funzione principale che per ogni tabella chiede al modello di estrarne i claims
 def claim_extractor(cartella_sorgente):
-    # """ Estraggo uno ad uno i file dalla directory sorgente e memorizzo le informazioni presenti nel file"""
-    # for JSON_File in tqdm(os.listdir(cartella_sorgente), desc="Extracting claims from tables"):
-    #     input_JSON_File_path = os.path.join(cartella_sorgente, JSON_File)
-    #     with open(input_JSON_File_path, 'r', encoding='utf-8') as file:
-    #         data = json.load(file)
+    """ Estraggo uno ad uno i file dalla directory sorgente e memorizzo le informazioni presenti nel file"""
+    for JSON_File in tqdm(os.listdir(cartella_sorgente), desc="Extracting claims from tables"):
+        input_JSON_File_path = os.path.join(cartella_sorgente, JSON_File)
+        with open(input_JSON_File_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
 
-    #     """ In primis verifico di non aver già creato il file destinazione, in modo da non dover interrogare il modello più volte sugli
-    #     stessi dati. Dopodiché, per tutti i dati nuovi, interrogo il modello e salvo la risposta in un apposito file testuale"""    
-    #     JSON_File_sanitized = JSON_File.replace(".json",".txt")
-    #     txt_path = os.path.join("data/claims/txt",JSON_File_sanitized)
-    #     if not os.path.exists(txt_path):
-    #         raw_response = ask_chatbot(data, 10, 10)
-    #         if raw_response:
-    #             if not is_response_complete(raw_response):
-    #                 raw_response = recover_incomplete_response(raw_response, data)
+        """ In primis verifico di non aver già creato il file destinazione, in modo da non dover interrogare il modello più volte sugli
+        stessi dati. Dopodiché, per tutti i dati nuovi, interrogo il modello e salvo la risposta in un apposito file testuale"""    
+        JSON_File_sanitized = JSON_File.replace(".json",".txt")
+        txt_path = os.path.join("data/claims/txt",JSON_File_sanitized)
+        if not os.path.exists(txt_path):
+            raw_response = ask_chatbot(data, 10, 10)
+            if raw_response:
+                if not is_response_complete(raw_response):
+                    raw_response = recover_incomplete_response(raw_response, data)
             
-    #             with open(f"data/claims/txt/{JSON_File_sanitized}", 'w', encoding='utf-8') as output_file:
-    #                 output_file.write(raw_response)
-    #         time.sleep(10)
+                with open(f"data/claims/txt/{JSON_File_sanitized}", 'w', encoding='utf-8') as output_file:
+                    output_file.write(raw_response)
+            time.sleep(10)
         
     for txt_file in os.listdir("data/claims/txt"):
         txt_file_path = os.path.join("data/claims/txt", txt_file)

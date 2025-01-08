@@ -6,7 +6,7 @@
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "lightbox e_{\\\\bm{t}}",
         "Outcome": "0.038"
     },
     "1": {
@@ -16,7 +16,7 @@
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "lightbox e_{\\\\bm{R}}",
         "Outcome": "0.157"
     },
     "2": {
@@ -26,7 +26,7 @@
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "lightbox e_{\\\\text{pose}}",
         "Outcome": "0.194"
     },
     "3": {
@@ -36,7 +36,7 @@
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "sunlamp e_{\\\\bm{t}}",
         "Outcome": "0.038"
     },
     "4": {
@@ -46,7 +46,7 @@
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "sunlamp e_{\\\\bm{R}}",
         "Outcome": "0.192"
     },
     "5": {
@@ -56,7 +56,7 @@
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "sunlamp e_{\\\\text{pose}}",
         "Outcome": "0.23"
     },
     "6": {
@@ -66,7 +66,7 @@
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "lightbox e_{\\\\bm{t}}",
         "Outcome": "0.035"
     },
     "7": {
@@ -76,7 +76,7 @@
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "lightbox e_{\\\\bm{R}}",
         "Outcome": "0.133"
     },
     "8": {
@@ -86,7 +86,7 @@
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "lightbox e_{\\\\text{pose}}",
         "Outcome": "0.168"
     },
     "9": {
@@ -96,7 +96,7 @@
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "sunlamp e_{\\\\bm{t}}",
         "Outcome": "0.036"
     },
     "10": {
@@ -106,7 +106,7 @@
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "sunlamp e_{\\\\bm{R}}",
         "Outcome": "0.164"
     },
     "11": {
@@ -116,187 +116,187 @@
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "sunlamp e_{\\\\text{pose}}",
         "Outcome": "0.2"
     },
     "12": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
+                "name": "(iii) multi h_{i}; \\\\widehat{\\\\bm{I}}_{o}",
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "lightbox e_{\\\\bm{t}}",
         "Outcome": "0.03"
     },
     "13": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
+                "name": "(iii) multi h_{i}; \\\\widehat{\\\\bm{I}}_{o}",
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "lightbox e_{\\\\bm{R}}",
         "Outcome": "0.126"
     },
     "14": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
+                "name": "(iii) multi h_{i}; \\\\widehat{\\\\bm{I}}_{o}",
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "lightbox e_{\\\\text{pose}}",
         "Outcome": "0.156"
     },
     "15": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
+                "name": "(iii) multi h_{i}; \\\\widehat{\\\\bm{I}}_{o}",
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "sunlamp e_{\\\\bm{t}}",
         "Outcome": "0.032"
     },
     "16": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
+                "name": "(iii) multi h_{i}; \\\\widehat{\\\\bm{I}}_{o}",
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "sunlamp e_{\\\\bm{R}}",
         "Outcome": "0.159"
     },
     "17": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
+                "name": "(iii) multi h_{i}; \\\\widehat{\\\\bm{I}}_{o}",
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "sunlamp e_{\\\\text{pose}}",
         "Outcome": "0.191"
     },
     "18": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
+                "name": "(iv) multi h_{i}; \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "lightbox e_{\\\\bm{t}}",
         "Outcome": "0.024"
     },
     "19": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
+                "name": "(iv) multi h_{i}; \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "lightbox e_{\\\\bm{R}}",
         "Outcome": "0.104"
     },
     "20": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
+                "name": "(iv) multi h_{i}; \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "lightbox e_{\\\\text{pose}}",
         "Outcome": "0.127"
     },
     "21": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
+                "name": "(iv) multi h_{i}; \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "sunlamp e_{\\\\bm{t}}",
         "Outcome": "0.024"
     },
     "22": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
+                "name": "(iv) multi h_{i}; \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "sunlamp e_{\\\\bm{R}}",
         "Outcome": "0.138"
     },
     "23": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
+                "name": "(iv) multi h_{i}; \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "sunlamp e_{\\\\text{pose}}",
         "Outcome": "0.162"
     },
     "24": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
+                "name": "(v) without \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "lightbox e_{\\\\bm{t}}",
         "Outcome": "0.037"
     },
     "25": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
+                "name": "(v) without \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "lightbox e_{\\\\bm{R}}",
         "Outcome": "0.166"
     },
     "26": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
+                "name": "(v) without \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "lightbox e_{\\\\text{pose}}",
         "Outcome": "0.203"
     },
     "27": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
+                "name": "(v) without \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "sunlamp e_{\\\\bm{t}}",
         "Outcome": "0.042"
     },
     "28": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
+                "name": "(v) without \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "sunlamp e_{\\\\bm{R}}",
         "Outcome": "0.257"
     },
     "29": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
+                "name": "(v) without \\\\bm{I}_{o}",
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "sunlamp e_{\\\\text{pose}}",
         "Outcome": "0.299"
     },
     "30": {
@@ -306,7 +306,7 @@
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "lightbox e_{\\\\bm{t}}",
         "Outcome": "0.019"
     },
     "31": {
@@ -316,7 +316,7 @@
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "lightbox e_{\\\\bm{R}}",
         "Outcome": "0.088"
     },
     "32": {
@@ -326,7 +326,7 @@
                 "value": ""
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "lightbox e_{\\\\text{pose}}",
         "Outcome": "0.107"
     },
     "33": {
@@ -336,7 +336,7 @@
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "sunlamp e_{\\\\bm{t}}",
         "Outcome": "0.022"
     },
     "34": {
@@ -346,7 +346,7 @@
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "sunlamp e_{\\\\bm{R}}",
         "Outcome": "0.097"
     },
     "35": {
@@ -356,7 +356,7 @@
                 "value": ""
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "sunlamp e_{\\\\text{pose}}",
         "Outcome": "0.12"
     }
 }

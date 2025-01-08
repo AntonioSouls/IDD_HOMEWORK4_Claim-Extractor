@@ -21,7 +21,7 @@
             },
             "1": {
                 "name": "Method",
-                "value": "GDR-Net\u00a0[46]"
+                "value": "GDR-Net\\u00a0[46]"
             }
         },
         "Measure": "ADD(-S)",

@@ -3,7 +3,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer\\u00a0[70]"
             },
             "1": {
                 "name": "H",
@@ -14,14 +14,14 @@
                 "value": "nan"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "44.3"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer\\u00a0[70]"
             },
             "1": {
                 "name": "H",
@@ -39,7 +39,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer\\u00a0[70]"
             },
             "1": {
                 "name": "H",
@@ -57,7 +57,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer\\u00a0[70]"
             },
             "1": {
                 "name": "H",
@@ -75,7 +75,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer\\u00a0[70]"
             },
             "1": {
                 "name": "H",
@@ -93,7 +93,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer\\u00a0[36]"
             },
             "1": {
                 "name": "H",
@@ -104,14 +104,14 @@
                 "value": "nan"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "43.1"
     },
     "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer\\u00a0[36]"
             },
             "1": {
                 "name": "H",
@@ -129,7 +129,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer\\u00a0[36]"
             },
             "1": {
                 "name": "H",
@@ -147,7 +147,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer\\u00a0[36]"
             },
             "1": {
                 "name": "H",
@@ -165,7 +165,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer\\u00a0[36]"
             },
             "1": {
                 "name": "H",
@@ -183,7 +183,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO\\u00a0[51]"
             },
             "1": {
                 "name": "H",
@@ -194,14 +194,14 @@
                 "value": "nan"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "42.8"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO\\u00a0[51]"
             },
             "1": {
                 "name": "H",
@@ -219,7 +219,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO\\u00a0[51]"
             },
             "1": {
                 "name": "H",
@@ -237,7 +237,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO\\u00a0[51]"
             },
             "1": {
                 "name": "H",
@@ -255,7 +255,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO\\u00a0[51]"
             },
             "1": {
                 "name": "H",
@@ -273,7 +273,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE\\u00a0[68]"
             },
             "1": {
                 "name": "H",
@@ -284,14 +284,14 @@
                 "value": "nan"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "41.0"
     },
     "16": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE\\u00a0[68]"
             },
             "1": {
                 "name": "H",
@@ -309,7 +309,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE\\u00a0[68]"
             },
             "1": {
                 "name": "H",
@@ -327,7 +327,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE\\u00a0[68]"
             },
             "1": {
                 "name": "H",
@@ -345,7 +345,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE\\u00a0[68]"
             },
             "1": {
                 "name": "H",
@@ -374,7 +374,7 @@
                 "value": "1"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "40.0"
     },
     "21": {
@@ -464,7 +464,7 @@
                 "value": "5"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "39.7"
     },
     "26": {
@@ -554,7 +554,7 @@
                 "value": "10"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "39.5"
     },
     "31": {

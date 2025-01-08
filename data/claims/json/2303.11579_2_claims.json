@@ -3,7 +3,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "U-CDGCN\u00a0[23] (N=96)\u25bd"
+                "value": "U-CDGCN\\u00a0[23] (N=96)\u25bd"
             },
             "1": {
                 "name": "Method",
@@ -17,7 +17,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "U-CDGCN\u00a0[23] (N=96)\u25bd"
+                "value": "U-CDGCN\\u00a0[23] (N=96)\u25bd"
             },
             "1": {
                 "name": "Method",
@@ -31,7 +31,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "U-CDGCN\u00a0[23] (N=96)\u25bd"
+                "value": "U-CDGCN\\u00a0[23] (N=96)\u25bd"
             },
             "1": {
                 "name": "Method",
@@ -45,7 +45,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51] (N=81)\u25bd"
+                "value": "P-STMO\\u00a0[51] (N=81)\u25bd"
             },
             "1": {
                 "name": "Method",
@@ -59,7 +59,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51] (N=81)\u25bd"
+                "value": "P-STMO\\u00a0[51] (N=81)\u25bd"
             },
             "1": {
                 "name": "Method",
@@ -73,7 +73,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51] (N=81)\u25bd"
+                "value": "P-STMO\\u00a0[51] (N=81)\u25bd"
             },
             "1": {
                 "name": "Method",
@@ -87,7 +87,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "TCN\u00a0[46] (N=81)"
+                "value": "TCN\\u00a0[46] (N=81)"
             },
             "1": {
                 "name": "Method",
@@ -101,7 +101,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "TCN\u00a0[46] (N=81)"
+                "value": "TCN\\u00a0[46] (N=81)"
             },
             "1": {
                 "name": "Method",
@@ -115,7 +115,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "TCN\u00a0[46] (N=81)"
+                "value": "TCN\\u00a0[46] (N=81)"
             },
             "1": {
                 "name": "Method",
@@ -129,7 +129,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "U-GCN\u00a0[62] (N=96)"
+                "value": "U-GCN\\u00a0[62] (N=96)"
             },
             "1": {
                 "name": "Method",
@@ -143,7 +143,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "U-GCN\u00a0[62] (N=96)"
+                "value": "U-GCN\\u00a0[62] (N=96)"
             },
             "1": {
                 "name": "Method",
@@ -157,7 +157,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "U-GCN\u00a0[62] (N=96)"
+                "value": "U-GCN\\u00a0[62] (N=96)"
             },
             "1": {
                 "name": "Method",
@@ -171,7 +171,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Anatomy\u00a0[9] (N=81)"
+                "value": "Anatomy\\u00a0[9] (N=81)"
             },
             "1": {
                 "name": "Method",
@@ -185,7 +185,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Anatomy\u00a0[9] (N=81)"
+                "value": "Anatomy\\u00a0[9] (N=81)"
             },
             "1": {
                 "name": "Method",
@@ -199,7 +199,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Anatomy\u00a0[9] (N=81)"
+                "value": "Anatomy\\u00a0[9] (N=81)"
             },
             "1": {
                 "name": "Method",
@@ -213,7 +213,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70] (N=9)"
+                "value": "PoseFormer\\u00a0[70] (N=9)"
             },
             "1": {
                 "name": "Method",
@@ -227,7 +227,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70] (N=9)"
+                "value": "PoseFormer\\u00a0[70] (N=9)"
             },
             "1": {
                 "name": "Method",
@@ -241,7 +241,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70] (N=9)"
+                "value": "PoseFormer\\u00a0[70] (N=9)"
             },
             "1": {
                 "name": "Method",
@@ -255,7 +255,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36] (N=9, H=3, P-Agg)"
+                "value": "MHFormer\\u00a0[36] (N=9, H=3, P-Agg)"
             },
             "1": {
                 "name": "Method",
@@ -269,7 +269,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36] (N=9, H=3, P-Agg)"
+                "value": "MHFormer\\u00a0[36] (N=9, H=3, P-Agg)"
             },
             "1": {
                 "name": "Method",
@@ -283,7 +283,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36] (N=9, H=3, P-Agg)"
+                "value": "MHFormer\\u00a0[36] (N=9, H=3, P-Agg)"
             },
             "1": {
                 "name": "Method",
@@ -297,7 +297,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68] (N=27)"
+                "value": "MixSTE\\u00a0[68] (N=27)"
             },
             "1": {
                 "name": "Method",
@@ -311,7 +311,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68] (N=27)"
+                "value": "MixSTE\\u00a0[68] (N=27)"
             },
             "1": {
                 "name": "Method",
@@ -325,7 +325,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68] (N=27)"
+                "value": "MixSTE\\u00a0[68] (N=27)"
             },
             "1": {
                 "name": "Method",
@@ -339,7 +339,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68] (N=243)\u2021"
+                "value": "MixSTE\\u00a0[68] (N=243)\u2021"
             },
             "1": {
                 "name": "Method",
@@ -353,7 +353,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68] (N=243)\u2021"
+                "value": "MixSTE\\u00a0[68] (N=243)\u2021"
             },
             "1": {
                 "name": "Method",
@@ -367,7 +367,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68] (N=243)\u2021"
+                "value": "MixSTE\\u00a0[68] (N=243)\u2021"
             },
             "1": {
                 "name": "Method",
@@ -381,210 +381,210 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorPCK\u2191",
-        "Outcome": "\\cellcolorbestcolor97.7"
+        "Measure": "\\\\cellcolorbestcolorPCK\u2191",
+        "Outcome": "\\\\cellcolorbestcolor97.7"
     },
     "28": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorAUC\u2191",
-        "Outcome": "\\cellcolorbestcolor77.8"
+        "Measure": "\\\\cellcolorbestcolorAUC\u2191",
+        "Outcome": "\\\\cellcolorbestcolor77.8"
     },
     "29": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorMPJPE\u2193",
-        "Outcome": "\\cellcolorbestcolor30.2"
+        "Measure": "\\\\cellcolorbestcolorMPJPE\u2193",
+        "Outcome": "\\\\cellcolorbestcolor30.2"
     },
     "30": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorPCK\u2191",
-        "Outcome": "\\cellcolorbestcolor97.7"
+        "Measure": "\\\\cellcolorbestcolorPCK\u2191",
+        "Outcome": "\\\\cellcolorbestcolor97.7"
     },
     "31": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorAUC\u2191",
-        "Outcome": "\\cellcolorbestcolor78.0"
+        "Measure": "\\\\cellcolorbestcolorAUC\u2191",
+        "Outcome": "\\\\cellcolorbestcolor78.0"
     },
     "32": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorMPJPE\u2193",
-        "Outcome": "\\cellcolorbestcolor30.0"
+        "Measure": "\\\\cellcolorbestcolorMPJPE\u2193",
+        "Outcome": "\\\\cellcolorbestcolor30.0"
     },
     "33": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorPCK\u2191",
-        "Outcome": "\\cellcolorbestcolor97.7"
+        "Measure": "\\\\cellcolorbestcolorPCK\u2191",
+        "Outcome": "\\\\cellcolorbestcolor97.7"
     },
     "34": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorAUC\u2191",
-        "Outcome": "\\cellcolorbestcolor78.2"
+        "Measure": "\\\\cellcolorbestcolorAUC\u2191",
+        "Outcome": "\\\\cellcolorbestcolor78.2"
     },
     "35": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorMPJPE\u2193",
-        "Outcome": "\\cellcolorbestcolor29.7"
+        "Measure": "\\\\cellcolorbestcolorMPJPE\u2193",
+        "Outcome": "\\\\cellcolorbestcolor29.7"
     },
     "36": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorPCK\u2191",
-        "Outcome": "\\cellcolorbestcolor97.8"
+        "Measure": "\\\\cellcolorbestcolorPCK\u2191",
+        "Outcome": "\\\\cellcolorbestcolor97.8"
     },
     "37": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorAUC\u2191",
-        "Outcome": "\\cellcolorbestcolor78.2"
+        "Measure": "\\\\cellcolorbestcolorAUC\u2191",
+        "Outcome": "\\\\cellcolorbestcolor78.2"
     },
     "38": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorMPJPE\u2193",
-        "Outcome": "\\cellcolorbestcolor29.8"
+        "Measure": "\\\\cellcolorbestcolorMPJPE\u2193",
+        "Outcome": "\\\\cellcolorbestcolor29.8"
     },
     "39": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorPCK\u2191",
-        "Outcome": "\\cellcolorbestcolor98.0"
+        "Measure": "\\\\cellcolorbestcolorPCK\u2191",
+        "Outcome": "\\\\cellcolorbestcolor98.0"
     },
     "40": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorAUC\u2191",
-        "Outcome": "\\cellcolorbestcolor79.1"
+        "Measure": "\\\\cellcolorbestcolorAUC\u2191",
+        "Outcome": "\\\\cellcolorbestcolor79.1"
     },
     "41": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
+                "value": "\\\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
+                "name": "\\\\cellcolorbestcolor",
                 "value": null
             }
         },
-        "Measure": "\\cellcolorbestcolorMPJPE\u2193",
-        "Outcome": "\\cellcolorbestcolor28.1"
+        "Measure": "\\\\cellcolorbestcolorMPJPE\u2193",
+        "Outcome": "\\\\cellcolorbestcolor28.1"
     }
 }

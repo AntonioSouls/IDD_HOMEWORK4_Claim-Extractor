@@ -3,31 +3,31 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "x^{\\text{3D}}_{i}"
+                "value": "x^{\\\\text{3D}}_{i}"
             }
         },
         "Measure": "Description",
-        "Outcome": "\\in\\mathbb{R}^{3}"
+        "Outcome": "\\\\in\\\\mathbb{R}^{3}"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "x^{\\text{2D}}_{i}"
+                "value": "x^{\\\\text{2D}}_{i}"
             }
         },
         "Measure": "Description",
-        "Outcome": "\\in\\mathbb{R}^{2}"
+        "Outcome": "\\\\in\\\\mathbb{R}^{2}"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "w^{\\text{2D}}_{i}"
+                "value": "w^{\\\\text{2D}}_{i}"
             }
         },
         "Measure": "Description",
-        "Outcome": "\\in\\mathbb{R}^{2}_{+}"
+        "Outcome": "\\\\in\\\\mathbb{R}^{2}_{+}"
     },
     "3": {
         "specifications": {
@@ -53,7 +53,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "y_{\\text{gt}}"
+                "value": "y_{\\\\text{gt}}"
             }
         },
         "Measure": "Description",
@@ -63,7 +63,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "y^{\\ast}"
+                "value": "y^{\\\\ast}"
             }
         },
         "Measure": "Description",
@@ -83,7 +83,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\theta"
+                "value": "\\\\theta"
             }
         },
         "Measure": "Description",
@@ -107,13 +107,13 @@
             }
         },
         "Measure": "Description",
-        "Outcome": "\\in\\mathbb{R}^{3}"
+        "Outcome": "\\\\in\\\\mathbb{R}^{3}"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\Sigma_{y^{\\ast}}"
+                "value": "\\\\Sigma_{y^{\\\\ast}}"
             }
         },
         "Measure": "Description",
@@ -133,7 +133,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\tilde{J}"
+                "value": "\\\\tilde{J}"
             }
         },
         "Measure": "Description",
@@ -153,7 +153,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\tilde{F}"
+                "value": "\\\\tilde{F}"
             }
         },
         "Measure": "Description",
@@ -163,11 +163,11 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\pi(\\cdot)"
+                "value": "\\\\pi(\\\\cdot)"
             }
         },
         "Measure": "Description",
-        "Outcome": ":\\mathbb{R}^{3}\\rightarrow\\mathbb{R}^{2}"
+        "Outcome": ":\\\\mathbb{R}^{3}\\\\rightarrow\\\\mathbb{R}^{2}"
     },
     "17": {
         "specifications": {
@@ -177,7 +177,7 @@
             }
         },
         "Measure": "Description",
-        "Outcome": "\\in\\mathbb{R}^{2}"
+        "Outcome": "\\\\in\\\\mathbb{R}^{2}"
     },
     "18": {
         "specifications": {
@@ -187,13 +187,13 @@
             }
         },
         "Measure": "Description",
-        "Outcome": "\\in\\mathbb{R}^{2}"
+        "Outcome": "\\\\in\\\\mathbb{R}^{2}"
     },
     "19": {
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\rho(\\cdot)"
+                "value": "\\\\rho(\\\\cdot)"
             }
         },
         "Measure": "Description",
@@ -203,7 +203,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\rho^{\\prime}_{i}"
+                "value": "\\\\rho^{\\\\prime}_{i}"
             }
         },
         "Measure": "Description",
@@ -213,7 +213,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\delta"
+                "value": "\\\\delta"
             }
         },
         "Measure": "Description",
@@ -353,7 +353,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "K^{\\prime}"
+                "value": "K^{\\\\prime}"
             }
         },
         "Measure": "Description",
@@ -363,7 +363,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "n_{\\text{head}}"
+                "value": "n_{\\\\text{head}}"
             }
         },
         "Measure": "Description",
@@ -373,7 +373,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "n_{\\text{hpts}}"
+                "value": "n_{\\\\text{hpts}}"
             }
         },
         "Measure": "Description",
@@ -383,7 +383,7 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\mathcal{L}_{\\text{KL}}"
+                "value": "\\\\mathcal{L}_{\\\\text{KL}}"
             }
         },
         "Measure": "Description",
@@ -393,27 +393,27 @@
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\mathcal{L}_{\\text{tgt}}"
+                "value": "\\\\mathcal{L}_{\\\\text{tgt}}"
             }
         },
         "Measure": "Description",
-        "Outcome": "The component of \\mathcal{L}_{\\text{KL}} concerning the reprojection errors at target pose"
+        "Outcome": "The component of \\\\mathcal{L}_{\\\\text{KL}} concerning the reprojection errors at target pose"
     },
     "40": {
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\mathcal{L}_{\\text{pred}}"
+                "value": "\\\\mathcal{L}_{\\\\text{pred}}"
             }
         },
         "Measure": "Description",
-        "Outcome": "The component of \\mathcal{L}_{\\text{KL}} concerning the reprojection errors over predicted pose"
+        "Outcome": "The component of \\\\mathcal{L}_{\\\\text{KL}} concerning the reprojection errors over predicted pose"
     },
     "41": {
         "specifications": {
             "0": {
                 "name": "Notation",
-                "value": "\\mathcal{L}_{\\text{reg}}"
+                "value": "\\\\mathcal{L}_{\\\\text{reg}}"
             }
         },
         "Measure": "Description",

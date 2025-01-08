@@ -3,21 +3,21 @@
         "specifications": {
             "0": {
                 "name": "Type",
-                "value": "\\cellcolorbestcolorIF"
+                "value": "\\\\cellcolorbestcolorIF"
             }
         },
         "Measure": "Method",
-        "Outcome": "\\cellcolorbestcolorconcat"
+        "Outcome": "\\\\cellcolorbestcolorconcat"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Type",
-                "value": "\\cellcolorbestcolorIF"
+                "value": "\\\\cellcolorbestcolorIF"
             }
         },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "\\cellcolorbestcolor40.0"
+        "Measure": "MPJPE\\\\downarrow",
+        "Outcome": "\\\\cellcolorbestcolor40.0"
     },
     "2": {
         "specifications": {
@@ -36,7 +36,7 @@
                 "value": "EF"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "40.9"
     },
     "4": {
@@ -56,7 +56,7 @@
                 "value": "EF"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "41.2"
     },
     "6": {
@@ -76,7 +76,7 @@
                 "value": "EF"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE\\\\downarrow",
         "Outcome": "41.1"
     }
 }

@@ -1,7 +1,7 @@
 {
     "0": {
         "specifications": {
-            "Method": "CASS\u00a0[2]",
+            "Method": "CASS\\u00a0[2]",
             "Data": "C+R"
         },
         "Measure": "3D_{25}",
@@ -9,7 +9,7 @@
     },
     "1": {
         "specifications": {
-            "Method": "CASS\u00a0[2]",
+            "Method": "CASS\\u00a0[2]",
             "Data": "C+R"
         },
         "Measure": "3D_{50}",
@@ -17,39 +17,39 @@
     },
     "2": {
         "specifications": {
-            "Method": "CASS\u00a0[2]",
+            "Method": "CASS\\u00a0[2]",
             "Data": "C+R"
         },
-        "Measure": "52\u2218cm{}^{\\circ}2cm",
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "0.0"
     },
     "3": {
         "specifications": {
-            "Method": "CASS\u00a0[2]",
+            "Method": "CASS\\u00a0[2]",
             "Data": "C+R"
         },
-        "Measure": "55\u2218cm{}^{\\circ}5cm",
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "0.0"
     },
     "4": {
         "specifications": {
-            "Method": "CASS\u00a0[2]",
+            "Method": "CASS\\u00a0[2]",
             "Data": "C+R"
         },
-        "Measure": "102\u2218cm{}^{\\circ}2cm",
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "0.0"
     },
     "5": {
         "specifications": {
-            "Method": "CASS\u00a0[2]",
+            "Method": "CASS\\u00a0[2]",
             "Data": "C+R"
         },
-        "Measure": "105\u2218cm{}^{\\circ}5cm",
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "0.0"
     },
     "6": {
         "specifications": {
-            "Method": "SPD\u00a0[30]",
+            "Method": "SPD\\u00a0[30]",
             "Data": "C+R"
         },
         "Measure": "3D_{25}",
@@ -57,7 +57,7 @@
     },
     "7": {
         "specifications": {
-            "Method": "SPD\u00a0[30]",
+            "Method": "SPD\\u00a0[30]",
             "Data": "C+R"
         },
         "Measure": "3D_{50}",
@@ -65,39 +65,39 @@
     },
     "8": {
         "specifications": {
-            "Method": "SPD\u00a0[30]",
+            "Method": "SPD\\u00a0[30]",
             "Data": "C+R"
         },
-        "Measure": "52\u2218cm{}^{\\circ}2cm",
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "2.6"
     },
     "9": {
         "specifications": {
-            "Method": "SPD\u00a0[30]",
+            "Method": "SPD\\u00a0[30]",
             "Data": "C+R"
         },
-        "Measure": "55\u2218cm{}^{\\circ}5cm",
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "3.5"
     },
     "10": {
         "specifications": {
-            "Method": "SPD\u00a0[30]",
+            "Method": "SPD\\u00a0[30]",
             "Data": "C+R"
         },
-        "Measure": "102\u2218cm{}^{\\circ}2cm",
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "9.7"
     },
     "11": {
         "specifications": {
-            "Method": "SPD\u00a0[30]",
+            "Method": "SPD\\u00a0[30]",
             "Data": "C+R"
         },
-        "Measure": "105\u2218cm{}^{\\circ}5cm",
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "13.9"
     },
     "12": {
         "specifications": {
-            "Method": "DualPoseNet\u00a0[22]",
+            "Method": "DualPoseNet\\u00a0[22]",
             "Data": "C+R"
         },
         "Measure": "3D_{25}",
@@ -105,7 +105,7 @@
     },
     "13": {
         "specifications": {
-            "Method": "DualPoseNet\u00a0[22]",
+            "Method": "DualPoseNet\\u00a0[22]",
             "Data": "C+R"
         },
         "Measure": "3D_{50}",
@@ -113,39 +113,39 @@
     },
     "14": {
         "specifications": {
-            "Method": "DualPoseNet\u00a0[22]",
+            "Method": "DualPoseNet\\u00a0[22]",
             "Data": "C+R"
         },
-        "Measure": "52\u2218cm{}^{\\circ}2cm",
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "17.8"
     },
     "15": {
         "specifications": {
-            "Method": "DualPoseNet\u00a0[22]",
+            "Method": "DualPoseNet\\u00a0[22]",
             "Data": "C+R"
         },
-        "Measure": "55\u2218cm{}^{\\circ}5cm",
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "22.8"
     },
     "16": {
         "specifications": {
-            "Method": "DualPoseNet\u00a0[22]",
+            "Method": "DualPoseNet\\u00a0[22]",
             "Data": "C+R"
         },
-        "Measure": "102\u2218cm{}^{\\circ}2cm",
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "26.3"
     },
     "17": {
         "specifications": {
-            "Method": "DualPoseNet\u00a0[22]",
+            "Method": "DualPoseNet\\u00a0[22]",
             "Data": "C+R"
         },
-        "Measure": "105\u2218cm{}^{\\circ}5cm",
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "36.5"
     },
     "18": {
         "specifications": {
-            "Method": "GPV-Pose\u00a0[7]",
+            "Method": "GPV-Pose\\u00a0[7]",
             "Data": "C+R"
         },
         "Measure": "3D_{25}",
@@ -153,7 +153,7 @@
     },
     "19": {
         "specifications": {
-            "Method": "GPV-Pose\u00a0[7]",
+            "Method": "GPV-Pose\\u00a0[7]",
             "Data": "C+R"
         },
         "Measure": "3D_{50}",
@@ -161,39 +161,39 @@
     },
     "20": {
         "specifications": {
-            "Method": "GPV-Pose\u00a0[7]",
+            "Method": "GPV-Pose\\u00a0[7]",
             "Data": "C+R"
         },
-        "Measure": "52\u2218cm{}^{\\circ}2cm",
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "14.1"
     },
     "21": {
         "specifications": {
-            "Method": "GPV-Pose\u00a0[7]",
+            "Method": "GPV-Pose\\u00a0[7]",
             "Data": "C+R"
         },
-        "Measure": "55\u2218cm{}^{\\circ}5cm",
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "21.5"
     },
     "22": {
         "specifications": {
-            "Method": "GPV-Pose\u00a0[7]",
+            "Method": "GPV-Pose\\u00a0[7]",
             "Data": "C+R"
         },
-        "Measure": "102\u2218cm{}^{\\circ}2cm",
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "23.8"
     },
     "23": {
         "specifications": {
-            "Method": "GPV-Pose\u00a0[7]",
+            "Method": "GPV-Pose\\u00a0[7]",
             "Data": "C+R"
         },
-        "Measure": "105\u2218cm{}^{\\circ}5cm",
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "41.1"
     },
     "24": {
         "specifications": {
-            "Method": "RePoNet\u00a0[10]",
+            "Method": "RePoNet\\u00a0[10]",
             "Data": "C+W\u2217"
         },
         "Measure": "3D_{25}",
@@ -201,7 +201,7 @@
     },
     "25": {
         "specifications": {
-            "Method": "RePoNet\u00a0[10]",
+            "Method": "RePoNet\\u00a0[10]",
             "Data": "C+W\u2217"
         },
         "Measure": "3D_{50}",
@@ -209,39 +209,39 @@
     },
     "26": {
         "specifications": {
-            "Method": "RePoNet\u00a0[10]",
+            "Method": "RePoNet\\u00a0[10]",
             "Data": "C+W\u2217"
         },
-        "Measure": "52\u2218cm{}^{\\circ}2cm",
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "29.5"
     },
     "27": {
         "specifications": {
-            "Method": "RePoNet\u00a0[10]",
+            "Method": "RePoNet\\u00a0[10]",
             "Data": "C+W\u2217"
         },
-        "Measure": "55\u2218cm{}^{\\circ}5cm",
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "34.4"
     },
     "28": {
         "specifications": {
-            "Method": "RePoNet\u00a0[10]",
+            "Method": "RePoNet\\u00a0[10]",
             "Data": "C+W\u2217"
         },
-        "Measure": "102\u2218cm{}^{\\circ}2cm",
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "35.0"
     },
     "29": {
         "specifications": {
-            "Method": "RePoNet\u00a0[10]",
+            "Method": "RePoNet\\u00a0[10]",
             "Data": "C+W\u2217"
         },
-        "Measure": "105\u2218cm{}^{\\circ}5cm",
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "42.5"
     },
     "30": {
         "specifications": {
-            "Method": "Self-Pose\u00a0[39]",
+            "Method": "Self-Pose\\u00a0[39]",
             "Data": "W\u2217"
         },
         "Measure": "3D_{25}",
@@ -249,7 +249,7 @@
     },
     "31": {
         "specifications": {
-            "Method": "Self-Pose\u00a0[39]",
+            "Method": "Self-Pose\\u00a0[39]",
             "Data": "W\u2217"
         },
         "Measure": "3D_{50}",
@@ -257,34 +257,34 @@
     },
     "32": {
         "specifications": {
-            "Method": "Self-Pose\u00a0[39]",
+            "Method": "Self-Pose\\u00a0[39]",
             "Data": "W\u2217"
         },
-        "Measure": "52\u2218cm{}^{\\circ}2cm",
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "32.7"
     },
     "33": {
         "specifications": {
-            "Method": "Self-Pose\u00a0[39]",
+            "Method": "Self-Pose\\u00a0[39]",
             "Data": "W\u2217"
         },
-        "Measure": "55\u2218cm{}^{\\circ}5cm",
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "35.3"
     },
     "34": {
         "specifications": {
-            "Method": "Self-Pose\u00a0[39]",
+            "Method": "Self-Pose\\u00a0[39]",
             "Data": "W\u2217"
         },
-        "Measure": "102\u2218cm{}^{\\circ}2cm",
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "38.3"
     },
     "35": {
         "specifications": {
-            "Method": "Self-Pose\u00a0[39]",
+            "Method": "Self-Pose\\u00a0[39]",
             "Data": "W\u2217"
         },
-        "Measure": "105\u2218cm{}^{\\circ}5cm",
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "45.3"
     },
     "36": {
@@ -308,7 +308,7 @@
             "Method": "IST-Net (Ours)",
             "Data": "C+R"
         },
-        "Measure": "52\u2218cm{}^{\\circ}2cm",
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "30.7"
     },
     "39": {
@@ -316,7 +316,7 @@
             "Method": "IST-Net (Ours)",
             "Data": "C+R"
         },
-        "Measure": "55\u2218cm{}^{\\circ}5cm",
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "35.8"
     },
     "40": {
@@ -324,7 +324,7 @@
             "Method": "IST-Net (Ours)",
             "Data": "C+R"
         },
-        "Measure": "102\u2218cm{}^{\\circ}2cm",
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
         "Outcome": "37.1"
     },
     "41": {
@@ -332,7 +332,7 @@
             "Method": "IST-Net (Ours)",
             "Data": "C+R"
         },
-        "Measure": "105\u2218cm{}^{\\circ}5cm",
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
         "Outcome": "43.7"
     }
 }
