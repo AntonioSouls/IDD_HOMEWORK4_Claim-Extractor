@@ -1,0 +1,62 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet [30]"
+            }
+        },
+        "Measure": "Parameters (M)",
+        "Outcome": "64"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HRNet [30]"
+            }
+        },
+        "Measure": "Speed (fps)",
+        "Outcome": "125"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCIO [15]"
+            }
+        },
+        "Measure": "Parameters (M)",
+        "Outcome": "193"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCIO [15]"
+            }
+        },
+        "Measure": "Speed (fps)",
+        "Outcome": "72"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCAI (Ours)"
+            }
+        },
+        "Measure": "Parameters (M)",
+        "Outcome": "357"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCAI (Ours)"
+            }
+        },
+        "Measure": "Speed (fps)",
+        "Outcome": "81"
+    }
+}

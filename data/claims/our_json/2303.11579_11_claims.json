@@ -1,0 +1,82 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "\\\\cellcolorbestcolorIF"
+            }
+        },
+        "Measure": "Method",
+        "Outcome": "\\\\cellcolorbestcolorconcat"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "\\\\cellcolorbestcolorIF"
+            }
+        },
+        "Measure": "MPJPE\\\\downarrow",
+        "Outcome": "\\\\cellcolorbestcolor40.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "Method",
+        "Outcome": "concat"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "MPJPE\\\\downarrow",
+        "Outcome": "40.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "Method",
+        "Outcome": "add"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "MPJPE\\\\downarrow",
+        "Outcome": "41.2"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "Method",
+        "Outcome": "CA"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            }
+        },
+        "Measure": "MPJPE\\\\downarrow",
+        "Outcome": "41.1"
+    }
+}

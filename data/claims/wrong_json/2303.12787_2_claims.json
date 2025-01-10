@@ -1,0 +1,262 @@
+{
+    "0": {
+        "specifications": {
+            "ID": "B0",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713"
+        },
+        "Measure": "0.02d",
+        "Outcome": "28.48"
+    },
+    "1": {
+        "specifications": {
+            "ID": "B0",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713"
+        },
+        "Measure": "0.05d",
+        "Outcome": "67.20"
+    },
+    "2": {
+        "specifications": {
+            "ID": "B0",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713"
+        },
+        "Measure": "0.1d",
+        "Outcome": "89.93"
+    },
+    "3": {
+        "specifications": {
+            "ID": "B0",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713"
+        },
+        "Measure": "Mean",
+        "Outcome": "61.87"
+    },
+    "4": {
+        "specifications": {
+            "ID": "B1",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713"
+        },
+        "Measure": "0.02d",
+        "Outcome": "25.86"
+    },
+    "5": {
+        "specifications": {
+            "ID": "B1",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713"
+        },
+        "Measure": "0.05d",
+        "Outcome": "70.90"
+    },
+    "6": {
+        "specifications": {
+            "ID": "B1",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713"
+        },
+        "Measure": "0.1d",
+        "Outcome": "92.68"
+    },
+    "7": {
+        "specifications": {
+            "ID": "B1",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713"
+        },
+        "Measure": "Mean",
+        "Outcome": "63.15"
+    },
+    "8": {
+        "specifications": {
+            "ID": "B2",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713"
+        },
+        "Measure": "0.02d",
+        "Outcome": "34.08"
+    },
+    "9": {
+        "specifications": {
+            "ID": "B2",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713"
+        },
+        "Measure": "0.05d",
+        "Outcome": "74.16"
+    },
+    "10": {
+        "specifications": {
+            "ID": "B2",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713"
+        },
+        "Measure": "0.1d",
+        "Outcome": "93.85"
+    },
+    "11": {
+        "specifications": {
+            "ID": "B2",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713"
+        },
+        "Measure": "Mean",
+        "Outcome": "67.36"
+    },
+    "12": {
+        "specifications": {
+            "ID": "B3",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713"
+        },
+        "Measure": "0.02d",
+        "Outcome": "34.40"
+    },
+    "13": {
+        "specifications": {
+            "ID": "B3",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713"
+        },
+        "Measure": "0.05d",
+        "Outcome": "75.00"
+    },
+    "14": {
+        "specifications": {
+            "ID": "B3",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713"
+        },
+        "Measure": "0.1d",
+        "Outcome": "93.83"
+    },
+    "15": {
+        "specifications": {
+            "ID": "B3",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713"
+        },
+        "Measure": "Mean",
+        "Outcome": "67.74"
+    },
+    "16": {
+        "specifications": {
+            "ID": "B4",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713"
+        },
+        "Measure": "0.02d",
+        "Outcome": "36.22"
+    },
+    "17": {
+        "specifications": {
+            "ID": "B4",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713"
+        },
+        "Measure": "0.05d",
+        "Outcome": "75.97"
+    },
+    "18": {
+        "specifications": {
+            "ID": "B4",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713"
+        },
+        "Measure": "0.1d",
+        "Outcome": "94.64"
+    },
+    "19": {
+        "specifications": {
+            "ID": "B4",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713"
+        },
+        "Measure": "Mean",
+        "Outcome": "68.94"
+    },
+    "20": {
+        "specifications": {
+            "ID": "B5",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "Init.": "\u2713"
+        },
+        "Measure": "0.02d",
+        "Outcome": "43.34"
+    },
+    "21": {
+        "specifications": {
+            "ID": "B5",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "Init.": "\u2713"
+        },
+        "Measure": "0.05d",
+        "Outcome": "82.13"
+    },
+    "22": {
+        "specifications": {
+            "ID": "B5",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "Init.": "\u2713"
+        },
+        "Measure": "0.1d",
+        "Outcome": "96.14"
+    },
+    "23": {
+        "specifications": {
+            "ID": "B5",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "Init.": "\u2713"
+        },
+        "Measure": "Mean",
+        "Outcome": "73.87"
+    },
+    "24": {
+        "specifications": {
+            "ID": "B6",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713",
+            "Init.": "\u2713"
+        },
+        "Measure": "0.02d",
+        "Outcome": "43.77"
+    },
+    "25": {
+        "specifications": {
+            "ID": "B6",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713",
+            "Init.": "\u2713"
+        },
+        "Measure": "0.05d",
+        "Outcome": "81.73"
+    },
+    "26": {
+        "specifications": {
+            "ID": "B6",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713",
+            "Init.": "\u2713"
+        },
+        "Measure": "0.1d",
+        "Outcome": "96.36"
+    },
+    "27": {
+        "specifications": {
+            "ID": "B6",
+            "\\\\mathcal{L}_{\\\\text{KL}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{reg}}": "\u2713",
+            "\\\\mathcal{L}_{\\\\text{crd}}": "\u2713",
+            "Init.": "\u2713"
+        },
+        "Measure": "Mean",
+        "Outcome": "73.95"
+    }
+}

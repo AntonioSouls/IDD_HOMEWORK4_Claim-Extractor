@@ -1,0 +1,102 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "\\u200bCls Avg.\\u200b",
+        "Outcome": "89.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Cabinet",
+        "Outcome": "91.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Chair",
+        "Outcome": "90.6"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Display",
+        "Outcome": "96.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Table",
+        "Outcome": "77.3"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "\\u200bCls Avg.\\u200b",
+        "Outcome": "94.3"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Cabinet",
+        "Outcome": "92.4"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Chair",
+        "Outcome": "98.5"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Display",
+        "Outcome": "93.8"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Table",
+        "Outcome": "92.4"
+    }
+}

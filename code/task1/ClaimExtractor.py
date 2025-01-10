@@ -116,23 +116,16 @@ def format_claims(raw_response):
             raise ValueError("No JSON object found in the response.")
     
         json_parts_lenght = len(json_parts)
-
         # Extract the JSON string
         json_str = json_parts[json_parts_lenght - 1].strip()
-
         # Replace non-standard characters
         json_str = json_str.replace('\xa0', ' ')
-
         # Escape backslashes
         json_str = json_str.replace('\\', '\\\\')
-        
-        # Print the JSON string
-        # print(f"JSON string to be parsed: {json_str}")
-
         # Parse the JSON string to ensure it's valid
         claims = json.loads(json_str)
-        
         return claims
+    
     except json.JSONDecodeError as e:
         print(f"JSON decoding error: {e}")
         return None

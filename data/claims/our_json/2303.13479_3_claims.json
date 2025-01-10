@@ -1,0 +1,452 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "70.7"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "35.2"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "42.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "58.8"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "nan"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "72.2"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "72.2"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "42.9"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "48.5"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "68.7"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "78.1"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "73.9"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "44.2"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "52.5"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "68.5"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "nan"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "79.2"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "75.9"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "43.5"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "48.9"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "70.4"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "nan"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "80.4"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "76.6"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "47.5"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "53.4"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "72.1"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "IST",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "CE",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "WE",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "80.5"
+    }
+}
