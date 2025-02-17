@@ -97,7 +97,7 @@ def save_converted_table(df, caption, references, path):
 # Funzione che riceve in ingresso un elenco di file json contenenti varie tabelle ciascuno, estrae le singole tabelle una ad una e, per 
 # ognuna, effettua una conversione in formato data-frame e salva il risultato di tale conversione in un apposito file json specifico per 
 # quella tabella
-def table_extractor(cartella_sorgente, cartella_destinazione_df, cartella_destinazione_png):
+def extract_tables(cartella_sorgente, cartella_destinazione_df, cartella_destinazione_png):
     for JSON_File in tqdm(os.listdir(cartella_sorgente), desc="Conversion of paper tables in .json format"):
 
         JSON_File_sanitized = sanitize_filename(JSON_File)
