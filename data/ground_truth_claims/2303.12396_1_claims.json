@@ -1,0 +1,296 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "LM-O"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "67.5"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "T-LESS"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "79.8"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "TUD-L"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "86.6"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "IC-BIN"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "63.8"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "ITODD"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "48.6"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "HB"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "73.5"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "YCB"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "85.0"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "LM-O"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "57.0"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "T-LESS"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "75.0"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "TUD-L"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "86.0"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "IC-BIN"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "27.2"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "ITODD"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "30.4"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "HB"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "60.4"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "YCB"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "80.0"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "LM-O"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "56.6"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "T-LESS"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "69.3"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "TUD-L"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "82.6"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "IC-BIN"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "40.1"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "ITODD"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "36.5"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "HB"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "63.5"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "YCB"
+            }
+        },
+        "Measure": "Accuracy",
+        "Outcome": "74.5"
+    }
+}

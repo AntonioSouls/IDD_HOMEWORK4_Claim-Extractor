@@ -1,0 +1,506 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.038"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.157"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.194"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.038"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.192"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.23"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.035"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.133"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.168"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.036"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.164"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.2"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iii) multi h\u1d62; \u00ce\u0160_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.03"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iii) multi h\u1d62; \u00ce\u0160_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.126"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iii) multi h\u1d62; \u00ce\u0160_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.156"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iii) multi h\u1d62; \u00ce\u0160_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.032"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iii) multi h\u1d62; \u00ce\u0160_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.159"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iii) multi h\u1d62; \u00ce\u0160_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.191"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iv) multi h\u1d62; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.024"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iv) multi h\u1d62; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.104"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iv) multi h\u1d62; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.127"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iv) multi h\u1d62; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.024"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iv) multi h\u1d62; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.138"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(iv) multi h\u1d62; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.162"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.037"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.166"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.203"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.042"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.257"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.299"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.019"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.088"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.107"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_t",
+        "Outcome": "0.022"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_R",
+        "Outcome": "0.097"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_pose",
+        "Outcome": "0.12"
+    }
+}

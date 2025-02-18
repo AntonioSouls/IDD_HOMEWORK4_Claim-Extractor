@@ -1,0 +1,114 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Backbone",
+                "value": "w/o diffusion"
+            },
+            "1": {
+                "name": "Model",
+                "value": "P-STMO"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "43.7"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Backbone",
+                "value": "w/o diffusion"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PoseFormer"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "47.6"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Backbone",
+                "value": "w/o diffusion"
+            },
+            "1": {
+                "name": "Model",
+                "value": "STE"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "44.6"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Backbone",
+                "value": "w/o diffusion"
+            },
+            "1": {
+                "name": "Model",
+                "value": "TCN"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "46.4"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Backbone",
+                "value": "w/ diffusion"
+            },
+            "1": {
+                "name": "Model",
+                "value": "P-STMO"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "42.2"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Backbone",
+                "value": "w/ diffusion"
+            },
+            "1": {
+                "name": "Model",
+                "value": "PoseFormer"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "45.7"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Backbone",
+                "value": "w/ diffusion"
+            },
+            "1": {
+                "name": "Model",
+                "value": "STE"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "43.8"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Backbone",
+                "value": "w/ diffusion"
+            },
+            "1": {
+                "name": "Model",
+                "value": "TCN"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "44.5"
+    }
+}

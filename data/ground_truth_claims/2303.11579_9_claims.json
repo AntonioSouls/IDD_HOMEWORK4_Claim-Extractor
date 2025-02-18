@@ -1,0 +1,22 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Location",
+                "value": "first layer"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "40.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Location",
+                "value": "all layers"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "40.0"
+    }
+}

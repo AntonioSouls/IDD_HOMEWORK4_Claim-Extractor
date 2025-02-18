@@ -1,0 +1,266 @@
+{
+    "0": {
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "SimpleBaseline"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "R152"
+                }
+            },
+            "Measure": "AP",
+            "Outcome": "73.7"
+        },
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "SimpleBaseline"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "R152"
+                }
+            },
+            "Measure": "AP^{M}",
+            "Outcome": "70.3"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "SimpleBaseline"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "R152"
+                }
+            },
+            "Measure": "AR",
+            "Outcome": "79.0"
+        }
+    },
+    "1": {
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "+ SCAI"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "R152"
+                }
+            },
+            "Measure": "AP",
+            "Outcome": "78.8"
+        },
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "+ SCAI"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "R152"
+                }
+            },
+            "Measure": "AP^{M}",
+            "Outcome": "75.5"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "+ SCAI"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "R152"
+                }
+            },
+            "Measure": "AR",
+            "Outcome": "82.5"
+        }
+    },
+    "2": {
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "HRNet"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR32"
+                }
+            },
+            "Measure": "AP",
+            "Outcome": "74.9"
+        },
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "HRNet"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR32"
+                }
+            },
+            "Measure": "AP^{M}",
+            "Outcome": "71.3"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "HRNet"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR32"
+                }
+            },
+            "Measure": "AR",
+            "Outcome": "80.1"
+        }
+    },
+    "3": {
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "+ SCAI"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR32"
+                }
+            },
+            "Measure": "AP",
+            "Outcome": "79.9"
+        },
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "+ SCAI"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR32"
+                }
+            },
+            "Measure": "AP^{M}",
+            "Outcome": "76.8"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "+ SCAI"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR32"
+                }
+            },
+            "Measure": "AR",
+            "Outcome": "82.5"
+        }
+    },
+    "4": {
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "HRNet"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR48"
+                }
+            },
+            "Measure": "AP",
+            "Outcome": "75.5"
+        },
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "HRNet"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR48"
+                }
+            },
+            "Measure": "AP^{M}",
+            "Outcome": "71.9"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "HRNet"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR48"
+                }
+            },
+            "Measure": "AR",
+            "Outcome": "80.5"
+        }
+    },
+    "5": {
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "+ SCAI"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR48"
+                }
+            },
+            "Measure": "AP",
+            "Outcome": "80.6"
+        },
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "+ SCAI"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR48"
+                }
+            },
+            "Measure": "AP^{M}",
+            "Outcome": "78.1"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "+ SCAI"
+                },
+                "1": {
+                    "name": "Backbone",
+                    "value": "HR48"
+                }
+            },
+            "Measure": "AR",
+            "Outcome": "83.1"
+        }
+    }
+}

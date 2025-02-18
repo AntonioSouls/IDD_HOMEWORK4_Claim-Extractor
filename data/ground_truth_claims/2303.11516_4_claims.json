@@ -1,0 +1,128 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "A0"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net baseline"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "59.29"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "A1"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "62.2"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "B0"
+            },
+            "1": {
+                "name": "Method",
+                "value": "A0 + 3D LC loss"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "66.48"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "B1"
+            },
+            "1": {
+                "name": "Method",
+                "value": "A0 + 2D LC loss"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "65.99"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "C0"
+            },
+            "1": {
+                "name": "Method",
+                "value": "B0 + detach residual from E_{cov}"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "61.03"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "C1"
+            },
+            "1": {
+                "name": "Method",
+                "value": "B0 + detach weights from E_{cov}"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "65.23"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "C2"
+            },
+            "1": {
+                "name": "Method",
+                "value": "B0 + remove E_{cov}"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "45.61"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "C3"
+            },
+            "1": {
+                "name": "Method",
+                "value": "B0 + remove E_{linear}"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "65.82"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Row",
+                "value": "C4"
+            },
+            "1": {
+                "name": "Method",
+                "value": "B0 + remove E_{prior}"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "60.69"
+    }
+}

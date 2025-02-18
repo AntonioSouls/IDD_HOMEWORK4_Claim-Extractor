@@ -1,0 +1,290 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "74.5"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEx",
+        "Outcome": "30.3"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEy",
+        "Outcome": "28.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEz",
+        "Outcome": "78.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "72.7"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEx",
+        "Outcome": "27.1"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEy",
+        "Outcome": "27.0"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEz",
+        "Outcome": "51.8"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "68.8"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEx",
+        "Outcome": "25.9"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEy",
+        "Outcome": "27.5"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEz",
+        "Outcome": "46.6"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "65.1"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEx",
+        "Outcome": "22.0"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEy",
+        "Outcome": "23.4"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
+            }
+        },
+        "Measure": "MJEz",
+        "Outcome": "48.1"
+    }
+}

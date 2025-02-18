@@ -1,0 +1,66 @@
+{   
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "H",
+                "value": "1"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "41.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "H",
+                "value": "1"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "40.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "H",
+                "value": "20"
+            },
+            "2": {
+                "name": "Setting",
+                "value": "P-Agg"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "39.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Diffusion",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "JPMA",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "H",
+                "value": "20"
+            },
+            "3": {
+                "name": "Setting",
+                "value": "J-Agg"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "39.5"
+    }
+}

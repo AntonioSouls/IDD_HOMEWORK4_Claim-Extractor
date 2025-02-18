@@ -1,0 +1,152 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Baseline"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "75.5"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Baseline"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "71.9"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Baseline"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "80.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Correction Network"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "78.5"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Correction Network"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "73.9"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Correction Network"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "81.4"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Self-Referential Error"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "78.9"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Self-Referential Error"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "75.8"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Self-Referential Error"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "81.6"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Joint Training"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "79.8"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Joint Training"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "77.8"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Joint Training"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "82.6"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Self-Adaptive Inference"
+            }
+        },
+        "Measure": "AP",
+        "Outcome": "80.6"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Self-Adaptive Inference"
+            }
+        },
+        "Measure": "AP^{M}",
+        "Outcome": "78.1"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "+ Self-Adaptive Inference"
+            }
+        },
+        "Measure": "AR",
+        "Outcome": "83.1"
+    }
+}

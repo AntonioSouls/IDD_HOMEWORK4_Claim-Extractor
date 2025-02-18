@@ -1,0 +1,632 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cls avg."
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.58"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cls avg."
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "1.70"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cls avg."
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "4.24"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.98"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "1.56"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "4.97"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.17"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "0.60"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "3.17"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Display"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.72"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Display"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "1.05"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Display"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "3.03"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Table"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.46"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Table"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "3.59"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Baseline based on"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Table"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "5.79"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cls avg."
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.45"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cls avg."
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "1.95"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cls avg."
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "3.55"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.45"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "1.54"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "3.56"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.17"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "0.55"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "2.59"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Display"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.49"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Display"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "1.17"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Display"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "2.44"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Table"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.70"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Table"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "4.55"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Dec."
+            },
+            "1": {
+                "name": "Category",
+                "value": "Table"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "5.60"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cls avg."
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.38"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cls avg."
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "1.44"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cls avg."
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "3.43"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.15"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "1.40"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "3.59"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "0.96"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "0.54"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "2.68"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Display"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "1.39"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Display"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "1.02"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Display"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "2.34"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Table"
+            }
+        },
+        "Measure": "translations (mean squared error)",
+        "Outcome": "2.02"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Table"
+            }
+        },
+        "Measure": "rotations (Riemannian distance)",
+        "Outcome": "2.82"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Table"
+            }
+        },
+        "Measure": "shapes (Chamfer distance)",
+        "Outcome": "5.09"
+    }
+}

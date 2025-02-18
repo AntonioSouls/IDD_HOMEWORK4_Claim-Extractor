@@ -1,0 +1,142 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "3D_75",
+        "Outcome": "73.9"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "52\u00b0cm\u00b02cm",
+        "Outcome": "44.2"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "55\u00b0cm\u00b05cm",
+        "Outcome": "52.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "102\u00b0cm\u00b02cm",
+        "Outcome": "68.5"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "105\u00b0cm\u00b05cm",
+        "Outcome": "79.2"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "Parameter",
+        "Outcome": "21M"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Implicit"
+            }
+        },
+        "Measure": "FPS",
+        "Outcome": "34"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "3D_75",
+        "Outcome": "75.1"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "52\u00b0cm\u00b02cm",
+        "Outcome": "45.0"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "55\u00b0cm\u00b05cm",
+        "Outcome": "50.7"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "102\u00b0cm\u00b02cm",
+        "Outcome": "69.6"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "105\u00b0cm\u00b05cm",
+        "Outcome": "80.0"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "Parameter",
+        "Outcome": "24M"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Explicit"
+            }
+        },
+        "Measure": "FPS",
+        "Outcome": "22"
+    }
+}

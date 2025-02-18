@@ -1,0 +1,114 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "NLL distributions",
+                "value": "Laplace"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "ours-3D"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "66.48"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "NLL distributions",
+                "value": "Laplace"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "quater."
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "66.72"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "NLL distributions",
+                "value": "Laplace"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "axis-ang."
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "65.85"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "NLL distributions",
+                "value": "Laplace"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "two-col."
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "66.39"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "NLL distributions",
+                "value": "Gaussian"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "ours-3D"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "61.90"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "NLL distributions",
+                "value": "Gaussian"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "quater."
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "60.72"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "NLL distributions",
+                "value": "Gaussian"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "axis-ang."
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "59.79"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "NLL distributions",
+                "value": "Gaussian"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "two-col."
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "60.37"
+    }
+}

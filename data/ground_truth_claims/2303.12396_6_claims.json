@@ -3,260 +3,240 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePose"
+                "value": "WDR + Ours"
             }
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "62.1"
+        "Measure": "Avg.",
+        "Outcome": "0.605"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePose"
+                "value": "WDR + Ours"
             }
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "88.5"
+        "Measure": "MSPD",
+        "Outcome": "0.694"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePose"
+                "value": "WDR + Ours"
             }
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "82.0"
+        "Measure": "MSSD",
+        "Outcome": "0.598"
     },
     "3": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose"
+                "value": "WDR + Ours"
             }
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "66.4"
+        "Measure": "VSD",
+        "Outcome": "0.522"
     },
     "4": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose"
+                "value": "WDR + RCNN"
             }
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "83.1"
+        "Measure": "Avg.",
+        "Outcome": "0.587"
     },
     "5": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose"
+                "value": "WDR + RCNN"
             }
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "56.8"
+        "Measure": "MSPD",
+        "Outcome": "0.673"
     },
     "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose"
+                "value": "WDR + RCNN"
             }
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "*90.9"
+        "Measure": "MSSD",
+        "Outcome": "0.580"
     },
     "7": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose"
+                "value": "WDR + RCNN"
             }
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "*83.9"
+        "Measure": "VSD",
+        "Outcome": "0.508"
     },
     "8": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST"
+                "value": "WDR + FCOSv2"
             }
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "65.1"
+        "Measure": "Avg.",
+        "Outcome": "0.585"
     },
     "9": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST"
+                "value": "WDR + FCOSv2"
             }
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "77.4"
+        "Measure": "MSPD",
+        "Outcome": "0.671"
     },
     "10": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net"
+                "value": "WDR + FCOSv2"
             }
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "60.1"
+        "Measure": "MSSD",
+        "Outcome": "0.578"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net"
+                "value": "WDR + FCOSv2"
             }
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "*91.6"
+        "Measure": "VSD",
+        "Outcome": "0.506"
     },
     "12": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net"
+                "value": "CDPNv2 + Ours"
             }
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "*84.4"
+        "Measure": "Avg.",
+        "Outcome": "0.412"
     },
     "13": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose"
+                "value": "CDPNv2 + Ours"
             }
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "80.5"
+        "Measure": "MSPD",
+        "Outcome": "0.534"
     },
     "14": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose"
+                "value": "CDPNv2 + Ours"
             }
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "90.1"
+        "Measure": "MSSD",
+        "Outcome": "0.428"
     },
     "15": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose"
+                "value": "CDPNv2 + Ours"
             }
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "85.3"
+        "Measure": "VSD",
+        "Outcome": "0.275"
     },
     "16": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net-LC"
+                "value": "CDPNv2 + FCOSv2"
             }
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "70.6"
+        "Measure": "Avg.",
+        "Outcome": "0.402"
     },
     "17": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net-LC"
+                "value": "CDPNv2 + FCOSv2"
             }
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "89.8"
+        "Measure": "MSPD",
+        "Outcome": "0.523"
     },
     "18": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net-LC"
+                "value": "CDPNv2 + FCOSv2"
             }
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "*94.1"
+        "Measure": "MSSD",
+        "Outcome": "0.416"
     },
     "19": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net-LC"
+                "value": "CDPNv2 + FCOSv2"
             }
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "84.0"
+        "Measure": "VSD",
+        "Outcome": "0.268"
     },
     "20": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net-LC"
+                "value": "CDPNv2 + RCNN"
             }
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "*88.8"
+        "Measure": "Avg.",
+        "Outcome": "0.388"
     },
     "21": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose-LC"
+                "value": "CDPNv2 + RCNN"
             }
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "82.4"
+        "Measure": "MSPD",
+        "Outcome": "0.506"
     },
     "22": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose-LC"
+                "value": "CDPNv2 + RCNN"
             }
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "90.8"
+        "Measure": "MSSD",
+        "Outcome": "0.401"
     },
     "23": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose-LC"
+                "value": "CDPNv2 + RCNN"
             }
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "*95.0"
-    },
-    "24": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ZebraPose-LC"
-            }
-        },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "86.1"
-    },
-    "25": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ZebraPose-LC"
-            }
-        },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "*90.8"
+        "Measure": "VSD",
+        "Outcome": "0.258"
     }
 }

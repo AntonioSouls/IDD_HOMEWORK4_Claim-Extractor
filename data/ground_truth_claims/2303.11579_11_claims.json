@@ -1,0 +1,58 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "IF"
+            },
+            "1": {
+                "name": "Method",
+                "value": "concat"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "40.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            },
+            "1": {
+                "name": "Method",
+                "value": "concat"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "40.9"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            },
+            "1": {
+                "name": "Method",
+                "value": "add"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "41.2"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "EF"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CA"
+            }
+        },
+        "Measure": "MPJPE\u2193",
+        "Outcome": "41.1"
+    }
+}

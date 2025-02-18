@@ -1,0 +1,256 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Scan2CAD"
+            }
+        },
+        "Measure": "Cls avg.",
+        "Outcome": "31.7"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Scan2CAD"
+            }
+        },
+        "Measure": "Cabinet",
+        "Outcome": "34.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Scan2CAD"
+            }
+        },
+        "Measure": "Chair",
+        "Outcome": "44.3"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Scan2CAD"
+            }
+        },
+        "Measure": "Display",
+        "Outcome": "17.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Scan2CAD"
+            }
+        },
+        "Measure": "Table",
+        "Outcome": "30.7"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RayTran"
+            }
+        },
+        "Measure": "Cls avg.",
+        "Outcome": "42.1"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RayTran"
+            }
+        },
+        "Measure": "Cabinet",
+        "Outcome": "36.2"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RayTran"
+            }
+        },
+        "Measure": "Chair",
+        "Outcome": "59.3"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RayTran"
+            }
+        },
+        "Measure": "Display",
+        "Outcome": "30.4"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RayTran"
+            }
+        },
+        "Measure": "Table",
+        "Outcome": "42.5"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Cls avg.",
+        "Outcome": "38.8"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Cabinet",
+        "Outcome": "23.8"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Chair",
+        "Outcome": "64.6"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Display",
+        "Outcome": "37.7"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Table",
+        "Outcome": "28.9"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Cls avg.",
+        "Outcome": "39.6"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Cls avg.",
+        "Outcome": "59.3"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Cabinet",
+        "Outcome": "45.4"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Chair",
+        "Outcome": "91.2"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Display",
+        "Outcome": "45.0"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
+            }
+        },
+        "Measure": "Table",
+        "Outcome": "55.7"
+    }
+}

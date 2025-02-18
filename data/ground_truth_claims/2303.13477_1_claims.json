@@ -1,0 +1,292 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DPDN [21]"
+            }
+        },
+        "Measure": "Joint Shape and Pose Estimation",
+        "Outcome": "\u2713"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DPDN [21]"
+            }
+        },
+        "Measure": "Shape Representation",
+        "Outcome": "Point Cloud"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Scan2CAD [4]"
+            }
+        },
+        "Measure": "Joint Shape and Pose Estimation",
+        "Outcome": "\u2713"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Scan2CAD [4]"
+            }
+        },
+        "Measure": "Multi-view Observation",
+        "Outcome": "\u2713"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Scan2CAD [4]"
+            }
+        },
+        "Measure": "Shape Representation",
+        "Outcome": "CAD models"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RayTran [34]"
+            }
+        },
+        "Measure": "Joint Shape and Pose Estimation",
+        "Outcome": "\u2713"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RayTran [34]"
+            }
+        },
+        "Measure": "Multi-view Observation",
+        "Outcome": "\u2713"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "RayTran [34]"
+            }
+        },
+        "Measure": "Shape Representation",
+        "Outcome": "Voxel Occupancy"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD [24]"
+            }
+        },
+        "Measure": "Feedback Loop",
+        "Outcome": "\u2713"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD [24]"
+            }
+        },
+        "Measure": "Joint Shape and Pose Estimation",
+        "Outcome": "\u2713"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD [24]"
+            }
+        },
+        "Measure": "Multi-view Observation",
+        "Outcome": "\u2713"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD [24]"
+            }
+        },
+        "Measure": "Online",
+        "Outcome": "\u2713"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD [24]"
+            }
+        },
+        "Measure": "Shape Representation",
+        "Outcome": "CAD models"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Vid2CAD [24]"
+            }
+        },
+        "Measure": "Momentum",
+        "Outcome": "Moving Avg."
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Feedback Loop",
+        "Outcome": "\u2713"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Joint Shape and Pose Estimation",
+        "Outcome": "\u2713"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Multi-view Observation",
+        "Outcome": "\u2713"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Online",
+        "Outcome": "\u2713"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Shape Representation",
+        "Outcome": "DeepSDF"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF [30]"
+            }
+        },
+        "Measure": "Momentum",
+        "Outcome": "Moving Avg."
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ma et al. [23]"
+            }
+        },
+        "Measure": "Feedback Loop",
+        "Outcome": "\u2713"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ma et al. [23]"
+            }
+        },
+        "Measure": "Fewer Updates",
+        "Outcome": "\u2713"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Feedback Loop",
+        "Outcome": "\u2713"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Fewer Updates",
+        "Outcome": "\u2713"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Joint Shape and Pose Estimation",
+        "Outcome": "\u2713"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Multi-view Observation",
+        "Outcome": "\u2713"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Online",
+        "Outcome": "\u2713"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Shape Representation",
+        "Outcome": "DeepDDF"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Momentum",
+        "Outcome": "Cross-Attn."
+    }
+}
