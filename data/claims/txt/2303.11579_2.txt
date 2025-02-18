@@ -1,61 +1,4 @@
-The user wants to extract claims from a table represented in a JSON format.
-Each claim should have a "specifications", a "Measure" and an "Outcome".
-The "specifications" are key-value pairs that identify the row from which the claim is extracted.
-The "Measure" is a column header, potentially found in the caption or references.
-The "Outcome" is the value associated with the "Measure" in that row.
-
-Plan:
-1. Identify the different measures available in the table headers.
-2. Iterate through each row of the table (excluding the header).
-3. For each row, extract the "specifications" based on the first column(s).
-4. For each measure, extract the corresponding "Outcome" from the row.
-5. Structure the extracted information into the desired JSON format.
-
-Let's analyze the provided example:
-
-Table headers: 'Method', 'Method', 'PCK\\uparrow', 'AUC\\uparrow', 'MPJPE\\downarrow'
-Measures: 'PCK\\uparrow', 'AUC\\uparrow', 'MPJPE\\downarrow'
-
-Consider the first data row: ['U-CDGCN\xa0[23] (N=96)\\triangledown', 'MM’21', '97.9', '69.5', '42.5']
-
-Claim 0 (based on 'PCK\\uparrow'):
-{
-    "specifications": {
-        "0": {"name": "Method", "value": "U-CDGCN\xa0[23] (N=96)\\triangledown"},
-        "1": {"name": "Method", "value": "MM’21"}
-    },
-    "Measure": "PCK\\uparrow",
-    "Outcome": "97.9"
-}
-
-Claim 1 (based on 'AUC\\uparrow'):
-{
-    "specifications": {
-        "0": {"name": "Method", "value": "U-CDGCN\xa0[23] (N=96)\\triangledown"},
-        "1": {"name": "Method", "value": "MM’21"}
-    },
-    "Measure": "AUC\\uparrow",
-    "Outcome": "69.5"
-}
-
-Claim 2 (based on 'MPJPE\\downarrow'):
-{
-    "specifications": {
-        "0": {"name": "Method", "value": "U-CDGCN\xa0[23] (N=96)\\triangledown"},
-        "1": {"name": "Method", "value": "MM’21"}
-    },
-    "Measure": "MPJPE\\downarrow",
-    "Outcome": "42.5"
-}
-
-Need to handle the merged header columns. The specifications should include all identifying columns.
-
-Revised Plan:
-1. Identify the measure columns from the table header.
-2. Iterate through each data row of the table.
-3. For each row, identify the specification columns and their values.
-4. For each measure column, extract the corresponding outcome value.
-5. Construct the claim object.```json
+```json
 {
     "0": {
         "specifications": {
@@ -64,7 +7,7 @@ Revised Plan:
                 "value": "U-CDGCN\u00a0[23] (N=96)▽"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "MM’21"
             }
         },
@@ -78,7 +21,7 @@ Revised Plan:
                 "value": "U-CDGCN\u00a0[23] (N=96)▽"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "MM’21"
             }
         },
@@ -92,7 +35,7 @@ Revised Plan:
                 "value": "U-CDGCN\u00a0[23] (N=96)▽"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "MM’21"
             }
         },
@@ -106,7 +49,7 @@ Revised Plan:
                 "value": "P-STMO\u00a0[51] (N=81)▽"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "ECCV’22"
             }
         },
@@ -120,7 +63,7 @@ Revised Plan:
                 "value": "P-STMO\u00a0[51] (N=81)▽"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "ECCV’22"
             }
         },
@@ -134,7 +77,7 @@ Revised Plan:
                 "value": "P-STMO\u00a0[51] (N=81)▽"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "ECCV’22"
             }
         },
@@ -148,7 +91,7 @@ Revised Plan:
                 "value": "TCN\u00a0[46] (N=81)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’19"
             }
         },
@@ -162,7 +105,7 @@ Revised Plan:
                 "value": "TCN\u00a0[46] (N=81)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’19"
             }
         },
@@ -176,7 +119,7 @@ Revised Plan:
                 "value": "TCN\u00a0[46] (N=81)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’19"
             }
         },
@@ -190,7 +133,7 @@ Revised Plan:
                 "value": "U-GCN\u00a0[62] (N=96)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "ECCV’20"
             }
         },
@@ -204,7 +147,7 @@ Revised Plan:
                 "value": "U-GCN\u00a0[62] (N=96)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "ECCV’20"
             }
         },
@@ -218,7 +161,7 @@ Revised Plan:
                 "value": "U-GCN\u00a0[62] (N=96)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "ECCV’20"
             }
         },
@@ -232,7 +175,7 @@ Revised Plan:
                 "value": "Anatomy\u00a0[9] (N=81)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "TCSVT’21"
             }
         },
@@ -246,7 +189,7 @@ Revised Plan:
                 "value": "Anatomy\u00a0[9] (N=81)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "TCSVT’21"
             }
         },
@@ -260,7 +203,7 @@ Revised Plan:
                 "value": "Anatomy\u00a0[9] (N=81)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "TCSVT’21"
             }
         },
@@ -274,7 +217,7 @@ Revised Plan:
                 "value": "PoseFormer\u00a0[70] (N=9)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "ICCV’21"
             }
         },
@@ -288,7 +231,7 @@ Revised Plan:
                 "value": "PoseFormer\u00a0[70] (N=9)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "ICCV’21"
             }
         },
@@ -302,7 +245,7 @@ Revised Plan:
                 "value": "PoseFormer\u00a0[70] (N=9)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "ICCV’21"
             }
         },
@@ -316,7 +259,7 @@ Revised Plan:
                 "value": "MHFormer\u00a0[36] (N=9, H=3, P-Agg)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’22"
             }
         },
@@ -330,7 +273,7 @@ Revised Plan:
                 "value": "MHFormer\u00a0[36] (N=9, H=3, P-Agg)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’22"
             }
         },
@@ -344,7 +287,7 @@ Revised Plan:
                 "value": "MHFormer\u00a0[36] (N=9, H=3, P-Agg)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’22"
             }
         },
@@ -358,7 +301,7 @@ Revised Plan:
                 "value": "MixSTE\u00a0[68] (N=27)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’22"
             }
         },
@@ -372,7 +315,7 @@ Revised Plan:
                 "value": "MixSTE\u00a0[68] (N=27)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’22"
             }
         },
@@ -386,7 +329,7 @@ Revised Plan:
                 "value": "MixSTE\u00a0[68] (N=27)"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’22"
             }
         },
@@ -400,7 +343,7 @@ Revised Plan:
                 "value": "MixSTE\u00a0[68] (N=243)‡"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’22"
             }
         },
@@ -414,7 +357,7 @@ Revised Plan:
                 "value": "MixSTE\u00a0[68] (N=243)‡"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’22"
             }
         },
@@ -428,7 +371,7 @@ Revised Plan:
                 "value": "MixSTE\u00a0[68] (N=243)‡"
             },
             "1": {
-                "name": "Method",
+                "name": "Venue",
                 "value": "CVPR’22"
             }
         },
@@ -442,8 +385,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorPCK↑",
@@ -456,8 +399,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorAUC↑",
@@ -470,8 +413,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=1, K=1)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorMPJPE↓",
@@ -484,8 +427,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorPCK↑",
@@ -498,8 +441,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorAUC↑",
@@ -512,8 +455,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorMPJPE↓",
@@ -526,8 +469,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorPCK↑",
@@ -540,8 +483,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorAUC↑",
@@ -554,8 +497,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Agg)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorMPJPE↓",
@@ -568,8 +511,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorPCK↑",
@@ -582,8 +525,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorAUC↑",
@@ -596,8 +539,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, P-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorMPJPE↓",
@@ -610,8 +553,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorPCK↑",
@@ -624,8 +567,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorAUC↑",
@@ -638,8 +581,8 @@ Revised Plan:
                 "value": "\\cellcolorbestcolorD3DP (N=243, H=20, K=20, J-Best#)"
             },
             "1": {
-                "name": "\\cellcolorbestcolor",
-                "value": null
+                "name": "Venue",
+                "value": "\\cellcolorbestcolor"
             }
         },
         "Measure": "\\cellcolorbestcolorMPJPE↓",

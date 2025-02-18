@@ -3,7 +3,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "DIST [22]"
+                "value": "DIST"
             }
         },
         "Measure": "Comp. Cost Time",
@@ -13,7 +13,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "DIST [22]"
+                "value": "DIST"
             }
         },
         "Measure": "Comp. Cost Memory",
@@ -23,7 +23,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "DIST [22]"
+                "value": "DIST"
             }
         },
         "Measure": "Shape Accuracy Chair",
@@ -33,7 +33,7 @@
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "DIST [22]"
+                "value": "DIST"
             }
         },
         "Measure": "Shape Accuracy Table",

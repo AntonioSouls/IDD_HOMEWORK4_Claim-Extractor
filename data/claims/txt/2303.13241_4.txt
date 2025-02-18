@@ -1,375 +1,507 @@
-The user wants to extract claims from a table represented in a JSON object.
-Each claim should follow a specific JSON format with "specifications", "Measure", and "Outcome".
-The "specifications" come from the row headers.
-The "Measure" can be found in the table, caption, or references.
-The "Outcome" is the value associated with the "Measure".
-
-The provided table looks like a cross table with multi-level column headers.
-
-Plan:
-1. Identify the "Measure" from the table and its associated column.
-2. Iterate through the rows of the table (excluding the header rows).
-3. For each row, extract the "specifications" which will be the values from the first column.
-4. Extract the "Outcome" which will be the value in the column corresponding to the identified "Measure".```json
+```json
 {
     "0": {
         "specifications": {
             "0": {
-                "name": "(i) no refinement",
-                "value": ""
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.038"
     },
     "1": {
         "specifications": {
             "0": {
-                "name": "(i) no refinement",
-                "value": ""
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.157"
     },
     "2": {
         "specifications": {
             "0": {
-                "name": "(i) no refinement",
-                "value": ""
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.194"
     },
     "3": {
         "specifications": {
             "0": {
-                "name": "(i) no refinement",
-                "value": ""
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.038"
     },
     "4": {
         "specifications": {
             "0": {
-                "name": "(i) no refinement",
-                "value": ""
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.192"
     },
     "5": {
         "specifications": {
             "0": {
-                "name": "(i) no refinement",
-                "value": ""
+                "name": "Refinement",
+                "value": "(i) no refinement"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.23"
     },
     "6": {
         "specifications": {
             "0": {
-                "name": "(ii) single h_{i}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.035"
     },
     "7": {
         "specifications": {
             "0": {
-                "name": "(ii) single h_{i}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.133"
     },
     "8": {
         "specifications": {
             "0": {
-                "name": "(ii) single h_{i}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.168"
     },
     "9": {
         "specifications": {
             "0": {
-                "name": "(ii) single h_{i}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.036"
     },
     "10": {
         "specifications": {
             "0": {
-                "name": "(ii) single h_{i}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.164"
     },
     "11": {
         "specifications": {
             "0": {
-                "name": "(ii) single h_{i}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(ii) single h_{i}"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.2"
     },
     "12": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iii) multi hᵢ; ÎŠ_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.03"
     },
     "13": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iii) multi hᵢ; ÎŠ_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.126"
     },
     "14": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iii) multi hᵢ; ÎŠ_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.156"
     },
     "15": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iii) multi hᵢ; ÎŠ_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.032"
     },
     "16": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iii) multi hᵢ; ÎŠ_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.159"
     },
     "17": {
         "specifications": {
             "0": {
-                "name": "(iii) multi h_{i}; \\widehat{\\bm{I}}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iii) multi hᵢ; ÎŠ_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.191"
     },
     "18": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iv) multi hᵢ; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.024"
     },
     "19": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iv) multi hᵢ; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.104"
     },
     "20": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iv) multi hᵢ; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.127"
     },
     "21": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iv) multi hᵢ; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.024"
     },
     "22": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iv) multi hᵢ; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.138"
     },
     "23": {
         "specifications": {
             "0": {
-                "name": "(iv) multi h_{i}; \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(iv) multi hᵢ; I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.162"
     },
     "24": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.037"
     },
     "25": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.166"
     },
     "26": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.203"
     },
     "27": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.042"
     },
     "28": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.257"
     },
     "29": {
         "specifications": {
             "0": {
-                "name": "(v) without \\bm{I}_{o}",
-                "value": ""
+                "name": "Refinement",
+                "value": "(v) without I_o"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.299"
     },
     "30": {
         "specifications": {
             "0": {
-                "name": "(vi) test set augs",
-                "value": ""
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.019"
     },
     "31": {
         "specifications": {
             "0": {
-                "name": "(vi) test set augs",
-                "value": ""
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.088"
     },
     "32": {
         "specifications": {
             "0": {
-                "name": "(vi) test set augs",
-                "value": ""
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
-        "Measure": "lightbox e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.107"
     },
     "33": {
         "specifications": {
             "0": {
-                "name": "(vi) test set augs",
-                "value": ""
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{t}}",
+        "Measure": "e_t",
         "Outcome": "0.022"
     },
     "34": {
         "specifications": {
             "0": {
-                "name": "(vi) test set augs",
-                "value": ""
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\bm{R}}",
+        "Measure": "e_R",
         "Outcome": "0.097"
     },
     "35": {
         "specifications": {
             "0": {
-                "name": "(vi) test set augs",
-                "value": ""
+                "name": "Refinement",
+                "value": "(vi) test set augs"
+            },
+            "1": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
-        "Measure": "sunlamp e_{\\text{pose}}",
+        "Measure": "e_pose",
         "Outcome": "0.12"
     }
 }

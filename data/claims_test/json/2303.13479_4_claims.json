@@ -1,0 +1,122 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "With PE"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "82.5"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "With PE"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "76.6"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "With PE"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "47.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "With PE"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "53.4"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "With PE"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "72.1"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "With PE"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "80.5"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "Without PE"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "81.3"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "Without PE"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "73.0"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "Without PE"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "41.5"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "Without PE"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "47.4"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "Without PE"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "68.8"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Position Encoding Term",
+                "value": "Without PE"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "78.8"
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Standard"
+            }
+        },
+        "Measure": "NDS",
+        "Outcome": "0.463"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Standard"
+            }
+        },
+        "Measure": "mAP",
+        "Outcome": "0.392"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Standard"
+            }
+        },
+        "Measure": "mATE",
+        "Outcome": "0.626"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Standard"
+            }
+        },
+        "Measure": "mAOE",
+        "Outcome": "0.282"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Monte Carlo"
+            }
+        },
+        "Measure": "NDS",
+        "Outcome": "0.463"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Monte Carlo"
+            }
+        },
+        "Measure": "mAP",
+        "Outcome": "0.393"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Monte Carlo"
+            }
+        },
+        "Measure": "mATE",
+        "Outcome": "0.623"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Scoring method",
+                "value": "Monte Carlo"
+            }
+        },
+        "Measure": "mAOE",
+        "Outcome": "0.286"
+    }
+}

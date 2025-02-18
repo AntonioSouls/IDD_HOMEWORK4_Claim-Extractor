@@ -1,809 +1,787 @@
-The user wants to extract claims from a JSON object containing a table.
-Each claim should have a "specifications" part, a "Measure", and an "Outcome".
-The "Measure" can be in the table, caption, or references.
-The "Outcome" is the value associated with the "Measure".
-
-Let's analyze the provided table and identify potential claims.
-The first row seems to be a multi-index header row.
-The second row contains the actual measure names.
-Columns 1, 4 correspond to 'MJE', columns 2, 5 to 'PAMJE', and columns 3, 6 to 'PVE'.
-The other columns in the first row ('3DPW-ALL', '3DPW-TEST') seem to be conditions or specifications.
-The first column contains the 'Method'.
-
-Let's extract some claims:
-- Method 'VIBE', with condition '3DPW-ALL', measure 'MJE', outcome '93.5'
-- Method 'VIBE', with condition '3DPW-ALL', measure 'PAMJE', outcome '56.5'
-- Method 'VIBE', with condition '3DPW-ALL', measure 'PVE', outcome '113.4'
-- Method 'VIBE', with condition '3DPW-TEST', measure 'MJE', outcome '82.7'
-- ... and so on for all rows and all combinations of conditions and measures.
-
-The caption mentions "MJE is reduced from 69.0 to 65.4" for the "BoPR(HR-W48)" method in "3DPW-TEST". This can be a claim.
-The caption also mentions "MJE from 80.0 to 72.0" for the "HybrIK" method in "3DPW-ALL". This can be a claim.
-
-Let's start by iterating through the table rows and columns to extract the claims.```json
+```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "VIBE\xa0[15]"
+                "value": "VIBE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "93.5"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "VIBE\xa0[15]"
+                "value": "VIBE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "56.5"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "VIBE\xa0[15]"
+                "value": "VIBE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "113.4"
     },
     "3": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "VIBE\xa0[15]"
+                "value": "VIBE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "82.7"
     },
     "4": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "VIBE\xa0[15]"
+                "value": "VIBE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "51.9"
     },
     "5": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "VIBE\xa0[15]"
+                "value": "VIBE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "99.1"
     },
     "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MEVA\xa0[25]"
+                "value": "MEVA"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "86.9"
     },
     "7": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MEVA\xa0[25]"
+                "value": "MEVA"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "54.7"
     },
     "8": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MAED\xa0[37]"
+                "value": "MAED"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "79.1"
     },
     "9": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MAED\xa0[37]"
+                "value": "MAED"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "45.7"
     },
     "10": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MAED\xa0[37]"
+                "value": "MAED"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "92.6"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Pose2Mesh\xa0[6]"
+                "value": "Pose2Mesh"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "89.2"
     },
     "12": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Pose2Mesh\xa0[6]"
+                "value": "Pose2Mesh"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "58.9"
     },
     "13": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Pose2Mesh\xa0[6]"
+                "value": "Pose2Mesh"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "89.5"
     },
     "14": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Pose2Mesh\xa0[6]"
+                "value": "Pose2Mesh"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "56.3"
     },
     "15": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Pose2Mesh\xa0[6]"
+                "value": "Pose2Mesh"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "105.3"
     },
     "16": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "I2L-MeshNet\xa0[27]"
+                "value": "I2L-MeshNet"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "93.2"
     },
     "17": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "I2L-MeshNet\xa0[27]"
+                "value": "I2L-MeshNet"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "58.6"
     },
     "18": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "METRO\xa0[21]"
+                "value": "METRO"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "77.1"
     },
     "19": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "METRO\xa0[21]"
+                "value": "METRO"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "47.9"
     },
     "20": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "METRO\xa0[21]"
+                "value": "METRO"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "88.2"
     },
     "21": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mesh-G\xa0[22]"
+                "value": "Mesh-G"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "74.7"
     },
     "22": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mesh-G\xa0[22]"
+                "value": "Mesh-G"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "45.6"
     },
     "23": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mesh-G\xa0[22]"
+                "value": "Mesh-G"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "87.7"
     },
     "24": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HybrIK\xa0[19]"
+                "value": "HybrIK"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "80.0"
     },
     "25": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HybrIK\xa0[19]"
+                "value": "HybrIK"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "48.8"
     },
     "26": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HybrIK\xa0[19]"
+                "value": "HybrIK"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "94.5"
     },
     "27": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HybrIK\xa0[19]"
+                "value": "HybrIK"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "74.1"
     },
     "28": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HybrIK\xa0[19]"
+                "value": "HybrIK"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "45.0"
     },
     "29": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HybrIK\xa0[19]"
+                "value": "HybrIK"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "86.5"
     },
     "30": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FastMETRO–L–H64\xa0[5]"
+                "value": "FastMETRO–L–H64"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "73.5"
     },
     "31": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FastMETRO–L–H64\xa0[5]"
+                "value": "FastMETRO–L–H64"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "44.6"
     },
     "32": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FastMETRO–L–H64\xa0[5]"
+                "value": "FastMETRO–L–H64"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "84.1"
     },
     "33": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SPIN\xa0[18]"
+                "value": "SPIN"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "96.9"
     },
     "34": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SPIN\xa0[18]"
+                "value": "SPIN"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "59.2"
     },
     "35": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SPIN\xa0[18]"
+                "value": "SPIN"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "116.4"
     },
     "36": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HMR-EFT\xa0[12]"
+                "value": "HMR-EFT"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "85.1"
     },
     "37": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HMR-EFT\xa0[12]"
+                "value": "HMR-EFT"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "52.2"
     },
     "38": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HMR-EFT\xa0[12]"
+                "value": "HMR-EFT"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "118.5"
     },
     "39": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ROMP\xa0[34]"
+                "value": "ROMP"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "82.7"
     },
     "40": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ROMP\xa0[34]"
+                "value": "ROMP"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "60.5"
     },
     "41": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ROMP\xa0[34]"
+                "value": "ROMP"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "76.7"
     },
     "42": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ROMP\xa0[34]"
+                "value": "ROMP"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "47.3"
     },
     "43": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ROMP\xa0[34]"
+                "value": "ROMP"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "93.4"
     },
     "44": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\xa0[16]"
+                "value": "PARE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "82.0"
     },
     "45": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\xa0[16]"
+                "value": "PARE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "50.9"
     },
     "46": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\xa0[16]"
+                "value": "PARE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "97.9"
     },
     "47": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\xa0[16]"
+                "value": "PARE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "74.5"
     },
     "48": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\xa0[16]"
+                "value": "PARE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "46.5"
     },
     "49": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\xa0[16]"
+                "value": "PARE"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "88.6"
     },
     "50": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "VisDB\xa0[41]"
+                "value": "VisDB"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "72.1"
     },
     "51": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "VisDB\xa0[41]"
+                "value": "VisDB"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "44.1"
     },
     "52": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "VisDB\xa0[41]"
+                "value": "VisDB"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "83.5"
     },
     "53": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF(HR-W48)\xa0[20]"
+                "value": "CLIFF(HR-W48)"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "69.0"
     },
     "54": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF(HR-W48)\xa0[20]"
+                "value": "CLIFF(HR-W48)"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "43.0"
     },
     "55": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF(HR-W48)\xa0[20]"
+                "value": "CLIFF(HR-W48)"
             },
             "1": {
                 "name": "Dataset",
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "81.2"
     },
     "56": {
@@ -817,7 +795,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "76.1"
     },
     "57": {
@@ -831,7 +809,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "45.9"
     },
     "58": {
@@ -845,7 +823,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "90.9"
     },
     "59": {
@@ -859,7 +837,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "68.8"
     },
     "60": {
@@ -873,7 +851,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "41.8"
     },
     "61": {
@@ -887,7 +865,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "81.7"
     },
     "62": {
@@ -901,7 +879,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "72.0"
     },
     "63": {
@@ -915,7 +893,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "45.3"
     },
     "64": {
@@ -929,7 +907,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-ALL"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "86.5"
     },
     "65": {
@@ -943,7 +921,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE↓",
         "Outcome": "65.4"
     },
     "66": {
@@ -957,7 +935,7 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PAMJE\\downarrow",
+        "Measure": "PAMJE↓",
         "Outcome": "42.5"
     },
     "67": {
@@ -971,64 +949,8 @@ Let's start by iterating through the table rows and columns to extract the claim
                 "value": "3DPW-TEST"
             }
         },
-        "Measure": "PVE\\downarrow",
+        "Measure": "PVE↓",
         "Outcome": "80.8"
-    },
-    "68": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "BoPR(HR-W48)"
-            },
-            "1": {
-                "name": "Dataset",
-                "value": "3DPW-TEST"
-            }
-        },
-        "Measure": "MJE",
-        "Outcome": "65.4"
-    },
-    "69": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "CLIFF"
-            },
-            "1": {
-                "name": "Dataset",
-                "value": "3DPW-TEST"
-            }
-        },
-        "Measure": "MJE",
-        "Outcome": "69.0"
-    },
-    "70": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "HybrIK"
-            },
-            "1": {
-                "name": "Dataset",
-                "value": "3DPW-ALL"
-            }
-        },
-        "Measure": "MJE",
-        "Outcome": "72.0"
-    },
-    "71": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "HybrIK"
-            },
-            "1": {
-                "name": "Dataset",
-                "value": "3DPW-ALL"
-            }
-        },
-        "Measure": "MJE",
-        "Outcome": "80.0"
     }
 }
 ```

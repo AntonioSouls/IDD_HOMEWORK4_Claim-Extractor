@@ -32,10 +32,6 @@
     "3": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.1"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0"
             }
@@ -46,10 +42,6 @@
     "4": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.1"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0"
             }
@@ -60,10 +52,6 @@
     "5": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.1"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0"
             }
@@ -104,10 +92,6 @@
     "9": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.2"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.1"
             }
@@ -118,10 +102,6 @@
     "10": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.2"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.1"
             }
@@ -132,10 +112,6 @@
     "11": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.2"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.1"
             }
@@ -176,10 +152,6 @@
     "15": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.25"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.2"
             }
@@ -190,10 +162,6 @@
     "16": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.25"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.2"
             }
@@ -204,10 +172,6 @@
     "17": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.25"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.2"
             }
@@ -248,10 +212,6 @@
     "21": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.3"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.3"
             }
@@ -262,10 +222,6 @@
     "22": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.3"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.3"
             }
@@ -276,10 +232,6 @@
     "23": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.3"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.3"
             }
@@ -320,10 +272,6 @@
     "27": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.4"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.4"
             }
@@ -334,10 +282,6 @@
     "28": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.4"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.4"
             }
@@ -348,10 +292,6 @@
     "29": {
         "specifications": {
             "0": {
-                "name": "\\\\mathcal{T}",
-                "value": "0.4"
-            },
-            "1": {
                 "name": "\\\\alpha",
                 "value": "0.4"
             }

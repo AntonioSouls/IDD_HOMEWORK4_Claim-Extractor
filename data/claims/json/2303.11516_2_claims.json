@@ -1,222 +1,278 @@
 {
     "0": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RePose\\u00a0[25]"
-            }
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "RePose"
+                }
+            },
+            "Measure": "ADD(-S)",
+            "Outcome": "62.1"
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "62.1"
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "RePose"
+                }
+            },
+            "Measure": "AUC of ADD-S",
+            "Outcome": "88.5"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "RePose"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "82.0"
+        }
     },
     "1": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RePose\\u00a0[25]"
-            }
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "RNNPose"
+                }
+            },
+            "Measure": "ADD(-S)",
+            "Outcome": "66.4"
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "88.5"
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "RNNPose"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "83.1"
+        }
     },
     "2": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RePose\\u00a0[25]"
-            }
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "SO-Pose"
+                }
+            },
+            "Measure": "ADD(-S)",
+            "Outcome": "56.8"
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "82.0"
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "SO-Pose"
+                }
+            },
+            "Measure": "AUC of ADD-S",
+            "Outcome": "*90.9"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "SO-Pose"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "*83.9"
+        }
     },
     "3": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RNNPose\\u00a0[50]"
-            }
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "DProST"
+                }
+            },
+            "Measure": "ADD(-S)",
+            "Outcome": "65.1"
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "66.4"
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "DProST"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "77.4"
+        }
     },
     "4": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RNNPose\\u00a0[50]"
-            }
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "GDR-Net"
+                }
+            },
+            "Measure": "ADD(-S)",
+            "Outcome": "60.1"
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "83.1"
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "GDR-Net"
+                }
+            },
+            "Measure": "AUC of ADD-S",
+            "Outcome": "*91.6"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "GDR-Net"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "*84.4"
+        }
     },
     "5": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "SO-Pose\\u00a0[12]"
-            }
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "ZebraPose"
+                }
+            },
+            "Measure": "ADD(-S)",
+            "Outcome": "80.5"
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "56.8"
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "ZebraPose"
+                }
+            },
+            "Measure": "AUC of ADD-S",
+            "Outcome": "90.1"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "ZebraPose"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "85.3"
+        }
     },
     "6": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "SO-Pose\\u00a0[12]"
-            }
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "GDR-Net-LC"
+                }
+            },
+            "Measure": "ADD(-S)",
+            "Outcome": "70.6"
         },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "*90.9"
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "GDR-Net-LC"
+                }
+            },
+            "Measure": "AUC of ADD-S",
+            "Outcome": "89.8"
+        },
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "GDR-Net-LC"
+                }
+            },
+            "Measure": "AUC of ADD-S",
+            "Outcome": "*94.1"
+        },
+        "3": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "GDR-Net-LC"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "84.0"
+        },
+        "4": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "GDR-Net-LC"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "*88.8"
+        }
     },
     "7": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "SO-Pose\\u00a0[12]"
-            }
+        "0": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "ZebraPose-LC"
+                }
+            },
+            "Measure": "ADD(-S)",
+            "Outcome": "82.4"
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "*83.9"
-    },
-    "8": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DProST\\u00a0[36]"
-            }
+        "1": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "ZebraPose-LC"
+                }
+            },
+            "Measure": "AUC of ADD-S",
+            "Outcome": "90.8"
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "65.1"
-    },
-    "9": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DProST\\u00a0[36]"
-            }
+        "2": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "ZebraPose-LC"
+                }
+            },
+            "Measure": "AUC of ADD-S",
+            "Outcome": "*95.0"
         },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "77.4"
-    },
-    "10": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "GDR-Net\\u00a0[46]"
-            }
+        "3": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "ZebraPose-LC"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "86.1"
         },
-        "Measure": "ADD(-S)",
-        "Outcome": "60.1"
-    },
-    "11": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "GDR-Net\\u00a0[46]"
-            }
-        },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "*91.6"
-    },
-    "12": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "GDR-Net\\u00a0[46]"
-            }
-        },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "*84.4"
-    },
-    "13": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ZebraPose\\u00a0[43]"
-            }
-        },
-        "Measure": "ADD(-S)",
-        "Outcome": "80.5"
-    },
-    "14": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ZebraPose\\u00a0[43]"
-            }
-        },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "90.1"
-    },
-    "15": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ZebraPose\\u00a0[43]"
-            }
-        },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "85.3"
-    },
-    "16": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "GDR-Net-LC"
-            }
-        },
-        "Measure": "ADD(-S)",
-        "Outcome": "70.6"
-    },
-    "17": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "GDR-Net-LC"
-            }
-        },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "89.8, *94.1"
-    },
-    "18": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "GDR-Net-LC"
-            }
-        },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "84.0, *88.8"
-    },
-    "19": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ZebraPose-LC"
-            }
-        },
-        "Measure": "ADD(-S)",
-        "Outcome": "82.4"
-    },
-    "20": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ZebraPose-LC"
-            }
-        },
-        "Measure": "AUC of ADD-S",
-        "Outcome": "90.8, *95.0"
-    },
-    "21": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ZebraPose-LC"
-            }
-        },
-        "Measure": "AUC of ADD(-S)",
-        "Outcome": "86.1, *90.8"
+        "4": {
+            "specifications": {
+                "0": {
+                    "name": "Method",
+                    "value": "ZebraPose-LC"
+                }
+            },
+            "Measure": "AUC of ADD(-S)",
+            "Outcome": "*90.8"
+        }
     }
 }

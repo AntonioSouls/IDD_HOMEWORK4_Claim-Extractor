@@ -1,23 +1,4 @@
-The user wants to extract claims from a table provided in a JSON format.
-Each claim should have a `specifications` section that identifies the row context for the `Measure` and its `Outcome`.
-The `Measure` can be found in the table, caption, or references.
-The `Outcome` is the value associated with the `Measure`.
-The output should be a JSON object containing an array of claims.
-
-Let's analyze the provided example:
 ```json
-{'table': [['Target', 'MPJPE\\downarrow'], ['noise', '40.2'], ['\\cellcolorbestcolororiginal data', '\\cellcolorbestcolor40.0']], 'caption': '(a) \r\nRegression target.\r\n\r\n', 'references': ['As shown in Table\xa08, we investigate the effect of two factors on the performance of JPMA: 1) the camera model, including pinhole camera (w/o distortion) or distorted pinhole camera (w/ distortion); 2) the way of accessing the intrinsic camera parameters, including using the ground truth (GT) or using a 2-layer MLPs to estimate the parameters (estimated). When the ground truth intrinsic camera parameters are used, the ideal pinhole camera model without distortion shows a performance degradation of 0.06mm compared with the case with distortion. When a neural network is utilized to estimate the parameters (the ground truth is not available), the performance drops by only 0.04mm and 0.02mm in distorted and distortion-free cases, respectively. These results indicate that the proposed JPMA method is robust to the noise caused by incorrect camera models or inaccurate estimations of intrinsic camera parameters.']}
-```
-
-The column names are 'Target' and 'MPJPE\\downarrow'.
-The potential measures could be 'MPJPE\\downarrow'.
-For 'noise', the outcome is '40.2'.
-For '\\cellcolorbestcolororiginal data', the outcome is '\\cellcolorbestcolor40.0'.
-
-Plan:
-1. Identify the measure from the table header.
-2. Iterate through the rows (excluding the header).
-3. For each row, extract the specifications and the corresponding outcome for the identified measure.```json
 {
     "0": {
         "specifications": {
@@ -26,18 +7,18 @@ Plan:
                 "value": "noise"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "40.2"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Target",
-                "value": "\\cellcolorbestcolororiginal data"
+                "value": "original data"
             }
         },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "\\cellcolorbestcolor40.0"
+        "Measure": "MPJPE↓",
+        "Outcome": "40.0"
     }
 }
 ```

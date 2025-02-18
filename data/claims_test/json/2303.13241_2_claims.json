@@ -1,0 +1,902 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2717"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.037"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2717"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.190"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2717"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.228"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2717"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.056"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2717"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.387"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2717"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.443"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.043"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.187"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.230"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.070"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.370"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.442"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.036"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.137"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.174"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.062"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.266"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2717"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.328"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.039"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.161"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.200"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.063"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.327"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.390"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.033"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.117"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "lightbox"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.150"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{t}}",
+        "Outcome": "0.056"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\bm{R}}",
+        "Outcome": "0.237"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "\\\\bm{I_{\\\\tilde{q}}}",
+                "value": "\u2713"
+            },
+            "1": {
+                "name": "\\\\bm{I}_{o}",
+                "value": "\u2713"
+            },
+            "2": {
+                "name": "\\\\bm{I}_{e}",
+                "value": "\u2713"
+            },
+            "3": {
+                "name": "\\\\bm{I}_{r}",
+                "value": "\u2713"
+            },
+            "4": {
+                "name": "\\\\epsilon",
+                "value": "f_{\\\\alpha}"
+            },
+            "5": {
+                "name": "Condition",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\\\text{pose}}",
+        "Outcome": "0.293"
+    }
+}

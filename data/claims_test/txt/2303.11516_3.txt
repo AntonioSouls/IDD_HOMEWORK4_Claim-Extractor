@@ -1,0 +1,187 @@
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BPnP\xa0[6]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "64.1"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BPnP\xa0[6]"
+            }
+        },
+        "Measure": "Correctness",
+        "Outcome": "53.9"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BPnP\xa0[6]"
+            }
+        },
+        "Measure": "Runtime",
+        "Outcome": "~ 30 ms"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "EPro-PnP\xa0[7]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "64.5"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "EPro-PnP\xa0[7]"
+            }
+        },
+        "Measure": "Correctness",
+        "Outcome": "59.3"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "EPro-PnP\xa0[7]"
+            }
+        },
+        "Measure": "Runtime",
+        "Outcome": "~ 80 ms"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "66.5"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "Correctness",
+        "Outcome": "99.9"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "Runtime",
+        "Outcome": "~ 15 ms"
+    }
+}
+``````json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BPnP\xa0[6]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "64.1"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BPnP\xa0[6]"
+            }
+        },
+        "Measure": "Correctness",
+        "Outcome": "53.9"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BPnP\xa0[6]"
+            }
+        },
+        "Measure": "Runtime",
+        "Outcome": "~ 30 ms"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "EPro-PnP\xa0[7]"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "64.5"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "EPro-PnP\xa0[7]"
+            }
+        },
+        "Measure": "Correctness",
+        "Outcome": "59.3"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "EPro-PnP\xa0[7]"
+            }
+        },
+        "Measure": "Runtime",
+        "Outcome": "~ 80 ms"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "66.5"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "Correctness",
+        "Outcome": "99.9"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "Runtime",
+        "Outcome": "~ 15 ms"
+    }
+}
+```

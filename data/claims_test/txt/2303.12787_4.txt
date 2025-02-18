@@ -1,0 +1,238 @@
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPN\u00a0[18]"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP + Explicit depth"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.1d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "89.86"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HybridPose\u00a0[14]"
+            },
+            "1": {
+                "name": "Type",
+                "value": "Hybrid constraints"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.1d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "91.30"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDRNet*\u00a0[43]"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP + Explicit depth"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.02d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "35.60"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDRNet*\u00a0[43]"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP + Explicit depth"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.05d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "76.00"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "GDRNet*\u00a0[43]"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP + Explicit depth"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.1d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "93.60"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "DPOD\u00a0[8]"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP + Explicit refiner"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.1d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "95.15"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PVNet-RePOSE\u00a0[7]"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP + Implicit refiner"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.1d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "96.10"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PVNet-RNNPose\u00a0[42]"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP + Implicit refiner"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.02d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "50.39"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PVNet-RNNPose\u00a0[42]"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP + Implicit refiner"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.05d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "85.56"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PVNet-RNNPose\u00a0[42]"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.1d"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP + Implicit refiner"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "97.37"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.02d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "43.77"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.05d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "81.73"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Type",
+                "value": "PnP"
+            },
+            "2": {
+                "name": "Condition",
+                "value": "0.1d"
+            }
+        },
+        "Measure": "ADD(-S)",
+        "Outcome": "96.36"
+    }
+}
+```

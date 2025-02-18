@@ -3,80 +3,56 @@
         "specifications": {
             "0": {
                 "name": "Type",
-                "value": "\\\\cellcolorbestcolorIF"
+                "value": "IF"
+            },
+            "1": {
+                "name": "Method",
+                "value": "concat"
             }
         },
-        "Measure": "Method",
-        "Outcome": "\\\\cellcolorbestcolorconcat"
+        "Measure": "MPJPE\u2193",
+        "Outcome": "40.0"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Type",
-                "value": "\\\\cellcolorbestcolorIF"
+                "value": "EF"
+            },
+            "1": {
+                "name": "Method",
+                "value": "concat"
             }
         },
-        "Measure": "MPJPE\\\\downarrow",
-        "Outcome": "\\\\cellcolorbestcolor40.0"
+        "Measure": "MPJPE\u2193",
+        "Outcome": "40.9"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "Type",
                 "value": "EF"
+            },
+            "1": {
+                "name": "Method",
+                "value": "add"
             }
         },
-        "Measure": "Method",
-        "Outcome": "concat"
+        "Measure": "MPJPE\u2193",
+        "Outcome": "41.2"
     },
     "3": {
         "specifications": {
             "0": {
                 "name": "Type",
                 "value": "EF"
+            },
+            "1": {
+                "name": "Method",
+                "value": "CA"
             }
         },
-        "Measure": "MPJPE\\\\downarrow",
-        "Outcome": "40.9"
-    },
-    "4": {
-        "specifications": {
-            "0": {
-                "name": "Type",
-                "value": "EF"
-            }
-        },
-        "Measure": "Method",
-        "Outcome": "add"
-    },
-    "5": {
-        "specifications": {
-            "0": {
-                "name": "Type",
-                "value": "EF"
-            }
-        },
-        "Measure": "MPJPE\\\\downarrow",
-        "Outcome": "41.2"
-    },
-    "6": {
-        "specifications": {
-            "0": {
-                "name": "Type",
-                "value": "EF"
-            }
-        },
-        "Measure": "Method",
-        "Outcome": "CA"
-    },
-    "7": {
-        "specifications": {
-            "0": {
-                "name": "Type",
-                "value": "EF"
-            }
-        },
-        "Measure": "MPJPE\\\\downarrow",
+        "Measure": "MPJPE\u2193",
         "Outcome": "41.1"
     }
 }

@@ -6,7 +6,7 @@
                 "value": "none"
             }
         },
-        "Measure": "MPJPE\\\\downarrow",
+        "Measure": "MPJPE\u2193",
         "Outcome": "40.6"
     },
     "1": {
@@ -16,17 +16,17 @@
                 "value": "flipping-once"
             }
         },
-        "Measure": "MPJPE\\\\downarrow",
+        "Measure": "MPJPE\u2193",
         "Outcome": "40.3"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "Type",
-                "value": "\\\\cellcolorbestcolordiffusion-flipping"
+                "value": "diffusion-flipping"
             }
         },
-        "Measure": "MPJPE\\\\downarrow",
-        "Outcome": "\\\\cellcolorbestcolor40.0"
+        "Measure": "MPJPE\u2193",
+        "Outcome": "40.0"
     }
 }

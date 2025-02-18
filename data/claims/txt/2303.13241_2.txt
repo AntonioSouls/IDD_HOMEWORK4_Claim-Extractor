@@ -1,61 +1,30 @@
-The user wants to extract claims from a table represented in a JSON object.
-Each claim should have the following structure:
 ```json
-{
-    "0": {
-        "specifications": {
-            "0": {"name": "Column_Name_1", "value": "Row_Value_1"},
-            "1": {"name": "Column_Name_2", "value": "Row_Value_2"}
-        },
-        "Measure": "Table_Header_Associated_to_Outcome",
-        "Outcome": "Table_Cell_Value"
-    },
-    "1": { ... }
-}
-```
-The 'Measure' can be found in the table headers, caption, or references.
-The 'Outcome' is the value associated with the 'Measure'.
-
-The input table can be one of four types: relational, nested relational, cross table, or nested cross table. For this table structure, it seems like a relational or nested relational table.
-
-Let's analyze the provided JSON object.
-```json
-{'table': [['nan', 'nan', 'nan', 'nan', 'nan', 'lightbox', 'lightbox', 'lightbox', 'sunlamp', 'sunlamp', 'sunlamp'], ['\\bm{I_{\\tilde{q}}}', '\\bm{I}_{o}', '\\bm{I}_{e}', '\\bm{I}_{r}', '\\epsilon', 'e_{\\bm{t}}', 'e_{\\bm{R}}', 'e_{\\text{pose}}', 'e_{\\bm{t}}', 'e_{\\bm{R}}', 'e_{\\text{pose}}'], ['✓', '✓', '✗', '✗', '1.0', '0.037', '0.190', '0.228', '0.056', '0.387', '0.443'], ['✓', '✓', '✓', '✗', '1.0', '0.043', '0.187', '0.230', '0.070', '0.370', '0.442'], ['✓', '✓', '✓', '✗', 'f_{\\alpha}', '0.036', '0.137', '0.174', '0.062', '0.266', '0.328'], ['✓', '✓', '✓', '✓', '1.0', '0.039', '0.161', '0.200', '0.063', '0.327', '0.390'], ['✓', '✓', '✓', '✓', 'f_{\\alpha}', '0.033', '0.117', '0.150', '0.056', '0.237', '0.293']], 'caption': 'TABLE II: Ablation Study on SPEED+. EagerNet\xa0trained with different targets (normalized model coordinates 𝑰𝒒~subscript𝑰bold-~𝒒\\bm{I_{\\tilde{q}}}, object mask 𝑰osubscript𝑰𝑜\\bm{I}_{o}, predicted error 𝑰esubscript𝑰𝑒\\bm{I}_{e}, and surface region segmentation 𝑰rsubscript𝑰𝑟\\bm{I}_{r}) and pose estimates with error policies ε𝜀\\varepsilon.', 'references': []}
-```
-
-The table has two header rows. The first header row groups the columns, and the second specifies the measure.
-The first 5 columns seems to be specifications, while the rest are measures.
-
-Let's extract claims by iterating through the data rows and associating them with the headers.
-
-Plan:
-1. Identify header rows.
-2. Identify data rows.
-3. Iterate through data rows.
-4. For each data cell in a data row, identify the corresponding measure from the header.
-5. Identify the specifications for that row.```json
 {
     "0": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "predicted error: ✗"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{t}}",
@@ -64,24 +33,28 @@ Plan:
     "1": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "predicted error: ✗"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{R}}",
@@ -90,24 +63,28 @@ Plan:
     "2": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "predicted error: ✗"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\text{pose}}",
@@ -116,24 +93,28 @@ Plan:
     "3": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "predicted error: ✗"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
         "Measure": "e_{\\bm{t}}",
@@ -142,24 +123,28 @@ Plan:
     "4": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "predicted error: ✗"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
         "Measure": "e_{\\bm{R}}",
@@ -168,24 +153,28 @@ Plan:
     "5": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "predicted error: ✗"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
             }
         },
         "Measure": "e_{\\text{pose}}",
@@ -194,24 +183,28 @@ Plan:
     "6": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{t}}",
@@ -220,24 +213,28 @@ Plan:
     "7": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{R}}",
@@ -246,24 +243,28 @@ Plan:
     "8": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\text{pose}}",
@@ -272,236 +273,632 @@ Plan:
     "9": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\bm{t}}",
+        "Outcome": "0.070"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
+            },
+            "4": {
+                "name": "error policies",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\bm{R}}",
+        "Outcome": "0.370"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
+            },
+            "4": {
+                "name": "error policies",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\text{pose}}",
+        "Outcome": "0.442"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
+            },
+            "4": {
+                "name": "error policies",
                 "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{t}}",
         "Outcome": "0.036"
     },
-    "10": {
+    "13": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{R}}",
         "Outcome": "0.137"
     },
-    "11": {
+    "14": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✗"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\text{pose}}",
         "Outcome": "0.174"
     },
-    "12": {
+    "15": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
+                "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\bm{t}}",
+        "Outcome": "0.062"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
+            },
+            "4": {
+                "name": "error policies",
+                "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\bm{R}}",
+        "Outcome": "0.266"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✗"
+            },
+            "4": {
+                "name": "error policies",
+                "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\text{pose}}",
+        "Outcome": "0.328"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
+            },
+            "4": {
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{t}}",
         "Outcome": "0.039"
     },
-    "13": {
+    "19": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{R}}",
         "Outcome": "0.161"
     },
-    "14": {
+    "20": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\text{pose}}",
         "Outcome": "0.200"
     },
-    "15": {
+    "21": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\bm{t}}",
+        "Outcome": "0.063"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
+            },
+            "4": {
+                "name": "error policies",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\bm{R}}",
+        "Outcome": "0.327"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
+            },
+            "4": {
+                "name": "error policies",
+                "value": "1.0"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\text{pose}}",
+        "Outcome": "0.390"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
+            },
+            "4": {
+                "name": "error policies",
                 "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{t}}",
         "Outcome": "0.033"
     },
-    "16": {
+    "25": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\bm{R}}",
         "Outcome": "0.117"
     },
-    "17": {
+    "26": {
         "specifications": {
             "0": {
-                "name": "\\bm{I_{\\tilde{q}}}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
             },
             "1": {
-                "name": "\\bm{I}_{o}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "object mask: ✓"
             },
             "2": {
-                "name": "\\bm{I}_{e}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "predicted error: ✓"
             },
             "3": {
-                "name": "\\bm{I}_{r}",
-                "value": "✓"
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
             },
             "4": {
-                "name": "\\epsilon",
+                "name": "error policies",
                 "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "lightbox"
             }
         },
         "Measure": "e_{\\text{pose}}",
         "Outcome": "0.150"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
+            },
+            "4": {
+                "name": "error policies",
+                "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\bm{t}}",
+        "Outcome": "0.056"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
+            },
+            "4": {
+                "name": "error policies",
+                "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\bm{R}}",
+        "Outcome": "0.237"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Targets",
+                "value": "normalized model coordinates: ✓"
+            },
+            "1": {
+                "name": "Targets",
+                "value": "object mask: ✓"
+            },
+            "2": {
+                "name": "Targets",
+                "value": "predicted error: ✓"
+            },
+            "3": {
+                "name": "Targets",
+                "value": "surface region segmentation: ✓"
+            },
+            "4": {
+                "name": "error policies",
+                "value": "f_{\\alpha}"
+            },
+            "5": {
+                "name": "Lighting",
+                "value": "sunlamp"
+            }
+        },
+        "Measure": "e_{\\text{pose}}",
+        "Outcome": "0.293"
     }
 }
 ```

@@ -3,297 +3,277 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "nan"
-    },
-    "1": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Cls avg.",
         "Outcome": "31.7"
     },
-    "2": {
+    "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Cabinet",
         "Outcome": "34.0"
     },
-    "3": {
+    "2": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Chair",
         "Outcome": "44.3"
     },
-    "4": {
+    "3": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Display",
         "Outcome": "17.9"
     },
-    "5": {
+    "4": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Table",
         "Outcome": "30.7"
     },
-    "6": {
+    "5": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "nan"
-    },
-    "7": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Cls avg.",
         "Outcome": "42.1"
     },
-    "8": {
+    "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Cabinet",
         "Outcome": "36.2"
     },
-    "9": {
+    "7": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Chair",
         "Outcome": "59.3"
     },
-    "10": {
+    "8": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Display",
         "Outcome": "30.4"
     },
-    "11": {
+    "9": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Table",
         "Outcome": "42.5"
     },
-    "12": {
+    "10": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "\u2713"
-    },
-    "13": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Cls avg.",
         "Outcome": "38.8"
     },
-    "14": {
+    "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Cabinet",
         "Outcome": "23.8"
     },
-    "15": {
+    "12": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Chair",
         "Outcome": "64.6"
     },
-    "16": {
+    "13": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Display",
         "Outcome": "37.7"
     },
-    "17": {
+    "14": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Table",
         "Outcome": "28.9"
     },
-    "18": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "\u2713"
-    },
-    "19": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Cls avg.",
-        "Outcome": "39.6"
-    },
-    "20": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Cabinet",
-        "Outcome": "-"
-    },
-    "21": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Chair",
-        "Outcome": "-"
-    },
-    "22": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Display",
-        "Outcome": "-"
-    },
-    "23": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Table",
-        "Outcome": "-"
-    },
-    "24": {
+    "15": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "\u2713"
-    },
-    "25": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Cls avg.",
         "Outcome": "59.3"
     },
-    "26": {
+    "16": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Cabinet",
         "Outcome": "45.4"
     },
-    "27": {
+    "17": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Chair",
         "Outcome": "91.2"
     },
-    "28": {
+    "18": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Display",
         "Outcome": "45.0"
     },
-    "29": {
+    "19": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "\u2713"
             }
         },
         "Measure": "Table",

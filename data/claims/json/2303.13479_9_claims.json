@@ -2,7 +2,7 @@
     "0": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "MSE"
             }
         },
@@ -12,7 +12,7 @@
     "1": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "MSE"
             }
         },
@@ -22,57 +22,57 @@
     "2": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "MSE"
             }
         },
-        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "52\u00e2\u02c6\u02dccm^2",
         "Outcome": "47.5"
     },
     "3": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "MSE"
             }
         },
-        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "55\u00e2\u02c6\u02dccm^5",
         "Outcome": "53.4"
     },
     "4": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "MSE"
             }
         },
-        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "102\u00e2\u02c6\u02dccm^2",
         "Outcome": "72.1"
     },
     "5": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "MSE"
             }
         },
-        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "105\u00e2\u02c6\u02dccm^5",
         "Outcome": "80.5"
     },
     "6": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "MSE"
             }
         },
-        "Measure": "1010\u2218cm{}^{\\\\circ}10cm",
+        "Measure": "1010\u00e2\u02c6\u02dccm^{10}",
         "Outcome": "82.6"
     },
     "7": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "L1"
             }
         },
@@ -82,7 +82,7 @@
     "8": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "L1"
             }
         },
@@ -92,51 +92,51 @@
     "9": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "L1"
             }
         },
-        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "52\u00e2\u02c6\u02dccm^2",
         "Outcome": "44.6"
     },
     "10": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "L1"
             }
         },
-        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "55\u00e2\u02c6\u02dccm^5",
         "Outcome": "50.4"
     },
     "11": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "L1"
             }
         },
-        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "102\u00e2\u02c6\u02dccm^2",
         "Outcome": "69.8"
     },
     "12": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "L1"
             }
         },
-        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "105\u00e2\u02c6\u02dccm^5",
         "Outcome": "78.8"
     },
     "13": {
         "specifications": {
             "0": {
-                "name": "Type",
+                "name": "Loss Type",
                 "value": "L1"
             }
         },
-        "Measure": "1010\u2218cm{}^{\\\\circ}10cm",
+        "Measure": "1010\u00e2\u02c6\u02dccm^{10}",
         "Outcome": "81.1"
     }
 }

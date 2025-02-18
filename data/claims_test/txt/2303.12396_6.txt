@@ -1,0 +1,340 @@
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.605"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.694"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.598"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.522"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "RCNN"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.587"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "RCNN"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.673"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "RCNN"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.580"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "RCNN"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.508"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "FCOSv2"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.585"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "FCOSv2"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.671"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "FCOSv2"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.578"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "WDR"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "FCOSv2"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.506"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.412"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.534"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.428"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "Ours"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.275"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "FCOSv2"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.402"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "FCOSv2"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.523"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "FCOSv2"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.416"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "FCOSv2"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.268"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "RCNN"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.388"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "RCNN"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.506"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "RCNN"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.401"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Base Model",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Detection Method",
+                "value": "RCNN"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.258"
+    }
+}
+```

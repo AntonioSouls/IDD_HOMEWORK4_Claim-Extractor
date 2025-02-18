@@ -1,0 +1,122 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "80.1"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "61.9"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "35.9"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "39.6"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "61.3"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SGPA"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "70.7"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "82.5"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "72.7"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "35.8"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "38.4"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "64.2"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "IST-NetM"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "72.4"
+    }
+}

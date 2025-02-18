@@ -3,7 +3,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BPnP\\u00a0[6]"
+                "value": "BPnP"
             }
         },
         "Measure": "ADD(-S)",
@@ -13,7 +13,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BPnP\\u00a0[6]"
+                "value": "BPnP"
             }
         },
         "Measure": "Correctness",
@@ -23,17 +23,17 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BPnP\\u00a0[6]"
+                "value": "BPnP"
             }
         },
         "Measure": "Runtime",
-        "Outcome": "\\\\sim 30 ms"
+        "Outcome": "~ 30 ms"
     },
     "3": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "EPro-PnP\\u00a0[7]"
+                "value": "EPro-PnP"
             }
         },
         "Measure": "ADD(-S)",
@@ -43,7 +43,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "EPro-PnP\\u00a0[7]"
+                "value": "EPro-PnP"
             }
         },
         "Measure": "Correctness",
@@ -53,11 +53,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "EPro-PnP\\u00a0[7]"
+                "value": "EPro-PnP"
             }
         },
         "Measure": "Runtime",
-        "Outcome": "\\\\sim 80 ms"
+        "Outcome": "~ 80 ms"
     },
     "6": {
         "specifications": {
@@ -87,6 +87,6 @@
             }
         },
         "Measure": "Runtime",
-        "Outcome": "\\\\sim 15 ms"
+        "Outcome": "~ 15 ms"
     }
 }

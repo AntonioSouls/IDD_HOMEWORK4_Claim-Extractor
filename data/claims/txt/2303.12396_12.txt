@@ -1,35 +1,14 @@
-The user wants to extract claims from a given JSON object containing a table, caption, and references.
-Each claim should have a specific structure: "specifications", "Measure", and "Outcome".
-The "specifications" are key-value pairs that define the context of the claim within the table.
-The "Measure" is the metric being measured, which can be found in the table headers, caption, or references.
-The "Outcome" is the value associated with the "Measure" for the given "specifications".
-
-Let's analyze the example table:
-The first row contains the headers: "Method", "Avg.", "MSPD", "MSSD", "VSD".
-The second row repeats some headers.
-The remaining rows contain the data.
-
-I need to identify the different entities being compared (e.g., "PFA+Ours", "SurfEmb", "Cosypose", "CDPNv2") and extract the corresponding "Outcome" for each "Measure" ("Avg.", "MSPD", "MSSD", "VSD").
-
-Plan:
-1. Iterate through the rows of the table starting from the third row (index 2).
-2. For each row, the first element will be the "Method".
-3. Iterate through the columns starting from the second column (index 1).
-4. The header of the current column will be the "Measure".
-5. The value in the current cell will be the "Outcome".
-6. Construct the "specifications" based on the "Method". If the second row contains information, incorporate that as well.
-
-Let's start extracting the claims.```json
+```json
 {
     "0": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "PFA+Ours"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             }
         },
         "Measure": "Avg.",
@@ -38,12 +17,12 @@ Let's start extracting the claims.```json
     "1": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "PFA+Ours"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             }
         },
         "Measure": "MSPD",
@@ -52,12 +31,12 @@ Let's start extracting the claims.```json
     "2": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "PFA+Ours"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             }
         },
         "Measure": "MSSD",
@@ -66,12 +45,12 @@ Let's start extracting the claims.```json
     "3": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "PFA+Ours"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             }
         },
         "Measure": "VSD",
@@ -80,12 +59,12 @@ Let's start extracting the claims.```json
     "4": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "SurfEmb"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             }
         },
         "Measure": "Avg.",
@@ -94,12 +73,12 @@ Let's start extracting the claims.```json
     "5": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "SurfEmb"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             }
         },
         "Measure": "MSPD",
@@ -108,12 +87,12 @@ Let's start extracting the claims.```json
     "6": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "SurfEmb"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             }
         },
         "Measure": "MSSD",
@@ -122,12 +101,12 @@ Let's start extracting the claims.```json
     "7": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "SurfEmb"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             }
         },
         "Measure": "VSD",
@@ -136,12 +115,12 @@ Let's start extracting the claims.```json
     "8": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "Cosypose"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             }
         },
         "Measure": "Avg.",
@@ -150,12 +129,12 @@ Let's start extracting the claims.```json
     "9": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "Cosypose"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             }
         },
         "Measure": "MSPD",
@@ -164,12 +143,12 @@ Let's start extracting the claims.```json
     "10": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "Cosypose"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             }
         },
         "Measure": "MSSD",
@@ -178,12 +157,12 @@ Let's start extracting the claims.```json
     "11": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "Cosypose"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             }
         },
         "Measure": "VSD",
@@ -192,12 +171,12 @@ Let's start extracting the claims.```json
     "12": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CDPNv2"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             }
         },
         "Measure": "Avg.",
@@ -206,12 +185,12 @@ Let's start extracting the claims.```json
     "13": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CDPNv2"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             }
         },
         "Measure": "MSPD",
@@ -220,12 +199,12 @@ Let's start extracting the claims.```json
     "14": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CDPNv2"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             }
         },
         "Measure": "MSSD",
@@ -234,12 +213,12 @@ Let's start extracting the claims.```json
     "15": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CDPNv2"
+                "name": "Input",
+                "value": "RGB (PBR)"
             },
             "1": {
-                "name": "RGB (PBR)",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             }
         },
         "Measure": "VSD",
@@ -248,12 +227,12 @@ Let's start extracting the claims.```json
     "16": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "PFA+Ours"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             }
         },
         "Measure": "Avg.",
@@ -262,12 +241,12 @@ Let's start extracting the claims.```json
     "17": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "PFA+Ours"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             }
         },
         "Measure": "MSPD",
@@ -276,12 +255,12 @@ Let's start extracting the claims.```json
     "18": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "PFA+Ours"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             }
         },
         "Measure": "MSSD",
@@ -290,12 +269,12 @@ Let's start extracting the claims.```json
     "19": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "PFA+Ours"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             }
         },
         "Measure": "VSD",
@@ -304,12 +283,12 @@ Let's start extracting the claims.```json
     "20": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "SurfEmb"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             }
         },
         "Measure": "Avg.",
@@ -318,12 +297,12 @@ Let's start extracting the claims.```json
     "21": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "SurfEmb"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             }
         },
         "Measure": "MSPD",
@@ -332,12 +311,12 @@ Let's start extracting the claims.```json
     "22": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "SurfEmb"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             }
         },
         "Measure": "MSSD",
@@ -346,12 +325,12 @@ Let's start extracting the claims.```json
     "23": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "SurfEmb"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             }
         },
         "Measure": "VSD",
@@ -360,12 +339,12 @@ Let's start extracting the claims.```json
     "24": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CIR"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CIR"
             }
         },
         "Measure": "Avg.",
@@ -374,12 +353,12 @@ Let's start extracting the claims.```json
     "25": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CIR"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CIR"
             }
         },
         "Measure": "MSPD",
@@ -388,12 +367,12 @@ Let's start extracting the claims.```json
     "26": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CIR"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CIR"
             }
         },
         "Measure": "MSSD",
@@ -402,12 +381,12 @@ Let's start extracting the claims.```json
     "27": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CIR"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CIR"
             }
         },
         "Measure": "VSD",
@@ -416,12 +395,12 @@ Let's start extracting the claims.```json
     "28": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "Cosypose+ICP"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "Cosypose+ICP"
             }
         },
         "Measure": "Avg.",
@@ -430,12 +409,12 @@ Let's start extracting the claims.```json
     "29": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "Cosypose+ICP"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "Cosypose+ICP"
             }
         },
         "Measure": "MSPD",
@@ -444,12 +423,12 @@ Let's start extracting the claims.```json
     "30": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "Cosypose+ICP"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "Cosypose+ICP"
             }
         },
         "Measure": "MSSD",
@@ -458,12 +437,12 @@ Let's start extracting the claims.```json
     "31": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "Cosypose+ICP"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "Cosypose+ICP"
             }
         },
         "Measure": "VSD",
@@ -472,12 +451,12 @@ Let's start extracting the claims.```json
     "32": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CDPNv2+ICP"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             }
         },
         "Measure": "Avg.",
@@ -486,12 +465,12 @@ Let's start extracting the claims.```json
     "33": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CDPNv2+ICP"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             }
         },
         "Measure": "MSPD",
@@ -500,12 +479,12 @@ Let's start extracting the claims.```json
     "34": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CDPNv2+ICP"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             }
         },
         "Measure": "MSSD",
@@ -514,12 +493,12 @@ Let's start extracting the claims.```json
     "35": {
         "specifications": {
             "0": {
-                "name": "Method",
-                "value": "CDPNv2+ICP"
+                "name": "Input",
+                "value": "RGB-D (PBR)"
             },
             "1": {
-                "name": "RGB-D (PBR)",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             }
         },
         "Measure": "VSD",

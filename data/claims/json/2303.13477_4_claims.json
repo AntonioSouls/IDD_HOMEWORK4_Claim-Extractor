@@ -3,17 +3,17 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ELLIPSDF [30]"
+                "value": "ELLIPSDF"
             }
         },
-        "Measure": "\\u200bCls Avg.\\u200b",
+        "Measure": "Cls Avg.",
         "Outcome": "89.0"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ELLIPSDF [30]"
+                "value": "ELLIPSDF"
             }
         },
         "Measure": "Cabinet",
@@ -23,7 +23,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ELLIPSDF [30]"
+                "value": "ELLIPSDF"
             }
         },
         "Measure": "Chair",
@@ -33,7 +33,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ELLIPSDF [30]"
+                "value": "ELLIPSDF"
             }
         },
         "Measure": "Display",
@@ -43,7 +43,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ELLIPSDF [30]"
+                "value": "ELLIPSDF"
             }
         },
         "Measure": "Table",
@@ -56,7 +56,7 @@
                 "value": "TransPoser"
             }
         },
-        "Measure": "\\u200bCls Avg.\\u200b",
+        "Measure": "Cls Avg.",
         "Outcome": "94.3"
     },
     "6": {

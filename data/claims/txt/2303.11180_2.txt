@@ -1,116 +1,10 @@
-The user wants to extract claims from a table provided in a JSON format.
-Each claim should have a "specifications", "Measure", and "Outcome".
-"specifications" will contain key-value pairs from the rows except the one used for the "Measure" and "Outcome".
-The "Measure" can be found in the table header, caption, or references.
-The "Outcome" is the corresponding value for the "Measure".
-
-Let's analyze the example table:
-```
-{
-    "table": [
-        [
-            "Method",
-            "Backbone",
-            "AP",
-            "AP^{med}"
-        ],
-        [
-            "Mask-RCNN [12]",
-            "ResNet101",
-            "60.3",
-            "-"
-        ],
-        [
-            "AlphaPose [8]",
-            "-",
-            "61.0",
-            "61.4"
-        ],
-        [
-            "OccNet [10]",
-            "ResNet50",
-            "65.5",
-            "66.6"
-        ],
-        [
-            "JC-SPPE [20]",
-            "ResNet101",
-            "66.0",
-            "66.3"
-        ],
-        [
-            "HigherHRNet [5]",
-            "HR48",
-            "67.6",
-            "-"
-        ],
-        [
-            "MIPNet [16]",
-            "HR48",
-            "70.0",
-            "71.1"
-        ],
-        [
-            "SCIO [15]",
-            "HR48",
-            "71.5",
-            "72.2"
-        ],
-        [
-            "SCAI (Ours)",
-            "HR48",
-            "72.4",
-            "73.2"
-        ],
-        [
-            "Performance Gain",
-            "nan",
-            "+0.9",
-            "+1.0"
-        ]
-    ],
-    "caption": "Table 2: \r\nComparison with the state-of-the-art methods on CrowdPose test-dev.\r\nThe best results are in bold and the second best results are underlined.\r\n",
-    "references": [
-        "Table 2 presents the results of our SCAI method compared to other state-of-the-art methods on the challenging CrowdPose dataset. The methods compared include Mask-RCNN [12], SimpleBaseline [39], AlphaPose [8], OccNet [10], JC-SPPE [20], HigherHRNet [5], MIPNet [16], and SCIO [15]. Our SCAI method achieves an improvement in average precision by up to 0.9% compared to the current best method SCIO [15]. This indicates that our method can provide more accurate pose estimation for multi-person scenes with challenging occlusion scenarios."
-    ]
-}
-```
-
-Possible measures are: "AP" and "AP^{med}".
-Let's try to extract claims for each measure.
-
-For "AP":
-- Method "Mask-RCNN [12]" has AP "60.3"
-- Method "AlphaPose [8]" has AP "61.0"
-- Method "OccNet [10]" has AP "65.5"
-- Method "JC-SPPE [20]" has AP "66.0"
-- Method "HigherHRNet [5]" has AP "67.6"
-- Method "MIPNet [16]" has AP "70.0"
-- Method "SCIO [15]" has AP "71.5"
-- Method "SCAI (Ours)" has AP "72.4"
-- Method "Performance Gain" has AP "+0.9"
-
-For "AP^{med}":
-- Method "Mask-RCNN [12]" has AP^{med} "-"
-- Method "AlphaPose [8]" has AP^{med} "61.4"
-- Method "OccNet [10]" has AP^{med} "66.6"
-- Method "JC-SPPE [20]" has AP^{med} "66.3"
-- Method "HigherHRNet [5]" has AP^{med} "-"
-- Method "MIPNet [16]" has AP^{med} "71.1"
-- Method "SCIO [15]" has AP^{med} "72.2"
-- Method "SCAI (Ours)" has AP^{med} "73.2"
-- Method "Performance Gain" has AP^{med} "+1.0"
-
-The caption mentions "average precision", which relates to "AP".
-The references mention "improvement in average precision by up to 0.9% compared to the current best method SCIO [15]". This confirms "AP" as a measure.
-
-Let's structure the output.```json
+```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mask-RCNN [12]"
+                "value": "Mask-RCNN"
             },
             "1": {
                 "name": "Backbone",
@@ -124,21 +18,7 @@ Let's structure the output.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "AlphaPose [8]"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "-"
-            }
-        },
-        "Measure": "AP",
-        "Outcome": "61.0"
-    },
-    "2": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "OccNet [10]"
+                "value": "OccNet"
             },
             "1": {
                 "name": "Backbone",
@@ -148,11 +28,25 @@ Let's structure the output.```json
         "Measure": "AP",
         "Outcome": "65.5"
     },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "OccNet"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "ResNet50"
+            }
+        },
+        "Measure": "AP^{med}",
+        "Outcome": "66.6"
+    },
     "3": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "JC-SPPE [20]"
+                "value": "JC-SPPE"
             },
             "1": {
                 "name": "Backbone",
@@ -166,7 +60,21 @@ Let's structure the output.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HigherHRNet [5]"
+                "value": "JC-SPPE"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "ResNet101"
+            }
+        },
+        "Measure": "AP^{med}",
+        "Outcome": "66.3"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HigherHRNet"
             },
             "1": {
                 "name": "Backbone",
@@ -176,11 +84,11 @@ Let's structure the output.```json
         "Measure": "AP",
         "Outcome": "67.6"
     },
-    "5": {
+    "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MIPNet [16]"
+                "value": "MIPNet"
             },
             "1": {
                 "name": "Backbone",
@@ -190,11 +98,25 @@ Let's structure the output.```json
         "Measure": "AP",
         "Outcome": "70.0"
     },
-    "6": {
+    "7": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SCIO [15]"
+                "value": "MIPNet"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR48"
+            }
+        },
+        "Measure": "AP^{med}",
+        "Outcome": "71.1"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCIO"
             },
             "1": {
                 "name": "Backbone",
@@ -204,7 +126,21 @@ Let's structure the output.```json
         "Measure": "AP",
         "Outcome": "71.5"
     },
-    "7": {
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SCIO"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "HR48"
+            }
+        },
+        "Measure": "AP^{med}",
+        "Outcome": "72.2"
+    },
+    "10": {
         "specifications": {
             "0": {
                 "name": "Method",
@@ -218,119 +154,7 @@ Let's structure the output.```json
         "Measure": "AP",
         "Outcome": "72.4"
     },
-    "8": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Performance Gain"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "nan"
-            }
-        },
-        "Measure": "AP",
-        "Outcome": "+0.9"
-    },
-    "9": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Mask-RCNN [12]"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "ResNet101"
-            }
-        },
-        "Measure": "AP^{med}",
-        "Outcome": "-"
-    },
-    "10": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "AlphaPose [8]"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "-"
-            }
-        },
-        "Measure": "AP^{med}",
-        "Outcome": "61.4"
-    },
     "11": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "OccNet [10]"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "ResNet50"
-            }
-        },
-        "Measure": "AP^{med}",
-        "Outcome": "66.6"
-    },
-    "12": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "JC-SPPE [20]"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "ResNet101"
-            }
-        },
-        "Measure": "AP^{med}",
-        "Outcome": "66.3"
-    },
-    "13": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "HigherHRNet [5]"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "HR48"
-            }
-        },
-        "Measure": "AP^{med}",
-        "Outcome": "-"
-    },
-    "14": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MIPNet [16]"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "HR48"
-            }
-        },
-        "Measure": "AP^{med}",
-        "Outcome": "71.1"
-    },
-    "15": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "SCIO [15]"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "HR48"
-            }
-        },
-        "Measure": "AP^{med}",
-        "Outcome": "72.2"
-    },
-    "16": {
         "specifications": {
             "0": {
                 "name": "Method",
@@ -343,20 +167,6 @@ Let's structure the output.```json
         },
         "Measure": "AP^{med}",
         "Outcome": "73.2"
-    },
-    "17": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Performance Gain"
-            },
-            "1": {
-                "name": "Backbone",
-                "value": "nan"
-            }
-        },
-        "Measure": "AP^{med}",
-        "Outcome": "+1.0"
     }
 }
 ```

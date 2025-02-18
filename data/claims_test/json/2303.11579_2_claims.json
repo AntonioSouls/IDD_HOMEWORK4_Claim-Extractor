@@ -1,0 +1,590 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "U-CDGCN\\u00a0[23] (N=96)\u25bd"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "MM\u201921"
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "97.9"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "U-CDGCN\\u00a0[23] (N=96)\u25bd"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "MM\u201921"
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "69.5"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "U-CDGCN\\u00a0[23] (N=96)\u25bd"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "MM\u201921"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "42.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "P-STMO\\u00a0[51] (N=81)\u25bd"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "ECCV\u201922"
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "97.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "P-STMO\\u00a0[51] (N=81)\u25bd"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "ECCV\u201922"
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "75.8"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "P-STMO\\u00a0[51] (N=81)\u25bd"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "ECCV\u201922"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "32.2"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\\u00a0[46] (N=81)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201919"
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "86.0"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\\u00a0[46] (N=81)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201919"
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "51.9"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TCN\\u00a0[46] (N=81)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201919"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "84.0"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "U-GCN\\u00a0[62] (N=96)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "ECCV\u201920"
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "86.9"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "U-GCN\\u00a0[62] (N=96)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "ECCV\u201920"
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "62.1"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "U-GCN\\u00a0[62] (N=96)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "ECCV\u201920"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "68.1"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Anatomy\\u00a0[9] (N=81)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "TCSVT\u201921"
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "87.9"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Anatomy\\u00a0[9] (N=81)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "TCSVT\u201921"
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "54.0"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "Anatomy\\u00a0[9] (N=81)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "TCSVT\u201921"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "78.8"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\\u00a0[70] (N=9)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "ICCV\u201921"
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "88.6"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\\u00a0[70] (N=9)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "ICCV\u201921"
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "56.4"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "PoseFormer\\u00a0[70] (N=9)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "ICCV\u201921"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "77.1"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "MHFormer\\u00a0[36] (N=9, H=3, P-Agg)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201922"
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "93.8"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "MHFormer\\u00a0[36] (N=9, H=3, P-Agg)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201922"
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "63.3"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "MHFormer\\u00a0[36] (N=9, H=3, P-Agg)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201922"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "58.0"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "MixSTE\\u00a0[68] (N=27)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201922"
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "94.4"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "MixSTE\\u00a0[68] (N=27)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201922"
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "66.5"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "MixSTE\\u00a0[68] (N=27)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201922"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "54.9"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "MixSTE\\u00a0[68] (N=243)\u2021"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201922"
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "96.9"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "MixSTE\\u00a0[68] (N=243)\u2021"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201922"
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "75.8"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "MixSTE\\u00a0[68] (N=243)\u2021"
+            },
+            "1": {
+                "name": "Venue",
+                "value": "CVPR\u201922"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "35.4"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=1, K=1)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "97.7"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=1, K=1)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "77.8"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=1, K=1)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "30.2"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, P-Agg)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "97.7"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, P-Agg)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "78.0"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, P-Agg)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "30.0"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, J-Agg)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "97.7"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, J-Agg)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "78.2"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, J-Agg)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "29.7"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, P-Best#)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "97.8"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, P-Best#)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "78.2"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, P-Best#)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "29.8"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, J-Best#)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "PCK",
+        "Outcome": "98.0"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, J-Best#)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "AUC",
+        "Outcome": "79.1"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "D3DP (N=243, H=20, K=20, J-Best#)"
+            },
+            "1": {
+                "name": "Venue",
+                "value": ""
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "28.1"
+    }
+}

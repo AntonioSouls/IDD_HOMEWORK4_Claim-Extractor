@@ -3,7 +3,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Center\u2020"
+                "value": "Center"
+            },
+            "1": {
+                "name": "Strategy",
+                "value": "NMS"
             }
         },
         "Measure": "AP",
@@ -13,7 +17,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Center\u2020"
+                "value": "Center"
+            },
+            "1": {
+                "name": "Strategy",
+                "value": "NMS"
             }
         },
         "Measure": "AP50",
@@ -23,7 +31,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Center\u2020"
+                "value": "Center"
+            },
+            "1": {
+                "name": "Strategy",
+                "value": "NMS"
             }
         },
         "Measure": "AP75",
@@ -63,7 +75,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Ours\u2020"
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Strategy",
+                "value": "NMS"
             }
         },
         "Measure": "AP",
@@ -73,7 +89,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Ours\u2020"
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Strategy",
+                "value": "NMS"
             }
         },
         "Measure": "AP50",
@@ -83,7 +103,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Ours\u2020"
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Strategy",
+                "value": "NMS"
             }
         },
         "Measure": "AP75",
@@ -123,7 +147,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Oracle\u2020"
+                "value": "Oracle"
+            },
+            "1": {
+                "name": "Strategy",
+                "value": "NMS"
             }
         },
         "Measure": "AP",
@@ -133,7 +161,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Oracle\u2020"
+                "value": "Oracle"
+            },
+            "1": {
+                "name": "Strategy",
+                "value": "NMS"
             }
         },
         "Measure": "AP50",
@@ -143,7 +175,11 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Oracle\u2020"
+                "value": "Oracle"
+            },
+            "1": {
+                "name": "Strategy",
+                "value": "NMS"
             }
         },
         "Measure": "AP75",

@@ -1,5 +1,6 @@
-You will receive a JSON object containing a table in the 'table' array, a caption (if available), and references (if available).
-An example of a json object that you can receive is the following: 
+{
+    "You will receive a JSON object containing a table in the 'table' array, a caption (if available), and references (if available).
+An example of a JSON object that you can receive is the following: 
 {
     "table": [
         [
@@ -26,14 +27,14 @@ An example of a json object that you can receive is the following:
         "string", "string"
     ]
 }
-This JSON object represents represents a table that can be of four different types:
+This JSON object represents a table that can be of four different types:
     - relational
     - nested relational
     - cross table
     - nested cross table
-Given this table classification your task is to extract claims from the table. Every claim has this structure:
+Given this table classification, your task is to extract claims from the table. Every claim has this structure:
 {
-    "0": {   # first claim
+    "0": {
         "specifications": {
             "0": {"name": "Model", "value": "Full Fine-tuning"},
             "1": {"name": "# Params.", "value": "1.8B"},
@@ -41,9 +42,18 @@ Given this table classification your task is to extract claims from the table. E
         "Measure": "VS",
         "Outcome": "5.3"
     },
-    "1": { ... } # second claim and so on
+    "1": { ... }
 }
 
-The Measure can be found on the table, references or caption. You must decide it. And the outcome is the value associated to the mesaure.
-It's MANDATORY that you return me only the json file where all the claims are extracted. 
-If you generated multiple claims, make sure the response is valid, closed JSON. If you can't extract all the claims, stop and return a closed JSON. 
+The 'Measure' can be found on the table, references, or caption. It is crucial that the 'Measure' value be the name of the metric being measured and not include reference numbers. You should identify proper names for measures, specifications, or values that might be references to datasets, metrics, or methods cited in the caption or references. If you find such references, use the proper names instead of the reference numbers.
+
+Additionally, do not generate claims where any 'specifications' or 'Measure' values are "nan", "none", "-", or any other indicator of missing data. Claims with missing values should be excluded.
+
+Furthermore, all special characters should be correctly recognized and included in the claims. For example:
+- "\\\\lambda_{f}" should be "λf".
+- "52\u2218cm{}^{\\\\circ}2cm" should be "5∘2cm".
+Ensure that no reference numbers (e.g., [46], [43]) appear in the names or values of specifications, measures, or outcomes.
+
+It's MANDATORY that you return me only the JSON file where all the claims are extracted correctly. 
+If you generate multiple claims, make sure the response is valid, closed JSON. If you can't extract all the claims, stop and return a closed JSON."
+}

@@ -4,6 +4,10 @@
             "0": {
                 "name": "Method",
                 "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "Avg.",
@@ -14,6 +18,10 @@
             "0": {
                 "name": "Method",
                 "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSPD",
@@ -24,6 +32,10 @@
             "0": {
                 "name": "Method",
                 "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSSD",
@@ -34,6 +46,10 @@
             "0": {
                 "name": "Method",
                 "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "VSD",
@@ -44,6 +60,10 @@
             "0": {
                 "name": "Method",
                 "value": "PFA"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "Avg.",
@@ -54,6 +74,10 @@
             "0": {
                 "name": "Method",
                 "value": "PFA"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSPD",
@@ -64,6 +88,10 @@
             "0": {
                 "name": "Method",
                 "value": "PFA"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSSD",
@@ -74,6 +102,10 @@
             "0": {
                 "name": "Method",
                 "value": "PFA"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "VSD",
@@ -84,6 +116,10 @@
             "0": {
                 "name": "Method",
                 "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "Avg.",
@@ -94,6 +130,10 @@
             "0": {
                 "name": "Method",
                 "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSPD",
@@ -104,6 +144,10 @@
             "0": {
                 "name": "Method",
                 "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSSD",
@@ -114,6 +158,10 @@
             "0": {
                 "name": "Method",
                 "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "VSD",
@@ -124,6 +172,10 @@
             "0": {
                 "name": "Method",
                 "value": "CIR"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "Avg.",
@@ -134,6 +186,10 @@
             "0": {
                 "name": "Method",
                 "value": "CIR"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSPD",
@@ -144,6 +200,10 @@
             "0": {
                 "name": "Method",
                 "value": "CIR"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSSD",
@@ -154,6 +214,10 @@
             "0": {
                 "name": "Method",
                 "value": "CIR"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "VSD",
@@ -164,6 +228,10 @@
             "0": {
                 "name": "Method",
                 "value": "Cosypose"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "Avg.",
@@ -174,6 +242,10 @@
             "0": {
                 "name": "Method",
                 "value": "Cosypose"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSPD",
@@ -184,6 +256,10 @@
             "0": {
                 "name": "Method",
                 "value": "Cosypose"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSSD",
@@ -194,6 +270,10 @@
             "0": {
                 "name": "Method",
                 "value": "Cosypose"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "VSD",
@@ -204,6 +284,10 @@
             "0": {
                 "name": "Method",
                 "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "Avg.",
@@ -214,6 +298,10 @@
             "0": {
                 "name": "Method",
                 "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSPD",
@@ -224,6 +312,10 @@
             "0": {
                 "name": "Method",
                 "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "MSSD",
@@ -234,6 +326,10 @@
             "0": {
                 "name": "Method",
                 "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Input",
+                "value": "RGB (PBR)"
             }
         },
         "Measure": "VSD",
@@ -246,7 +342,7 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -260,7 +356,7 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -274,7 +370,7 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -288,7 +384,7 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -302,7 +398,7 @@
                 "value": "PFA"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -316,7 +412,7 @@
                 "value": "PFA"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -330,7 +426,7 @@
                 "value": "PFA"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -344,7 +440,7 @@
                 "value": "PFA"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -358,7 +454,7 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -372,7 +468,7 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -386,7 +482,7 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -400,7 +496,7 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -414,7 +510,7 @@
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -428,7 +524,7 @@
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -442,7 +538,7 @@
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -456,7 +552,7 @@
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -470,7 +566,7 @@
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -484,7 +580,7 @@
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -498,7 +594,7 @@
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -512,7 +608,7 @@
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -526,7 +622,7 @@
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -540,7 +636,7 @@
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -554,7 +650,7 @@
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -568,7 +664,7 @@
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB",
+                "name": "Input",
                 "value": "RGB-D (PBR)"
             }
         },

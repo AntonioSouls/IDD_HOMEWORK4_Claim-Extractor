@@ -3,333 +3,147 @@
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\\u00a0[12]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Implicit diff.\\xa0[12]"
             }
         },
-        "Measure": "2\u00b0",
-        "Outcome": "divergence"
+        "Measure": "\\\\\\\\mathcal{L}_{\\\\\\\\text{crd}}",
+        "Outcome": "\u2713"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\\u00a0[12]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Implicit diff.\\xa0[12]"
             }
         },
-        "Measure": "2 cm",
-        "Outcome": "divergence"
+        "Measure": "2\u00b0",
+        "Outcome": "56.13"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\\u00a0[12]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Implicit diff.\\xa0[12]"
             }
         },
-        "Measure": "2\u00b0, 2 cm",
-        "Outcome": "divergence"
+        "Measure": "2 cm",
+        "Outcome": "91.13"
     },
     "3": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Implicit diff.\\u00a0[12]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Implicit diff.\\xa0[12]"
             }
         },
-        "Measure": "ADD(-S) 0.1d",
-        "Outcome": "divergence"
+        "Measure": "2\u00b0, 2 cm",
+        "Outcome": "53.33"
     },
     "4": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\\u00a0[28]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Implicit diff.\\xa0[12]"
             }
         },
-        "Measure": "2\u00b0",
-        "Outcome": "00.32"
+        "Measure": "ADD(-S) 0.1d",
+        "Outcome": "88.74"
     },
     "5": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\\u00a0[28]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Reprojection\\xa0[28]"
             }
         },
-        "Measure": "2 cm",
-        "Outcome": "42.30"
+        "Measure": "\\\\\\\\mathcal{L}_{\\\\\\\\text{crd}}",
+        "Outcome": "\u2713"
     },
     "6": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\\u00a0[28]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Reprojection\\xa0[28]"
             }
         },
-        "Measure": "2\u00b0, 2 cm",
-        "Outcome": "00.16"
+        "Measure": "2\u00b0",
+        "Outcome": "62.79"
     },
     "7": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "Reprojection\\u00a0[28]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Reprojection\\xa0[28]"
             }
         },
-        "Measure": "ADD(-S) 0.1d",
-        "Outcome": "14.56"
+        "Measure": "2 cm",
+        "Outcome": "92.91"
     },
     "8": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "KL div. (ours)"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Reprojection\\xa0[28]"
             }
         },
-        "Measure": "2\u00b0",
-        "Outcome": "58.28"
+        "Measure": "2\u00b0, 2 cm",
+        "Outcome": "60.65"
     },
     "9": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
-                "value": "KL div. (ours)"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
+                "value": "Reprojection\\xa0[28]"
             }
         },
-        "Measure": "2 cm",
-        "Outcome": "91.17"
+        "Measure": "ADD(-S) 0.1d",
+        "Outcome": "92.04"
     },
     "10": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
                 "value": "KL div. (ours)"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
             }
         },
-        "Measure": "2\u00b0, 2 cm",
-        "Outcome": "55.71"
+        "Measure": "\\\\\\\\mathcal{L}_{\\\\\\\\text{crd}}",
+        "Outcome": "\u2713"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
                 "value": "KL div. (ours)"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "nan"
-            }
-        },
-        "Measure": "ADD(-S) 0.1d",
-        "Outcome": "89.93"
-    },
-    "12": {
-        "specifications": {
-            "0": {
-                "name": "Main Loss",
-                "value": "Implicit diff.\\u00a0[12]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
-            }
-        },
-        "Measure": "2\u00b0",
-        "Outcome": "56.13"
-    },
-    "13": {
-        "specifications": {
-            "0": {
-                "name": "Main Loss",
-                "value": "Implicit diff.\\u00a0[12]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
-            }
-        },
-        "Measure": "2 cm",
-        "Outcome": "91.13"
-    },
-    "14": {
-        "specifications": {
-            "0": {
-                "name": "Main Loss",
-                "value": "Implicit diff.\\u00a0[12]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
-            }
-        },
-        "Measure": "2\u00b0, 2 cm",
-        "Outcome": "53.33"
-    },
-    "15": {
-        "specifications": {
-            "0": {
-                "name": "Main Loss",
-                "value": "Implicit diff.\\u00a0[12]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
-            }
-        },
-        "Measure": "ADD(-S) 0.1d",
-        "Outcome": "88.74"
-    },
-    "16": {
-        "specifications": {
-            "0": {
-                "name": "Main Loss",
-                "value": "Reprojection\\u00a0[28]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
-            }
-        },
-        "Measure": "2\u00b0",
-        "Outcome": "62.79"
-    },
-    "17": {
-        "specifications": {
-            "0": {
-                "name": "Main Loss",
-                "value": "Reprojection\\u00a0[28]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
-            }
-        },
-        "Measure": "2 cm",
-        "Outcome": "92.91"
-    },
-    "18": {
-        "specifications": {
-            "0": {
-                "name": "Main Loss",
-                "value": "Reprojection\\u00a0[28]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
-            }
-        },
-        "Measure": "2\u00b0, 2 cm",
-        "Outcome": "60.65"
-    },
-    "19": {
-        "specifications": {
-            "0": {
-                "name": "Main Loss",
-                "value": "Reprojection\\u00a0[28]"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
-            }
-        },
-        "Measure": "ADD(-S) 0.1d",
-        "Outcome": "92.04"
-    },
-    "20": {
-        "specifications": {
-            "0": {
-                "name": "Main Loss",
-                "value": "KL div. (ours)"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
             }
         },
         "Measure": "2\u00b0",
         "Outcome": "69.95"
     },
-    "21": {
+    "12": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
                 "value": "KL div. (ours)"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
             }
         },
         "Measure": "2 cm",
         "Outcome": "94.97"
     },
-    "22": {
+    "13": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
                 "value": "KL div. (ours)"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
             }
         },
         "Measure": "2\u00b0, 2 cm",
         "Outcome": "68.38"
     },
-    "23": {
+    "14": {
         "specifications": {
             "0": {
                 "name": "Main Loss",
                 "value": "KL div. (ours)"
-            },
-            "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{crd}}",
-                "value": "\u2713"
             }
         },
         "Measure": "ADD(-S) 0.1d",

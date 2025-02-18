@@ -3,7 +3,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CDPN\\u00a0[18]"
+                "value": "CDPN"
             },
             "1": {
                 "name": "Type",
@@ -17,7 +17,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HybridPose\\u00a0[14]"
+                "value": "HybridPose"
             },
             "1": {
                 "name": "Type",
@@ -31,7 +31,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDRNet*\\u00a0[43]"
+                "value": "GDRNet*"
             },
             "1": {
                 "name": "Type",
@@ -45,7 +45,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDRNet*\\u00a0[43]"
+                "value": "GDRNet*"
             },
             "1": {
                 "name": "Type",
@@ -59,7 +59,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDRNet*\\u00a0[43]"
+                "value": "GDRNet*"
             },
             "1": {
                 "name": "Type",
@@ -73,7 +73,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DPOD\\u00a0[8]"
+                "value": "DPOD"
             },
             "1": {
                 "name": "Type",
@@ -87,7 +87,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PVNet-RePOSE\\u00a0[7]"
+                "value": "PVNet-RePOSE"
             },
             "1": {
                 "name": "Type",
@@ -101,7 +101,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PVNet-RNNPose\\u00a0[42]"
+                "value": "PVNet-RNNPose"
             },
             "1": {
                 "name": "Type",
@@ -115,7 +115,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PVNet-RNNPose\\u00a0[42]"
+                "value": "PVNet-RNNPose"
             },
             "1": {
                 "name": "Type",
@@ -129,7 +129,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PVNet-RNNPose\\u00a0[42]"
+                "value": "PVNet-RNNPose"
             },
             "1": {
                 "name": "Type",

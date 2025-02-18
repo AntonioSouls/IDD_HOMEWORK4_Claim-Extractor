@@ -1,0 +1,506 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.58"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "1.18"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "3.52"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.87"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "1.69"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "4.09"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.30"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "0.66"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "2.95"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.29"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "0.98"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "3.12"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.40"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "1.38"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "3.62"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.19"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "0.58"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "2.61"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.35"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "1.01"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "3.13"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.59"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "1.35"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "3.52"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.10"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "0.67"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "w/o \\\\mbox{\\\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "2.74"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.23"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "1.00"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "3.03"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.35"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "1.39"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Cabinet"
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "3.47"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "translation mean squared error",
+        "Outcome": "1.10"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "rotation Riemannian distance",
+        "Outcome": "0.61"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Chair"
+            }
+        },
+        "Measure": "shape Chamfer distance",
+        "Outcome": "2.58"
+    }
+}

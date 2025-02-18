@@ -1,83 +1,4 @@
-The user wants to extract claims from a JSON object containing a table, caption, and references.
-Each claim should have a "specifications", "Measure", and "Outcome".
-The "Measure" can be found in the table, caption, or references.
-The "Outcome" is the value associated with the "Measure".
-
-Let's analyze the example provided:
 ```json
-{
-    "table": [
-        [
-            "Model",
-            "Parameters",
-            "Precision",
-            "Recall"
-        ],
-        [
-            "Llama3.2",
-            "7B",
-            "x",
-            "y"
-        ],
-        [
-            "Gemma",
-            "70B",
-            "x2",
-            "y2"
-        ]
-    ],
-    "caption": "string",
-    "references": [
-        "string", "string"
-    ]
-}
-```
-In this example, a potential claim could be:
-```json
-{
-    "0": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Llama3.2"}
-        },
-        "Measure": "Parameters",
-        "Outcome": "7B"
-    }
-}
-```
-Another potential claim could be:
-```json
-{
-    "0": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Llama3.2"}
-        },
-        "Measure": "Precision",
-        "Outcome": "x"
-    }
-}
-```
-
-Now let's analyze the provided JSON object for the task:
-```json
-{'table': [['Level', 'Method', 'MPJPE\\downarrow'], ['pose', 'average', '39.9'], ['pose', 'MLPs', '42.5'], ['joint', 'MLPs', '41.6'], ['pose', 'reproj.', '39.7'], ['joint', 'reproj.', '39.5']], 'caption': '(b) \r\nMulti-hypothesis aggregation.\r\n\r\n', 'references': ['We implement two alternatives: predicting the noise ϵtsubscriptitalic-ϵ𝑡\\epsilon_{t} at each timestep of the reverse process or predicting the original 3D data 𝒚0subscript𝒚0\\bm{y}_{0}. As shown in Table\xa05a, the latter achieves better results.', 'Note that the difference between our work and other concurrent diffusion-based methods\xa0[22, 18, 14] mainly lies in the regression target. The regression target of our model is the original 3D data 𝒚0subscript𝒚0\\bm{y}_{0}, while theirs is the noise ϵtsubscriptitalic-ϵ𝑡\\epsilon_{t} at each timestep. Table\xa05a shows our method outperforms theirs. Further experiments (Table\xa06) reveal that predicting 𝒚0subscript𝒚0\\bm{y}_{0} yields good performance even in early iterations, while predicting ϵtsubscriptitalic-ϵ𝑡\\epsilon_{t} does not. This is because in early iterations, when the input 𝒚tsubscript𝒚𝑡\\bm{y}_{t} is extremely noisy, it is more effective to predict the original signal 𝒚0subscript𝒚0\\bm{y}_{0} directly than to obtain 𝒚0subscript𝒚0\\bm{y}_{0} by predicting the noise ϵtsubscriptitalic-ϵ𝑡\\epsilon_{t} and then subtracting it from 𝒚tsubscript𝒚𝑡\\bm{y}_{t}. This property is valuable for real-time processing. For example, when K𝐾K is fixed and computational resources are inadequate, the algorithm is required to produce predictions after the first iteration. Our method of predicting 𝒚0subscript𝒚0\\bm{y}_{0} still achieves satisfactory results, while theirs of predicting ϵtsubscriptitalic-ϵ𝑡\\epsilon_{t} does not.', 'We add the timestep embedding to the network in a similar way as the positional embedding\xa0[58]. Table\xa05b shows that adding it to the first layer of the network performs the same as all layers, hence the former is chosen for simplicity. Experimental results demonstrate that timestep embedding is crucial to the denoising process.', 'Three data augmentation approaches are compared in Table\xa05c, including 1) no augmentation; 2) flipping-once, which flips the input, conducts denoising for K𝐾K times, and flips the prediction again. The flipped prediction is then averaged with the unflipped prediction in the original branch to yield the final output; 3) diffusion-flipping, which applies the flip-denoise-flip process to each timestep (K𝐾K times). The detailed architectures of these three approaches are shown in Fig.\xa07. Our diffusion-flipping achieves the best results because it averages the 3D poses of the original and flipped branches at each timestep, preventing the accumulation of errors. Other concurrent diffusion-based methods\xa0[22, 18, 14] don’t use any augmentation or use the flipping-once method. Therefore, our model is more effective than theirs.', 'As shown in Table\xa05d, we evaluate multiple fusion methods (concatenation, addition, and cross attention\xa0[58]) in two fusion types (input fusion and embedding fusion). For embedding fusion, two additional spatio-temporal Transformer layers are used to extract 2D features, after which these features are fused into the denoiser. The best fusion approach is concatenating noisy 3D poses and 2D conditions on the input side, which provides a fast and effective way to modify existing 3D pose estimators to fit the diffusion framework.', 'Table\xa05e indicates that the best performance can be achieved by setting an appropriate maximum number of timesteps. When T𝑇T is too small, we cannot diffuse the ground truth 3D poses to a Gaussian distribution during training, so the denoiser has trouble recovering a clean pose from Gaussian noise during inference. When T𝑇T is too large, excessive samples become pure noise after diffusion. Then, the training process of the denoiser is affected and the denoiser cannot generalize well to 3D poses with varying levels of noise (i.e., 3D poses at different timesteps) during inference.']}
-```
-The table has the following structure:
-- Headers: 'Level', 'Method', 'MPJPE\\downarrow'
-- Rows:
-    - 'pose', 'average', '39.9'
-    - 'pose', 'MLPs', '42.5'
-    - 'joint', 'MLPs', '41.6'
-    - 'pose', 'reproj.', '39.7'
-    - 'joint', 'reproj.', '39.5'
-
-Potential claims from the table:
-- When Level is 'pose' and Method is 'average', MPJPE is '39.9'.
-- When Level is 'pose' and Method is 'MLPs', MPJPE is '42.5'.
-- When Level is 'joint' and Method is 'MLPs', MPJPE is '41.6'.
-- When Level is 'pose' and Method is 'reproj.', MPJPE is '39.7'.
-- When Level is 'joint' and Method is 'reproj.', MPJPE is '39.5'.
-
-The 'MPJPE\\downarrow' suggests that lower values are better. This can be added to the measure.```json
 {
     "0": {
         "specifications": {
@@ -90,7 +11,7 @@ The 'MPJPE\\downarrow' suggests that lower values are better. This can be added 
                 "value": "average"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "39.9"
     },
     "1": {
@@ -104,7 +25,7 @@ The 'MPJPE\\downarrow' suggests that lower values are better. This can be added 
                 "value": "MLPs"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "42.5"
     },
     "2": {
@@ -118,7 +39,7 @@ The 'MPJPE\\downarrow' suggests that lower values are better. This can be added 
                 "value": "MLPs"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "41.6"
     },
     "3": {
@@ -132,7 +53,7 @@ The 'MPJPE\\downarrow' suggests that lower values are better. This can be added 
                 "value": "reproj."
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "39.7"
     },
     "4": {
@@ -146,7 +67,7 @@ The 'MPJPE\\downarrow' suggests that lower values are better. This can be added 
                 "value": "reproj."
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "39.5"
     }
 }

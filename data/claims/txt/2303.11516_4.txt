@@ -1,18 +1,4 @@
-The user wants to extract claims from a table represented in a JSON object.
-Each claim should have a specific structure with "specifications", "Measure", and "Outcome".
-The "Measure" needs to be identified from the table, caption, or references.
-The "Outcome" is the value associated with the "Measure".
-
-Let's analyze the provided JSON object.
-The table has columns: 'Row', 'Method', 'ADD(-S)'.
-The caption and references provide additional context.
-
-Plan:
-1. Iterate through the rows of the table (excluding the header row).
-2. For each row, identify potential "specifications" based on the 'Row' and 'Method' columns.
-3. Identify the "Measure". "ADD(-S)" seems to be a good candidate as it is a column in the table.
-4. The "Outcome" will be the value in the "ADD(-S)" column for that row.
-5. Construct the claim object for each row.```json
+```json
 {
     "0": {
         "specifications": {
@@ -36,7 +22,7 @@ Plan:
             },
             "1": {
                 "name": "Method",
-                "value": "GDR-Net\u00a0[46]"
+                "value": "GDR-Net"
             }
         },
         "Measure": "ADD(-S)",

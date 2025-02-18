@@ -1,0 +1,44 @@
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Timesteps",
+                "value": "100"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "40.8"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Timesteps",
+                "value": "500"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "40.2"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Timesteps",
+                "value": "1000"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "40.0"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Timesteps",
+                "value": "2000"
+            }
+        },
+        "Measure": "MPJPE",
+        "Outcome": "40.3"
+    }
+}
+```

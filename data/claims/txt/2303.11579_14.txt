@@ -1,109 +1,14 @@
-The user wants to extract claims from a table provided in a JSON object.
-Each claim needs to have a "specifications", a "Measure" and an "Outcome".
-The "specifications" are key-value pairs extracted from the header and row values.
-The "Measure" can be found in the table, caption, or references.
-The "Outcome" is the value associated with the "Measure".
-
-Let's analyze the provided example:
 ```json
-{'table': [['Backbone', 'P-STMO\xa0[51]', 'PoseFormer\xa0[70]', 'STE\xa0[35]', 'TCN\xa0[46]'], ['w/o diffusion', '43.7', '47.6', '44.6', '46.4'], ['w/ diffusion', '42.2', '45.7', '43.8', '44.5']], 'caption': 'Table 7: Performance using other 3D estimators as backbone. MPJPE↓↓\\downarrow is reported. H=K=1.', 'references': []}
-```
-
-The header row is: `['Backbone', 'P-STMO\xa0[51]', 'PoseFormer\xa0[70]', 'STE\xa0[35]', 'TCN\xa0[46]']`
-The data rows are:
-`['w/o diffusion', '43.7', '47.6', '44.6', '46.4']`
-`['w/ diffusion', '42.2', '45.7', '43.8', '44.5']`
-
-The caption is: `Table 7: Performance using other 3D estimators as backbone. MPJPE↓↓\\downarrow is reported. H=K=1.`
-The references are: `[]`
-
-From the caption, we can identify "MPJPE" as a potential Measure. The "↓↓↓" indicates that lower values are better.
-
-Let's try to extract claims.
-
-Claim 0:
-Specifications:
-  0: {"name": "Backbone", "value": "P-STMO\xa0[51]"}
-  1: {"name": "w/o diffusion", "value": ""}  -> This seems incorrect, the row header should be used
-Measure: MPJPE
-Outcome: 43.7
-
-Claim 1:
-Specifications:
-  0: {"name": "Backbone", "value": "PoseFormer\xa0[70]"}
-  1: {"name": "w/o diffusion", "value": ""}
-Measure: MPJPE
-Outcome: 47.6
-
-Let's adjust the specification extraction strategy. The first column seems to be a specification itself.
-
-Claim 0:
-Specifications:
-  0: {"name": "Backbone", "value": "P-STMO\xa0[51]"}
-  1: {"name": "diffusion", "value": "w/o"}
-Measure: MPJPE
-Outcome: 43.7
-
-Claim 1:
-Specifications:
-  0: {"name": "Backbone", "value": "PoseFormer\xa0[70]"}
-  1: {"name": "diffusion", "value": "w/o"}
-Measure: MPJPE
-Outcome: 47.6
-
-Claim 2:
-Specifications:
-  0: {"name": "Backbone", "value": "STE\xa0[35]"}
-  1: {"name": "diffusion", "value": "w/o"}
-Measure: MPJPE
-Outcome: 44.6
-
-Claim 3:
-Specifications:
-  0: {"name": "Backbone", "value": "TCN\xa0[46]"}
-  1: {"name": "diffusion", "value": "w/o"}
-Measure: MPJPE
-Outcome: 46.4
-
-Claim 4:
-Specifications:
-  0: {"name": "Backbone", "value": "P-STMO\xa0[51]"}
-  1: {"name": "diffusion", "value": "w/ diffusion"}
-Measure: MPJPE
-Outcome: 42.2
-
-Claim 5:
-Specifications:
-  0: {"name": "Backbone", "value": "PoseFormer\xa0[70]"}
-  1: {"name": "diffusion", "value": "w/ diffusion"}
-Measure: MPJPE
-Outcome: 45.7
-
-Claim 6:
-Specifications:
-  0: {"name": "Backbone", "value": "STE\xa0[35]"}
-  1: {"name": "diffusion", "value": "w/ diffusion"}
-Measure: MPJPE
-Outcome: 43.8
-
-Claim 7:
-Specifications:
-  0: {"name": "Backbone", "value": "TCN\xa0[46]"}
-  1: {"name": "diffusion", "value": "w/ diffusion"}
-Measure: MPJPE
-Outcome: 44.5
-
-The structure of the output should be a JSON object where keys are the claim indices and values are the claim dictionaries.```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "P-STMO\xa0[51]"
+                "value": "w/o diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/o diffusion"
+                "name": "Model",
+                "value": "P-STMO"
             }
         },
         "Measure": "MPJPE",
@@ -113,11 +18,11 @@ The structure of the output should be a JSON object where keys are the claim ind
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "PoseFormer\xa0[70]"
+                "value": "w/o diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/o diffusion"
+                "name": "Model",
+                "value": "PoseFormer"
             }
         },
         "Measure": "MPJPE",
@@ -127,11 +32,11 @@ The structure of the output should be a JSON object where keys are the claim ind
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "STE\xa0[35]"
+                "value": "w/o diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/o diffusion"
+                "name": "Model",
+                "value": "STE"
             }
         },
         "Measure": "MPJPE",
@@ -141,11 +46,11 @@ The structure of the output should be a JSON object where keys are the claim ind
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "TCN\xa0[46]"
+                "value": "w/o diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/o diffusion"
+                "name": "Model",
+                "value": "TCN"
             }
         },
         "Measure": "MPJPE",
@@ -155,11 +60,11 @@ The structure of the output should be a JSON object where keys are the claim ind
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "P-STMO\xa0[51]"
+                "value": "w/ diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/ diffusion"
+                "name": "Model",
+                "value": "P-STMO"
             }
         },
         "Measure": "MPJPE",
@@ -169,11 +74,11 @@ The structure of the output should be a JSON object where keys are the claim ind
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "PoseFormer\xa0[70]"
+                "value": "w/ diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/ diffusion"
+                "name": "Model",
+                "value": "PoseFormer"
             }
         },
         "Measure": "MPJPE",
@@ -183,11 +88,11 @@ The structure of the output should be a JSON object where keys are the claim ind
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "STE\xa0[35]"
+                "value": "w/ diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/ diffusion"
+                "name": "Model",
+                "value": "STE"
             }
         },
         "Measure": "MPJPE",
@@ -197,11 +102,11 @@ The structure of the output should be a JSON object where keys are the claim ind
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "TCN\xa0[46]"
+                "value": "w/ diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/ diffusion"
+                "name": "Model",
+                "value": "TCN"
             }
         },
         "Measure": "MPJPE",

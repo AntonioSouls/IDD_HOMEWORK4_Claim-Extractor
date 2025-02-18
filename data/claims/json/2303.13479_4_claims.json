@@ -26,7 +26,7 @@
                 "value": "w"
             }
         },
-        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "52\u2218cm{}^\u22182cm",
         "Outcome": "47.5"
     },
     "3": {
@@ -36,7 +36,7 @@
                 "value": "w"
             }
         },
-        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "55\u2218cm{}^\u22185cm",
         "Outcome": "53.4"
     },
     "4": {
@@ -46,7 +46,7 @@
                 "value": "w"
             }
         },
-        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "102\u2218cm{}^\u22182cm",
         "Outcome": "72.1"
     },
     "5": {
@@ -56,7 +56,7 @@
                 "value": "w"
             }
         },
-        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "105\u2218cm{}^\u22185cm",
         "Outcome": "80.5"
     },
     "6": {
@@ -86,7 +86,7 @@
                 "value": "w/o"
             }
         },
-        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "52\u2218cm{}^\u22182cm",
         "Outcome": "41.5"
     },
     "9": {
@@ -96,7 +96,7 @@
                 "value": "w/o"
             }
         },
-        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "55\u2218cm{}^\u22185cm",
         "Outcome": "47.4"
     },
     "10": {
@@ -106,7 +106,7 @@
                 "value": "w/o"
             }
         },
-        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "102\u2218cm{}^\u22182cm",
         "Outcome": "68.8"
     },
     "11": {
@@ -116,7 +116,7 @@
                 "value": "w/o"
             }
         },
-        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "105\u2218cm{}^\u22185cm",
         "Outcome": "78.8"
     }
 }

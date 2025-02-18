@@ -3,120 +3,168 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SPIN\\u00a0[18]"
+                "value": "SPIN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "MJE\\\\downarrow",
+        "Measure": "MJE",
         "Outcome": "153.4"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SPIN\\u00a0[18]"
+                "value": "SPIN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "V2V\\\\downarrow",
+        "Measure": "V2V",
         "Outcome": "148.9"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\\u00a0[16]"
+                "value": "PARE"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "MJE\\\\downarrow",
+        "Measure": "MJE",
         "Outcome": "146.2"
     },
     "3": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE\\u00a0[16]"
+                "value": "PARE"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "V2V\\\\downarrow",
+        "Measure": "V2V",
         "Outcome": "140.9"
     },
     "4": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ROMP\\u00a0[34]"
+                "value": "ROMP"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "MJE\\\\downarrow",
+        "Measure": "MJE",
         "Outcome": "108.1"
     },
     "5": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ROMP\\u00a0[34]"
+                "value": "ROMP"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "V2V\\\\downarrow",
+        "Measure": "V2V",
         "Outcome": "103.4"
     },
     "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEV\\u00a0[35]"
+                "value": "BEV"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "MJE\\\\downarrow",
+        "Measure": "MJE",
         "Outcome": "105.3"
     },
     "7": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEV\\u00a0[35]"
+                "value": "BEV"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "V2V\\\\downarrow",
+        "Measure": "V2V",
         "Outcome": "100.7"
     },
     "8": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Hand4Whole\\u00a0[35]"
+                "value": "Hand4Whole"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "MJE\\\\downarrow",
+        "Measure": "MJE",
         "Outcome": "89.8"
     },
     "9": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Hand4Whole\\u00a0[35]"
+                "value": "Hand4Whole"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "V2V\\\\downarrow",
+        "Measure": "V2V",
         "Outcome": "84.8"
     },
     "10": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF\\u00a0[20]"
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "MJE\\\\downarrow",
+        "Measure": "MJE",
         "Outcome": "81.0"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF\\u00a0[20]"
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "V2V\\\\downarrow",
+        "Measure": "V2V",
         "Outcome": "76.0"
     },
     "12": {
@@ -124,9 +172,13 @@
             "0": {
                 "name": "Method",
                 "value": "BoPR"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "MJE\\\\downarrow",
+        "Measure": "MJE",
         "Outcome": "79.9"
     },
     "13": {
@@ -134,9 +186,13 @@
             "0": {
                 "name": "Method",
                 "value": "BoPR"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Agora"
             }
         },
-        "Measure": "V2V\\\\downarrow",
+        "Measure": "V2V",
         "Outcome": "74.5"
     }
 }

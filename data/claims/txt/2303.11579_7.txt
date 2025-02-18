@@ -1,108 +1,4 @@
-The user wants to extract claims from a table represented in a JSON object.
-Each claim has a specific structure with "specifications", "Measure", and "Outcome".
-The "specifications" are key-value pairs from the table's header and a corresponding row.
-The "Measure" can be found in the table, caption, or references.
-The "Outcome" is the value associated with the "Measure".
-
-Let's analyze the example and the provided new data to understand the task.
-
-**Example Analysis:**
-
 ```json
-{
-    "table": [
-        [
-            "Model",
-            "Parameters",
-            "Precision",
-            "Recall"
-        ],
-        [
-            "Llama3.2",
-            "7B",
-            "x",
-            "y"
-        ],
-        [
-            "Gemma",
-            "70B",
-            "x2",
-            "y2"
-        ]
-    ],
-    "caption": "string",
-    "references": [
-        "string", "string"
-    ]
-}
-```
-
-Expected Claims (Hypothetical based on the structure):
-
-```json
-{
-    "0": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Llama3.2"}
-        },
-        "Measure": "Parameters",
-        "Outcome": "7B"
-    },
-    "1": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Llama3.2"}
-        },
-        "Measure": "Precision",
-        "Outcome": "x"
-    },
-    "2": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Llama3.2"}
-        },
-        "Measure": "Recall",
-        "Outcome": "y"
-    },
-    "3": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Gemma"}
-        },
-        "Measure": "Parameters",
-        "Outcome": "70B"
-    },
-    "4": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Gemma"}
-        },
-        "Measure": "Precision",
-        "Outcome": "x2"
-    },
-    "5": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Gemma"}
-        },
-        "Measure": "Recall",
-        "Outcome": "y2"
-    }
-}
-```
-
-**New Data Analysis:**
-
-```json
-{'table': [['Target', 'MPJPE\\downarrow'], ['noise', '40.2'], ['\\cellcolorbestcolororiginal data', '\\cellcolorbestcolor40.0']], 'caption': 'Table 5: Ablation experiments of D3DP on Human3.6M to justify the selection of each component. H𝐻H=1, K𝐾K=1. Default settings are shown in gray. ', 'references': ['The denoiser has the compatibility to use existing 3D human pose estimators as the backbone. We run our pipeline on a few other 3D estimators\xa0[51, 70, 35, 46]. Table\xa07 shows that our approach achieves performance gains over different backbone networks, which verifies the compatibility and versatility.']}
-```
-
-Table Header: ['Target', 'MPJPE\\downarrow']
-Rows: ['noise', '40.2'], ['\\cellcolorbestcolororiginal data', '\\cellcolorbestcolor40.0']
-
-Possible Measures: 'MPJPE\\downarrow'
-
-Claims to extract:
-
-- For 'noise', the 'MPJPE\\downarrow' is '40.2'
-- For '\\cellcolorbestcolororiginal data', the 'MPJPE\\downarrow' is '\\cellcolorbestcolor40.0'
-
-The "specifications" will use the first column as the name, and the corresponding value from the row.```json
 {
     "0": {
         "specifications": {
@@ -111,18 +7,18 @@ The "specifications" will use the first column as the name, and the correspondin
                 "value": "noise"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "40.2"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Target",
-                "value": "\\cellcolorbestcolororiginal data"
+                "value": "original data"
             }
         },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "\\cellcolorbestcolor40.0"
+        "Measure": "MPJPE↓",
+        "Outcome": "40.0"
     }
 }
 ```

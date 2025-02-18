@@ -1,0 +1,212 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "MSE"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "82.5"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "MSE"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "76.6"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "MSE"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "47.5"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "MSE"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "53.4"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "MSE"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "72.1"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "MSE"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "80.5"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "MSE"
+            }
+        },
+        "Measure": "1010\u2218cm{}^{\\\\circ}10cm",
+        "Outcome": "82.6"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "L1"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "82.8"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "L1"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "74.6"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "L1"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "44.6"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "L1"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "50.4"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "L1"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "69.8"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "L1"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "78.8"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "L1"
+            }
+        },
+        "Measure": "1010\u2218cm{}^{\\\\circ}10cm",
+        "Outcome": "81.1"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "nan"
+            }
+        },
+        "Measure": "3D_{50}",
+        "Outcome": "nan"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "nan"
+            }
+        },
+        "Measure": "3D_{75}",
+        "Outcome": "nan"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "nan"
+            }
+        },
+        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "nan"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "nan"
+            }
+        },
+        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "nan"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "nan"
+            }
+        },
+        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Outcome": "nan"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "nan"
+            }
+        },
+        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Outcome": "nan"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Type",
+                "value": "nan"
+            }
+        },
+        "Measure": "1010\u2218cm{}^{\\\\circ}10cm",
+        "Outcome": "nan"
+    }
+}

@@ -1,0 +1,1234 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "41.5"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "62.6"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "38.7"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "51.6"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "83.2"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "98.5"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "96.2"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.7"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "91.5"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "96.3"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "98.1"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.4"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "65.9"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "80.5"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "77.6"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "79.6"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "90.2"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "100"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "77.0"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.7"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "44.2"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "70.5"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "63.2"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "86.1"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "2.8"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.5"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "81.3"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.1"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "61.7"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "97.2"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "81.8"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "94.9"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "64.9"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "76.9"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "68.1"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "73.9"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "64.1"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "71.2"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "71.0"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "95.8"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.0"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "100"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "100"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "100"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "73.8"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "75.9"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "69.9"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "85.6"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "37.7"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "18.5"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "44.1"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "35.2"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "61.5"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "77.5"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "46.2"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "88.7"
+    },
+    "56": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "78.5"
+    },
+    "57": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "97.4"
+    },
+    "58": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.7"
+    },
+    "59": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.2"
+    },
+    "60": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "59.5"
+    },
+    "61": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "87.6"
+    },
+    "62": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "91.7"
+    },
+    "63": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "82.6"
+    },
+    "64": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "3.9"
+    },
+    "65": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "71.8"
+    },
+    "66": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "14.9"
+    },
+    "67": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "56.9"
+    },
+    "68": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "7.4"
+    },
+    "69": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "23.3"
+    },
+    "70": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "29.3"
+    },
+    "71": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "27.8"
+    },
+    "72": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "69.8"
+    },
+    "73": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "87.6"
+    },
+    "74": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "80.5"
+    },
+    "75": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "84.4"
+    },
+    "76": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "90.0"
+    },
+    "77": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "98.0"
+    },
+    "78": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "95.5"
+    },
+    "79": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.1"
+    },
+    "80": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "71.9"
+    },
+    "81": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "99.3"
+    },
+    "82": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "57.6"
+    },
+    "83": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "91.3"
+    },
+    "84": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "mean"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "60.1"
+    },
+    "85": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "mean"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "80.5"
+    },
+    "86": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "mean"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "70.6"
+    },
+    "87": {
+        "specifications": {
+            "0": {
+                "name": "Object",
+                "value": "mean"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "82.4"
+    }
+}

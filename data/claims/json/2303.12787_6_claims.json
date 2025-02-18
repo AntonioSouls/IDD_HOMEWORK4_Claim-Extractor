@@ -3,7 +3,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D \u00a7\u2020\\u00a0[44]"
+                "value": "FCOS3D \u00a7\u2020"
             },
             "1": {
                 "name": "Backbone",
@@ -17,7 +17,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D \u00a7\u2020\\u00a0[44]"
+                "value": "FCOS3D \u00a7\u2020"
             },
             "1": {
                 "name": "Backbone",
@@ -31,7 +31,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D \u00a7\u2020\\u00a0[44]"
+                "value": "FCOS3D \u00a7\u2020"
             },
             "1": {
                 "name": "Backbone",
@@ -45,7 +45,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D \u00a7\u2020\\u00a0[44]"
+                "value": "FCOS3D \u00a7\u2020"
             },
             "1": {
                 "name": "Backbone",
@@ -59,7 +59,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D \u00a7\u2020\\u00a0[44]"
+                "value": "FCOS3D \u00a7\u2020"
             },
             "1": {
                 "name": "Backbone",
@@ -73,7 +73,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D \u00a7\u2020\\u00a0[44]"
+                "value": "FCOS3D \u00a7\u2020"
             },
             "1": {
                 "name": "Backbone",
@@ -87,7 +87,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D \u00a7\u2020\\u00a0[44]"
+                "value": "FCOS3D \u00a7\u2020"
             },
             "1": {
                 "name": "Backbone",
@@ -101,7 +101,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD \u00a7\\u00a0[1]"
+                "value": "PGD \u00a7"
             },
             "1": {
                 "name": "Backbone",
@@ -115,7 +115,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD \u00a7\\u00a0[1]"
+                "value": "PGD \u00a7"
             },
             "1": {
                 "name": "Backbone",
@@ -129,7 +129,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD \u00a7\\u00a0[1]"
+                "value": "PGD \u00a7"
             },
             "1": {
                 "name": "Backbone",
@@ -143,7 +143,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD \u00a7\\u00a0[1]"
+                "value": "PGD \u00a7"
             },
             "1": {
                 "name": "Backbone",
@@ -157,7 +157,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD \u00a7\\u00a0[1]"
+                "value": "PGD \u00a7"
             },
             "1": {
                 "name": "Backbone",
@@ -171,7 +171,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD \u00a7\\u00a0[1]"
+                "value": "PGD \u00a7"
             },
             "1": {
                 "name": "Backbone",
@@ -185,7 +185,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD \u00a7\\u00a0[1]"
+                "value": "PGD \u00a7"
             },
             "1": {
                 "name": "Backbone",
@@ -199,7 +199,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -213,7 +213,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -227,7 +227,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -241,7 +241,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -255,7 +255,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -269,7 +269,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -283,7 +283,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -297,7 +297,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -311,7 +311,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -325,7 +325,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -339,7 +339,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -353,7 +353,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -367,7 +367,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -381,7 +381,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -395,7 +395,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -409,7 +409,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -423,7 +423,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -437,7 +437,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -451,7 +451,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -465,7 +465,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -479,7 +479,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -493,7 +493,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -507,7 +507,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -521,7 +521,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -535,7 +535,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -549,7 +549,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -563,7 +563,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -577,7 +577,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",

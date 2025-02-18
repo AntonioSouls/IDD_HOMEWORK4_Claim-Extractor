@@ -1,45 +1,17 @@
-The user wants to extract claims from a given JSON object that contains a table, a caption, and references.
-Each claim should have the structure:
 ```json
-{
-    "0": {
-        "specifications": {
-            "0": {"name": "column_name", "value": "row_value"},
-            "1": {"name": "column_name", "value": "row_value"},
-            ...
-        },
-        "Measure": "some_measure",
-        "Outcome": "some_value"
-    },
-    "1": { ... }
-}
-```
-The "Measure" can be found in the table, references, or caption. The "Outcome" is the value associated with the measure.
-
-Let's analyze the provided example.
-The table has columns: 'Object', '[46]', '[43]', '[46]-LC', '[43]-LC'.
-The caption mentions "ADD(-S) scores".
-The references mention "ADD(-S) scores" and "AUC scores".
-
-Possible Measures: ADD(-S) score, AUC score, values in columns '[46]', '[43]', '[46]-LC', '[43]-LC'.
-
-Plan:
-1. Iterate through each row of the table (excluding the header row).
-2. For each row, extract the 'Object' name as a specification.
-3. Identify potential Measures from the column headers, caption, and references.
-4. For each potential Measure, extract the corresponding Outcome.
-5. Construct the claim JSON object.
-
-Let's start with extracting claims based on the column headers as the measure.```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Object",
                 "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "41.5"
     },
     "1": {
@@ -47,9 +19,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "62.6"
     },
     "2": {
@@ -57,9 +33,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "38.7"
     },
     "3": {
@@ -67,9 +47,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "51.6"
     },
     "4": {
@@ -77,9 +61,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "83.2"
     },
     "5": {
@@ -87,9 +75,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "98.5"
     },
     "6": {
@@ -97,9 +89,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "96.2"
     },
     "7": {
@@ -107,9 +103,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.7"
     },
     "8": {
@@ -117,9 +117,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "91.5"
     },
     "9": {
@@ -127,9 +131,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "96.3"
     },
     "10": {
@@ -137,9 +145,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "98.1"
     },
     "11": {
@@ -147,9 +159,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.4"
     },
     "12": {
@@ -157,9 +173,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "65.9"
     },
     "13": {
@@ -167,9 +187,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "80.5"
     },
     "14": {
@@ -177,9 +201,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "77.6"
     },
     "15": {
@@ -187,9 +215,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "79.6"
     },
     "16": {
@@ -197,9 +229,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "90.2"
     },
     "17": {
@@ -207,9 +243,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "100"
     },
     "18": {
@@ -217,9 +257,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "77.0"
     },
     "19": {
@@ -227,9 +271,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.7"
     },
     "20": {
@@ -237,9 +285,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "44.2"
     },
     "21": {
@@ -247,9 +299,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "70.5"
     },
     "22": {
@@ -257,9 +313,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "63.2"
     },
     "23": {
@@ -267,9 +327,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "86.1"
     },
     "24": {
@@ -277,9 +341,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "2.8"
     },
     "25": {
@@ -287,9 +355,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.5"
     },
     "26": {
@@ -297,9 +369,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "81.3"
     },
     "27": {
@@ -307,9 +383,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.1"
     },
     "28": {
@@ -317,9 +397,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "61.7"
     },
     "29": {
@@ -327,9 +411,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "97.2"
     },
     "30": {
@@ -337,9 +425,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "81.8"
     },
     "31": {
@@ -347,9 +439,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "94.9"
     },
     "32": {
@@ -357,9 +453,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "64.9"
     },
     "33": {
@@ -367,9 +467,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "76.9"
     },
     "34": {
@@ -377,9 +481,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "68.1"
     },
     "35": {
@@ -387,9 +495,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "73.9"
     },
     "36": {
@@ -397,9 +509,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "64.1"
     },
     "37": {
@@ -407,9 +523,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "71.2"
     },
     "38": {
@@ -417,9 +537,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "71.0"
     },
     "39": {
@@ -427,9 +551,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "95.8"
     },
     "40": {
@@ -437,9 +565,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.0"
     },
     "41": {
@@ -447,9 +579,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "100"
     },
     "42": {
@@ -457,9 +593,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "100"
     },
     "43": {
@@ -467,9 +607,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "100"
     },
     "44": {
@@ -477,9 +621,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "73.8"
     },
     "45": {
@@ -487,9 +635,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "75.9"
     },
     "46": {
@@ -497,9 +649,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "69.9"
     },
     "47": {
@@ -507,9 +663,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "85.6"
     },
     "48": {
@@ -517,9 +677,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "37.7"
     },
     "49": {
@@ -527,9 +691,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "18.5"
     },
     "50": {
@@ -537,9 +705,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "44.1"
     },
     "51": {
@@ -547,9 +719,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "35.2"
     },
     "52": {
@@ -557,9 +733,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "61.5"
     },
     "53": {
@@ -567,9 +747,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "77.5"
     },
     "54": {
@@ -577,9 +761,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "46.2"
     },
     "55": {
@@ -587,9 +775,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "88.7"
     },
     "56": {
@@ -597,9 +789,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "78.5"
     },
     "57": {
@@ -607,9 +803,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "97.4"
     },
     "58": {
@@ -617,9 +817,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.7"
     },
     "59": {
@@ -627,9 +831,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.2"
     },
     "60": {
@@ -637,9 +845,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "59.5"
     },
     "61": {
@@ -647,9 +859,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "87.6"
     },
     "62": {
@@ -657,9 +873,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "91.7"
     },
     "63": {
@@ -667,9 +887,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "82.6"
     },
     "64": {
@@ -677,9 +901,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "3.9"
     },
     "65": {
@@ -687,9 +915,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "71.8"
     },
     "66": {
@@ -697,9 +929,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "14.9"
     },
     "67": {
@@ -707,9 +943,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "56.9"
     },
     "68": {
@@ -717,9 +957,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "7.4"
     },
     "69": {
@@ -727,9 +971,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "23.3"
     },
     "70": {
@@ -737,9 +985,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "29.3"
     },
     "71": {
@@ -747,9 +999,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "27.8"
     },
     "72": {
@@ -757,9 +1013,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "69.8"
     },
     "73": {
@@ -767,9 +1027,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "87.6"
     },
     "74": {
@@ -777,9 +1041,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "80.5"
     },
     "75": {
@@ -787,9 +1055,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "84.4"
     },
     "76": {
@@ -797,9 +1069,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "90.0"
     },
     "77": {
@@ -807,9 +1083,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "98.0"
     },
     "78": {
@@ -817,9 +1097,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "95.5"
     },
     "79": {
@@ -827,9 +1111,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.1"
     },
     "80": {
@@ -837,9 +1125,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "71.9"
     },
     "81": {
@@ -847,9 +1139,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.3"
     },
     "82": {
@@ -857,9 +1153,13 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "57.6"
     },
     "83": {
@@ -867,50 +1167,14 @@ Let's start with extracting claims based on the column headers as the measure.``
             "0": {
                 "name": "Object",
                 "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "91.3"
-    },
-    "84": {
-        "specifications": {
-            "0": {
-                "name": "Object",
-                "value": "mean"
-            }
-        },
-        "Measure": "[46]",
-        "Outcome": "60.1"
-    },
-    "85": {
-        "specifications": {
-            "0": {
-                "name": "Object",
-                "value": "mean"
-            }
-        },
-        "Measure": "[43]",
-        "Outcome": "80.5"
-    },
-    "86": {
-        "specifications": {
-            "0": {
-                "name": "Object",
-                "value": "mean"
-            }
-        },
-        "Measure": "[46]-LC",
-        "Outcome": "70.6"
-    },
-    "87": {
-        "specifications": {
-            "0": {
-                "name": "Object",
-                "value": "mean"
-            }
-        },
-        "Measure": "[43]-LC",
-        "Outcome": "82.4"
     }
 }
 ```

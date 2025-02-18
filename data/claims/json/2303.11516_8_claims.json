@@ -4,9 +4,13 @@
             "0": {
                 "name": "Object",
                 "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "41.5"
     },
     "1": {
@@ -14,9 +18,13 @@
             "0": {
                 "name": "Object",
                 "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "62.6"
     },
     "2": {
@@ -24,9 +32,13 @@
             "0": {
                 "name": "Object",
                 "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "38.7"
     },
     "3": {
@@ -34,9 +46,13 @@
             "0": {
                 "name": "Object",
                 "value": "002_master_chef_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "51.6"
     },
     "4": {
@@ -44,9 +60,13 @@
             "0": {
                 "name": "Object",
                 "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "83.2"
     },
     "5": {
@@ -54,9 +74,13 @@
             "0": {
                 "name": "Object",
                 "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "98.5"
     },
     "6": {
@@ -64,9 +88,13 @@
             "0": {
                 "name": "Object",
                 "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "96.2"
     },
     "7": {
@@ -74,9 +102,13 @@
             "0": {
                 "name": "Object",
                 "value": "003_cracker_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.7"
     },
     "8": {
@@ -84,9 +116,13 @@
             "0": {
                 "name": "Object",
                 "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "91.5"
     },
     "9": {
@@ -94,9 +130,13 @@
             "0": {
                 "name": "Object",
                 "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "96.3"
     },
     "10": {
@@ -104,9 +144,13 @@
             "0": {
                 "name": "Object",
                 "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "98.1"
     },
     "11": {
@@ -114,9 +158,13 @@
             "0": {
                 "name": "Object",
                 "value": "004_sugar_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.4"
     },
     "12": {
@@ -124,9 +172,13 @@
             "0": {
                 "name": "Object",
                 "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "65.9"
     },
     "13": {
@@ -134,9 +186,13 @@
             "0": {
                 "name": "Object",
                 "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "80.5"
     },
     "14": {
@@ -144,9 +200,13 @@
             "0": {
                 "name": "Object",
                 "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "77.6"
     },
     "15": {
@@ -154,9 +214,13 @@
             "0": {
                 "name": "Object",
                 "value": "005_tomato_soup_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "79.6"
     },
     "16": {
@@ -164,9 +228,13 @@
             "0": {
                 "name": "Object",
                 "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "90.2"
     },
     "17": {
@@ -174,9 +242,13 @@
             "0": {
                 "name": "Object",
                 "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "100"
     },
     "18": {
@@ -184,9 +256,13 @@
             "0": {
                 "name": "Object",
                 "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "77.0"
     },
     "19": {
@@ -194,9 +270,13 @@
             "0": {
                 "name": "Object",
                 "value": "006_mustard_bottle"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.7"
     },
     "20": {
@@ -204,9 +284,13 @@
             "0": {
                 "name": "Object",
                 "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "44.2"
     },
     "21": {
@@ -214,9 +298,13 @@
             "0": {
                 "name": "Object",
                 "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "70.5"
     },
     "22": {
@@ -224,9 +312,13 @@
             "0": {
                 "name": "Object",
                 "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "63.2"
     },
     "23": {
@@ -234,9 +326,13 @@
             "0": {
                 "name": "Object",
                 "value": "007_tuna_fish_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "86.1"
     },
     "24": {
@@ -244,9 +340,13 @@
             "0": {
                 "name": "Object",
                 "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "2.8"
     },
     "25": {
@@ -254,9 +354,13 @@
             "0": {
                 "name": "Object",
                 "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.5"
     },
     "26": {
@@ -264,9 +368,13 @@
             "0": {
                 "name": "Object",
                 "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "81.3"
     },
     "27": {
@@ -274,9 +382,13 @@
             "0": {
                 "name": "Object",
                 "value": "008_pudding_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.1"
     },
     "28": {
@@ -284,9 +396,13 @@
             "0": {
                 "name": "Object",
                 "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "61.7"
     },
     "29": {
@@ -294,9 +410,13 @@
             "0": {
                 "name": "Object",
                 "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "97.2"
     },
     "30": {
@@ -304,9 +424,13 @@
             "0": {
                 "name": "Object",
                 "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "81.8"
     },
     "31": {
@@ -314,9 +438,13 @@
             "0": {
                 "name": "Object",
                 "value": "009_gelatin_box"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "94.9"
     },
     "32": {
@@ -324,9 +452,13 @@
             "0": {
                 "name": "Object",
                 "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "64.9"
     },
     "33": {
@@ -334,9 +466,13 @@
             "0": {
                 "name": "Object",
                 "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "76.9"
     },
     "34": {
@@ -344,9 +480,13 @@
             "0": {
                 "name": "Object",
                 "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "68.1"
     },
     "35": {
@@ -354,9 +494,13 @@
             "0": {
                 "name": "Object",
                 "value": "010_potted_meat_can"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "73.9"
     },
     "36": {
@@ -364,9 +508,13 @@
             "0": {
                 "name": "Object",
                 "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "64.1"
     },
     "37": {
@@ -374,9 +522,13 @@
             "0": {
                 "name": "Object",
                 "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "71.2"
     },
     "38": {
@@ -384,9 +536,13 @@
             "0": {
                 "name": "Object",
                 "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "71.0"
     },
     "39": {
@@ -394,9 +550,13 @@
             "0": {
                 "name": "Object",
                 "value": "011_banana"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "95.8"
     },
     "40": {
@@ -404,9 +564,13 @@
             "0": {
                 "name": "Object",
                 "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.0"
     },
     "41": {
@@ -414,9 +578,13 @@
             "0": {
                 "name": "Object",
                 "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "100"
     },
     "42": {
@@ -424,9 +592,13 @@
             "0": {
                 "name": "Object",
                 "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "100"
     },
     "43": {
@@ -434,9 +606,13 @@
             "0": {
                 "name": "Object",
                 "value": "019_pitcher_base"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "100"
     },
     "44": {
@@ -444,9 +620,13 @@
             "0": {
                 "name": "Object",
                 "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "73.8"
     },
     "45": {
@@ -454,9 +634,13 @@
             "0": {
                 "name": "Object",
                 "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "75.9"
     },
     "46": {
@@ -464,9 +648,13 @@
             "0": {
                 "name": "Object",
                 "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "69.9"
     },
     "47": {
@@ -474,9 +662,13 @@
             "0": {
                 "name": "Object",
                 "value": "021_bleach_cleanser"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "85.6"
     },
     "48": {
@@ -484,9 +676,13 @@
             "0": {
                 "name": "Object",
                 "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "37.7"
     },
     "49": {
@@ -494,9 +690,13 @@
             "0": {
                 "name": "Object",
                 "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "18.5"
     },
     "50": {
@@ -504,9 +704,13 @@
             "0": {
                 "name": "Object",
                 "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "44.1"
     },
     "51": {
@@ -514,9 +718,13 @@
             "0": {
                 "name": "Object",
                 "value": "024_bowl*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "35.2"
     },
     "52": {
@@ -524,9 +732,13 @@
             "0": {
                 "name": "Object",
                 "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "61.5"
     },
     "53": {
@@ -534,9 +746,13 @@
             "0": {
                 "name": "Object",
                 "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "77.5"
     },
     "54": {
@@ -544,9 +760,13 @@
             "0": {
                 "name": "Object",
                 "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "46.2"
     },
     "55": {
@@ -554,9 +774,13 @@
             "0": {
                 "name": "Object",
                 "value": "025_mug"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "88.7"
     },
     "56": {
@@ -564,9 +788,13 @@
             "0": {
                 "name": "Object",
                 "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "78.5"
     },
     "57": {
@@ -574,9 +802,13 @@
             "0": {
                 "name": "Object",
                 "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "97.4"
     },
     "58": {
@@ -584,9 +816,13 @@
             "0": {
                 "name": "Object",
                 "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.7"
     },
     "59": {
@@ -594,9 +830,13 @@
             "0": {
                 "name": "Object",
                 "value": "035_power_drill"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.2"
     },
     "60": {
@@ -604,9 +844,13 @@
             "0": {
                 "name": "Object",
                 "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "59.5"
     },
     "61": {
@@ -614,9 +858,13 @@
             "0": {
                 "name": "Object",
                 "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "87.6"
     },
     "62": {
@@ -624,9 +872,13 @@
             "0": {
                 "name": "Object",
                 "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "91.7"
     },
     "63": {
@@ -634,9 +886,13 @@
             "0": {
                 "name": "Object",
                 "value": "036_wood_block*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "82.6"
     },
     "64": {
@@ -644,9 +900,13 @@
             "0": {
                 "name": "Object",
                 "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "3.9"
     },
     "65": {
@@ -654,9 +914,13 @@
             "0": {
                 "name": "Object",
                 "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "71.8"
     },
     "66": {
@@ -664,9 +928,13 @@
             "0": {
                 "name": "Object",
                 "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "14.9"
     },
     "67": {
@@ -674,9 +942,13 @@
             "0": {
                 "name": "Object",
                 "value": "037_scissors"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "56.9"
     },
     "68": {
@@ -684,9 +956,13 @@
             "0": {
                 "name": "Object",
                 "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "7.4"
     },
     "69": {
@@ -694,9 +970,13 @@
             "0": {
                 "name": "Object",
                 "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "23.3"
     },
     "70": {
@@ -704,9 +984,13 @@
             "0": {
                 "name": "Object",
                 "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "29.3"
     },
     "71": {
@@ -714,9 +998,13 @@
             "0": {
                 "name": "Object",
                 "value": "040_large_marker"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "27.8"
     },
     "72": {
@@ -724,9 +1012,13 @@
             "0": {
                 "name": "Object",
                 "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "69.8"
     },
     "73": {
@@ -734,9 +1026,13 @@
             "0": {
                 "name": "Object",
                 "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "87.6"
     },
     "74": {
@@ -744,9 +1040,13 @@
             "0": {
                 "name": "Object",
                 "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "80.5"
     },
     "75": {
@@ -754,9 +1054,13 @@
             "0": {
                 "name": "Object",
                 "value": "051_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "84.4"
     },
     "76": {
@@ -764,9 +1068,13 @@
             "0": {
                 "name": "Object",
                 "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "90.0"
     },
     "77": {
@@ -774,9 +1082,13 @@
             "0": {
                 "name": "Object",
                 "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "98.0"
     },
     "78": {
@@ -784,9 +1096,13 @@
             "0": {
                 "name": "Object",
                 "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "95.5"
     },
     "79": {
@@ -794,9 +1110,13 @@
             "0": {
                 "name": "Object",
                 "value": "052_extra_large_clamp*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.1"
     },
     "80": {
@@ -804,9 +1124,13 @@
             "0": {
                 "name": "Object",
                 "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net"
             }
         },
-        "Measure": "[46]",
+        "Measure": "ADD(-S) score",
         "Outcome": "71.9"
     },
     "81": {
@@ -814,9 +1138,13 @@
             "0": {
                 "name": "Object",
                 "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose"
             }
         },
-        "Measure": "[43]",
+        "Measure": "ADD(-S) score",
         "Outcome": "99.3"
     },
     "82": {
@@ -824,9 +1152,13 @@
             "0": {
                 "name": "Object",
                 "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "GDR-Net-LC"
             }
         },
-        "Measure": "[46]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "57.6"
     },
     "83": {
@@ -834,49 +1166,13 @@
             "0": {
                 "name": "Object",
                 "value": "061_foam_brick*"
+            },
+            "1": {
+                "name": "Method",
+                "value": "ZebraPose-LC"
             }
         },
-        "Measure": "[43]-LC",
+        "Measure": "ADD(-S) score",
         "Outcome": "91.3"
-    },
-    "84": {
-        "specifications": {
-            "0": {
-                "name": "Object",
-                "value": "mean"
-            }
-        },
-        "Measure": "[46]",
-        "Outcome": "60.1"
-    },
-    "85": {
-        "specifications": {
-            "0": {
-                "name": "Object",
-                "value": "mean"
-            }
-        },
-        "Measure": "[43]",
-        "Outcome": "80.5"
-    },
-    "86": {
-        "specifications": {
-            "0": {
-                "name": "Object",
-                "value": "mean"
-            }
-        },
-        "Measure": "[46]-LC",
-        "Outcome": "70.6"
-    },
-    "87": {
-        "specifications": {
-            "0": {
-                "name": "Object",
-                "value": "mean"
-            }
-        },
-        "Measure": "[43]-LC",
-        "Outcome": "82.4"
     }
 }

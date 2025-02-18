@@ -6,20 +6,8 @@
                 "value": "C0"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
+                "name": "\u00ce\u00bb_KL",
                 "value": "\u2713"
-            },
-            "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
-                "value": "nan"
-            },
-            "3": {
-                "name": "Aux. loss_0",
-                "value": "nan"
-            },
-            "4": {
-                "name": "Aux. loss_1",
-                "value": "nan"
             }
         },
         "Measure": "NDS\u2191",
@@ -32,20 +20,8 @@
                 "value": "C0"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
+                "name": "\u00ce\u00bb_KL",
                 "value": "\u2713"
-            },
-            "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
-                "value": "nan"
-            },
-            "3": {
-                "name": "Aux. loss_0",
-                "value": "nan"
-            },
-            "4": {
-                "name": "Aux. loss_1",
-                "value": "nan"
             }
         },
         "Measure": "mAP\u2191",
@@ -58,20 +34,8 @@
                 "value": "C0"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
+                "name": "\u00ce\u00bb_KL",
                 "value": "\u2713"
-            },
-            "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
-                "value": "nan"
-            },
-            "3": {
-                "name": "Aux. loss_0",
-                "value": "nan"
-            },
-            "4": {
-                "name": "Aux. loss_1",
-                "value": "nan"
             }
         },
         "Measure": "mATE\u2193",
@@ -84,20 +48,8 @@
                 "value": "C0"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
+                "name": "\u00ce\u00bb_KL",
                 "value": "\u2713"
-            },
-            "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
-                "value": "nan"
-            },
-            "3": {
-                "name": "Aux. loss_0",
-                "value": "nan"
-            },
-            "4": {
-                "name": "Aux. loss_1",
-                "value": "nan"
             }
         },
         "Measure": "mAOE\u2193",
@@ -110,20 +62,8 @@
                 "value": "C1"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
-                "value": "nan"
-            },
-            "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_reg",
                 "value": "\u2713"
-            },
-            "3": {
-                "name": "Aux. loss_0",
-                "value": "nan"
-            },
-            "4": {
-                "name": "Aux. loss_1",
-                "value": "nan"
             }
         },
         "Measure": "NDS\u2191",
@@ -136,20 +76,8 @@
                 "value": "C1"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
-                "value": "nan"
-            },
-            "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_reg",
                 "value": "\u2713"
-            },
-            "3": {
-                "name": "Aux. loss_0",
-                "value": "nan"
-            },
-            "4": {
-                "name": "Aux. loss_1",
-                "value": "nan"
             }
         },
         "Measure": "mAP\u2191",
@@ -162,20 +90,8 @@
                 "value": "C1"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
-                "value": "nan"
-            },
-            "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_reg",
                 "value": "\u2713"
-            },
-            "3": {
-                "name": "Aux. loss_0",
-                "value": "nan"
-            },
-            "4": {
-                "name": "Aux. loss_1",
-                "value": "nan"
             }
         },
         "Measure": "mATE\u2193",
@@ -188,20 +104,8 @@
                 "value": "C1"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
-                "value": "nan"
-            },
-            "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_reg",
                 "value": "\u2713"
-            },
-            "3": {
-                "name": "Aux. loss_0",
-                "value": "nan"
-            },
-            "4": {
-                "name": "Aux. loss_1",
-                "value": "nan"
             }
         },
         "Measure": "mAOE\u2193",
@@ -214,19 +118,15 @@
                 "value": "C2"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
-                "value": "nan"
+                "name": "\u00ce\u00bb_reg",
+                "value": "\u2713"
             },
             "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_crd",
                 "value": "\u2713"
             },
             "3": {
-                "name": "Aux. loss_0",
-                "value": "\u2713"
-            },
-            "4": {
-                "name": "Aux. loss_1",
+                "name": "\u00ce\u00bb_proj",
                 "value": "\u2713"
             }
         },
@@ -240,19 +140,15 @@
                 "value": "C2"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
-                "value": "nan"
+                "name": "\u00ce\u00bb_reg",
+                "value": "\u2713"
             },
             "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_crd",
                 "value": "\u2713"
             },
             "3": {
-                "name": "Aux. loss_0",
-                "value": "\u2713"
-            },
-            "4": {
-                "name": "Aux. loss_1",
+                "name": "\u00ce\u00bb_proj",
                 "value": "\u2713"
             }
         },
@@ -266,19 +162,15 @@
                 "value": "C2"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
-                "value": "nan"
+                "name": "\u00ce\u00bb_reg",
+                "value": "\u2713"
             },
             "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_crd",
                 "value": "\u2713"
             },
             "3": {
-                "name": "Aux. loss_0",
-                "value": "\u2713"
-            },
-            "4": {
-                "name": "Aux. loss_1",
+                "name": "\u00ce\u00bb_proj",
                 "value": "\u2713"
             }
         },
@@ -292,19 +184,15 @@
                 "value": "C2"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
-                "value": "nan"
+                "name": "\u00ce\u00bb_reg",
+                "value": "\u2713"
             },
             "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_crd",
                 "value": "\u2713"
             },
             "3": {
-                "name": "Aux. loss_0",
-                "value": "\u2713"
-            },
-            "4": {
-                "name": "Aux. loss_1",
+                "name": "\u00ce\u00bb_proj",
                 "value": "\u2713"
             }
         },
@@ -318,19 +206,19 @@
                 "value": "C3"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
+                "name": "\u00ce\u00bb_KL",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_reg",
                 "value": "\u2713"
             },
             "3": {
-                "name": "Aux. loss_0",
+                "name": "\u00ce\u00bb_crd",
                 "value": "\u2713"
             },
             "4": {
-                "name": "Aux. loss_1",
+                "name": "\u00ce\u00bb_proj",
                 "value": "\u2713"
             }
         },
@@ -344,19 +232,19 @@
                 "value": "C3"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
+                "name": "\u00ce\u00bb_KL",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_reg",
                 "value": "\u2713"
             },
             "3": {
-                "name": "Aux. loss_0",
+                "name": "\u00ce\u00bb_crd",
                 "value": "\u2713"
             },
             "4": {
-                "name": "Aux. loss_1",
+                "name": "\u00ce\u00bb_proj",
                 "value": "\u2713"
             }
         },
@@ -370,19 +258,19 @@
                 "value": "C3"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
+                "name": "\u00ce\u00bb_KL",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_reg",
                 "value": "\u2713"
             },
             "3": {
-                "name": "Aux. loss_0",
+                "name": "\u00ce\u00bb_crd",
                 "value": "\u2713"
             },
             "4": {
-                "name": "Aux. loss_1",
+                "name": "\u00ce\u00bb_proj",
                 "value": "\u2713"
             }
         },
@@ -396,19 +284,19 @@
                 "value": "C3"
             },
             "1": {
-                "name": "\\\\mathcal{L}_{\\\\text{KL}}",
+                "name": "\u00ce\u00bb_KL",
                 "value": "\u2713"
             },
             "2": {
-                "name": "\\\\mathcal{L}_{\\\\text{reg}}",
+                "name": "\u00ce\u00bb_reg",
                 "value": "\u2713"
             },
             "3": {
-                "name": "Aux. loss_0",
+                "name": "\u00ce\u00bb_crd",
                 "value": "\u2713"
             },
             "4": {
-                "name": "Aux. loss_1",
+                "name": "\u00ce\u00bb_proj",
                 "value": "\u2713"
             }
         },

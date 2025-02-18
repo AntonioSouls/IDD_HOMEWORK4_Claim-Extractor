@@ -6,8 +6,12 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "Avg.",
@@ -20,8 +24,12 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSPD",
@@ -34,8 +42,12 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSSD",
@@ -48,8 +60,12 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "VSD",
@@ -62,8 +78,12 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "Avg.",
@@ -76,8 +96,12 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSPD",
@@ -90,8 +114,12 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSSD",
@@ -104,8 +132,12 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "VSD",
@@ -118,8 +150,12 @@
                 "value": "Cosypose"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "Avg.",
@@ -132,8 +168,12 @@
                 "value": "Cosypose"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSPD",
@@ -146,8 +186,12 @@
                 "value": "Cosypose"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSSD",
@@ -160,8 +204,12 @@
                 "value": "Cosypose"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "VSD",
@@ -174,8 +222,12 @@
                 "value": "CDPNv2"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "Avg.",
@@ -188,8 +240,12 @@
                 "value": "CDPNv2"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSPD",
@@ -202,8 +258,12 @@
                 "value": "CDPNv2"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSSD",
@@ -216,8 +276,12 @@
                 "value": "CDPNv2"
             },
             "1": {
-                "name": "RGB (PBR)",
+                "name": "Input Modality",
                 "value": "RGB (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "VSD",
@@ -230,8 +294,12 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "Avg.",
@@ -244,8 +312,12 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSPD",
@@ -258,8 +330,12 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSSD",
@@ -272,8 +348,12 @@
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "VSD",
@@ -286,8 +366,12 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "Avg.",
@@ -300,8 +384,12 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSPD",
@@ -314,8 +402,12 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSSD",
@@ -328,12 +420,16 @@
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "VSD",
-        "Outcome": "0.621"
+        "Outcome": "0621"
     },
     "24": {
         "specifications": {
@@ -342,8 +438,12 @@
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "Avg.",
@@ -356,8 +456,12 @@
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSPD",
@@ -370,8 +474,12 @@
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSSD",
@@ -384,8 +492,12 @@
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "VSD",
@@ -398,8 +510,12 @@
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "Avg.",
@@ -412,8 +528,12 @@
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSPD",
@@ -426,8 +546,12 @@
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSSD",
@@ -440,8 +564,12 @@
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "VSD",
@@ -454,8 +582,12 @@
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "Avg.",
@@ -468,8 +600,12 @@
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSPD",
@@ -482,8 +618,12 @@
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "MSSD",
@@ -496,8 +636,12 @@
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB-D (PBR)",
+                "name": "Input Modality",
                 "value": "RGB-D (PBR)"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
         "Measure": "VSD",

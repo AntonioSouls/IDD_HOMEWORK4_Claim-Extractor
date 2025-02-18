@@ -1,19 +1,10 @@
-The user wants to extract claims from a table provided in a JSON object.
-Each claim should have a "specifications", a "Measure", and an "Outcome".
-The "specifications" are key-value pairs from the table identifying a specific row.
-The "Measure" is usually a column header.
-The "Outcome" is the value in the table cell corresponding to the "Measure" for the given "specifications".
-
-Plan:
-1. Iterate through each row of the table, excluding the header row.
-2. For each row, the first column(s) can be used for specifications.
-3. The remaining columns can be considered as measures and their corresponding values as outcomes.```json
+```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D §†\u00a0[44]"
+                "value": "FCOS3D §†"
             },
             "1": {
                 "name": "Backbone",
@@ -27,7 +18,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D §†\u00a0[44]"
+                "value": "FCOS3D §†"
             },
             "1": {
                 "name": "Backbone",
@@ -41,7 +32,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D §†\u00a0[44]"
+                "value": "FCOS3D §†"
             },
             "1": {
                 "name": "Backbone",
@@ -55,7 +46,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D §†\u00a0[44]"
+                "value": "FCOS3D §†"
             },
             "1": {
                 "name": "Backbone",
@@ -69,7 +60,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D §†\u00a0[44]"
+                "value": "FCOS3D §†"
             },
             "1": {
                 "name": "Backbone",
@@ -83,7 +74,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D §†\u00a0[44]"
+                "value": "FCOS3D §†"
             },
             "1": {
                 "name": "Backbone",
@@ -97,7 +88,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOS3D §†\u00a0[44]"
+                "value": "FCOS3D §†"
             },
             "1": {
                 "name": "Backbone",
@@ -111,7 +102,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD §\u00a0[1]"
+                "value": "PGD §"
             },
             "1": {
                 "name": "Backbone",
@@ -125,7 +116,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD §\u00a0[1]"
+                "value": "PGD §"
             },
             "1": {
                 "name": "Backbone",
@@ -139,7 +130,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD §\u00a0[1]"
+                "value": "PGD §"
             },
             "1": {
                 "name": "Backbone",
@@ -153,7 +144,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD §\u00a0[1]"
+                "value": "PGD §"
             },
             "1": {
                 "name": "Backbone",
@@ -167,7 +158,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD §\u00a0[1]"
+                "value": "PGD §"
             },
             "1": {
                 "name": "Backbone",
@@ -181,7 +172,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD §\u00a0[1]"
+                "value": "PGD §"
             },
             "1": {
                 "name": "Backbone",
@@ -195,7 +186,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PGD §\u00a0[1]"
+                "value": "PGD §"
             },
             "1": {
                 "name": "Backbone",
@@ -209,7 +200,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -223,7 +214,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -237,7 +228,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -251,7 +242,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -265,7 +256,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -279,7 +270,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -293,7 +284,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -307,7 +298,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -321,7 +312,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -335,7 +326,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -349,7 +340,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -363,7 +354,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -377,7 +368,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -391,7 +382,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BEVFormer\u00a0[54]"
+                "value": "BEVFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -405,7 +396,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -419,7 +410,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -433,7 +424,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -447,7 +438,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -461,7 +452,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -475,7 +466,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -489,7 +480,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PolarFormer\u00a0[55]"
+                "value": "PolarFormer"
             },
             "1": {
                 "name": "Backbone",
@@ -503,7 +494,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -517,7 +508,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -531,7 +522,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -545,7 +536,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -559,7 +550,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -573,7 +564,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",
@@ -587,7 +578,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PETR\u00a0[53]"
+                "value": "PETR"
             },
             "1": {
                 "name": "Backbone",

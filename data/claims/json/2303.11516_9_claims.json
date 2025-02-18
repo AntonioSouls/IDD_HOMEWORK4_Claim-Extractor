@@ -3,7 +3,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE [25]"
+                "value": "RePOSE"
             },
             "1": {
                 "name": "Object",
@@ -17,7 +17,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose [50]"
+                "value": "RNNPose"
             },
             "1": {
                 "name": "Object",
@@ -31,7 +31,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose [12]"
+                "value": "SO-Pose"
             },
             "1": {
                 "name": "Object",
@@ -45,7 +45,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST [36]"
+                "value": "DProST"
             },
             "1": {
                 "name": "Object",
@@ -59,7 +59,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net [46]"
+                "value": "GDR-Net"
             },
             "1": {
                 "name": "Object",
@@ -73,7 +73,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose [43]"
+                "value": "ZebraPose"
             },
             "1": {
                 "name": "Object",
@@ -115,7 +115,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE [25]"
+                "value": "RePOSE"
             },
             "1": {
                 "name": "Object",
@@ -129,7 +129,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose [50]"
+                "value": "RNNPose"
             },
             "1": {
                 "name": "Object",
@@ -143,7 +143,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose [12]"
+                "value": "SO-Pose"
             },
             "1": {
                 "name": "Object",
@@ -157,7 +157,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST [36]"
+                "value": "DProST"
             },
             "1": {
                 "name": "Object",
@@ -171,7 +171,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net [46]"
+                "value": "GDR-Net"
             },
             "1": {
                 "name": "Object",
@@ -185,7 +185,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose [43]"
+                "value": "ZebraPose"
             },
             "1": {
                 "name": "Object",
@@ -227,7 +227,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE [25]"
+                "value": "RePOSE"
             },
             "1": {
                 "name": "Object",
@@ -241,7 +241,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose [50]"
+                "value": "RNNPose"
             },
             "1": {
                 "name": "Object",
@@ -255,7 +255,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose [12]"
+                "value": "SO-Pose"
             },
             "1": {
                 "name": "Object",
@@ -269,7 +269,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST [36]"
+                "value": "DProST"
             },
             "1": {
                 "name": "Object",
@@ -283,7 +283,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net [46]"
+                "value": "GDR-Net"
             },
             "1": {
                 "name": "Object",
@@ -297,7 +297,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose [43]"
+                "value": "ZebraPose"
             },
             "1": {
                 "name": "Object",
@@ -339,7 +339,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE [25]"
+                "value": "RePOSE"
             },
             "1": {
                 "name": "Object",
@@ -353,7 +353,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose [50]"
+                "value": "RNNPose"
             },
             "1": {
                 "name": "Object",
@@ -367,7 +367,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose [12]"
+                "value": "SO-Pose"
             },
             "1": {
                 "name": "Object",
@@ -381,7 +381,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST [36]"
+                "value": "DProST"
             },
             "1": {
                 "name": "Object",
@@ -395,7 +395,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net [46]"
+                "value": "GDR-Net"
             },
             "1": {
                 "name": "Object",
@@ -409,7 +409,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose [43]"
+                "value": "ZebraPose"
             },
             "1": {
                 "name": "Object",
@@ -451,7 +451,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE [25]"
+                "value": "RePOSE"
             },
             "1": {
                 "name": "Object",
@@ -465,7 +465,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose [50]"
+                "value": "RNNPose"
             },
             "1": {
                 "name": "Object",
@@ -479,7 +479,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose [12]"
+                "value": "SO-Pose"
             },
             "1": {
                 "name": "Object",
@@ -493,7 +493,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST [36]"
+                "value": "DProST"
             },
             "1": {
                 "name": "Object",
@@ -507,7 +507,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net [46]"
+                "value": "GDR-Net"
             },
             "1": {
                 "name": "Object",
@@ -521,7 +521,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose [43]"
+                "value": "ZebraPose"
             },
             "1": {
                 "name": "Object",
@@ -563,84 +563,84 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE [25]"
+                "value": "RePOSE"
             },
             "1": {
                 "name": "Object",
                 "value": "eggbox*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "51.7"
     },
     "41": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose [50]"
+                "value": "RNNPose"
             },
             "1": {
                 "name": "Object",
                 "value": "eggbox*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "66.98"
     },
     "42": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose [12]"
+                "value": "SO-Pose"
             },
             "1": {
                 "name": "Object",
                 "value": "eggbox*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "52.4"
     },
     "43": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST [36]"
+                "value": "DProST"
             },
             "1": {
                 "name": "Object",
                 "value": "eggbox*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "55.3"
     },
     "44": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net [46]"
+                "value": "GDR-Net"
             },
             "1": {
                 "name": "Object",
                 "value": "eggbox*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "54.2"
     },
     "45": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose [43]"
+                "value": "ZebraPose"
             },
             "1": {
                 "name": "Object",
                 "value": "eggbox*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "70.9"
     },
     "46": {
@@ -654,7 +654,7 @@
                 "value": "eggbox*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "62.81"
     },
     "47": {
@@ -668,91 +668,91 @@
                 "value": "eggbox*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "71.77"
     },
     "48": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE [25]"
+                "value": "RePOSE"
             },
             "1": {
                 "name": "Object",
                 "value": "glue*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "54.3"
     },
     "49": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose [50]"
+                "value": "RNNPose"
             },
             "1": {
                 "name": "Object",
                 "value": "glue*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "63.79"
     },
     "50": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose [12]"
+                "value": "SO-Pose"
             },
             "1": {
                 "name": "Object",
                 "value": "glue*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "78.3"
     },
     "51": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST [36]"
+                "value": "DProST"
             },
             "1": {
                 "name": "Object",
                 "value": "glue*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "76.9"
     },
     "52": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net [46]"
+                "value": "GDR-Net"
             },
             "1": {
                 "name": "Object",
                 "value": "glue*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "75.8"
     },
     "53": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose [43]"
+                "value": "ZebraPose"
             },
             "1": {
                 "name": "Object",
                 "value": "glue*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "88.7"
     },
     "54": {
@@ -766,7 +766,7 @@
                 "value": "glue*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "68.88"
     },
     "55": {
@@ -780,14 +780,14 @@
                 "value": "glue*"
             }
         },
-        "Measure": "ADD(-S)",
+        "Measure": "ADD-S",
         "Outcome": "86.35"
     },
     "56": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE [25]"
+                "value": "RePOSE"
             },
             "1": {
                 "name": "Object",
@@ -801,7 +801,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose [50]"
+                "value": "RNNPose"
             },
             "1": {
                 "name": "Object",
@@ -815,7 +815,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose [12]"
+                "value": "SO-Pose"
             },
             "1": {
                 "name": "Object",
@@ -829,7 +829,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST [36]"
+                "value": "DProST"
             },
             "1": {
                 "name": "Object",
@@ -843,7 +843,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net [46]"
+                "value": "GDR-Net"
             },
             "1": {
                 "name": "Object",
@@ -857,7 +857,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose [43]"
+                "value": "ZebraPose"
             },
             "1": {
                 "name": "Object",
@@ -899,7 +899,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RePOSE [25]"
+                "value": "RePOSE"
             },
             "1": {
                 "name": "Object",
@@ -913,7 +913,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RNNPose [50]"
+                "value": "RNNPose"
             },
             "1": {
                 "name": "Object",
@@ -927,7 +927,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "SO-Pose [12]"
+                "value": "SO-Pose"
             },
             "1": {
                 "name": "Object",
@@ -941,7 +941,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DProST [36]"
+                "value": "DProST"
             },
             "1": {
                 "name": "Object",
@@ -955,7 +955,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDR-Net [46]"
+                "value": "GDR-Net"
             },
             "1": {
                 "name": "Object",
@@ -969,7 +969,7 @@
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "ZebraPose [43]"
+                "value": "ZebraPose"
             },
             "1": {
                 "name": "Object",

@@ -2,12 +2,16 @@
     "0": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "Avg.",
@@ -16,12 +20,16 @@
     "1": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSPD",
@@ -30,12 +38,16 @@
     "2": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSSD",
@@ -44,12 +56,16 @@
     "3": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "VSD",
@@ -58,12 +74,16 @@
     "4": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "Avg.",
@@ -72,12 +92,16 @@
     "5": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSPD",
@@ -86,12 +110,16 @@
     "6": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSSD",
@@ -100,12 +128,16 @@
     "7": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "VSD",
@@ -114,12 +146,16 @@
     "8": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "Avg.",
@@ -128,12 +164,16 @@
     "9": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSPD",
@@ -142,12 +182,16 @@
     "10": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSSD",
@@ -156,12 +200,16 @@
     "11": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "VSD",
@@ -170,12 +218,16 @@
     "12": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "Avg.",
@@ -184,12 +236,16 @@
     "13": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSPD",
@@ -198,12 +254,16 @@
     "14": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSSD",
@@ -212,12 +272,16 @@
     "15": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "VSD",
@@ -226,12 +290,16 @@
     "16": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "Avg.",
@@ -240,12 +308,16 @@
     "17": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSPD",
@@ -254,12 +326,16 @@
     "18": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSSD",
@@ -268,12 +344,16 @@
     "19": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "VSD",
@@ -282,586 +362,718 @@
     "20": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
-            },
-            "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
-            }
-        },
-        "Measure": "Avg.",
-        "Outcome": "0.770"
-    },
-    "21": {
-        "specifications": {
-            "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
-            },
-            "1": {
-                "name": "Method Level 2",
+                "name": "Method",
                 "value": "CIR"
+            },
+            "1": {
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.715"
     },
-    "22": {
+    "21": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "CIR"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CIR"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.798"
     },
-    "23": {
+    "22": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "CIR"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CIR"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.684"
     },
-    "24": {
+    "23": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "CIR"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CIR"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "VSD",
         "Outcome": "0.663"
     },
-    "25": {
+    "24": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.728"
     },
-    "26": {
+    "25": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.821"
     },
-    "27": {
+    "26": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.695"
     },
-    "28": {
+    "27": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "Cosypose"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "VSD",
         "Outcome": "0.669"
     },
-    "29": {
+    "28": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.478"
     },
-    "30": {
+    "29": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.620"
     },
-    "31": {
+    "30": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.426"
     },
-    "32": {
+    "31": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB (Real+PBR)"
+                "name": "Method",
+                "value": "CDPNv2"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2"
+                "name": "Input Modality",
+                "value": "RGB"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "VSD",
         "Outcome": "0.386"
     },
-    "33": {
+    "32": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.801"
     },
-    "34": {
+    "33": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.833"
     },
-    "35": {
+    "34": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.807"
     },
-    "36": {
+    "35": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "VSD",
         "Outcome": "0.764"
     },
-    "37": {
+    "36": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.828"
     },
-    "38": {
+    "37": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.859"
     },
-    "39": {
+    "38": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.829"
     },
-    "40": {
+    "39": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "SurfEmb"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "VSD",
         "Outcome": "0.797"
     },
-    "41": {
+    "40": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.435"
     },
-    "42": {
+    "41": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.488"
     },
-    "43": {
+    "42": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.449"
     },
-    "44": {
+    "43": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "PBR"
             }
         },
         "Measure": "VSD",
         "Outcome": "0.368"
     },
-    "45": {
+    "44": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.850"
     },
-    "46": {
+    "45": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.878"
     },
-    "47": {
+    "46": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.856"
     },
-    "48": {
+    "47": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "PFA+Ours"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "PFA+Ours"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "VSD",
         "Outcome": "0.816"
     },
-    "49": {
+    "48": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
-            },
-            "1": {
-                "name": "Method Level 2",
-                "value": "SurfEmb"
-            }
-        },
-        "Measure": "Avg.",
-        "Outcome": "0.833"
-    },
-    "50": {
-        "specifications": {
-            "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
-            },
-            "1": {
-                "name": "Method Level 2",
+                "name": "Method",
                 "value": "CIR"
+            },
+            "1": {
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.776"
     },
-    "51": {
+    "49": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "CIR"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CIR"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.795"
     },
-    "52": {
+    "50": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "CIR"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CIR"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.773"
     },
-    "53": {
+    "51": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "CIR"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CIR"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "VSD",
         "Outcome": "0.760"
     },
-    "54": {
+    "52": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.701"
     },
-    "55": {
+    "53": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.767"
     },
-    "56": {
+    "54": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.749"
     },
-    "57": {
+    "55": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "Cosypose+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "VSD",
         "Outcome": "0.587"
     },
-    "58": {
+    "56": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "Avg.",
         "Outcome": "0.464"
     },
-    "59": {
+    "57": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSPD",
         "Outcome": "0.516"
     },
-    "60": {
+    "58": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "MSSD",
         "Outcome": "0.489"
     },
-    "61": {
+    "59": {
         "specifications": {
             "0": {
-                "name": "Method Level 1",
-                "value": "RGB-D (Real+PBR)"
+                "name": "Method",
+                "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "Method Level 2",
-                "value": "CDPNv2+ICP"
+                "name": "Input Modality",
+                "value": "RGB-D"
+            },
+            "2": {
+                "name": "Data Type",
+                "value": "Real+PBR"
             }
         },
         "Measure": "VSD",

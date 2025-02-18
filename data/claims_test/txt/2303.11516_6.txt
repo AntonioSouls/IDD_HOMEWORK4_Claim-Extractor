@@ -1,0 +1,116 @@
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Distribution Representation",
+                "value": "Laplace"
+            },
+            "1": {
+                "name": "Pose Representation",
+                "value": "ours-3D"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "66.48"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Distribution Representation",
+                "value": "Laplace"
+            },
+            "1": {
+                "name": "Pose Representation",
+                "value": "quaternions"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "66.72"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Distribution Representation",
+                "value": "Laplace"
+            },
+            "1": {
+                "name": "Pose Representation",
+                "value": "axis-angles"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "65.85"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Distribution Representation",
+                "value": "Laplace"
+            },
+            "1": {
+                "name": "Pose Representation",
+                "value": "two-column"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "66.39"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Distribution Representation",
+                "value": "Gaussian"
+            },
+            "1": {
+                "name": "Pose Representation",
+                "value": "ours-3D"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "61.90"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Distribution Representation",
+                "value": "Gaussian"
+            },
+            "1": {
+                "name": "Pose Representation",
+                "value": "quaternions"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "60.72"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Distribution Representation",
+                "value": "Gaussian"
+            },
+            "1": {
+                "name": "Pose Representation",
+                "value": "axis-angles"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "59.79"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Distribution Representation",
+                "value": "Gaussian"
+            },
+            "1": {
+                "name": "Pose Representation",
+                "value": "two-column"
+            }
+        },
+        "Measure": "ADD(-S) score",
+        "Outcome": "60.37"
+    }
+}
+```

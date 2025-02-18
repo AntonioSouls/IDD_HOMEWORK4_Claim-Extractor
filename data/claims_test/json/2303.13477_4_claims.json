@@ -1,0 +1,102 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF"
+            }
+        },
+        "Measure": "Cls Avg. Accuracy",
+        "Outcome": "89.0"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF"
+            }
+        },
+        "Measure": "Cabinet Accuracy",
+        "Outcome": "91.0"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF"
+            }
+        },
+        "Measure": "Chair Accuracy",
+        "Outcome": "90.6"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF"
+            }
+        },
+        "Measure": "Display Accuracy",
+        "Outcome": "96.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ELLIPSDF"
+            }
+        },
+        "Measure": "Table Accuracy",
+        "Outcome": "77.3"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Cls Avg. Accuracy",
+        "Outcome": "94.3"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Cabinet Accuracy",
+        "Outcome": "92.4"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Chair Accuracy",
+        "Outcome": "98.5"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Display Accuracy",
+        "Outcome": "93.8"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "TransPoser"
+            }
+        },
+        "Measure": "Table Accuracy",
+        "Outcome": "92.4"
+    }
+}

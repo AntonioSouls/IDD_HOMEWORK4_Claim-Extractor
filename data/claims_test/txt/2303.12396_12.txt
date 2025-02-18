@@ -1,0 +1,508 @@
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.353"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.484"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.306"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.269"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.413"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.552"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.363"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.324"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.216"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.300"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.177"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.172"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.067"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.161"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.087"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.059"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.460"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.498"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.495"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PFA+Ours"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.413"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.538"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.560"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.558"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SurfEmb"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.497"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.381"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.370"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.379"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CIR"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.394"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.313"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.315"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.341"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Cosypose+ICP"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.282"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "Avg.",
+        "Outcome": "0.186"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSPD",
+        "Outcome": "0.184"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "MSSD",
+        "Outcome": "0.206"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CDPNv2+ICP"
+            },
+            "1": {
+                "name": "Input Type",
+                "value": "RGB-D (PBR)"
+            }
+        },
+        "Measure": "VSD",
+        "Outcome": "0.168"
+    }
+}
+```

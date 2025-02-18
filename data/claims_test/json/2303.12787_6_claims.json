@@ -1,0 +1,786 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOS3D \u00a7\u2020\\xa0[44]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.428"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOS3D \u00a7\u2020\\xa0[44]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.358"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOS3D \u00a7\u2020\\xa0[44]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.690"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOS3D \u00a7\u2020\\xa0[44]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mASE\u2193",
+        "Outcome": "0.249"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOS3D \u00a7\u2020\\xa0[44]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.452"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOS3D \u00a7\u2020\\xa0[44]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAVE\u2193",
+        "Outcome": "1.434"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FCOS3D \u00a7\u2020\\xa0[44]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAAE\u2193",
+        "Outcome": "0.124"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PGD \u00a7\\xa0[1]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.448"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PGD \u00a7\\xa0[1]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.386"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PGD \u00a7\\xa0[1]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.626"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PGD \u00a7\\xa0[1]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mASE\u2193",
+        "Outcome": "0.245"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PGD \u00a7\\xa0[1]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.451"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PGD \u00a7\\xa0[1]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAVE\u2193",
+        "Outcome": "1.509"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PGD \u00a7\\xa0[1]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAAE\u2193",
+        "Outcome": "0.127"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.455"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.391"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.647"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mASE\u2193",
+        "Outcome": "0.251"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.433"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAVE\u2193",
+        "Outcome": "0.933"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAAE\u2193",
+        "Outcome": "0.143"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BEVFormer\\xa0[54]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.462"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BEVFormer\\xa0[54]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.409"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BEVFormer\\xa0[54]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.650"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BEVFormer\\xa0[54]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mASE\u2193",
+        "Outcome": "0.261"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BEVFormer\\xa0[54]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.439"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BEVFormer\\xa0[54]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAVE\u2193",
+        "Outcome": "0.925"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BEVFormer\\xa0[54]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAAE\u2193",
+        "Outcome": "0.147"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PolarFormer\\xa0[55]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.470"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PolarFormer\\xa0[55]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.415"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PolarFormer\\xa0[55]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.657"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PolarFormer\\xa0[55]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mASE\u2193",
+        "Outcome": "0.263"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PolarFormer\\xa0[55]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.405"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PolarFormer\\xa0[55]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAVE\u2193",
+        "Outcome": "0.911"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PolarFormer\\xa0[55]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAAE\u2193",
+        "Outcome": "0.139"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "Swin-B"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.483"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "Swin-B"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.445"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "Swin-B"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.627"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "Swin-B"
+            }
+        },
+        "Measure": "mASE\u2193",
+        "Outcome": "0.249"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "Swin-B"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.449"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "Swin-B"
+            }
+        },
+        "Measure": "mAVE\u2193",
+        "Outcome": "0.927"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PETR\\xa0[53]"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "Swin-B"
+            }
+        },
+        "Measure": "mAAE\u2193",
+        "Outcome": "0.141"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.481"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.409"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.559"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mASE\u2193",
+        "Outcome": "0.239"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.325"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAVE\u2193",
+        "Outcome": "1.090"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAAE\u2193",
+        "Outcome": "0.115"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours \u00a7"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "NDS\u2191",
+        "Outcome": "0.490"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours \u00a7"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAP\u2191",
+        "Outcome": "0.423"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours \u00a7"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mATE\u2193",
+        "Outcome": "0.547"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours \u00a7"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mASE\u2193",
+        "Outcome": "0.236"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours \u00a7"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAOE\u2193",
+        "Outcome": "0.302"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours \u00a7"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAVE\u2193",
+        "Outcome": "1.071"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Ours \u00a7"
+            },
+            "1": {
+                "name": "Backbone",
+                "value": "R101"
+            }
+        },
+        "Measure": "mAAE\u2193",
+        "Outcome": "0.123"
+    }
+}

@@ -1,168 +1,146 @@
-The user wants to extract claims from a table represented in a JSON object.
-Each claim should have a 'specifications', 'Measure', and 'Outcome'.
-The 'specifications' are key-value pairs derived from the table's row and column headers.
-The 'Measure' can be found in the table, caption, or references.
-The 'Outcome' is the value associated with the 'Measure'.
-
-Let's analyze the provided example:
 ```json
-{'table': [['Iteration', '1.0', '2.0', '3.0', '4.0', '5.0'], ['noise \\epsilon_{t}', '48.6', '43.5', '41.0', '40.5', '40.0'], ['original data \\bm{y}_{0}', '39.9', '39.9', '39.8', '39.8', '39.7']], 'caption': 'Table 6: Performance of two regression targets after each iteration. MPJPE↓↓\\downarrow is reported. H=K=5. J-Agg is used.', 'references': []}
-```
-
-The table headers are 'Iteration', '1.0', '2.0', '3.0', '4.0', '5.0'.
-The row headers are 'noise \\epsilon_{t}' and 'original data \\bm{y}_{0}'.
-The caption mentions "MPJPE↓↓\\downarrow is reported". This looks like the Measure.
-
-Let's try to extract claims based on 'noise \\epsilon_{t}' row:
-- For Iteration 1.0, Measure is MPJPE, Outcome is 48.6
-- For Iteration 2.0, Measure is MPJPE, Outcome is 43.5
-- ... and so on.
-
-Let's try to extract claims based on 'original data \\bm{y}_{0}' row:
-- For Iteration 1.0, Measure is MPJPE, Outcome is 39.9
-- For Iteration 2.0, Measure is MPJPE, Outcome is 39.9
-- ... and so on.
-
-The structure of specifications should be based on the row and column headers.```json
 {
     "0": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "1.0"
+                "name": "Regression targets",
+                "value": "noise Îµt"
             },
             "1": {
-                "name": "regression targets",
-                "value": "noise \\epsilon_{t}"
+                "name": "Iteration",
+                "value": "1.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "48.6"
     },
     "1": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "2.0"
+                "name": "Regression targets",
+                "value": "noise Îµt"
             },
             "1": {
-                "name": "regression targets",
-                "value": "noise \\epsilon_{t}"
+                "name": "Iteration",
+                "value": "2.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "43.5"
     },
     "2": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "3.0"
+                "name": "Regression targets",
+                "value": "noise Îµt"
             },
             "1": {
-                "name": "regression targets",
-                "value": "noise \\epsilon_{t}"
+                "name": "Iteration",
+                "value": "3.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "41.0"
     },
     "3": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "4.0"
+                "name": "Regression targets",
+                "value": "noise Îµt"
             },
             "1": {
-                "name": "regression targets",
-                "value": "noise \\epsilon_{t}"
+                "name": "Iteration",
+                "value": "4.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "40.5"
     },
     "4": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "5.0"
+                "name": "Regression targets",
+                "value": "noise Îµt"
             },
             "1": {
-                "name": "regression targets",
-                "value": "noise \\epsilon_{t}"
+                "name": "Iteration",
+                "value": "5.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "40.0"
     },
     "5": {
+        ```json
+{
+    "5": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "1.0"
+                "name": "Regression targets",
+                "value": "original data \\bm{y}_{0}"
             },
             "1": {
-                "name": "regression targets",
-                "value": "original data \\bm{y}_{0}"
+                "name": "Iteration",
+                "value": "1.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "39.9"
     },
     "6": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "2.0"
+                "name": "Regression targets",
+                "value": "original data \\bm{y}_{0}"
             },
             "1": {
-                "name": "regression targets",
-                "value": "original data \\bm{y}_{0}"
+                "name": "Iteration",
+                "value": "2.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "39.9"
     },
     "7": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "3.0"
+                "name": "Regression targets",
+                "value": "original data \\bm{y}_{0}"
             },
             "1": {
-                "name": "regression targets",
-                "value": "original data \\bm{y}_{0}"
+                "name": "Iteration",
+                "value": "3.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "39.8"
     },
     "8": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "4.0"
+                "name": "Regression targets",
+                "value": "original data \\bm{y}_{0}"
             },
             "1": {
-                "name": "regression targets",
-                "value": "original data \\bm{y}_{0}"
+                "name": "Iteration",
+                "value": "4.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "39.8"
     },
     "9": {
         "specifications": {
             "0": {
-                "name": "Iteration",
-                "value": "5.0"
+                "name": "Regression targets",
+                "value": "original data \\bm{y}_{0}"
             },
             "1": {
-                "name": "regression targets",
-                "value": "original data \\bm{y}_{0}"
+                "name": "Iteration",
+                "value": "5.0"
             }
         },
-        "Measure": "MPJPE",
+        "Measure": "MPJPE↓↓↓",
         "Outcome": "39.7"
     }
 }

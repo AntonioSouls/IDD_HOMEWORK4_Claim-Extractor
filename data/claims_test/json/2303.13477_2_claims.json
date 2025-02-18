@@ -1,0 +1,82 @@
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "DIST"
+            }
+        },
+        "Measure": "Time",
+        "Outcome": "0.27 sec"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "DIST"
+            }
+        },
+        "Measure": "Memory",
+        "Outcome": "5.4 GB"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "DIST"
+            }
+        },
+        "Measure": "Shape Accuracy (Chair)",
+        "Outcome": "1.28"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "DIST"
+            }
+        },
+        "Measure": "Shape Accuracy (Table)",
+        "Outcome": "1.43"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "DeepDDF"
+            }
+        },
+        "Measure": "Time",
+        "Outcome": "0.04 sec"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "DeepDDF"
+            }
+        },
+        "Measure": "Memory",
+        "Outcome": "5.0 GB"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "DeepDDF"
+            }
+        },
+        "Measure": "Shape Accuracy (Chair)",
+        "Outcome": "0.83"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Model",
+                "value": "DeepDDF"
+            }
+        },
+        "Measure": "Shape Accuracy (Table)",
+        "Outcome": "0.91"
+    }
+}

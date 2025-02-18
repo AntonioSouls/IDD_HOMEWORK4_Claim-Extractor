@@ -1,53 +1,10 @@
-The user wants to extract claims from a table provided in a JSON format.
-Each claim should have a "specifications", a "Measure", and an "Outcome".
-The "specifications" are key-value pairs from the table headers and rows.
-The "Measure" and "Outcome" are a value from the table and the corresponding header.
-The "Measure" can be found in the table, caption, or references.
-
-Let's analyze the example:
 ```json
-{
-    "0": {   # first claim
-        "specifications": {
-            "0": {"name": "Model", "value": "Full Fine-tuning"},
-            "1": {"name": "# Params.", "value": "1.8B"},
-        },
-        "Measure": "VS",
-        "Outcome": "5.3"
-    },
-    "1": { ... } # second claim and so on
-}
-```
-
-Now let's analyze the provided table:
-```json
-{'table': [['Method', 'Type', 'ADD(-S)', 'ADD(-S)', 'ADD(-S)'], ['Method', 'Type', '0.02d', '0.05d', '0.1d'], ['CDPN\xa0[18]', 'PnP + Explicit depth', '-', '-', '89.86'], ['HybridPose\xa0[14]', 'Hybrid constraints', '-', '-', '91.30'], ['GDRNet*\xa0[43]', 'PnP + Explicit depth', '35.60', '76.00', '93.60'], ['DPOD\xa0[8]', 'PnP + Explicit refiner', '-', '-', '95.15'], ['PVNet-RePOSE\xa0[7]', 'PnP + Implicit refiner', '-', '-', '96.10'], ['PVNet-RNNPose\xa0[42]', 'PnP + Implicit refiner', '50.39', '85.56', '97.37'], ['Ours', 'PnP', '43.77', '81.73', '96.36']], 'caption': 'TABLE IV: Comparison to the state-of-the-art geometric methods. BPnP\xa0[12] is not included as it adopts a different train/test split. *Although GDRNet\xa0[43] only reports the performance in its ablation section, it is still a fair comparison to our method, since both use the same baseline (CDPN).', 'references': []}
-```
-
-The table has two header rows.  We need to combine them to form the "name" in the specifications.
-
-For each row in the table (starting from the third row), we can create multiple claims based on the values in the cells.
-The "specifications" will be the values from the first two columns.
-The "Measure" will be the header of the current column.
-The "Outcome" will be the value in the current cell.
-
-Let's start with the first data row: `['CDPN\xa0[18]', 'PnP + Explicit depth', '-', '-', '89.86']`
-- Method: CDPN\xa0[18], Type: PnP + Explicit depth, ADD(-S) 0.1d: 89.86
-
-Let's consider the structure of the desired output. It's a JSON object where keys are sequential numbers starting from "0". Each value is another JSON object representing a claim.
-
-Plan:
-1. Iterate through the data rows (starting from index 2).
-2. For each data row, iterate through the columns (starting from index 2).
-3. Extract the specifications from the first two columns.
-4. Extract the Measure from the column headers.
-5. Extract the Outcome from the current cell.```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CDPN\u00a0[18]"
+                "value": "CDPN"
             },
             "1": {
                 "name": "Type",
@@ -61,7 +18,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "HybridPose\u00a0[14]"
+                "value": "HybridPose"
             },
             "1": {
                 "name": "Type",
@@ -75,7 +32,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDRNet*\u00a0[43]"
+                "value": "GDRNet*"
             },
             "1": {
                 "name": "Type",
@@ -89,7 +46,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDRNet*\u00a0[43]"
+                "value": "GDRNet*"
             },
             "1": {
                 "name": "Type",
@@ -103,7 +60,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "GDRNet*\u00a0[43]"
+                "value": "GDRNet*"
             },
             "1": {
                 "name": "Type",
@@ -117,7 +74,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "DPOD\u00a0[8]"
+                "value": "DPOD"
             },
             "1": {
                 "name": "Type",
@@ -131,7 +88,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PVNet-RePOSE\u00a0[7]"
+                "value": "PVNet-RePOSE"
             },
             "1": {
                 "name": "Type",
@@ -145,7 +102,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PVNet-RNNPose\u00a0[42]"
+                "value": "PVNet-RNNPose"
             },
             "1": {
                 "name": "Type",
@@ -159,7 +116,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PVNet-RNNPose\u00a0[42]"
+                "value": "PVNet-RNNPose"
             },
             "1": {
                 "name": "Type",
@@ -173,7 +130,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PVNet-RNNPose\u00a0[42]"
+                "value": "PVNet-RNNPose"
             },
             "1": {
                 "name": "Type",

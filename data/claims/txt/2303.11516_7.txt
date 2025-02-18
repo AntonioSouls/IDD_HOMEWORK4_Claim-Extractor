@@ -1,66 +1,4 @@
-The user wants to extract claims from a table represented in a JSON format.
-Each claim should have a "specifications", "Measure", and "Outcome".
-The "specifications" are determined by the row headers and their values.
-The "Measure" and "Outcome" are obtained from the table data. The "Measure" can potentially be in the caption or references.
-
-Let's analyze the example input:
 ```json
-{'table': [['Row', 'Method', 'ADD(-S)'], ['A0', 'ZebraPose\xa0[43]', '76.91'], ['A1', 'ZebraPose baseline', '75.19'], ['A2', 'A1 + LC loss', '78.06']], 'caption': 'Table 7: Results of the ZebraPose\xa0[43] based experiments on the LM-O dataset.', 'references': ['Results.\r\nAs shown in Tab.\xa07, after switching from the global vertex encoding to our coordinate-wise encoding (A0\xa0vs.\xa0A1), the performance drops by about 1.7 points. When the LC loss is applied, the performance drop is compensated, surpassing the original ZebraPose\xa0[43].']}
-```
-
-The table headers are 'Row', 'Method', and 'ADD(-S)'.
-Each row represents a different experiment/setting.
-The 'ADD(-S)' seems to be the "Measure".
-
-Let's break down the process for each row:
-
-Row 'A0':
-- specifications: {'0': {'name': 'Row', 'value': 'A0'}, '1': {'name': 'Method', 'value': 'ZebraPose\xa0[43]'}}
-- Measure: 'ADD(-S)'
-- Outcome: '76.91'
-
-Row 'A1':
-- specifications: {'0': {'name': 'Row', 'value': 'A1'}, '1': {'name': 'Method', 'value': 'ZebraPose baseline'}}
-- Measure: 'ADD(-S)'
-- Outcome: '75.19'
-
-Row 'A2':
-- specifications: {'0': {'name': 'Row', 'value': 'A2'}, '1': {'name': 'Method', 'value': 'A1 + LC loss'}}
-- Measure: 'ADD(-S)'
-- Outcome: '78.06'
-
-Considering the caption and references, they might provide context but the 'ADD(-S)' is clearly present in the table header.
-
-The final JSON structure should be:
-```json
-{
-    "0": {
-        "specifications": {
-            "0": {"name": "Row", "value": "A0"},
-            "1": {"name": "Method", "value": "ZebraPose\xa0[43]"}
-        },
-        "Measure": "ADD(-S)",
-        "Outcome": "76.91"
-    },
-    "1": {
-        "specifications": {
-            "0": {"name": "Row", "value": "A1"},
-            "1": {"name": "Method", "value": "ZebraPose baseline"}
-        },
-        "Measure": "ADD(-S)",
-        "Outcome": "75.19"
-    },
-    "2": {
-        "specifications": {
-            "0": {"name": "Row", "value": "A2"},
-            "1": {"name": "Method", "value": "A1 + LC loss"}
-        },
-        "Measure": "ADD(-S)",
-        "Outcome": "78.06"
-    }
-}
-```
-This looks correct. I will now implement the extraction logic.```json
 {
     "0": {
         "specifications": {
@@ -70,7 +8,7 @@ This looks correct. I will now implement the extraction logic.```json
             },
             "1": {
                 "name": "Method",
-                "value": "ZebraPose\xa0[43]"
+                "value": "ZebraPose"
             }
         },
         "Measure": "ADD(-S)",

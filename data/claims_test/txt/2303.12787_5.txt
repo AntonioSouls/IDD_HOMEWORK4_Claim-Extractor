@@ -1,0 +1,308 @@
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{KL}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "NDS↑",
+        "Outcome": "0.447"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{KL}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mAP↑",
+        "Outcome": "0.380"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{KL}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mATE↓",
+        "Outcome": "0.656"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{KL}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mAOE↓",
+        "Outcome": "0.332"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "NDS↑",
+        "Outcome": "0.408"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mAP↑",
+        "Outcome": "0.363"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mATE↓",
+        "Outcome": "0.683"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mAOE↓",
+        "Outcome": "0.607"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "$\\mathcal{L}_{\\text{crd}}$",
+                "value": "✓"
+            },
+            "2": {
+                "name": "$\\mathcal{L}_{\\text{proj}}$",
+                "value": "✓"
+            },
+            "3": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "NDS↑",
+        "Outcome": "0.429"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "$\\mathcal{L}_{\\text{crd}}$",
+                "value": "✓"
+            },
+            "2": {
+                "name": "$\\mathcal{L}_{\\text{proj}}$",
+                "value": "✓"
+            },
+            "3": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mAP↑",
+        "Outcome": "0.363"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "$\\mathcal{L}_{\\text{crd}}$",
+                "value": "✓"
+            },
+            "2": {
+                "name": "$\\mathcal{L}_{\\text{proj}}$",
+                "value": "✓"
+            },
+            "3": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mATE↓",
+        "Outcome": "0.691"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "$\\mathcal{L}_{\\text{crd}}$",
+                "value": "✓"
+            },
+            "2": {
+                "name": "$\\mathcal{L}_{\\text{proj}}$",
+                "value": "✓"
+            },
+            "3": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mAOE↓",
+        "Outcome": "0.397"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{KL}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "2": {
+                "name": "$\\mathcal{L}_{\\text{crd}}$",
+                "value": "✓"
+            },
+            "3": {
+                "name": "$\\mathcal{L}_{\\text{proj}}$",
+                "value": "✓"
+            },
+            "4": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "NDS↑",
+        "Outcome": "0.463"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{KL}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "2": {
+                "name": "$\\mathcal{L}_{\\text{crd}}$",
+                "value": "✓"
+            },
+            "3": {
+                "name": "$\\mathcal{L}_{\\text{proj}}$",
+                "value": "✓"
+            },
+            "4": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mAP↑",
+        "Outcome": "0.392"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{KL}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "2": {
+                "name": "$\\mathcal{L}_{\\text{crd}}$",
+                "value": "✓"
+            },
+            "3": {
+                "name": "$\\mathcal{L}_{\\text{proj}}$",
+                "value": "✓"
+            },
+            "4": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mATE↓",
+        "Outcome": "0.626"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "$\\mathcal{L}_{\\text{KL}}$",
+                "value": "✓"
+            },
+            "1": {
+                "name": "$\\mathcal{L}_{\\text{reg}}$",
+                "value": "✓"
+            },
+            "2": {
+                "name": "$\\mathcal{L}_{\\text{crd}}$",
+                "value": "✓"
+            },
+            "3": {
+                "name": "$\\mathcal{L}_{\\text{proj}}$",
+                "value": "✓"
+            },
+            "4": {
+                "name": "Dataset",
+                "value": "nuScenes validation set"
+            }
+        },
+        "Measure": "mAOE↓",
+        "Outcome": "0.282"
+    }
+}
+```

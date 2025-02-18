@@ -1,29 +1,4 @@
-The user wants to extract claims from a JSON object containing a table, a caption, and references.
-Each claim should have a "specifications", a "Measure", and an "Outcome".
-The "specifications" are key-value pairs from the table's row.
-The "Measure" can be found in the table, caption, or references.
-The "Outcome" is the value associated with the "Measure" in the table.
-
-Based on the provided example:
-- The first row of the table seems to define the column names.
-- Subsequent rows represent different entities.
-- For each entity, we need to find claims by combining specifications (column name and value) with a Measure and its corresponding Outcome.
-
-Let's analyze the example input:
 ```json
-{'table': [['Method', 'Avg.', 'MSPD', 'MSSD', 'VSD'], ['WDR + Ours', '0.605', '0.694', '0.598', '0.522'], ['WDR + RCNN', '0.587', '0.673', '0.580', '0.508'], ['WDR + FCOSv2', '0.585', '0.671', '0.578', '0.506'], ['CDPNv2 + Ours', '0.412', '0.534', '0.428', '0.275'], ['CDPNv2 + FCOSv2', '0.402', '0.523', '0.416', '0.268'], ['CDPNv2 + RCNN', '0.388', '0.506', '0.401', '0.258']], 'caption': 'Table 6: \r\nEffect on different pose regression networks.\r\nOur detection method consistently improves the results of different pose regression frameworks, including WDR\xa0[19] and CDPNv2\xa0[26]. Here we denote Mask R-CNN\xa0[10] as “RCNN’.\r\n', 'references': ['Evaluation with different pose regression networks.\r\nIn principle, our detection method can be used with most pose regression frameworks as a first component to extract the object’s bounding box before pose regression.\r\nTo demonstrate its generalization ability, we test our detection method on YCB with two other typical pose regression networks, WDR-Pose\xa0[19] and CDPNv2\xa0[26].\r\nTable\xa06 provides the results, evidencing that our detection method consistently improves the pose results.']}
-```
-
-The column names are: 'Method', 'Avg.', 'MSPD', 'MSSD', 'VSD'.
-For the first data row: ['WDR + Ours', '0.605', '0.694', '0.598', '0.522']
-
-Possible claims:
-- Specification: {'0': {'name': 'Method', 'value': 'WDR + Ours'}}, Measure: 'Avg.', Outcome: '0.605'
-- Specification: {'0': {'name': 'Method', 'value': 'WDR + Ours'}}, Measure: 'MSPD', Outcome: '0.694'
-- Specification: {'0': {'name': 'Method', 'value': 'WDR + Ours'}}, Measure: 'MSSD', Outcome: '0.598'
-- Specification: {'0': {'name': 'Method', 'value': 'WDR + Ours'}}, Measure: 'VSD', Outcome: '0.522'
-
-Let's try to extract claims for all rows.```json
 {
     "0": {
         "specifications": {

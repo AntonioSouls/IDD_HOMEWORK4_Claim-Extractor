@@ -1,26 +1,10 @@
-The user wants to extract claims from a table represented in a JSON format. Each claim should have a 'specifications', a 'Measure', and an 'Outcome'.
-
-The 'specifications' come from the row headers and the values in a row.
-The 'Measure' and 'Outcome' come from a column, where the column header is the 'Measure' and the value in the row is the 'Outcome'.
-
-Need to iterate through each row of the table (excluding the header row).
-For each row, iterate through each column (excluding the columns used for specifications).
-For each cell considered as a potential 'Outcome', the corresponding column header is the 'Measure', and the values in the other columns form the 'specifications'.
-
-Let's consider the first data row: `['PoseFormer\xa0[70]', '1', 'nan', '44.3', '9.5', '0.81', '1.62', '1952']`
-Possible measures and outcomes based on this row:
-- Measure: 'H', Outcome: '1', Specifications: {'Method': 'PoseFormer\xa0[70]', 'K': 'nan', 'MPJPE\\downarrow': '44.3', 'Params(M)': '9.5', 'Train. MACs(G)': '0.81', 'Infer. MACs(G)': '1.62', 'Infer. FPS': '1952'}
-- Measure: 'K', Outcome: 'nan', Specifications: {'Method': 'PoseFormer\xa0[70]', 'H': '1', 'MPJPE\\downarrow': '44.3', 'Params(M)': '9.5', 'Train. MACs(G)': '0.81', 'Infer. MACs(G)': '1.62', 'Infer. FPS': '1952'}
-- Measure: 'MPJPE\\downarrow', Outcome: '44.3', Specifications: {'Method': 'PoseFormer\xa0[70]', 'H': '1', 'K': 'nan', 'Params(M)': '9.5', 'Train. MACs(G)': '0.81', 'Infer. MACs(G)': '1.62', 'Infer. FPS': '1952'}
-... and so on.
-
-Need to structure the output as a JSON object.```json
+```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer"
             },
             "1": {
                 "name": "H",
@@ -31,14 +15,14 @@ Need to structure the output as a JSON object.```json
                 "value": "nan"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "44.3"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer"
             },
             "1": {
                 "name": "H",
@@ -56,7 +40,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer"
             },
             "1": {
                 "name": "H",
@@ -74,7 +58,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer"
             },
             "1": {
                 "name": "H",
@@ -92,7 +76,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
+                "value": "PoseFormer"
             },
             "1": {
                 "name": "H",
@@ -110,7 +94,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer"
             },
             "1": {
                 "name": "H",
@@ -121,14 +105,14 @@ Need to structure the output as a JSON object.```json
                 "value": "nan"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "43.1"
     },
     "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer"
             },
             "1": {
                 "name": "H",
@@ -146,7 +130,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer"
             },
             "1": {
                 "name": "H",
@@ -164,7 +148,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer"
             },
             "1": {
                 "name": "H",
@@ -182,7 +166,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MHFormer\u00a0[36]"
+                "value": "MHFormer"
             },
             "1": {
                 "name": "H",
@@ -200,7 +184,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO"
             },
             "1": {
                 "name": "H",
@@ -211,14 +195,14 @@ Need to structure the output as a JSON object.```json
                 "value": "nan"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "42.8"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO"
             },
             "1": {
                 "name": "H",
@@ -236,7 +220,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO"
             },
             "1": {
                 "name": "H",
@@ -254,7 +238,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO"
             },
             "1": {
                 "name": "H",
@@ -272,7 +256,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "P-STMO\u00a0[51]"
+                "value": "P-STMO"
             },
             "1": {
                 "name": "H",
@@ -290,7 +274,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE"
             },
             "1": {
                 "name": "H",
@@ -301,14 +285,14 @@ Need to structure the output as a JSON object.```json
                 "value": "nan"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "41.0"
     },
     "16": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE"
             },
             "1": {
                 "name": "H",
@@ -326,7 +310,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE"
             },
             "1": {
                 "name": "H",
@@ -344,7 +328,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE"
             },
             "1": {
                 "name": "H",
@@ -362,7 +346,7 @@ Need to structure the output as a JSON object.```json
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "MixSTE\u00a0[68]"
+                "value": "MixSTE"
             },
             "1": {
                 "name": "H",
@@ -391,7 +375,7 @@ Need to structure the output as a JSON object.```json
                 "value": "1"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "40.0"
     },
     "21": {
@@ -481,7 +465,7 @@ Need to structure the output as a JSON object.```json
                 "value": "5"
             }
         },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "39.7"
     },
     "26": {
@@ -571,652 +555,7 @@ Need to structure the output as a JSON object.```json
                 "value": "10"
             }
         },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "39.5"
-    },
-    "31": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "20"
-            },
-            "2": {
-                "name": "K",
-                "value": "10"
-            }
-        },
-        "Measure": "Params(M)",
-        "Outcome": "34.6"
-    },
-    "32": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "20"
-            },
-            "2": {
-                "name": "K",
-                "value": "10"
-            }
-        },
-        "Measure": "Train. MACs(G)",
-        "Outcome": "0.57"
-    },
-    "33": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "20"
-            },
-            "2": {
-                "name": "K",
-                "value": "10"
-            }
-        },
-        "Measure": "Infer. MACs(G)",
-        "Outcome": "228.2"
-    },
-    "34": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "20"
-            },
-            "2": {
-                "name": "K",
-                "value": "10"
-            }
-        },
-        "Measure": "Infer. FPS",
-        "Outcome": "29"
-    }
-}
-```The user wants to extract claims from a table within a JSON object.
-Each claim should have "specifications", "Measure", and "Outcome".
-"specifications" are derived from row headers and cell values in a row.
-"Measure" is a column header, and "Outcome" is the corresponding cell value in the row.
-
-Steps:
-1. Extract the table from the JSON object.
-2. Get the header row of the table.
-3. Iterate through each data row (excluding the header).
-4. For each data row, iterate through each column (excluding the columns used for specifications).
-5. For each cell in the data row, consider its column header as the "Measure" and the cell value as the "Outcome".
-6. The "specifications" are the remaining columns in the current row, where the column header is the "name" and the cell value is the "value".
-7. Construct the JSON object of claims.```json
-{
-    "0": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "44.3"
-    },
-    "1": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Params(M)",
-        "Outcome": "9.5"
-    },
-    "2": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Train. MACs(G)",
-        "Outcome": "0.81"
-    },
-    "3": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Infer. MACs(G)",
-        "Outcome": "1.62"
-    },
-    "4": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "PoseFormer\u00a0[70]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Infer. FPS",
-        "Outcome": "1952"
-    },
-    "5": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MHFormer\u00a0[36]"
-            },
-            "1": {
-                "name": "H",
-                "value": "3"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "43.1"
-    },
-    "6": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MHFormer\u00a0[36]"
-            },
-            "1": {
-                "name": "H",
-                "value": "3"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Params(M)",
-        "Outcome": "24.7"
-    },
-    "7": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MHFormer\u00a0[36]"
-            },
-            "1": {
-                "name": "H",
-                "value": "3"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Train. MACs(G)",
-        "Outcome": "4.81"
-    },
-    "8": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MHFormer\u00a0[36]"
-            },
-            "1": {
-                "name": "H",
-                "value": "3"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Infer. MACs(G)",
-        "Outcome": "9.62"
-    },
-    "9": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MHFormer\u00a0[36]"
-            },
-            "1": {
-                "name": "H",
-                "value": "3"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Infer. FPS",
-        "Outcome": "598"
-    },
-    "10": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "P-STMO\u00a0[51]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "42.8"
-    },
-    "11": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "P-STMO\u00a0[51]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Params(M)",
-        "Outcome": "6.7"
-    },
-    "12": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "P-STMO\u00a0[51]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Train. MACs(G)",
-        "Outcome": "0.87"
-    },
-    "13": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "P-STMO\u00a0[51]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Infer. MACs(G)",
-        "Outcome": "1.74"
-    },
-    "14": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "P-STMO\u00a0[51]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Infer. FPS",
-        "Outcome": "3040"
-    },
-    "15": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MixSTE\u00a0[68]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "41.0"
-    },
-    "16": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MixSTE\u00a0[68]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Params(M)",
-        "Outcome": "33.6"
-    },
-    "17": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MixSTE\u00a0[68]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Train. MACs(G)",
-        "Outcome": "0.57"
-    },
-    "18": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MixSTE\u00a0[68]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Infer. MACs(G)",
-        "Outcome": "1.14"
-    },
-    "19": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "MixSTE\u00a0[68]"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "nan"
-            }
-        },
-        "Measure": "Infer. FPS",
-        "Outcome": "4547"
-    },
-    "20": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "1"
-            }
-        },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "40.0"
-    },
-    "21": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "1"
-            }
-        },
-        "Measure": "Params(M)",
-        "Outcome": "34.6"
-    },
-    "22": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "1"
-            }
-        },
-        "Measure": "Train. MACs(G)",
-        "Outcome": "0.57"
-    },
-    "23": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "1"
-            }
-        },
-        "Measure": "Infer. MACs(G)",
-        "Outcome": "1.14"
-    },
-    "24": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "1"
-            },
-            "2": {
-                "name": "K",
-                "value": "1"
-            }
-        },
-        "Measure": "Infer. FPS",
-        "Outcome": "4364"
-    },
-    "25": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "5"
-            },
-            "2": {
-                "name": "K",
-                "value": "5"
-            }
-        },
-        "Measure": "MPJPE\\downarrow",
-        "Outcome": "39.7"
-    },
-    "26": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "5"
-            },
-            "2": {
-                "name": "K",
-                "value": "5"
-            }
-        },
-        "Measure": "Params(M)",
-        "Outcome": "34.6"
-    },
-    "27": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "5"
-            },
-            "2": {
-                "name": "K",
-                "value": "5"
-            }
-        },
-        "Measure": "Train. MACs(G)",
-        "Outcome": "0.57"
-    },
-    "28": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "5"
-            },
-            "2": {
-                "name": "K",
-                "value": "5"
-            }
-        },
-        "Measure": "Infer. MACs(G)",
-        "Outcome": "28.5"
-    },
-    "29": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "5"
-            },
-            "2": {
-                "name": "K",
-                "value": "5"
-            }
-        },
-        "Measure": "Infer. FPS",
-        "Outcome": "204"
-    },
-    "30": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "D3DP"
-            },
-            "1": {
-                "name": "H",
-                "value": "20"
-            },
-            "2": {
-                "name": "K",
-                "value": "10"
-            }
-        },
-        "Measure": "MPJPE\\downarrow",
+        "Measure": "MPJPE↓",
         "Outcome": "39.5"
     },
     "31": {

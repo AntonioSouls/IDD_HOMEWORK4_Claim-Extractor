@@ -1,0 +1,200 @@
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPIN [18]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "153.4"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPIN [18]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "V2V",
+        "Outcome": "148.9"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE [16]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "146.2"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE [16]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "V2V",
+        "Outcome": "140.9"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ROMP [34]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "108.1"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ROMP [34]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "V2V",
+        "Outcome": "103.4"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BEV [35]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "105.3"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BEV [35]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "V2V",
+        "Outcome": "100.7"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Hand4Whole [35]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "89.8"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Hand4Whole [35]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "V2V",
+        "Outcome": "84.8"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF [20]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "81.0"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF [20]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "V2V",
+        "Outcome": "76.0"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "MJE",
+        "Outcome": "79.9"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "AGORA"
+            }
+        },
+        "Measure": "V2V",
+        "Outcome": "74.5"
+    }
+}
+```

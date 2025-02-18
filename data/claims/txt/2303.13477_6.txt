@@ -1,585 +1,507 @@
-The user wants to extract claims from a JSON object representing a table.
-Each claim should follow a specific format containing "specifications", "Measure", and "Outcome".
-The "Measure" needs to be identified from the table, caption, or references.
-The "Outcome" is the value associated with the "Measure".
-
-Let's analyze the example provided:
 ```json
-{
-    "table": [
-        [
-            "Model",
-            "Class avg.",
-            "Class avg.",
-            "Class avg.",
-            "Cabinet",
-            "Cabinet",
-            "Cabinet",
-            "Chair",
-            "Chair",
-            "Chair"
-        ],
-        [
-            "Model",
-            "T",
-            "R",
-            "S",
-            "T",
-            "R",
-            "S",
-            "T",
-            "R",
-            "S"
-        ],
-        [
-            "w/o NOCS",
-            "1.58",
-            "1.18",
-            "3.52",
-            "1.87",
-            "1.69",
-            "4.09",
-            "1.30",
-            "0.66",
-            "2.95"
-        ],
-        [
-            "w/o Camera PE",
-            "1.29",
-            "0.98",
-            "3.12",
-            "1.40",
-            "1.38",
-            "3.62",
-            "1.19",
-            "0.58",
-            "2.61"
-        ],
-        [
-            "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}",
-            "1.35",
-            "1.01",
-            "3.13",
-            "1.59",
-            "1.35",
-            "3.52",
-            "1.10",
-            "0.67",
-            "2.74"
-        ],
-        [
-            "TransPoser",
-            "1.23",
-            "1.00",
-            "3.03",
-            "1.35",
-            "1.39",
-            "3.47",
-            "1.10",
-            "0.61",
-            "2.58"
-        ]
-    ],
-    "caption": "Table B.6: Ablation study of the NOCS representation, the positional encoding of the camera poses, and the addition of 𝒎Kttsubscriptsuperscript𝒎𝑡superscript𝐾𝑡\\mbox{\\boldmath$m$}^{t}_{K^{t}} to the input of the decoder. Metrics for translation (T), rotation (R), and shape (S) are the mean squared error (10−2)superscript102(10^{-2}), Riemannian distance (10−1)superscript101(10^{-1}), and Chamfer distance (10−3)superscript103(10^{-3}), respectively. The results show that each component are independently essential to TransPoser.",
-    "references": []
-}
-```
-
-The table has a multi-index structure in the header.
-The first row of the header represents general categories (Class avg., Cabinet, Chair).
-The second row specifies the measures (T, R, S) within each category.
-The rows represent different models or configurations.
-
-Let's try to extract claims for the first row of data ("w/o NOCS"):
-
-Claim 0:
-Specifications: Model = "w/o NOCS"
-Measure: T (from column 2)
-Outcome: 1.58
-
-Claim 1:
-Specifications: Model = "w/o NOCS"
-Measure: R (from column 3)
-Outcome: 1.18
-
-Claim 2:
-Specifications: Model = "w/o NOCS"
-Measure: S (from column 4)
-Outcome: 3.52
-
-Claim 3:
-Specifications: Model = "w/o NOCS", Cabinet
-Measure: T (from column 5)
-Outcome: 1.87
-
-... and so on.
-
-The caption also provides information about the measures: "Metrics for translation (T), rotation (R), and shape (S) are the mean squared error (10−2), Riemannian distance (10−1), and Chamfer distance (10−3), respectively." This could be useful for providing more context to the measures.
-
-Revised approach:
-
-Iterate through each data row in the table (starting from the third row).
-For each data row, iterate through the columns.
-Identify the "Measure" from the second header row and potentially the first header row.
-The "Outcome" is the value in the current cell.
-The "Specifications" come from the first column of the current row and potentially the first header row if it spans multiple columns.
-
-Need to handle the multi-level header correctly.```json
 {
     "0": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.58"
     },
     "1": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "1.18"
     },
     "2": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o NOCS"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "3.52"
     },
     "3": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o NOCS"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.87"
     },
     "4": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o NOCS"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "1.69"
     },
     "5": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o NOCS"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "4.09"
     },
     "6": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o NOCS"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.30"
     },
     "7": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o NOCS"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "0.66"
     },
     "8": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o NOCS"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "2.95"
     },
     "9": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.29"
     },
     "10": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "0.98"
     },
     "11": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o Camera PE"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "3.12"
     },
     "12": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o Camera PE"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.40"
     },
     "13": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o Camera PE"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "1.38"
     },
     "14": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o Camera PE"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "3.62"
     },
     "15": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o Camera PE"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.19"
     },
     "16": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o Camera PE"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "0.58"
     },
     "17": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o Camera PE"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "2.61"
     },
     "18": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.35"
     },
     "19": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "1.01"
     },
     "20": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "3.13"
     },
     "21": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.59"
     },
     "22": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "1.35"
     },
     "23": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "3.52"
     },
     "24": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.10"
     },
     "25": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "0.67"
     },
     "26": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "w/o \\mbox{\\boldmathm}^{t}_{K^{t}}"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "2.74"
     },
     "27": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.23"
     },
     "28": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "1.00"
     },
     "29": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Category",
+                "value": "Class avg."
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "3.03"
     },
     "30": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "TransPoser"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.35"
     },
     "31": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "TransPoser"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "1.39"
     },
     "32": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "TransPoser"
             },
             "1": {
-                "name": "Cabinet",
-                "value": null
+                "name": "Category",
+                "value": "Cabinet"
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "3.47"
     },
     "33": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "TransPoser"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "T",
+        "Measure": "Mean squared error (10−2)",
         "Outcome": "1.10"
     },
     "34": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "TransPoser"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "R",
+        "Measure": "Riemannian distance (10−1)",
         "Outcome": "0.61"
     },
     "35": {
         "specifications": {
             "0": {
-                "name": "Model",
+                "name": "Model Config",
                 "value": "TransPoser"
             },
             "1": {
-                "name": "Chair",
-                "value": null
+                "name": "Category",
+                "value": "Chair"
             }
         },
-        "Measure": "S",
+        "Measure": "Chamfer distance (10−3)",
         "Outcome": "2.58"
     }
 }

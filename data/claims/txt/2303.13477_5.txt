@@ -1,362 +1,280 @@
-The user wants to extract claims from a table represented in a JSON object.
-Each claim has a "specifications", a "Measure", and an "Outcome".
-"Specifications" are key-value pairs defining the context of the claim, usually based on rows or columns.
-"Measure" is a metric or dimension being measured, extracted from the table, caption, or references.
-"Outcome" is the value associated with the "Measure" for the given "Specifications".
-
-Let's analyze the example provided:
 ```json
-{
-    "0": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Full Fine-tuning"},
-            "1": {"name": "# Params.", "value": "1.8B"}
-        },
-        "Measure": "VS",
-        "Outcome": "5.3"
-    },
-    "1": { ... }
-}
-```
-In this example, it seems "Model" and "# Params." are specifications that identify a specific row. "VS" is the Measure, and "5.3" is the corresponding Outcome.
-
-Now let's analyze the input table:
-```json
-{'table': [['Method', 'Online', 'Cls avg.', 'Cabinet', 'Chair', 'Display', 'Table'], ['Scan2CAD [4]', 'nan', '31.7', '34.0', '44.3', '17.9', '30.7'], ['RayTran [34]', 'nan', '42.1', '36.2', '59.3', '30.4', '42.5'], ['Vid2CAD [24]', '✓', '38.8', '23.8', '64.6', '37.7', '28.9'], ['ELLIPSDF [30]', '✓', '39.6', '-', '-', '-', '-'], ['TransPoser', '✓', '59.3', '45.4', '91.2', '45.0', '55.7']], 'caption': 'Table 5: Accuracy of pose estimation for ScanNet\xa0[11]. TransPoser achieves higher accuracy for all categories.', 'references': []}
-```
-The table has "Method" as the row header and "Online", "Cls avg.", "Cabinet", "Chair", "Display", "Table" as column headers.
-The caption mentions "Accuracy of pose estimation". This could be a potential "Measure".
-
-Let's try to extract claims based on "Cls avg." as the Measure.
-
-For "Scan2CAD [4]":
-Specifications: {"0": {"name": "Method", "value": "Scan2CAD [4]"}}
-Measure: "Cls avg."
-Outcome: "31.7"
-
-For "RayTran [34]":
-Specifications: {"0": {"name": "Method", "value": "RayTran [34]"}}
-Measure: "Cls avg."
-Outcome: "42.1"
-
-We can also consider individual object categories as measures.
-
-For "Scan2CAD [4]":
-Specifications: {"0": {"name": "Method", "value": "Scan2CAD [4]"}}
-Measure: "Cabinet"
-Outcome: "34.0"
-
-Let's consider the caption's information as the "Measure". "Accuracy of pose estimation".
-
-For "TransPoser", with "Cabinet":
-Specifications: {"0": {"name": "Method", "value": "TransPoser"}}
-Measure: "Accuracy of pose estimation for Cabinet"
-Outcome: "45.4"
-
-It seems a reasonable approach is to iterate through each data cell in the table and form a claim. The "Specifications" will be based on the row and column headers. The "Measure" can be the column header.
-
-Plan:
-1. Iterate through the rows of the table (excluding the header row).
-2. For each row, iterate through the columns (excluding the row header).
-3. The row header will be part of the "Specifications".
-4. The column header will be the "Measure".
-5. The cell value will be the "Outcome".```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "nan"
-    },
-    "1": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Cls avg.",
         "Outcome": "31.7"
     },
-    "2": {
+    "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Cabinet",
         "Outcome": "34.0"
     },
-    "3": {
+    "2": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Chair",
         "Outcome": "44.3"
     },
-    "4": {
+    "3": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Display",
         "Outcome": "17.9"
     },
-    "5": {
+    "4": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Scan2CAD [4]"
+                "value": "Scan2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Table",
         "Outcome": "30.7"
     },
-    "6": {
+    "5": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "nan"
-    },
-    "7": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Cls avg.",
         "Outcome": "42.1"
     },
-    "8": {
+    "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Cabinet",
         "Outcome": "36.2"
     },
-    "9": {
+    "7": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Chair",
         "Outcome": "59.3"
     },
-    "10": {
+    "8": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Display",
         "Outcome": "30.4"
     },
-    "11": {
+    "9": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "RayTran [34]"
+                "value": "RayTran"
+            },
+            "1": {
+                "name": "Online",
+                "value": "nan"
             }
         },
         "Measure": "Table",
         "Outcome": "42.5"
     },
-    "12": {
+    "10": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "✓"
-    },
-    "13": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Cls avg.",
         "Outcome": "38.8"
     },
-    "14": {
+    "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Cabinet",
         "Outcome": "23.8"
     },
-    "15": {
+    "12": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Chair",
         "Outcome": "64.6"
     },
-    "16": {
+    "13": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Display",
         "Outcome": "37.7"
     },
-    "17": {
+    "14": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Vid2CAD [24]"
+                "value": "Vid2CAD"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Table",
         "Outcome": "28.9"
     },
-    "18": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "✓"
-    },
-    "19": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Cls avg.",
-        "Outcome": "39.6"
-    },
-    "20": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Cabinet",
-        "Outcome": "-"
-    },
-    "21": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Chair",
-        "Outcome": "-"
-    },
-    "22": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Display",
-        "Outcome": "-"
-    },
-    "23": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Table",
-        "Outcome": "-"
-    },
-    "24": {
+    "15": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "✓"
-    },
-    "25": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Cls avg.",
         "Outcome": "59.3"
     },
-    "26": {
+    "16": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Cabinet",
         "Outcome": "45.4"
     },
-    "27": {
+    "17": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Chair",
         "Outcome": "91.2"
     },
-    "28": {
+    "18": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Display",
         "Outcome": "45.0"
     },
-    "29": {
+    "19": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "TransPoser"
+            },
+            "1": {
+                "name": "Online",
+                "value": "✓"
             }
         },
         "Measure": "Table",

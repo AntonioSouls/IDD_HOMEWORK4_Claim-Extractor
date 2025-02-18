@@ -10,7 +10,7 @@
                 "value": "GT"
             }
         },
-        "Measure": "MPJPE\\\\downarrow",
+        "Measure": "MPJPE\u2193",
         "Outcome": "39.74"
     },
     "1": {
@@ -24,7 +24,7 @@
                 "value": "GT"
             }
         },
-        "Measure": "MPJPE\\\\downarrow",
+        "Measure": "MPJPE\u2193",
         "Outcome": "39.80"
     },
     "2": {
@@ -38,7 +38,7 @@
                 "value": "estimated"
             }
         },
-        "Measure": "MPJPE\\\\downarrow",
+        "Measure": "MPJPE\u2193",
         "Outcome": "39.78"
     },
     "3": {
@@ -52,7 +52,7 @@
                 "value": "estimated"
             }
         },
-        "Measure": "MPJPE\\\\downarrow",
+        "Measure": "MPJPE\u2193",
         "Outcome": "39.82"
     }
 }

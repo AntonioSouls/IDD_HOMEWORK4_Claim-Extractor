@@ -1,28 +1,4 @@
-The user wants to extract claims from a JSON object containing a table, caption and references.
-Each claim should have a "specifications", "Measure" and "Outcome".
-The "specifications" are key-value pairs from the first column or row of the table.
-The "Measure" can be found in the table, references or caption.
-The "Outcome" is the value associated with the measure.
-
-Based on the provided example, the claims are extracted by iterating through the data cells of the table.
-For each data cell, the specifications are derived from the row and column headers.
-The measure seems to be the column header.
-The outcome is the value in the cell.
-
-Let's apply this to the given table.
-
-Table structure:
-- First row: headers
-- Subsequent rows: data
-
-Example claim extraction for the cell at row 3, column 2 ("0.879"):
-- Specifications:
-    - "Method": "PFA+Ours"
-    - The second row seems to indicate a grouping, let's include this as "RGB type": "RGB (PBR)"
-- Measure: "MSPD"
-- Outcome: "0.879"
-
-Let's try to extract all claims.```json
+```json
 {
     "0": {
         "specifications": {
@@ -31,7 +7,7 @@ Let's try to extract all claims.```json
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -45,7 +21,7 @@ Let's try to extract all claims.```json
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -59,7 +35,7 @@ Let's try to extract all claims.```json
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -73,7 +49,7 @@ Let's try to extract all claims.```json
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -87,7 +63,7 @@ Let's try to extract all claims.```json
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -101,7 +77,7 @@ Let's try to extract all claims.```json
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -115,7 +91,7 @@ Let's try to extract all claims.```json
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -129,7 +105,7 @@ Let's try to extract all claims.```json
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -143,7 +119,7 @@ Let's try to extract all claims.```json
                 "value": "Cosypose"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -157,7 +133,7 @@ Let's try to extract all claims.```json
                 "value": "Cosypose"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -171,7 +147,7 @@ Let's try to extract all claims.```json
                 "value": "Cosypose"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -185,7 +161,7 @@ Let's try to extract all claims.```json
                 "value": "Cosypose"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -199,7 +175,7 @@ Let's try to extract all claims.```json
                 "value": "CDPNv2"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -213,7 +189,7 @@ Let's try to extract all claims.```json
                 "value": "CDPNv2"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -227,7 +203,7 @@ Let's try to extract all claims.```json
                 "value": "CDPNv2"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -241,7 +217,7 @@ Let's try to extract all claims.```json
                 "value": "CDPNv2"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB (PBR)"
             }
         },
@@ -255,7 +231,7 @@ Let's try to extract all claims.```json
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -269,7 +245,7 @@ Let's try to extract all claims.```json
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -283,7 +259,7 @@ Let's try to extract all claims.```json
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -297,7 +273,7 @@ Let's try to extract all claims.```json
                 "value": "PFA+Ours"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -311,7 +287,7 @@ Let's try to extract all claims.```json
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -325,7 +301,7 @@ Let's try to extract all claims.```json
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -339,7 +315,7 @@ Let's try to extract all claims.```json
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -353,7 +329,7 @@ Let's try to extract all claims.```json
                 "value": "SurfEmb"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -367,7 +343,7 @@ Let's try to extract all claims.```json
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -381,7 +357,7 @@ Let's try to extract all claims.```json
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -395,7 +371,7 @@ Let's try to extract all claims.```json
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -409,7 +385,7 @@ Let's try to extract all claims.```json
                 "value": "CIR"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -423,7 +399,7 @@ Let's try to extract all claims.```json
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -437,7 +413,7 @@ Let's try to extract all claims.```json
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -451,7 +427,7 @@ Let's try to extract all claims.```json
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -465,7 +441,7 @@ Let's try to extract all claims.```json
                 "value": "Cosypose+ICP"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -479,7 +455,7 @@ Let's try to extract all claims.```json
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -493,7 +469,7 @@ Let's try to extract all claims.```json
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -507,7 +483,7 @@ Let's try to extract all claims.```json
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },
@@ -521,7 +497,7 @@ Let's try to extract all claims.```json
                 "value": "CDPNv2+ICP"
             },
             "1": {
-                "name": "RGB type",
+                "name": "Input Type",
                 "value": "RGB-D (PBR)"
             }
         },

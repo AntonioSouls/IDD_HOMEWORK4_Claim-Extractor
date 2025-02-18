@@ -1,46 +1,4 @@
-The user wants to extract claims from a table provided in a JSON format.
-Each claim will contain a "specifications", a "Measure" and an "Outcome".
-The "specifications" are key-value pairs extracted from the table, identifying the context of the claim.
-The "Measure" is a column header from the table or information from the caption or references.
-The "Outcome" is the value in the table associated with the specifications and the measure.
-
-Let's analyze the example provided:
 ```json
-{
-    "0": {
-        "specifications": {
-            "0": {"name": "Model", "value": "Full Fine-tuning"},
-            "1": {"name": "# Params.", "value": "1.8B"}
-        },
-        "Measure": "VS",
-        "Outcome": "5.3"
-    },
-    "1": { ... }
-}
-```
-
-And the input table:
-```json
-{'table': [['ID', 'Method', 'ADD(-S)', 'ADD(-S)', 'ADD(-S)', 'Mean'], ['ID', 'Method', '0.02d', '0.05d', '0.1d', 'Mean'], ['A0', 'CDPN-Full\xa0[18]', '29.10', '69.50', '91.03', '63.21'], ['A1', 'CDPN w/o trans. head', '15.93', '46.79', '74.54', '45.75'], ['A2', 'A1 →\xa0Batch=32, LM solver', '21.17', '55.00', '79.96', '52.04']], 'caption': 'TABLE I: Results of the CDPN baseline. A0 and A1 are reproduced with the official code (https://git.io/JXZv6).', 'references': []}
-```
-
-The table has two header rows. The first row provides general categories for the columns in the second row.
-The structure suggests this is a nested relational table.
-
-Possible claims:
-For each row (excluding the headers), we can make claims.
-
-Claim for the first data row ('A0', 'CDPN-Full\xa0[18]', '29.10', '69.50', '91.03', '63.21'):
-- Specifications:
-    - ID: A0
-    - Method: CDPN-Full\xa0[18]
-- Measures and Outcomes:
-    - ADD(-S) 0.02d: 29.10
-    - ADD(-S) 0.05d: 69.50
-    - ADD(-S) 0.1d: 91.03
-    - Mean: 63.21
-
-Need to format the output in the required JSON structure.```json
 {
     "0": {
         "specifications": {
@@ -50,7 +8,7 @@ Need to format the output in the required JSON structure.```json
             },
             "1": {
                 "name": "Method",
-                "value": "CDPN-Full\u00a0[18]"
+                "value": "CDPN-Full"
             }
         },
         "Measure": "ADD(-S) 0.02d",
@@ -64,7 +22,7 @@ Need to format the output in the required JSON structure.```json
             },
             "1": {
                 "name": "Method",
-                "value": "CDPN-Full\u00a0[18]"
+                "value": "CDPN-Full"
             }
         },
         "Measure": "ADD(-S) 0.05d",
@@ -78,7 +36,7 @@ Need to format the output in the required JSON structure.```json
             },
             "1": {
                 "name": "Method",
-                "value": "CDPN-Full\u00a0[18]"
+                "value": "CDPN-Full"
             }
         },
         "Measure": "ADD(-S) 0.1d",
@@ -92,7 +50,7 @@ Need to format the output in the required JSON structure.```json
             },
             "1": {
                 "name": "Method",
-                "value": "CDPN-Full\u00a0[18]"
+                "value": "CDPN-Full"
             }
         },
         "Measure": "Mean",
@@ -162,7 +120,7 @@ Need to format the output in the required JSON structure.```json
             },
             "1": {
                 "name": "Method",
-                "value": "A1 →\u00a0Batch=32, LM solver"
+                "value": "A1 → Batch=32, LM solver"
             }
         },
         "Measure": "ADD(-S) 0.02d",
@@ -176,7 +134,7 @@ Need to format the output in the required JSON structure.```json
             },
             "1": {
                 "name": "Method",
-                "value": "A1 →\u00a0Batch=32, LM solver"
+                "value": "A1 → Batch=32, LM solver"
             }
         },
         "Measure": "ADD(-S) 0.05d",
@@ -190,7 +148,7 @@ Need to format the output in the required JSON structure.```json
             },
             "1": {
                 "name": "Method",
-                "value": "A1 →\u00a0Batch=32, LM solver"
+                "value": "A1 → Batch=32, LM solver"
             }
         },
         "Measure": "ADD(-S) 0.1d",
@@ -204,7 +162,7 @@ Need to format the output in the required JSON structure.```json
             },
             "1": {
                 "name": "Method",
-                "value": "A1 →\u00a0Batch=32, LM solver"
+                "value": "A1 → Batch=32, LM solver"
             }
         },
         "Measure": "Mean",

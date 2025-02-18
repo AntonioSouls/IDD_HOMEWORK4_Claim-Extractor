@@ -12,6 +12,10 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E1"
             }
         },
         "Measure": "3D_{75}",
@@ -30,9 +34,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E1"
             }
         },
-        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "52\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "35.2"
     },
     "2": {
@@ -48,9 +56,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E1"
             }
         },
-        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "55\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "42.9"
     },
     "3": {
@@ -66,9 +78,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E1"
             }
         },
-        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "102\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "58.8"
     },
     "4": {
@@ -84,9 +100,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E1"
             }
         },
-        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "105\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "72.2"
     },
     "5": {
@@ -102,6 +122,10 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E2"
             }
         },
         "Measure": "3D_{75}",
@@ -120,9 +144,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E2"
             }
         },
-        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "52\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "42.9"
     },
     "7": {
@@ -138,9 +166,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E2"
             }
         },
-        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "55\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "48.5"
     },
     "8": {
@@ -156,9 +188,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E2"
             }
         },
-        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "102\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "68.7"
     },
     "9": {
@@ -174,9 +210,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E2"
             }
         },
-        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "105\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "78.1"
     },
     "10": {
@@ -192,6 +232,10 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E3"
             }
         },
         "Measure": "3D_{75}",
@@ -210,9 +254,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E3"
             }
         },
-        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "52\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "44.2"
     },
     "12": {
@@ -228,9 +276,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E3"
             }
         },
-        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "55\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "52.5"
     },
     "13": {
@@ -246,9 +298,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E3"
             }
         },
-        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "102\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "68.5"
     },
     "14": {
@@ -264,9 +320,13 @@
             "2": {
                 "name": "WE",
                 "value": "nan"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E3"
             }
         },
-        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "105\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "79.2"
     },
     "15": {
@@ -282,6 +342,10 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E4"
             }
         },
         "Measure": "3D_{75}",
@@ -300,9 +364,13 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E4"
             }
         },
-        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "52\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "43.5"
     },
     "17": {
@@ -318,9 +386,13 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E4"
             }
         },
-        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "55\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "48.9"
     },
     "18": {
@@ -336,9 +408,13 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E4"
             }
         },
-        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "102\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "70.4"
     },
     "19": {
@@ -354,9 +430,13 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E4"
             }
         },
-        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "105\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "80.4"
     },
     "20": {
@@ -372,6 +452,10 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E5"
             }
         },
         "Measure": "3D_{75}",
@@ -390,9 +474,13 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E5"
             }
         },
-        "Measure": "52\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "52\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "47.5"
     },
     "22": {
@@ -408,9 +496,13 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E5"
             }
         },
-        "Measure": "55\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "55\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "53.4"
     },
     "23": {
@@ -426,9 +518,13 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E5"
             }
         },
-        "Measure": "102\u2218cm{}^{\\\\circ}2cm",
+        "Measure": "102\u00e2\u02c6\u02dccm{}^{\\\\circ}2cm",
         "Outcome": "72.1"
     },
     "24": {
@@ -444,9 +540,13 @@
             "2": {
                 "name": "WE",
                 "value": "\u2713"
+            },
+            "3": {
+                "name": "Configuration",
+                "value": "E5"
             }
         },
-        "Measure": "105\u2218cm{}^{\\\\circ}5cm",
+        "Measure": "105\u00e2\u02c6\u02dccm{}^{\\\\circ}5cm",
         "Outcome": "80.5"
     }
 }

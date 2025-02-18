@@ -1,61 +1,17 @@
-The user wants to extract claims from a table represented in JSON format. Each claim should have a "specifications", a "Measure", and an "Outcome".
-
-**Plan:**
-
-1. Understand the table structure and identify potential claims.
-2. Iterate through the rows of the table to extract individual claims.
-3. For each row, identify the "specifications" (the first columns).
-4. Identify the "Measure" from the table, caption, or references. It seems like the column headers (excluding the first one) could be the "Measure".
-5. Identify the corresponding "Outcome" for each "Measure" within the row.
-6. Format the extracted claims as a JSON object.
-
-**Example with the provided table:**
-
-*   **Row 1 (Headers):** "Method", "LM-O", "T-LESS", "TUD-L", "IC-BIN", "ITODD", "HB", "YCB", "Avg."
-*   **Row 2 (Ours):** "Ours", "67.5", "79.8", "86.6", "63.8", "48.6", "73.5", "85.0", "72.1"
-    *   Specifications: {"0": {"name": "Method", "value": "Ours"}}
-    *   Measure/Outcome pairs:
-        *   "LM-O": "67.5"
-        *   "T-LESS": "79.8"
-        *   "TUD-L": "86.6"
-        *   "IC-BIN": "63.8"
-        *   "ITODD": "48.6"
-        *   "HB": "73.5"
-        *   "YCB": "85.0"
-        *   "Avg.": "72.1"
-*   **Row 3 (FCOSv2 [44]):** "FCOSv2 [44]", "57.0", "75.0", "86.0", "27.2", "30.4", "60.4", "80.0", "66.7"
-    *   Specifications: {"0": {"name": "Method", "value": "FCOSv2 [44]"}}
-    *   Measure/Outcome pairs:
-        *   "LM-O": "57.0"
-        *   "T-LESS": "75.0"
-        *   "TUD-L": "86.0"
-        *   "IC-BIN": "27.2"
-        *   "ITODD": "30.4"
-        *   "HB": "60.4"
-        *   "YCB": "80.0"
-        *   "Avg.": "66.7"
-*   **Row 4 (Mask R-CNN [10]):** "Mask R-CNN [10]", "56.6", "69.3", "82.6", "40.1", "36.5", "63.5", "74.5", "60.5"
-    *   Specifications: {"0": {"name": "Method", "value": "Mask R-CNN [10]"}}
-    *   Measure/Outcome pairs:
-        *   "LM-O": "56.6"
-        *   "T-LESS": "69.3"
-        *   "TUD-L": "82.6"
-        *   "IC-BIN": "40.1"
-        *   "ITODD": "36.5"
-        *   "HB": "63.5"
-        *   "YCB": "74.5"
-        *   "Avg.": "60.5"
-
-**Refinement:** The "Measure" seems to be the column header, and the "Outcome" is the value in the corresponding cell.```json
+```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Method",
                 "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "LM-O"
             }
         },
-        "Measure": "LM-O",
+        "Measure": "Accuracy",
         "Outcome": "67.5"
     },
     "1": {
@@ -63,9 +19,13 @@ The user wants to extract claims from a table represented in JSON format. Each c
             "0": {
                 "name": "Method",
                 "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "T-LESS"
             }
         },
-        "Measure": "T-LESS",
+        "Measure": "Accuracy",
         "Outcome": "79.8"
     },
     "2": {
@@ -73,9 +33,13 @@ The user wants to extract claims from a table represented in JSON format. Each c
             "0": {
                 "name": "Method",
                 "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "TUD-L"
             }
         },
-        "Measure": "TUD-L",
+        "Measure": "Accuracy",
         "Outcome": "86.6"
     },
     "3": {
@@ -83,9 +47,13 @@ The user wants to extract claims from a table represented in JSON format. Each c
             "0": {
                 "name": "Method",
                 "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
-        "Measure": "IC-BIN",
+        "Measure": "Accuracy",
         "Outcome": "63.8"
     },
     "4": {
@@ -93,9 +61,13 @@ The user wants to extract claims from a table represented in JSON format. Each c
             "0": {
                 "name": "Method",
                 "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "ITODD"
             }
         },
-        "Measure": "ITODD",
+        "Measure": "Accuracy",
         "Outcome": "48.6"
     },
     "5": {
@@ -103,9 +75,13 @@ The user wants to extract claims from a table represented in JSON format. Each c
             "0": {
                 "name": "Method",
                 "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "HB"
             }
         },
-        "Measure": "HB",
+        "Measure": "Accuracy",
         "Outcome": "73.5"
     },
     "6": {
@@ -113,9 +89,13 @@ The user wants to extract claims from a table represented in JSON format. Each c
             "0": {
                 "name": "Method",
                 "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "YCB"
             }
         },
-        "Measure": "YCB",
+        "Measure": "Accuracy",
         "Outcome": "85.0"
     },
     "7": {
@@ -123,169 +103,237 @@ The user wants to extract claims from a table represented in JSON format. Each c
             "0": {
                 "name": "Method",
                 "value": "Ours"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Avg."
             }
         },
-        "Measure": "Avg.",
+        "Measure": "Accuracy",
         "Outcome": "72.1"
     },
     "8": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOSv2\xa0[44]"
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "LM-O"
             }
         },
-        "Measure": "LM-O",
+        "Measure": "Accuracy",
         "Outcome": "57.0"
     },
     "9": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOSv2\xa0[44]"
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "T-LESS"
             }
         },
-        "Measure": "T-LESS",
+        "Measure": "Accuracy",
         "Outcome": "75.0"
     },
     "10": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOSv2\xa0[44]"
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "TUD-L"
             }
         },
-        "Measure": "TUD-L",
+        "Measure": "Accuracy",
         "Outcome": "86.0"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOSv2\xa0[44]"
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
-        "Measure": "IC-BIN",
+        "Measure": "Accuracy",
         "Outcome": "27.2"
     },
     "12": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOSv2\xa0[44]"
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "ITODD"
             }
         },
-        "Measure": "ITODD",
+        "Measure": "Accuracy",
         "Outcome": "30.4"
     },
     "13": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOSv2\xa0[44]"
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "HB"
             }
         },
-        "Measure": "HB",
+        "Measure": "Accuracy",
         "Outcome": "60.4"
     },
     "14": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOSv2\xa0[44]"
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "YCB"
             }
         },
-        "Measure": "YCB",
+        "Measure": "Accuracy",
         "Outcome": "80.0"
     },
     "15": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "FCOSv2\xa0[44]"
+                "value": "FCOSv2"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Avg."
             }
         },
-        "Measure": "Avg.",
+        "Measure": "Accuracy",
         "Outcome": "66.7"
     },
     "16": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mask R-CNN\xa0[10]"
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "LM-O"
             }
         },
-        "Measure": "LM-O",
+        "Measure": "Accuracy",
         "Outcome": "56.6"
     },
     "17": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mask R-CNN\xa0[10]"
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "T-LESS"
             }
         },
-        "Measure": "T-LESS",
+        "Measure": "Accuracy",
         "Outcome": "69.3"
     },
     "18": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mask R-CNN\xa0[10]"
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "TUD-L"
             }
         },
-        "Measure": "TUD-L",
+        "Measure": "Accuracy",
         "Outcome": "82.6"
     },
     "19": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mask R-CNN\xa0[10]"
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "IC-BIN"
             }
         },
-        "Measure": "IC-BIN",
+        "Measure": "Accuracy",
         "Outcome": "40.1"
     },
     "20": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mask R-CNN\xa0[10]"
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "ITODD"
             }
         },
-        "Measure": "ITODD",
+        "Measure": "Accuracy",
         "Outcome": "36.5"
     },
     "21": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mask R-CNN\xa0[10]"
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "HB"
             }
         },
-        "Measure": "HB",
+        "Measure": "Accuracy",
         "Outcome": "63.5"
     },
     "22": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mask R-CNN\xa0[10]"
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "YCB"
             }
         },
-        "Measure": "YCB",
+        "Measure": "Accuracy",
         "Outcome": "74.5"
     },
     "23": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "Mask R-CNN\xa0[10]"
+                "value": "Mask R-CNN"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "Avg."
             }
         },
-        "Measure": "Avg.",
+        "Measure": "Accuracy",
         "Outcome": "60.5"
     }
 }

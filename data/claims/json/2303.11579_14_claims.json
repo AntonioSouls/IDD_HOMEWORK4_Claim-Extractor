@@ -3,11 +3,11 @@
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "P-STMO\\xa0[51]"
+                "value": "w/o diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/o diffusion"
+                "name": "Model",
+                "value": "P-STMO"
             }
         },
         "Measure": "MPJPE",
@@ -17,11 +17,11 @@
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "PoseFormer\\xa0[70]"
+                "value": "w/o diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/o diffusion"
+                "name": "Model",
+                "value": "PoseFormer"
             }
         },
         "Measure": "MPJPE",
@@ -31,11 +31,11 @@
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "STE\\xa0[35]"
+                "value": "w/o diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/o diffusion"
+                "name": "Model",
+                "value": "STE"
             }
         },
         "Measure": "MPJPE",
@@ -45,11 +45,11 @@
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "TCN\\xa0[46]"
+                "value": "w/o diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/o diffusion"
+                "name": "Model",
+                "value": "TCN"
             }
         },
         "Measure": "MPJPE",
@@ -59,11 +59,11 @@
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "P-STMO\\xa0[51]"
+                "value": "w/ diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/ diffusion"
+                "name": "Model",
+                "value": "P-STMO"
             }
         },
         "Measure": "MPJPE",
@@ -73,11 +73,11 @@
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "PoseFormer\\xa0[70]"
+                "value": "w/ diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/ diffusion"
+                "name": "Model",
+                "value": "PoseFormer"
             }
         },
         "Measure": "MPJPE",
@@ -87,11 +87,11 @@
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "STE\\xa0[35]"
+                "value": "w/ diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/ diffusion"
+                "name": "Model",
+                "value": "STE"
             }
         },
         "Measure": "MPJPE",
@@ -101,11 +101,11 @@
         "specifications": {
             "0": {
                 "name": "Backbone",
-                "value": "TCN\\xa0[46]"
+                "value": "w/ diffusion"
             },
             "1": {
-                "name": null,
-                "value": "w/ diffusion"
+                "name": "Model",
+                "value": "TCN"
             }
         },
         "Measure": "MPJPE",

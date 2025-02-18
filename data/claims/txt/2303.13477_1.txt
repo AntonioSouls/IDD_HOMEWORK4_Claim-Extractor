@@ -1,1024 +1,204 @@
-The user wants to extract claims from a JSON object representing a table.
-Each claim should have the following structure:
 ```json
 {
     "0": {
         "specifications": {
-            "0": {"name": "column_name_1", "value": "row_value_1"},
-            "1": {"name": "column_name_2", "value": "row_value_2"}
+            "0": {"name": "Method", "value": "DPDN [21]"}
         },
-        "Measure": "some_measure",
-        "Outcome": "some_value"
-    },
-    "1": { ... }
-}
-```
-The 'Measure' should be identified from the table, caption, or references. The 'Outcome' is the corresponding value for that measure.
-The 'specifications' are the values of other columns in the same row.
-
-Let's analyze the provided example:
-```json
-{'table': [['Method', '\u200b Feedback Loop \u200b', '\u200b Fewer Updates \u200b', 'Joint Shape and Pose Estimation', 'Multi-view Observation', 'Online', 'Shape Representation', 'Momentum'], ['DPDN [21]', 'nan', '-', '✓', 'nan', '-', 'Point Cloud', '-'], ['Scan2CAD [4]', 'nan', '-', '✓', '✓', 'nan', 'CAD models', '-'], ['RayTran [34]', 'nan', '-', '✓', '✓', 'nan', 'Voxel Occupancy', '-'], ['Vid2CAD [24]', '✓', 'nan', '✓', '✓', '✓', 'CAD models', 'Moving Avg.'], ['ELLIPSDF [30]', '✓', 'nan', '✓', '✓', '✓', 'DeepSDF', 'Moving Avg.'], ['Ma et al. [23]', '✓', '✓', 'nan', 'nan', 'nan', '-', 'nan'], ['TransPoser', '✓', '✓', '✓', '✓', '✓', 'DeepDDF', 'Cross-Attn.']], 'caption': 'Table 1: Category-level object shape and pose estimation methods. TransPoser realizes neural optimization that effectively weighs multiple viewpoints and leverages learned momentum, which enables efficient and accurate joint object shape and pose estimation from sequential observations. We also introduce an efficient neural shape representation, DeepDDF, for this.', 'references': []}
-```
-
-The table headers are: 'Method', 'Feedback Loop', 'Fewer Updates', 'Joint Shape and Pose Estimation', 'Multi-view Observation', 'Online', 'Shape Representation', 'Momentum'.
-
-Let's try to extract claims by considering each column as a 'Measure'.
-
-For example, considering 'Feedback Loop' as the 'Measure':
-- For DPDN [21], the 'Outcome' is 'nan'.
-- For Scan2CAD [4], the 'Outcome' is 'nan'.
-- ... and so on.
-
-Alternatively, we can consider each row to have a set of properties.
-
-Let's consider 'Method' as a specification and other columns as potential measures or specifications.```json
-{
-    "0": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "nan"
+        "Measure": "Joint Shape and Pose Estimation",
+        "Outcome": "✓"
     },
     "1": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
+            "0": {"name": "Method", "value": "DPDN [21]"}
         },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "-"
+        "Measure": "Shape Representation",
+        "Outcome": "Point Cloud"
     },
     "2": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
+            "0": {"name": "Method", "value": "Scan2CAD [4]"}
         },
         "Measure": "Joint Shape and Pose Estimation",
         "Outcome": "✓"
     },
     "3": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
+            "0": {"name": "Method", "value": "Scan2CAD [4]"}
         },
         "Measure": "Multi-view Observation",
-        "Outcome": "nan"
+        "Outcome": "✓"
     },
     "4": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
+            "0": {"name": "Method", "value": "Scan2CAD [4]"}
         },
-        "Measure": "Online",
-        "Outcome": "-"
+        "Measure": "Shape Representation",
+        "Outcome": "CAD models"
     },
     "5": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
+            "0": {"name": "Method", "value": "RayTran [34]"}
         },
-        "Measure": "Shape Representation",
-        "Outcome": "Point Cloud"
+        "Measure": "Joint Shape and Pose Estimation",
+        "Outcome": "✓"
     },
     "6": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
+            "0": {"name": "Method", "value": "RayTran [34]"}
         },
-        "Measure": "Momentum",
-        "Outcome": "-"
+        "Measure": "Multi-view Observation",
+        "Outcome": "✓"
     },
     "7": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
+            "0": {"name": "Method", "value": "RayTran [34]"}
         },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "nan"
+        "Measure": "Shape Representation",
+        "Outcome": "Voxel Occupancy"
     },
     "8": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
+            "0": {"name": "Method", "value": "Vid2CAD [24]"}
         },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "-"
+        "Measure": "Feedback Loop",
+        "Outcome": "✓"
     },
     "9": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
+            "0": {"name": "Method", "value": "Vid2CAD [24]"}
         },
         "Measure": "Joint Shape and Pose Estimation",
         "Outcome": "✓"
     },
     "10": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
+            "0": {"name": "Method", "value": "Vid2CAD [24]"}
         },
         "Measure": "Multi-view Observation",
         "Outcome": "✓"
     },
     "11": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
+            "0": {"name": "Method", "value": "Vid2CAD [24]"}
         },
         "Measure": "Online",
-        "Outcome": "nan"
+        "Outcome": "✓"
     },
     "12": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
+            "0": {"name": "Method", "value": "Vid2CAD [24]"}
         },
         "Measure": "Shape Representation",
         "Outcome": "CAD models"
     },
     "13": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
+            "0": {"name": "Method", "value": "Vid2CAD [24]"}
         },
         "Measure": "Momentum",
-        "Outcome": "-"
+        "Outcome": "Moving Avg."
     },
     "14": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
+            "0": {"name": "Method", "value": "ELLIPSDF [30]"}
         },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "nan"
+        "Measure": "Feedback Loop",
+        "Outcome": "✓"
     },
     "15": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
+            "0": {"name": "Method", "value": "ELLIPSDF [30]"}
         },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "-"
+        "Measure": "Joint Shape and Pose Estimation",
+        "Outcome": "✓"
     },
     "16": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
+            "0": {"name": "Method", "value": "ELLIPSDF [30]"}
         },
-        "Measure": "Joint Shape and Pose Estimation",
+        "Measure": "Multi-view Observation",
         "Outcome": "✓"
     },
     "17": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
+            "0": {"name": "Method", "value": "ELLIPSDF [30]"}
         },
-        "Measure": "Multi-view Observation",
+        "Measure": "Online",
         "Outcome": "✓"
     },
     "18": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "nan"
-    },
-    "19": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "Shape Representation",
-        "Outcome": "Voxel Occupancy"
-    },
-    "20": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "Momentum",
-        "Outcome": "-"
-    },
-    "21": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "✓"
-    },
-    "22": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "nan"
-    },
-    "23": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "✓"
-    },
-    "24": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "✓"
-    },
-    "25": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "✓"
-    },
-    "26": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "Shape Representation",
-        "Outcome": "CAD models"
-    },
-    "27": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "Momentum",
-        "Outcome": "Moving Avg."
-    },
-    "28": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "✓"
-    },
-    "29": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "nan"
-    },
-    "30": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "✓"
-    },
-    "31": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "✓"
-    },
-    "32": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "✓"
-    },
-    "33": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
+            "0": {"name": "Method", "value": "ELLIPSDF [30]"}
         },
         "Measure": "Shape Representation",
         "Outcome": "DeepSDF"
     },
-    "34": {
+    "19": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
+            "0": {"name": "Method", "value": "ELLIPSDF [30]"}
         },
         "Measure": "Momentum",
         "Outcome": "Moving Avg."
     },
-    "35": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "✓"
-    },
-    "36": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "✓"
-    },
-    "37": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "nan"
-    },
-    "38": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "nan"
-    },
-    "39": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "nan"
-    },
-    "40": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Shape Representation",
-        "Outcome": "-"
-    },
-    "41": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Momentum",
-        "Outcome": "nan"
-    },
-    "42": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "✓"
-    },
-    "43": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "✓"
-    },
-    "44": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "✓"
-    },
-    "45": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "✓"
-    },
-    "46": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "✓"
-    },
-    "47": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "Shape Representation",
-        "Outcome": "DeepDDF"
-    },
-    "48": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "Momentum",
-        "Outcome": "Cross-Attn."
-    }
-}
-```The user wants to extract claims from a table represented in a JSON object.
-Each claim should have a "Measure" and an "Outcome", along with "specifications" from other columns in the same row.
-
-Plan:
-1. Iterate through each row of the table (excluding the header row).
-2. For each cell in the row, consider the column header as the "Measure" and the cell value as the "Outcome".
-3. The "specifications" will be the values of the other columns in the same row, with their corresponding header names.```json
-{
-    "0": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "nan"
-    },
-    "1": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "-"
-    },
-    "2": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "✓"
-    },
-    "3": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "nan"
-    },
-    "4": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "-"
-    },
-    "5": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
-        },
-        "Measure": "Shape Representation",
-        "Outcome": "Point Cloud"
-    },
-    "6": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "DPDN [21]"
-            }
-        },
-        "Measure": "Momentum",
-        "Outcome": "-"
-    },
-    "7": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "nan"
-    },
-    "8": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "-"
-    },
-    "9": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "✓"
-    },
-    "10": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "✓"
-    },
-    "11": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "nan"
-    },
-    "12": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
-        },
-        "Measure": "Shape Representation",
-        "Outcome": "CAD models"
-    },
-    "13": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Scan2CAD [4]"
-            }
-        },
-        "Measure": "Momentum",
-        "Outcome": "-"
-    },
-    "14": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "nan"
-    },
-    "15": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "-"
-    },
-    "16": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "✓"
-    },
-    "17": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "✓"
-    },
-    "18": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "nan"
-    },
-    "19": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
-        },
-        "Measure": "Shape Representation",
-        "Outcome": "Voxel Occupancy"
-    },
     "20": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "RayTran [34]"
-            }
+            "0": {"name": "Method", "value": "Ma et al. [23]"}
         },
-        "Measure": "Momentum",
-        "Outcome": "-"
+        "Measure": "Feedback Loop",
+        "Outcome": "✓"
     },
     "21": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
+            "0": {"name": "Method", "value": "Ma et al. [23]"}
         },
-        "Measure": "\u200b Feedback Loop \u200b",
+        "Measure": "Fewer Updates",
         "Outcome": "✓"
     },
     "22": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
+            "0": {"name": "Method", "value": "TransPoser"}
         },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "nan"
+        "Measure": "Feedback Loop",
+        "Outcome": "✓"
     },
     "23": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
+            "0": {"name": "Method", "value": "TransPoser"}
         },
-        "Measure": "Joint Shape and Pose Estimation",
+        "Measure": "Fewer Updates",
         "Outcome": "✓"
     },
     "24": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
+            "0": {"name": "Method", "value": "TransPoser"}
         },
-        "Measure": "Multi-view Observation",
+        "Measure": "Joint Shape and Pose Estimation",
         "Outcome": "✓"
     },
     "25": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
+            "0": {"name": "Method", "value": "TransPoser"}
         },
-        "Measure": "Online",
+        "Measure": "Multi-view Observation",
         "Outcome": "✓"
     },
     "26": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
+            "0": {"name": "Method", "value": "TransPoser"}
         },
-        "Measure": "Shape Representation",
-        "Outcome": "CAD models"
+        "Measure": "Online",
+        "Outcome": "✓"
     },
     "27": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Vid2CAD [24]"
-            }
-        },
-        "Measure": "Momentum",
-        "Outcome": "Moving Avg."
-    },
-    "28": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "✓"
-    },
-    "29": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "nan"
-    },
-    "30": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "✓"
-    },
-    "31": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "✓"
-    },
-    "32": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "✓"
-    },
-    "33": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Shape Representation",
-        "Outcome": "DeepSDF"
-    },
-    "34": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "ELLIPSDF [30]"
-            }
-        },
-        "Measure": "Momentum",
-        "Outcome": "Moving Avg."
-    },
-    "35": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "✓"
-    },
-    "36": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "✓"
-    },
-    "37": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "nan"
-    },
-    "38": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "nan"
-    },
-    "39": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "nan"
-    },
-    "40": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Shape Representation",
-        "Outcome": "-"
-    },
-    "41": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "Ma et al. [23]"
-            }
-        },
-        "Measure": "Momentum",
-        "Outcome": "nan"
-    },
-    "42": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "\u200b Feedback Loop \u200b",
-        "Outcome": "✓"
-    },
-    "43": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "\u200b Fewer Updates \u200b",
-        "Outcome": "✓"
-    },
-    "44": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "Joint Shape and Pose Estimation",
-        "Outcome": "✓"
-    },
-    "45": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "Multi-view Observation",
-        "Outcome": "✓"
-    },
-    "46": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
-        },
-        "Measure": "Online",
-        "Outcome": "✓"
-    },
-    "47": {
-        "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
+            "0": {"name": "Method", "value": "TransPoser"}
         },
         "Measure": "Shape Representation",
         "Outcome": "DeepDDF"
     },
-    "48": {
+    "28": {
         "specifications": {
-            "0": {
-                "name": "Method",
-                "value": "TransPoser"
-            }
+            "0": {"name": "Method", "value": "TransPoser"}
         },
         "Measure": "Momentum",
         "Outcome": "Cross-Attn."

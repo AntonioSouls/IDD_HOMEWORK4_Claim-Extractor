@@ -2,8 +2,12 @@
     "0": {
         "specifications": {
             "0": {
-                "name": "dist. rep.",
+                "name": "NLL distributions",
                 "value": "Laplace"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "ours-3D"
             }
         },
         "Measure": "ADD(-S) score",
@@ -12,8 +16,12 @@
     "1": {
         "specifications": {
             "0": {
-                "name": "dist. rep.",
+                "name": "NLL distributions",
                 "value": "Laplace"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "quater."
             }
         },
         "Measure": "ADD(-S) score",
@@ -22,8 +30,12 @@
     "2": {
         "specifications": {
             "0": {
-                "name": "dist. rep.",
+                "name": "NLL distributions",
                 "value": "Laplace"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "axis-ang."
             }
         },
         "Measure": "ADD(-S) score",
@@ -32,8 +44,12 @@
     "3": {
         "specifications": {
             "0": {
-                "name": "dist. rep.",
+                "name": "NLL distributions",
                 "value": "Laplace"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "two-col."
             }
         },
         "Measure": "ADD(-S) score",
@@ -42,8 +58,12 @@
     "4": {
         "specifications": {
             "0": {
-                "name": "dist. rep.",
+                "name": "NLL distributions",
                 "value": "Gaussian"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "ours-3D"
             }
         },
         "Measure": "ADD(-S) score",
@@ -52,8 +72,12 @@
     "5": {
         "specifications": {
             "0": {
-                "name": "dist. rep.",
+                "name": "NLL distributions",
                 "value": "Gaussian"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "quater."
             }
         },
         "Measure": "ADD(-S) score",
@@ -62,8 +86,12 @@
     "6": {
         "specifications": {
             "0": {
-                "name": "dist. rep.",
+                "name": "NLL distributions",
                 "value": "Gaussian"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "axis-ang."
             }
         },
         "Measure": "ADD(-S) score",
@@ -72,8 +100,12 @@
     "7": {
         "specifications": {
             "0": {
-                "name": "dist. rep.",
+                "name": "NLL distributions",
                 "value": "Gaussian"
+            },
+            "1": {
+                "name": "pose representation",
+                "value": "two-col."
             }
         },
         "Measure": "ADD(-S) score",

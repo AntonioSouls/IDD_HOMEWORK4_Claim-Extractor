@@ -1,279 +1,291 @@
-The user wants to extract claims from a table represented in a JSON format.
-Each claim should have a "specifications", "Measure", and "Outcome".
-The "Measure" can be found in the table, caption, or references.
-The "Outcome" is the value associated with the "Measure".
-
-Let's analyze the provided example to understand the structure of the table and how to extract the claims.
-
-The table has headers in the first rows.
-The "Measure" seems to be a column header.
-The "specifications" are other column headers and their corresponding values in a row.
-
-For the given example:
 ```json
-{
-    "table": [
-        [
-            "Method",
-            "3DPW-Test",
-            "3DPW-Test",
-            "3DPW-Test",
-            "3DPW-Test"
-        ],
-        [
-            "Method",
-            "MJE\\downarrow",
-            "MJEx\\downarrow",
-            "MJEy\\downarrow",
-            "MJEz\\downarrow"
-        ],
-        [
-            "PARE(HR-W32)",
-            "74.5",
-            "30.3",
-            "28.9",
-            "78.9"
-        ],
-        [
-            "CLIFF(HR-W48)",
-            "72.7",
-            "27.1",
-            "27.0",
-            "51.8"
-        ],
-        [
-            "BoPR(HR-W32)",
-            "68.8",
-            "25.9",
-            "27.5",
-            "46.6"
-        ],
-        [
-            "BoPR(HR-W48)",
-            "65.1",
-            "22.0",
-            "23.4",
-            "48.1"
-        ]
-    ],
-    "caption": "Table 3: Axis-wise performance comparison on the 3DPW-Test. All methods have been trained on dataset with 3DPW.",
-    "references": [
-        "Improved occlusion handling.\r\nTable \xa03 showcases the results of our proposed BoPR method, the baseline PARE method, and the CLIFF method on the occlusion datasets 3DPW-OCC and 3DOH. All methods were evaluated on 3DPW-OCC without using the 3DPW training dataset. When evaluating 3DOH, they fine-tuned the network on the 3DPW training dataset. Both evaluations excluded their own training set to ensure a better comparison of the generalization ability on occlusion datasets. BoPR outperformed PARE in both MJE and PAMJE and showed superior performance compared to CLIFF and PARE on 3DOH. Specifically, on the 3DPW-OCC dataset, BoPR reduced MJE and PAMJE by 5.8% and 10.9%, respectively, compared to PARE. On 3DOH, BoPR achieved a 2.6% improvement over CLIFF. These results suggest that part-aware regression with body-reference conditioning enhances occlusion handling and improves accuracy and generalization in challenging scenarios."
-    ]
-}
-```
-
-The first row seems to indicate the dataset.
-The second row seems to indicate the measures.
-The first column seems to indicate the methods.
-
-Let's try to extract claims based on the second row as "Measure".
-
-Claim 0:
-Specifications: {"0": {"name": "Method", "value": "PARE(HR-W32)"}}
-Measure: MJE↓
-Outcome: 74.5
-
-Claim 1:
-Specifications: {"0": {"name": "Method", "value": "PARE(HR-W32)"}}
-Measure: MJEx↓
-Outcome: 30.3
-
-Claim 2:
-Specifications: {"0": {"name": "Method", "value": "PARE(HR-W32)"}}
-Measure: MJEy↓
-Outcome: 28.9
-
-Claim 3:
-Specifications: {"0": {"name": "Method", "value": "PARE(HR-W32)"}}
-Measure: MJEz↓
-Outcome: 78.9
-
-... and so on.
-
-It seems the user wants to iterate through each row of the table (starting from the third row) and for each column (starting from the second column), create a claim. The "Measure" will be the column header, the "Outcome" will be the cell value, and the "specifications" will be the values from the first column.
-
-Let's refine the strategy:
-
-1. Identify the header rows. In this case, the first two rows are headers.
-2. Iterate through the data rows (starting from the third row).
-3. For each data row, iterate through the columns (starting from the second column).
-4. For each cell, extract the "Measure" from the corresponding column header (second row), the "Outcome" from the cell value, and the "specifications" from the values in the first column and potentially other relevant columns.
-
-A potential issue is that the first row also seems to act as a category for the measures in the second row. We need to incorporate that.
-
-Let's rethink the structure of specifications. It should contain information identifying the context of the outcome.
-
-Claim 0:
-Specifications: {"0": {"name": "Method", "value": "PARE(HR-W32)"}, "1": {"name": "3DPW-Test", "value": "MJE↓"}}
-Measure: MJE↓
-Outcome: 74.5
-
-Claim 1:
-Specifications: {"0": {"name": "Method", "value": "PARE(HR-W32)"}, "1": {"name": "3DPW-Test", "value": "MJEx↓"}}
-Measure: MJEx↓
-Outcome: 30.3
-
-This seems more appropriate. Let's implement this.```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE(HR-W32)"
+                "value": "PARE"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE",
         "Outcome": "74.5"
     },
     "1": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE(HR-W32)"
+                "value": "PARE"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEx\\downarrow",
+        "Measure": "MJEx",
         "Outcome": "30.3"
     },
     "2": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE(HR-W32)"
+                "value": "PARE"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEy\\downarrow",
+        "Measure": "MJEy",
         "Outcome": "28.9"
     },
     "3": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "PARE(HR-W32)"
+                "value": "PARE"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEz\\downarrow",
+        "Measure": "MJEz",
         "Outcome": "78.9"
     },
     "4": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF(HR-W48)"
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE",
         "Outcome": "72.7"
     },
     "5": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF(HR-W48)"
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEx\\downarrow",
+        "Measure": "MJEx",
         "Outcome": "27.1"
     },
     "6": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF(HR-W48)"
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEy\\downarrow",
+        "Measure": "MJEy",
         "Outcome": "27.0"
     },
     "7": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "CLIFF(HR-W48)"
+                "value": "CLIFF"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEz\\downarrow",
+        "Measure": "MJEz",
         "Outcome": "51.8"
     },
     "8": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BoPR(HR-W32)"
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE",
         "Outcome": "68.8"
     },
     "9": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BoPR(HR-W32)"
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEx\\downarrow",
+        "Measure": "MJEx",
         "Outcome": "25.9"
     },
     "10": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BoPR(HR-W32)"
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEy\\downarrow",
+        "Measure": "MJEy",
         "Outcome": "27.5"
     },
     "11": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BoPR(HR-W32)"
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W32"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEz\\downarrow",
+        "Measure": "MJEz",
         "Outcome": "46.6"
     },
     "12": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BoPR(HR-W48)"
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJE\\downarrow",
+        "Measure": "MJE",
         "Outcome": "65.1"
     },
     "13": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BoPR(HR-W48)"
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEx\\downarrow",
+        "Measure": "MJEx",
         "Outcome": "22.0"
     },
     "14": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BoPR(HR-W48)"
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEy\\downarrow",
+        "Measure": "MJEy",
         "Outcome": "23.4"
     },
     "15": {
         "specifications": {
             "0": {
                 "name": "Method",
-                "value": "BoPR(HR-W48)"
+                "value": "BoPR"
+            },
+            "1": {
+                "name": "HR-W",
+                "value": "W48"
+            },
+            "2": {
+                "name": "Dataset",
+                "value": "3DPW-Test"
             }
         },
-        "Measure": "MJEz\\downarrow",
+        "Measure": "MJEz",
         "Outcome": "48.1"
     }
 }

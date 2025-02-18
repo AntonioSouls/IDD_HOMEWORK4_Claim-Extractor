@@ -1,0 +1,956 @@
+```json
+{
+    "0": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "VIBE [15]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "93.5"
+    },
+    "1": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "VIBE [15]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "56.5"
+    },
+    "2": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "VIBE [15]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "113.4"
+    },
+    "3": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "VIBE [15]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "82.7"
+    },
+    "4": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "VIBE [15]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "51.9"
+    },
+    "5": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "VIBE [15]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "99.1"
+    },
+    "6": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MEVA [25]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "86.9"
+    },
+    "7": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MEVA [25]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "54.7"
+    },
+    "8": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MAED [37]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "79.1"
+    },
+    "9": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MAED [37]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "45.7"
+    },
+    "10": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "MAED [37]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "92.6"
+    },
+    "11": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Pose2Mesh [6]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "89.2"
+    },
+    "12": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Pose2Mesh [6]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "58.9"
+    },
+    "13": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Pose2Mesh [6]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "89.5"
+    },
+    "14": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Pose2Mesh [6]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "56.3"
+    },
+    "15": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Pose2Mesh [6]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "105.3"
+    },
+    "16": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "I2L-MeshNet [27]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "93.2"
+    },
+    "17": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "I2L-MeshNet [27]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "58.6"
+    },
+    "18": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "METRO [21]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "77.1"
+    },
+    "19": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "METRO [21]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "47.9"
+    },
+    "20": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "METRO [21]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "88.2"
+    },
+    "21": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mesh-G [22]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "74.7"
+    },
+    "22": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mesh-G [22]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "45.6"
+    },
+    "23": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "Mesh-G [22]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "87.7"
+    },
+    "24": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HybrIK [19]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "80.0"
+    },
+    "25": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HybrIK [19]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "48.8"
+    },
+    "26": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HybrIK [19]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "94.5"
+    },
+    "27": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HybrIK [19]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "74.1"
+    },
+    "28": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HybrIK [19]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "45.0"
+    },
+    "29": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HybrIK [19]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "86.5"
+    },
+    "30": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FastMETRO–L–H64 [5]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "73.5"
+    },
+    "31": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FastMETRO–L–H64 [5]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "44.6"
+    },
+    "32": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "FastMETRO–L–H64 [5]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "84.1"
+    },
+    "33": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPIN [18]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "96.9"
+    },
+    "34": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPIN [18]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "59.2"
+    },
+    "35": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "SPIN [18]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "116.4"
+    },
+    "36": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HMR-EFT [12]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "85.1"
+    },
+    "37": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HMR-EFT [12]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "52.2"
+    },
+    "38": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "HMR-EFT [12]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "118.5"
+    },
+    "39": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ROMP [34]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "82.7"
+    },
+    "40": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ROMP [34]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "60.5"
+    },
+    "41": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ROMP [34]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "76.7"
+    },
+    "42": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ROMP [34]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "47.3"
+    },
+    "43": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "ROMP [34]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "93.4"
+    },
+    "44": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE [16]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "82.0"
+    },
+    "45": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE [16]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "50.9"
+    },
+    "46": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE [16]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "97.9"
+    },
+    "47": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE [16]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "74.5"
+    },
+    "48": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE [16]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "46.5"
+    },
+    "49": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "PARE [16]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "88.6"
+    },
+    "50": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "VisDB [41]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "72.1"
+    },
+    "51": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "VisDB [41]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "44.1"
+    },
+    "52": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "VisDB [41]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "83.5"
+    },
+    "53": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF(HR-W48) [20]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "69.0"
+    },
+    "54": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF(HR-W48) [20]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "43.0"
+    },
+    "55": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "CLIFF(HR-W48) [20]"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "81.2"
+    },
+    "56": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "76.1"
+    },
+    "57": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "45.9"
+    },
+    "58": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "90.9"
+    },
+    "59": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "68.8"
+    },
+    "60": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "41.8"
+    },
+    "61": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W32)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "81.7"
+    },
+    "62": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "72.0"
+    },
+    "63": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "45.3"
+    },
+    "64": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-ALL"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "86.5"
+    },
+    "65": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "MJE↓",
+        "Outcome": "65.4"
+    },
+    "66": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PAMJE↓",
+        "Outcome": "42.5"
+    },
+    "67": {
+        "specifications": {
+            "0": {
+                "name": "Method",
+                "value": "BoPR(HR-W48)"
+            },
+            "1": {
+                "name": "Dataset",
+                "value": "3DPW-TEST"
+            }
+        },
+        "Measure": "PVE↓",
+        "Outcome": "80.8"
+    }
+}
+```

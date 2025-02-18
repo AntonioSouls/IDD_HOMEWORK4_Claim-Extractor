@@ -1,36 +1,10 @@
-The user wants to extract claims from a table provided in a JSON format.
-Each claim should follow a specific JSON structure with "specifications", "Measure", and "Outcome".
-The "specifications" come from the column headers and corresponding row value.
-The "Measure" can be found in the table, caption, or references.
-The "Outcome" is the value associated with the "Measure".
-
-Let's analyze the example provided:
-Table:
-[['Model', 'Comp. Cost', 'Comp. Cost', 'Shape Accuracy', 'Shape Accuracy'],
- ['Model', 'Time', 'Memory', 'Chair', 'Table'],
- ['DIST [22]', '0.27 sec', '5.4 GB', '1.28', '1.43'],
- ['DeepDDF', '0.04 sec', '5.0 GB', '0.83', '0.91']]
-Caption: 'Table 2: Experimental comparison of shape reconstruction speed and accuracy of DeepDDF with DIST. Accuracy is shown in Chamfer distances (10−3)superscript103(10^{-3}) from ground truth. Our DeepDDF realizes more accurate reconstruction in an order of magnitude less time.'
-References: []
-
-Observations:
-- The table has a multi-index header.
-- "Comp. Cost" and "Shape Accuracy" are top-level headers.
-- "Time", "Memory", "Chair", "Table" are sub-headers.
-- The caption mentions "speed" and "accuracy". "Accuracy" seems to relate to "Shape Accuracy". The unit of accuracy is "Chamfer distances (10−3)".
-- "Speed" likely relates to "Comp. Cost", with the unit being time.
-
-Plan:
-1. Iterate through each row of the table (starting from the data rows).
-2. For each cell in a row, identify the corresponding column headers.
-3. Create "specifications" based on the model name.
-4. Identify the "Measure" and "Outcome" based on the column headers.```json
+```json
 {
     "0": {
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "DIST [22]"
+                "value": "DIST"
             }
         },
         "Measure": "Comp. Cost Time",
@@ -40,7 +14,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "DIST [22]"
+                "value": "DIST"
             }
         },
         "Measure": "Comp. Cost Memory",
@@ -50,7 +24,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "DIST [22]"
+                "value": "DIST"
             }
         },
         "Measure": "Shape Accuracy Chair",
@@ -60,7 +34,7 @@ Plan:
         "specifications": {
             "0": {
                 "name": "Model",
-                "value": "DIST [22]"
+                "value": "DIST"
             }
         },
         "Measure": "Shape Accuracy Table",
