@@ -1,9 +1,9 @@
 Key,Count
 Backbone,7
-Dataset,10
-Method,17
-Method Level 1,6
-Method Level 2,6
+Data Type,4
+Dataset,8
+Input Modality,4
+Loss Type,14
+Method,35
 Object,16
-Type,14
-\\lambda_{f},35
+Î»f,35

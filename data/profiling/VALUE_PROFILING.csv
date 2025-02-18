@@ -1,22 +1,27 @@
 Key,Count
 Backbone::R101,7
-Dataset::3DPW-ALL,5
+Data Type::Real+PBR,4
+Dataset::3DPW-ALL,3
 Dataset::3DPW-TEST,5
-Method Level 1::RGB-D (Real+PBR),6
-Method Level 2::CDPNv2+ICP,4
-Method Level 2::Cosypose+ICP,2
-Method::BoPR(HR-W48),7
-Method::CLIFF,1
-Method::HybrIK,2
+Input Modality::RGB-D,4
+Loss Type::L1,7
+Loss Type::MSE,7
+Method::BoPR(HR-W32),2
+Method::BoPR(HR-W48),6
+Method::CDPNv2+ICP,4
+Method::GDR-LC,1
+Method::GDR-Net,4
+Method::GDR-Net-LC,3
 Method::Ours §,7
+Method::Zebra-LC,1
+Method::ZebraPose,4
+Method::ZebraPose-LC,3
 Object::051_large_clamp*,4
 Object::052_extra_large_clamp*,4
 Object::061_foam_brick*,4
 Object::mean,4
-Type::L1,7
-Type::MSE,7
-\\lambda_{f}::10,7
-\\lambda_{f}::100,7
-\\lambda_{f}::20,7
-\\lambda_{f}::5,7
-\\lambda_{f}::50,7
+Î»f::10,7
+Î»f::100,7
+Î»f::20,7
+Î»f::5,7
+Î»f::50,7
