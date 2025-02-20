@@ -1,62 +1,73 @@
-import pandas as pd
-import json
 import os
+import json
+import pandas as pd
+from collections import defaultdict
 
-def create_profiling(data):
-    all_entries_name = []
-    all_entries_value = []
-    all_entries_metric = []
-    profiling_df_dict = {}
-
-    # Claims extractions
-    for key, row in data.items():
-        for spec_key, spec in row['specifications'].items():
-            all_entries_name.append({'Key': spec['name'], 'Count': 1})
-            all_entries_value.append({'Key': spec['name'] + "::" + spec['value'], 'Count': 1})
-        all_entries_metric.append({'Key': row['Measure'], 'Count': 1})
-
-    profiling_df_name = pd.DataFrame(all_entries_name)
-    profiling_df_value = pd.DataFrame(all_entries_value)
-    profiling_df_metric = pd.DataFrame(all_entries_metric)
+def count_entries(data):
+    name_counts = defaultdict(int)
+    value_counts = defaultdict(int)
+    measure_counts = defaultdict(int)
     
-    # Group-by to manage duplicate
-    profiling_df_dict['name'] = (profiling_df_name.groupby('Key').sum().reset_index())
-    profiling_df_dict['value'] = (profiling_df_value.groupby('Key').sum().reset_index())
-    profiling_df_dict['metric'] = (profiling_df_metric.groupby('Key').sum().reset_index())
+    def process_entry(entry):
+        if 'specifications' in entry:
+            for spec_key, spec in entry['specifications'].items():
+                name = spec['name']
+                value = spec['value']
+                name_counts[name] += 1
+                value_counts[value] += 1
+        
+        if 'Measure' in entry:
+            measure = entry['Measure']
+            if measure:
+                measure_counts[measure] += 1
 
-    return profiling_df_dict
+    def process_data(data):
+        for key, row in data.items():
+            if isinstance(row, dict) and 'specifications' in row:
+                process_entry(row)
+            else:
+                for subkey, subrow in row.items():
+                    if isinstance(subrow, dict):
+                        process_entry(subrow)
 
-def load_all_claims(directory_path):
-    all_claims = [] 
+    process_data(data)
+    return name_counts, value_counts, measure_counts
+
+def load_and_count_all_claims(directory_path):
+    total_name_counts = defaultdict(int)
+    total_value_counts = defaultdict(int)
+    total_measure_counts = defaultdict(int)
 
     for filename in os.listdir(directory_path):
         if filename.endswith(".json"):
             file_path = os.path.join(directory_path, filename)
             with open(file_path, 'r') as file:
                 data = json.load(file)
-                all_claims.append(data) 
-    return all_claims
+                name_counts, value_counts, measure_counts = count_entries(data)
+                for key, count in name_counts.items():
+                    total_name_counts[key] += count
+                for key, count in value_counts.items():
+                    total_value_counts[key] += count
+                for key, count in measure_counts.items():
+                    total_measure_counts[key] += count
 
-def create_profiling_spreadsheet():
-    try:
-        folder_exists = os.path.exists('data/profiling')
-        if not folder_exists:
-            os.makedirs('data/profiling')
-            print(f"\033[32mCreated directory: {'data/profiling'}\033[0m\n")
+    return total_name_counts, total_value_counts, total_measure_counts
 
-        # Load all claims
-        all_claims = load_all_claims('data/claims/json')
+def save_profiling_to_csv(profiling_counts, filename):
+    profiling_df = pd.DataFrame(list(profiling_counts.items()), columns=['Key', 'Count'])
+    profiling_df.to_csv(filename, index=False)
+    print(f"Profiling CSV file saved as {filename}")
 
-        # Flatten the list of dictionaries
-        flattened_data = {k: v for d in all_claims for k, v in d.items()}
+def main():
+    directory_path = 'data/claims/json'
+    total_name_counts, total_value_counts, total_measure_counts = load_and_count_all_claims(directory_path)
 
-        # Create profiling with pre-aligned values
-        profiling_df_dict = create_profiling(flattened_data)
+    if not os.path.exists('data/profiling'):
+        os.makedirs('data/profiling')
+    
+    save_profiling_to_csv(total_name_counts, 'data/profiling/NAME_PROFILING.csv')
+    save_profiling_to_csv(total_value_counts, 'data/profiling/VALUE_PROFILING.csv')
+    save_profiling_to_csv(total_measure_counts, 'data/profiling/METRIC_PROFILING.csv')
 
-        for key in profiling_df_dict:
-            filename = 'data/profiling/' + key.upper() + '_PROFILING.csv'
-            profiling_df_dict[key].to_csv(filename, index=False)
-            print(f"- \033[32mProfiling CSV file saved as {filename}\033[0m\n")
-
-    except Exception as e:
-        print(f"\033[31mError during the process: {e}\033[0m\n")
+if __name__ == '__main__':
+    main()

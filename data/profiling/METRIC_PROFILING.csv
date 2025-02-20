@@ -1,31 +1,115 @@
 Key,Count
-1010°cm°10cm,5
-1010âˆ˜cm^{10},2
-102°cm°2cm,5
-102âˆ˜cm^2,2
-105°cm°5cm,5
-105âˆ˜cm^5,2
-3D50,5
-3D75,5
-3D_{50},2
-3D_{75},2
-52°cm°2cm,5
+AP,45
+AP^{med},5
+AP^{M},16
+AR,16
+Parameters (M),3
+Speed (fps),3
+ADD(-S),91
+AUC of ADD-S,8
+AUC of ADD(-S),10
+Correctness,3
+Runtime,3
+ADD(-S) score,92
+ADD-S,16
+MPJPE↓,45
+MPJPE,8
+PCK↑,9
+AUC↑,9
+Params(M),7
+Train. MACs(G),7
+Infer. MACs(G),7
+Infer. FPS,7
+MJE↓,24
+PAMJE↓,24
+PVE↓,20
+MJE,40
+V2V,7
+MJEx,4
+MJEy,4
+MJEz,4
+PAMJE,13
+PVE,6
+Avg.,74
+MSPD,74
+MSSD,74
+VSD,74
+Accuracy,24
+AP50,22
+AP75,22
+ADD(-S) 0.02d,6
+ADD(-S) 0.05d,6
+ADD(-S) 0.1d,13
+Mean,3
+\\\\mathcal{L}_{\\\\text{crd}},3
+2°,3
+2 cm,3
+"2°, 2 cm",3
+NDS↑,14
+mAP↑,14
+mATE↓,14
+mAOE↓,14
+mASE↓,8
+mAVE↓,8
+mAAE↓,8
+Inference time (sec),10
+e_t,34
+e_R,34
+e_pose,34
+µ,6
+e_{\\bm{t}},10
+e_{\\bm{R}},10
+e_{\\text{pose}},10
+Joint Shape and Pose Estimation,6
+Shape Representation,6
+Multi-view Observation,5
+Feedback Loop,4
+Online,3
+Momentum,3
+Fewer Updates,2
+Comp. Cost Time,2
+Comp. Cost Memory,2
+Shape Accuracy Chair,2
+Shape Accuracy Table,2
+translations (mean squared error),15
+rotations (Riemannian distance),15
+shapes (Chamfer distance),15
+Cls Avg.,2
+Cabinet,6
+Chair,6
+Display,6
+Table,6
+Cls avg.,4
+Mean squared error (10−2),12
+Riemannian distance (10−1),12
+Chamfer distance (10−3),12
+3D_{75},11
+52âˆ˜cm{}^{\\circ}2cm,5
+55âˆ˜cm{}^{\\circ}5cm,5
+102âˆ˜cm{}^{\\circ}2cm,5
+105âˆ˜cm{}^{\\circ}5cm,5
+3D_{50},6
+52∘cm{}^∘2cm,2
+55∘cm{}^∘5cm,2
+102∘cm{}^∘2cm,2
+105∘cm{}^∘5cm,2
+3D_75,10
+52°cm°2cm,11
+55°cm°5cm,11
+102°cm°2cm,11
+105°cm°5cm,11
+Parameter,2
+FPS,2
+3D_50,8
+52âˆ˜cm°2cm,8
+55âˆ˜cm°5cm,8
+102âˆ˜cm°2cm,7
+105âˆ˜cm°5cm,8
+3D50,7
+3D75,7
+1010°cm°10cm,7
 52âˆ˜cm^2,2
-55°cm°5cm,5
 55âˆ˜cm^5,2
-ADD(-S),4
-ADD(-S) score,12
-Avg.,1
-MJE↓,2
-MSPD,1
-MSSD,1
-NDS↑,1
-PAMJE↓,3
-PVE↓,3
-VSD,1
-mAAE↓,1
-mAOE↓,1
-mAP↑,1
-mASE↓,1
-mATE↓,1
-mAVE↓,1
+102âˆ˜cm^2,2
+105âˆ˜cm^5,2
+1010âˆ˜cm^{10},2

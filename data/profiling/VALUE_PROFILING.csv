@@ -1,27 +1,352 @@
 Key,Count
-Backbone::R101,7
-Data Type::Real+PBR,4
-Dataset::3DPW-ALL,3
-Dataset::3DPW-TEST,5
-Input Modality::RGB-D,4
-Loss Type::L1,7
-Loss Type::MSE,7
-Method::BoPR(HR-W32),2
-Method::BoPR(HR-W48),6
-Method::CDPNv2+ICP,4
-Method::GDR-LC,1
-Method::GDR-Net,4
-Method::GDR-Net-LC,3
-Method::Ours §,7
-Method::Zebra-LC,1
-Method::ZebraPose,4
-Method::ZebraPose-LC,3
-Object::051_large_clamp*,4
-Object::052_extra_large_clamp*,4
-Object::061_foam_brick*,4
-Object::mean,4
-Î»f::10,7
-Î»f::100,7
-Î»f::20,7
-Î»f::5,7
-Î»f::50,7
+Mask-RCNN,1
+ResNet101,3
+OccNet,2
+ResNet50,2
+JC-SPPE,2
+HigherHRNet,1
+HR48,13
+MIPNet,2
+SCIO,4
+SCAI (Ours),4
+SimpleBaseline,3
+R152,6
++ SCAI,9
+HRNet,8
+HR32,6
+Baseline,3
++ Correction Network,3
++ Self-Referential Error,3
++ Joint Training,3
++ Self-Adaptive Inference,3
+0.85,12
+0.65,12
+0.3,9
+0.6,3
+0.45,9
+1.0,21
+0.4,9
+RePOSE,10
+real+syn,2
+RNNPose,12
+SO-Pose,13
+real+pbr,6
+DProST,12
+GDR-Net,35
+ZebraPose,35
+GDR-Net-LC,27
+ZebraPose-LC,27
+RePose,3
+BPnP,3
+EPro-PnP,3
+Ours,30
+A0,6
+GDR-Net baseline,1
+A1,6
+B0,1
+A0 + 3D LC loss,1
+B1,1
+A0 + 2D LC loss,1
+C0,5
+B0 + detach residual from E_{cov},1
+C1,5
+B0 + detach weights from E_{cov},1
+C2,5
+B0 + remove E_{cov},1
+C3,5
+B0 + remove E_{linear},1
+C4,1
+B0 + remove E_{prior},1
+MLE,2
+PnP RANSAC,2
+PnP weighted,2
+MLE + LC loss,2
+Laplace,4
+ours-3D,2
+quater.,2
+axis-ang.,2
+two-col.,2
+Gaussian,4
+ZebraPose baseline,1
+A2,5
+A1 + LC loss,1
+002_master_chef_can,4
+003_cracker_box,4
+004_sugar_box,4
+005_tomato_soup_can,4
+006_mustard_bottle,4
+007_tuna_fish_can,4
+008_pudding_box,4
+009_gelatin_box,4
+010_potted_meat_can,4
+011_banana,4
+019_pitcher_base,4
+021_bleach_cleanser,4
+024_bowl*,4
+025_mug,4
+035_power_drill,4
+036_wood_block*,4
+037_scissors,4
+040_large_marker,4
+051_large_clamp*,4
+052_extra_large_clamp*,4
+061_foam_brick*,4
+ape,8
+GDR-LC,9
+Zebra-LC,9
+can,8
+cat,8
+driller,8
+duck,8
+eggbox*,8
+glue*,8
+holepuncher,8
+mean,8
+none,2
+flipping-once,1
+diffusion-flipping,1
+IF,1
+concat,2
+EF,3
+add,1
+CA,1
+100,8
+500,1
+\\cellcolorbestcolor1000,1
+2000,1
+w/o diffusion,4
+P-STMO,7
+PoseFormer,7
+STE,2
+TCN,2
+w/ diffusion,4
+w/ distortion,2
+GT,2
+w/o distortion,2
+estimated,2
+U-CDGCN\u00a0[23] (N=96)▽,3
+MM’21,3
+P-STMO\u00a0[51] (N=81)▽,3
+ECCV’22,3
+TCN\u00a0[46] (N=81),3
+CVPR’19,3
+U-GCN\u00a0[62] (N=96),3
+ECCV’20,3
+Anatomy\u00a0[9] (N=81),3
+TCSVT’21,3
+PoseFormer\u00a0[70] (N=9),3
+ICCV’21,3
+"MHFormer\u00a0[36] (N=9, H=3, P-Agg)",3
+CVPR’22,9
+MixSTE\u00a0[68] (N=27),3
+MixSTE\u00a0[68] (N=243)‡,3
+✓,114
+20,14
+J-Agg,2
+pose,3
+average,1
+MLPs,2
+joint,2
+reproj.,2
+1,32
+nan,65
+MHFormer,5
+3,12
+MixSTE,5
+D3DP,15
+5,17
+10,12
+noise,2
+original data,2
+first layer,1
+all layers,1
+VIBE,6
+3DPW-ALL,29
+3DPW-TEST,39
+MEVA,2
+MAED,3
+Pose2Mesh,5
+I2L-MeshNet,2
+METRO,3
+Mesh-G,3
+HybrIK,6
+FastMETRO–L–H64,3
+SPIN,5
+HMR-EFT,3
+ROMP,7
+PARE,23
+VisDB,3
+CLIFF(HR-W48),5
+BoPR(HR-W32),10
+BoPR(HR-W48),10
+Agora,14
+BEV,2
+Hand4Whole,2
+CLIFF,6
+BoPR,21
+W32,8
+3DPW-Test,16
+W48,8
+PARE(HR-W32),4
+3DPW-OCC,6
+3DOH,8
+3DPW,18
+PARE w TF,3
+BoPR w/o L_{3D},3
+BoPR w/o L_{2D},3
+BoPR w/o L_{RD},3
+Elbow,2
+Wrist,2
+Head,2
+Knee,2
+Ankle,2
+Hip,2
+Neck,2
+Shoulder,2
+PFA+Ours,64
+RGB (PBR),88
+SurfEmb,48
+Cosypose,32
+CDPNv2,32
+RGB (Real+PBR),12
+RGB-D (PBR),96
+CDPNv2+ICP,32
+RGB-D (Real+PBR),16
+CIR,32
+Cosypose+ICP,24
+IC-BIN,39
+LM-O,3
+T-LESS,3
+TUD-L,3
+ITODD,3
+HB,3
+YCB,3
+Avg.,3
+FCOSv2,11
+Mask R-CNN,8
+PAA,3
+AutoAssign,3
+ATSS,3
+Faster R-CNN,3
+Center,6
+NMS,9
+Oracle,6
+0.1,6
+0,3
+0.2,6
+0.25,3
+WDR + Ours,4
+WDR + RCNN,4
+WDR + FCOSv2,4
+CDPNv2 + Ours,4
+CDPNv2 + FCOSv2,4
+CDPNv2 + RCNN,4
+PFA,8
+RGB,32
+PBR,28
+Real+PBR,32
+RGB-D,28
+CDPN-Full,4
+CDPN w/o trans. head,4
+"A1 → Batch=32, LM solver",4
+Implicit diff.\xa0[12],5
+Reprojection\xa0[28],5
+KL div. (ours),5
+CDPN,1
+PnP + Explicit depth,4
+HybridPose,1
+Hybrid constraints,1
+GDRNet*,3
+DPOD,1
+PnP + Explicit refiner,1
+PVNet-RePOSE,1
+PnP + Implicit refiner,4
+PVNet-RNNPose,3
+PnP,5
+FCOS3D §†,7
+R101,49
+PGD §,7
+PETR,14
+BEVFormer,7
+PolarFormer,7
+Swin-B,7
+Ours §,7
+v1.8.1+cu111,5
+FCOS,2
+Deform,2
+Total,2
+v1.10.1+cu113,5
+Standard,4
+Monte Carlo,4
+lava1302,7
+lightbox,66
+sunlamp,66
+prow,7
+VPU,7
+TangoUnchained,7
+haoranhuang_njust,7
+EagerNet (ours),7
+normalized model coordinates: ✓,30
+object mask: ✓,30
+predicted error: ✗,6
+surface region segmentation: ✗,18
+predicted error: ✓,24
+f_{\\alpha},12
+surface region segmentation: ✓,12
+aug1,6
+aug2,6
+aug3,6
+aug4,6
+aug5,6
+(i) no refinement,6
+(ii) single h_{i},6
+(iii) multi hᵢ; ÎŠ_o,6
+(iv) multi hᵢ; I_o,6
+(v) without I_o,6
+(vi) test set augs,6
+DPDN [21],2
+Scan2CAD [4],3
+RayTran [34],3
+Vid2CAD [24],6
+ELLIPSDF [30],6
+Ma et al. [23],2
+TransPoser,41
+DIST,4
+DeepDDF,4
+Baseline based on,15
+Cls avg.,9
+Cabinet,21
+Chair,21
+Display,9
+Table,9
+w/o Dec.,15
+ELLIPSDF,5
+Scan2CAD,5
+RayTran,5
+Vid2CAD,5
+w/o NOCS,9
+Class avg.,12
+w/o Camera PE,9
+w/o \\mbox{\\boldmathm}^{t}_{K^{t}},9
+E1,5
+E2,5
+E3,5
+E4,5
+E5,5
+w,6
+w/o,6
+Implicit,7
+Explicit,7
+SGPA,12
+IST-NetM,6
+NOCS,6
+✗,23
+DualPoseNet,6
+GPV-Pose,5
+SPD,6
+CR-Net,6
+RBP-Pose,6
+IST-Net (Ours),6
+50,7
+MSE,7
+L1,7
